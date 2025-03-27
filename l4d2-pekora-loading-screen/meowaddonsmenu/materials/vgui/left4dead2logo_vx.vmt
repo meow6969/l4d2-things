@@ -1,0 +1,12 @@
+UnlitGeneric
+{
+$basetexture "vgui/urikgamemenu/L4D2logo_urik"
+$translucent 1
+$ignorez 1
+$additive 0
+$vertexalpha 1
+$vertexcolor 1
+$no_fullbright 1
+
+$frame 0
+}

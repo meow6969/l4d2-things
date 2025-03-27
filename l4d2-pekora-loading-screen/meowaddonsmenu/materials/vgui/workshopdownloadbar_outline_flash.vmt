@@ -1,0 +1,24 @@
+UnlitGeneric
+{
+$baseTexture "vgui/workshopdownloadbar_outline_flash"
+$translucent 1
+$alpha 1
+$vertexalpha 1
+$ignorez 1
+$no_fullbright 1
+$vertexcolor 1
+$offset 0
+
+Proxies
+{
+    "Sine"
+    {
+      "sineperiod" "0.5"
+      "sinemin" "0"
+      "sinemax" "1"
+      "timeoffset" "$offset"
+      "resultVar" "$alpha"
+    }
+}
+}
+

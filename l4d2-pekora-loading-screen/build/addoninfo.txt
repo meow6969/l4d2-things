@@ -1,0 +1,18 @@
+"AddonInfo"
+
+{
+	addonSteamAppID	"550"	
+        addontitle		"pekora loading music"                                     // Add-on title that shows up in Add-ons list. ~20 chars max
+        addonversion	        "1.0"                                             // Add-on version.
+        addontagline		"pekora loading music"	        // Add-on tagline or wrap-up- a short description. ~100 chars max
+	addonauthor 		"elitezrule2"                                         // Name/alias of the author
+	addonauthorSteamID 	"https://steamcommunity.com/id/mrpedrovsk/"        // Steam Profile URL of author or group
+ 
+	//addonContent_Campaign		"1" 	                                //This addon provides muliple connected maps with a finale
+ 
+	//addonURL0 ""	//An html home page for the add-on that includes a download link.
+ 
+	// short description that appears in the Add-on list screen...
+	addonDescription "pekora loading screen, original mod made by Kurasaki_aoi"
+ 
+}

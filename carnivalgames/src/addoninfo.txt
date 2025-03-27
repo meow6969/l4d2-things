@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+addontitle "madoka carnival games"
+addonversion "1"
+addontagline ""
+addonauthor "elitezrule2"
+addonauthorSteamID ""
+
+addonDescription "meow"
+}

@@ -1,0 +1,10 @@
+UnlitGeneric
+{
+$basetexture "vgui\icon_l4d"
+$translucent 1
+$ignorez 1
+$vertexcolor 1
+
+$color "[0.21 0.21 0.21]"
+$basetexturetransform "center .5 .5 scale 1.2 1.2 rotate 0 translate 0 -0.03"
+}

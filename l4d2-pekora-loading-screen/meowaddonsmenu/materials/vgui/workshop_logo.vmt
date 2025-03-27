@@ -1,0 +1,22 @@
+UnlitGeneric
+{
+$basetexture "vgui/workshop_logo"
+$translucent 1
+$vertexcolor 1
+$vertexalpha 1
+$no_fullbright 1
+$ignorez 1
+$offset 0
+
+Proxies
+{
+    "Sine"
+    {
+      "sineperiod" "3"
+      "sinemin" "0.3"
+      "sinemax" "1"
+      "timeoffset" "$offset"
+      "resultVar" "$alpha"
+    }
+}
+}

@@ -1,0 +1,20 @@
+"AddonInfo"
+{
+addontitle									"meow Urik Game Menu"
+vpkname									"meowurikmenu"
+parsedate 1
+description_template					"$addontitle$ v$vpkdate$"
+version_template						"$vpkdate$"
+addonDescription							"meow Urik Game Menu v1" 
+addonAuthor								"Urik&meow"
+addonAuthorSteamID					""
+addonVersion								"1" 
+addonTagline								""
+addonSteamGroupName				""
+addonURL0								"https://steamcommunity.com/sharedfiles/filedetails/?id=121272536"
+addonSteamAppID						550
+}
+//credits
+//Urik_Kane - creator
+//Rayman1103 - additional useful features
+//Windows 8 Vector icon pack by icons8 (iconspedia.com)

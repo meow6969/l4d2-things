@@ -1,0 +1,30 @@
+UnlitGeneric
+{
+$basetexture "vgui/urikgamemenu/L4D2logo_urik"
+$translucent 1
+$ignorez 1
+$additive 0
+$no_fullbright 1
+$offset 0
+
+//change to 1 for xmas logo. It transfers its value to animated frame number. 0 = default, 1 = xmas
+$xmaslogo 0
+
+	Proxies
+	{
+		Equals
+		{
+		srcVar1 $xmaslogo
+		resultVar $frame
+		}
+
+		"Sine"
+		{
+		  "sineperiod" "4"
+		  "sinemin" "0.1"
+		  "sinemax" "0.25"
+		  "timeoffset" "$offset"
+		  "resultVar" "$alpha"
+		}
+	}
+}

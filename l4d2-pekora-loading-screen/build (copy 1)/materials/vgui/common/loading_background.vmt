@@ -1,0 +1,22 @@
+"UnlitGeneric"
+{
+	$basetexture "vgui/common/loading_background"
+	$translucent "0"
+	$vertexcolor "0"
+	$vertexalpha "0"
+	$no_fullbright "1"
+	$ignorez "1"
+        $additive "0"
+        $nolod "1"
+	$nomip "1"
+	$nocompress "1"
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedTextureVar" "$basetexture"
+			"animatedTextureFrameNumVar" "$frame"
+			"animatedTextureFrameRate" "10"
+		}
+	}
+}

@@ -1,0 +1,22 @@
+"AddonInfo"
+{
+	addontitle		"anime for default loading screen"			//Max 127  characters.
+	addonauthor		"elitezrule2"			//Max 119  characters.
+	addonDescription	"anime for default loading screen"		//Max 1023 characters.
+	addonversion		"1.0"				//Max 31   characters. Allows decimals.
+	
+	// These booleans act as content descriptors, showing up as tags ingame.
+	// Users can filter addons by these tags and see what's inside without reading the description.
+	// Set to 1 where applicable. You can use multiple, such as "Weapons" and "skins".
+	addonContent_Campaign		0			//Has multiple maps that string into a campaign.		Represented ingame as: Campaigns
+	addonContent_Map		0 			//Has at least one map.						Represented ingame as: Campaigns
+	addonContent_Skin		0 			//Modifies an existing model or texture.			Represented ingame as: Skins
+	addonContent_weapon		0 			//Modifies a weapon in some way. (or adds melee weapons)	Represented ingame as: Weapons
+	addonContent_BossInfected	0 			//Modifies the Tank or the Witch.				Represented ingame as: Infected
+	addonContent_CommonInfected	0 			//Modifies CI.							Represented ingame as: Infected
+	addonContent_Survivor		0 			//Modifies Survivors.						Represented ingame as: Survivors
+	addonContent_Sound		0 			//Modifies a sound. (not for when a map is shipped with sounds)	Represented ingame as: Sounds
+	addonContent_Music		0 			//Modifies specifically music.					Represented ingame as: Sounds
+	addonContent_Script		0 			//Modifies a script.						Represented ingame as: Scripts
+	addonContent_prop		0 			//Modifies a prop						Represented ingame as: Items
+}

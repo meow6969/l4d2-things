@@ -1,0 +1,20 @@
+UnlitGeneric
+{
+	$basetexture	"engine/l4d_spinner"
+	$translucent	1
+	$vertexcolor	1
+	$vertexalpha	1
+	$no_fullbright	1
+	$ignorez	1
+	$nolod		1
+
+	Proxies
+	{
+		AnimatedTexture
+		{ 
+			animatedTextureVar 		$basetexture 
+			animatedTextureFrameNumVar 	$frame
+			animatedTextureFrameRate	10		//this is the FPS that the texture will animate at
+		}
+	}
+}

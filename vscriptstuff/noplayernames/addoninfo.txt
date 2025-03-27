@@ -1,0 +1,12 @@
+"AddonInfo"
+{
+     addonSteamAppID         "550"
+     addontitle              "remove name above player head"
+     addonversion            "1.0"
+     addontagline            "Scripts"
+     addonauthor             "elitezrule2"
+     addonURL0               ""
+     addonDescription        "Spawns Beams for all usable items"
+     addonContent_Script     1
+}
+ 
