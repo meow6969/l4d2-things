@@ -1,7 +1,0 @@
-UnlitGeneric
-{
-$basetexture "vgui\arrow_left_small"
-$translucent 1
-$ignorez 1
-$vertexcolor 1
-}

@@ -1,5 +1,0 @@
-UnlitGeneric
-{
-$baseTexture "vgui/urikgamemenu/campaignFrame"
-$translucent 1
-}

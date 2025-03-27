@@ -1,8 +1,0 @@
-"AddonInfo"
-{
-addonSteamAppID "550"
-addontitle "shared particle manifest"
-addonversion "1"
-addonauthor "meow"
-addonDescription "shared particle manifest for my installed addons"
-}
