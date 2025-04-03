@@ -1,0 +1,9 @@
+// UnlitGeneric {
+//     $BaseTexture "Starfelll\Prop.Monitor01a.WatsonPC\terrariumtexsketchfab"
+// }
+Patch {
+    Include "materials\Starfelll\Prop_Monitor01a_WatsonPC\base_screen.vmt"
+    Insert {
+        $BaseTexture "Starfelll\Prop_Monitor01a_WatsonPC\terrariumtexsketchfab"
+    }
+}

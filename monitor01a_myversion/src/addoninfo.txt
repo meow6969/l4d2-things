@@ -1,0 +1,8 @@
+"AddonInfo"
+{
+	"addontitle" "[monitor01a] Gura and Ame my edit"
+	"addonauthor" "Starfelll"
+	"addonversion" "1.0"
+	"addonContent_prop" "1"
+	"addonSteamAppID" "550"
+}

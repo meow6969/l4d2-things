@@ -1,0 +1,16 @@
+VertexLitGeneric {
+    $Model 1
+
+    $selfillum 1
+    //$selfillummaskscale 0.1
+
+    $selfillummask "models\props_trailers\trailers_grey"
+    //$selfillumtint "[0.8 0.8 0.8]"
+
+    
+    // $selfillummaskscale 0.1
+   // $detailscale 0.001        // scales the detail texture to same size as diffuse texture.
+   
+//    $detailblendmode 0
+//     $detailblendfactor 0.01
+}
