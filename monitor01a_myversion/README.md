@@ -1,5 +1,6 @@
 hello this is a slightly modified version of the mod \[monitor01a\] Gura and Ame  
 you can download the original here: https://steamcommunity.com/sharedfiles/filedetails/?id=3234244361  
+you can download my patched version here: https://github.com/meow6969/l4d2-things/raw/refs/heads/master/monitor01a_myversion.vpk  
 you should assume everything in the src/ directory (as well as ../monitor01a_myversion.vpk) is written by the authors of \[monitor01a\] Gura and Ame  
   
 currently this  mod has a bug on linux that causes the textures not to be loaded properly  
