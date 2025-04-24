@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/zsh
 
-if [[ "${ZSH_EVAL_CONTEXT}" ]]; then
+if ! [[ "${ZSH_EVAL_CONTEXT}" =~ ":file$" ]] && [[ "${ZSH_EVAL_CONTEXT}" ]]; then
   echo "${ZSH_EVAL_CONTEXT}"
   echo "not allowed to run pathvars.sh"
   exit 2
@@ -17,14 +17,14 @@ function file_exists () {
 }
 
 function ensure_file () {
-  if [ ! $(file_exists "${1}"; echo $?) = 0 ]; then
+  if [ ! "$(file_exists "${1}"; echo $?)" = 0 ]; then
     echo "fatal error: ${1} is not a file or does not exist"
     exit 2
   fi
 }
 
 function ensure_dir () {
-  if [ ! $(file_exists "${1}"; echo $?) = 2 ]; then
+  if [ ! "$(file_exists "${1}"; echo $?)" = 2 ]; then
     echo "fatal error: ${1} is not a directory or does not exist"
     exit 2
   fi
@@ -37,15 +37,26 @@ function ensure_init () {
 }
 
 function init_pathvars() {
-  declare -g shpath
-  shpath="$(readlink -f -- "$0")"
+  shpath="$(echo "${funcfiletrace[*]}" | sed "s/:[0-9]*$//")"
   ensure_file "${shpath}"
-  # pathvarspath="${0}"
-  pathvarspath="$(readlink -f -- "${BASH_SOURCE[0]}" )"
+  pathvarspath="$(readlink -f --  "$(echo "${funcsourcetrace[*]}" | sed "s/:[0-9]*$//")" )"
 
   shutilspath="$(readlink -f -- "$( dirname "${pathvarspath}" )" )"
-  ensure_file "${shutilspath}/l4d2path.txt"
-  l4d2path="$(cat "${shutilspath}/l4d2path.txt")"
+  pyvenvpath="$(readlink -f -- "${shutilspath}/../.venv" )"
+  pyscriptspath="$(readlink -f -- "${shutilspath}/pythonscripts")"
+  if [[ ! -d "${pyvenvpath}" ]]; then
+    echo "python venv not created, doing it for you..."
+    python3 -m venv "${pyvenvpath}"
+    source "${pyvenvpath}/bin/activate"
+    pip install -r "${pyscriptspath}/REQUIREMENTS.txt"
+  else
+    source "${pyvenvpath}/bin/activate"
+  fi
+#  declare -gx PYTHONPATH="${pyscriptspath}:${PYTHONPATH}"
+  export PYTHONPATH="${pyscriptspath}:${PYTHONPATH}"
+
+#  ensure_file "${shutilspath}/l4d2path.txt"
+  l4d2path="$(python "${shutilspath}/pythonscripts/get_l4d2_dir.py")"
   ensure_dir "${l4d2path}"
   
 
@@ -61,8 +72,8 @@ function init_pathvars() {
   else 
     srcpath="${shdirpath}/src"
   fi
-  . "${shutilspath}/funcs.sh"
-  . "${shutilspath}/output.sh"
+  source "${shutilspath}/funcs.sh"
+  source "${shutilspath}/output.sh"
   ensure_srcpath
   ensure_pakpath
   lastbuild="$(get_last_build "${shdirpath}")"
@@ -82,6 +93,8 @@ function echo_pathvars () {
   output "	$(format_key "l4d2path")	$(format_path "${l4d2path}")"
   output "	$(format_key "pathvarspath")	$(format_path "${pathvarspath}")"
   output "	$(format_key "shutilspath")	$(format_path "${shutilspath}")"
+  output "	$(format_key "pyscriptspath")	$(format_path "${pyscriptspath}")"
+  output "	$(format_key "pyvenvpath")	$(format_path "${pyvenvpath}")"
   output "	$(format_key "shpath")		$(format_path "${shpath}")"
   output "	$(format_key "srcpath")		$(format_path "${srcpath}")"
   output "	$(format_key "shdirpath")	$(format_path "${shdirpath}")"
@@ -99,8 +112,8 @@ function ensure_srcpath () {
       output "$(format_path "${shpath}"): source path cannot be a file: $(format_path "${srcpath}")" 
       exit 2
     fi
-    echo "$(format_path "${shpath}"): source path does not exist: $(format_path "${srcpath}")" 
-    exit 2 
+#    echo "$(format_path "${shpath}"): source path does not exist: $(format_path "${srcpath}")"
+    return 0
   fi
   return 0
 }

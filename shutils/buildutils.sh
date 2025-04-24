@@ -1,12 +1,12 @@
-#!/bin/sh
+#!/bin/zsh
 
-if [[ "${ZSH_EVAL_CONTEXT}" ]]; then
+if ! [[ "${ZSH_EVAL_CONTEXT}" =~ ":file$" ]] && [[ "${ZSH_EVAL_CONTEXT}" ]]; then
   echo "${ZSH_EVAL_CONTEXT}"
   echo "not allowed to run buildutils.sh"
   exit 2
 fi
 
-. "${utilpath}/funcs.sh"
+source "${utilpath}/funcs.sh"
 
 DEFAULT_AUDIO_SAMPLERATE=22050
 DEFAULT_AUDIO_CHANNELS=1
@@ -201,4 +201,11 @@ function ensure_correct_audio_files () {
     # echo "${f}"
   done
   echo done converting
+}
+
+function file_increment_number_after_string () {
+  if [ ! $(file_exists "${1}"; echo ${?}) = 0 ]; then
+    return ${?}
+  fi
+
 }

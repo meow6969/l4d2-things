@@ -1,1 +1,5 @@
 bluearchive*
+.idea
+shutils/pythonscripts/copy_wkshpdl.sh
+__pycache__
+shutils/pythonscripts/utils/pcftest.py

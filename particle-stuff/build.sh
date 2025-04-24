@@ -1,4 +1,11 @@
-#!/bin/sh
+#!/bin/zsh
 
-vpkeditcli cyanpinkbluefire -v 1 -s -o cyanpinkbluefire.vpk
-vpkeditcli pinkrain -v 1 -s -o pinkrain.vpk
+source "$(dirname "${0}")/../shutils/pathvars.sh"
+init_pathvars
+
+python3 "${shdirpath}/edit_fire_pcfs.py" "${shdirpath}/cyanpinkbluefire/particles" "${shdirpath}/tempparticles"
+python3 "${shdirpath}/edit_rain_pcfs.py" "${shdirpath}/pinkrain/particles" "${shdirpath}/tempparticles"
+
+vpkeditcli "${shdirpath}/cyanpinkbluefire" -v 1 -s -o "${shdirpath}/cyanpinkbluefire.vpk"
+vpkeditcli "${shdirpath}/pinkrain" -v 1 -s -o "${shdirpath}/pinkrain.vpk"
+rm -r "${shdirpath}/tempparticles"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 if [ ! "${shutilspath}" ]; then
   if [ ! "${1}" ] || [ ! -d "${1}" ]; then
@@ -10,32 +10,32 @@ else
   utilpath="${shutilspath}"
 fi
 
-. "${utilpath}/colorcodes.sh"
-. "${utilpath}/funcs.sh"
+source "${utilpath}/colorcodes.sh"
+source "${utilpath}/funcs.sh"
 
 function format_path() {
   if [ ! "$1" ]; then
     return
   fi
-  echo "${PATH_COLOR}\"${@}\"${ENDC}"
+  echo "${PATH_COLOR}\"${*}\"${ENDC}"
 }
 
 function format_key() {
   if [ ! "$1" ]; then
     return
   fi
-  echo "${KEY_COLOR}${@}${ENDC}"
+  echo "${KEY_COLOR}${*}${ENDC}"
 }
 
 function format_value() {
   if [ ! "$1" ]; then
     return
   fi
-  echo "${VALUE_COLOR}${@}${ENDC}"
+  echo "${VALUE_COLOR}${*}${ENDC}"
 }
 
 function output () {
-  o_str="$(join_strings "$@")"
+  o_str="$(join_strings "${@}")"
 
   echo -e "${o_str}${ENDC}"
 }

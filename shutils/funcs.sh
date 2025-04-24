@@ -1,10 +1,16 @@
-#!/bin/sh
+#!/bin/zsh
 
-if [[ "${ZSH_EVAL_CONTEXT}" ]]; then
+if ! [[ "${ZSH_EVAL_CONTEXT}" =~ ":file$" ]] && [[ "${ZSH_EVAL_CONTEXT}" ]]; then
   echo "${ZSH_EVAL_CONTEXT}"
   echo "not allowed to run funcs.sh"
   exit 2
 fi
+
+function ensure_params () {
+  if [ ! "${#}" = 2 ]; then
+    return "1"
+  fi
+}
 
 function file_exists () {
   if [ ! -f "$1" ]; then
@@ -20,7 +26,7 @@ function join_strings () {
   o_str=""
 
   first_param=true
-  for param in "$*"; do 
+  for param in "${@}"; do
     if [ "${first_param}" = true ]; then
       first_param=false
       o_str="${o_str}${param}"
@@ -75,7 +81,7 @@ function get_last_build () {
   fi
 
   lbtext="$(cat "${1}/last_build.txt")"
-  if [ ! $(is_string_integer "${lbtext}") ]; then
+  if [ ! "$(is_string_integer "${lbtext}")" ]; then
     return
   fi
   echo "${lbtext}"
@@ -86,7 +92,7 @@ function get_realpath () {
   if [ ! "${1}" ]; then
     return
   fi
-  echo "$(readlink -f -- "${1}")"
+  readlink -f -- "${1}"
 }
 
 function get_most_recent_file () {
@@ -108,7 +114,7 @@ function get_file_date () {
   meowmeow="$(get_realpath "${1}")"
   # echo "meowmeow		= ${meowmeow}" > `tty`
   if [ ! -f "${meowmeow}" ]; then
-    echo $meowmeow > `tty`
+    echo "${meowmeow}" > "$(tty)"
     return
   fi
   meowmeowdate="$(date -r "${meowmeow}" "+%s")"
@@ -120,5 +126,5 @@ function get_file_date () {
 }
 
 function get_most_recent_file_date () {
-  echo "$(get_file_date "$(get_most_recent_file "${1}" )" )"
+  get_file_date "$(get_most_recent_file "${1}" )"
 }
