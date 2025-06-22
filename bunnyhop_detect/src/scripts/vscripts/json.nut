@@ -1,7 +1,13 @@
-/* function printl(line)
+// custom json serializer/deserializer for l4d2
+// made by meow
+// if u encounter errors make a issue on the github: https://github.com/meow6969/l4d2-things
+
+
+// uncomment this line if u are running this script not in l4d2
+function printl(line="")
 {
 	printf(line+"\n");
-} */
+} 
 
 if (!("Json" in getroottable()))
 {
@@ -33,6 +39,9 @@ function Json::Utils::PrintThing(theThing, returnString=false)
 			break;
 		case "string":
 			pStr = "\""+theThing+"\"";
+			break;
+		case "null":
+			pStr = "null";
 			break;
 		default:
 			pStr = theThing.tostring();
@@ -94,6 +103,53 @@ function Json::Utils::IsFloat(theString)
 function Json::Utils::IsNumber(theString)
 {
 	return ::Json.Utils.IsInteger(theString) || ::Json.Utils.IsFloat(theString);
+}
+
+function Json::Utils::EscapeString(theString)
+{
+	local pointer = 0;
+	local rStr = "";
+	
+	while (pointer < theString.len())
+	{
+		local theChar = theString[pointer].tochar();
+	
+		switch (theChar)
+		{
+			case "\\":
+				rStr += "\\\\";
+				break;
+			case "\t":
+				rStr += "\\t";
+				break;
+			case "\r":
+				rStr += "\\r";
+				break;
+			case "\n":
+				rStr += "\\n";
+				break;
+			case "\f":
+				rStr += "\\f";
+				break;
+			case "\b":
+				rStr += "\\b";
+				break;
+			case "\v":
+				rStr += "\\v";
+				break;
+			/* case "'":
+				pStr += "'";
+				break; */
+			case "\"":
+				rStr += "\\\"";
+				break;
+			default:
+				rStr += theChar;
+				break;
+		}
+		pointer++;
+	}
+	return rStr;
 }
 
 function Json::Utils::FileToStr(filepath)
@@ -225,7 +281,7 @@ function Json::Deserialize::ParseString(parseTracker)
 				gettingHex = -1;
 			}
 		}
-	
+
 		if (nextEscaped)
 		{
 			switch (theChar)
@@ -265,6 +321,13 @@ function Json::Deserialize::ParseString(parseTracker)
 			nextEscaped = !nextEscaped;
 			continue;
 		}
+
+		if (theChar == "\\") 
+		{
+			nextEscaped = true;
+			continue;
+		}
+
 		if (theChar == "\"")
 		{
 			break;
@@ -415,6 +478,36 @@ function Json::Deserialize::ParseBool(parseTracker)
 	}
 	throw "Json::Deserialize::ParseBool(): did not get enough chars";
 }
+
+function Json::Deserialize::ParseNull(parseTracker)
+{
+	local theChar = parseTracker.CurChar();
+	local expectation = "null";
+
+	if (theChar != "n") { 
+		throw "Json::Deserialize::ParseNull(): got invalid first char expected n got "+theChar;
+	}
+
+	local expectationIndex = 0;
+	
+	while (parseTracker.PointerNotReachedEnd())
+	{
+		parseTracker.PointerAdd();
+		expectationIndex++;
+		local theChar = parseTracker.CurChar();
+
+		if (theChar != expectation[expectationIndex].tochar())
+		{
+			throw "Json::Deserialize::ParseNull(): got invalid char expected "+expectation[expectationIndex].tochar()+" got "+theChar;
+		}
+
+		if (expectationIndex == expectation.len() - 1)
+		{
+			return null;
+		}
+	}
+	throw "Json::Deserialize::ParseNull(): did not get enough chars";
+}
  
 function Json::Deserialize::ParseValue(parseTracker)
 {
@@ -437,6 +530,8 @@ function Json::Deserialize::ParseValue(parseTracker)
 		case "t":
 			return ::Json.Deserialize.ParseBool(parseTracker);
 			break;
+		case "n":
+			return ::Json.Deserialize.ParseNull(parseTracker);
 		default:
 			if (::Json.Utils.IsNumber(parseTracker.CurChar()))
 			{
@@ -480,8 +575,8 @@ function Json::Serialize::ExpandIndent(indentAmt)
 function Json::Serialize::String(theString, baseIndent=2, curIndent=0, lineSep="\n")
 {
 	// return "\""+escaped(theString)+"\"";
-	return "\""+theString+"\"";
-}
+	return "\""+::Json.Utils.EscapeString(theString)+"\"";
+} 
 
 function Json::Serialize::Table(theTable, baseIndent=2, curIndent=0, lineSep="\n")
 {
