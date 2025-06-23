@@ -1,0 +1,5 @@
+VertexLitGeneric
+{
+	$baseTexture "models/meowmeow/lilpeanuthomu/moustachiokyubey.vtf"
+	$surfaceprop default
+}

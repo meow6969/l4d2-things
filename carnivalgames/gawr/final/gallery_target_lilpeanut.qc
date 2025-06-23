@@ -16,7 +16,7 @@ $contents "solid"
 
 $illumposition -0.489 -0.496 -6.729
 
-$cdmaterials "models\props_fairgrounds\"
+$cdmaterials "models\meowmeow\lilpeanuthomu"
 
 $cbox 0 0 0 0 0 0
 

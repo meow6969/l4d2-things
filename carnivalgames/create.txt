@@ -1,0 +1,4 @@
+prop_dynamic_create props_fairgrounds/gallery_target_lilpeanut.mdl
+prop_dynamic_create "props_fairgrounds/lil'peanut_cutout001.mdl"
+
+prop_dynamic_create props_fairgrounds/gallery_target_moustachio.mdl
