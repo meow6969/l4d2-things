@@ -8,7 +8,7 @@
  * sephora ([steam](https://steamcommunity.com/id/deathbydolls)): creator of pink wood texture ([workshop mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2829210319))  
  * pinhead ([steam](https://steamcommunity.com/id/mariogamerap)): helping with textures  
 
-## showcase  
+## showcase (youtube) 
 
-![mod showcase](https://www.youtube.com/watch?v=0yR724g3YpU)
+[![mod showcase](https://img.youtube.com/vi/0yR724g3YpU/0.jpg)](https://www.youtube.com/watch?v=0yR724g3YpU)
 
