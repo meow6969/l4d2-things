@@ -10,5 +10,5 @@
 
 ## showcase  
 
-[![mod showcase](https://img.youtube.com/vi/0yR724g3YpU/0.jpg)](https://www.youtube.com/watch?v=0yR724g3YpU)
+![mod showcase](https://www.youtube.com/watch?v=0yR724g3YpU)
 
