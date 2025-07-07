@@ -1,7 +1,7 @@
 
 # meow bunnyhop detect  
 
-this is a fork of (simple bunnyhop detect)[https://steamcommunity.com/sharedfiles/filedetails/?id=2256379828]  
+this is a fork of [simple bunnyhop detect](https://steamcommunity.com/sharedfiles/filedetails/?id=2256379828)  
 this one is heavily modified to add new features and alter bunny hop detection  
 the included json.nut is a vscript json serializer and deserializer that supports the entire json standard  
 you can use it in your own mods if you want to, i worked very hard on it  
