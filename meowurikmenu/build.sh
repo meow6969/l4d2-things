@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 if [[ "${ZSH_EVAL_CONTEXT}" =~ :file$ ]]; then
   echo "not allowed to source build.sh"
@@ -9,4 +9,4 @@ fi
 init_pathvars 
 echo_pathvars
 # echo "${shpath}"
-vpkeditcli -v 1 -s -o "${pakpath}" "${srcpath}"
+vpkeditcli --no-progress -v 1 -s -o "${pakpath}" "${srcpath}"

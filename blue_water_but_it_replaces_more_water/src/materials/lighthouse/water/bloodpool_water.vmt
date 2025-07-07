@@ -1,0 +1,36 @@
+Water
+{
+$normalmap "liquids/water_river_normal_sharp"
+$flowmap "liquids/c5m1_hflowmap"
+$flow_normaluvscale 180.0
+$flow_worlduvscale 0.5
+$flow_timeintervalinseconds 0.5
+$flow_uvscrolldistance 0.12
+$flow_bumpstrength 0.4
+$flow_timescale 1.0
+$flow_noise_texture "liquids/water_noise"
+$flow_noise_scale 0.0006
+$flow_debug 0
+$refract 1
+$refractamount "1.0"
+$refracttint "{ 0   64  128 }"
+$abovewater 1
+$bottommaterial "lighthouse/water/bloodpool_water_beneath"
+$fogenable 1
+$fogstart 0
+$fogend 20
+$lightmapwaterfog 0
+">=DX90_20b"
+{
+$fogcolor "{ 0   64  128 }"
+$flashlighttint 50
+}
+"<DX90_20b"
+{
+$fogcolor "{ 0   64  128 }"
+$flashlighttint 200
+}
+"%compilewater" 1
+"%tooltexture" "nature/water_frame01_normal"
+$surfaceprop water
+}

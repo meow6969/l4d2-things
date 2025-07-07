@@ -1,0 +1,37 @@
+Water
+{
+"%tooltexture" "nature/water_frame01_normal"
+$refract 1
+$refractamount ".5"
+$reflecttexture _rt_WaterReflection
+$reflectamount ".5"
+$reflecttint "{ 130 165 160 }"
+$reflectskyboxonly 1
+$reflectentities 1
+$envmap env_cubemap
+$envmapmask "lighthouse/water/water_estuary_ref"
+$envmaptint "[.3 .32 .35]"
+$abovewater 1
+$scale "[1 1]"
+$bumpmap "nature/water_frame01_dudv"
+$normalmap "nature/water_frame01_normal"
+"%compilewater" 1
+$surfaceprop water
+$bottommaterial "lighthouse/water/water_estuary_beneath"
+$bumpframe 0
+$fogenable 1
+$fogcolor "{10 18 15}"
+$fogstart 8.00
+$fogend 32.00
+$scroll1 "[.01 .01 .05]"
+$scroll2 "[-.025 .025 .075]"
+Proxies
+{
+TextureScroll
+{
+texturescrollvar $bumptransform
+texturescrollrate .5
+texturescrollangle 270.00
+}
+}
+}

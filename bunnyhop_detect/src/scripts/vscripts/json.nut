@@ -4,10 +4,10 @@
 
 
 // uncomment this line if u are running this script not in l4d2
-function printl(line="")
-{
-	printf(line+"\n");
-} 
+// function printl(line="")
+// {
+// 	printf(line+"\n");
+// }
 
 if (!("Json" in getroottable()))
 {
@@ -649,7 +649,7 @@ function Json::Serialize::ToString(theObject, indent=2)
 function Json::Serialize::ToFile(filepath, theObject, indent=2)
 {
 	local wStr = ::Json.Serialize.ToString(theObject, indent);
-	printl("Json::Serialize::ToFile(): wStr="+wStr);
+	// printl("Json::Serialize::ToFile(): wStr="+wStr);
 	::Json.Utils.StrToFile(filepath, wStr);
 }
 

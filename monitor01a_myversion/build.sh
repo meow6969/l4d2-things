@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 if [[ "${ZSH_EVAL_CONTEXT}" =~ :file$ ]]; then
   echo "not allowed to source build.sh"

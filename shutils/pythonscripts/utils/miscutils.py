@@ -14,11 +14,11 @@ class CCs:
 
 
 class DebugLogLevel(Enum):
+    ERROR = -2
     NONE = -1
     HUMAN = 0
     DEBUG = 1
     VERBOSE = 2
-    ERROR = 3
 
     def do_msg_edit(self, msg: str) -> str:
         match self:

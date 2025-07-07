@@ -1,0 +1,101 @@
+"graphics_nya"
+{
+//Row 3
+	    "tip_boomer_vomit"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"0"
+				"y"			"128"
+				"width"		"128"
+				"height"	"128"		
+		}
+		"tip_boomer_swipe"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"128"
+				"y"			"128"
+				"width"		"128"
+				"height"	"128"			
+		}
+		"tip_hunter_pounce"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"256"
+				"y"			"128"
+				"width"		"128"
+				"height"	"128"		
+		}
+		"tip_hunter_swipe"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"384"
+				"y"			"128"
+				"width"		"128"
+				"height"	"128"		
+		}
+		"tip_smoker_pull"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"512"
+				"y"			"128"
+				"width"		"128"
+				"height"	"128"		
+		}		
+		"tip_smoker_swipe"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"640"
+				"y"			"128"
+				"width"		"128"
+				"height"	"128"			
+		}
+		"tip_jockey_pounce"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"768"
+				"y"			"128"
+				"width"		"128"
+				"height"	"128"			
+		}
+		"tip_jockey_swipe"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"896"
+				"y"			"128"
+				"width"		"128"
+				"height"	"128"			
+		}
+    // Row 4
+		"tip_charger_charge"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"0"
+				"y"			"256"
+				"width"		"128"
+				"height"	"128"		
+		}
+		"tip_charger_pummel"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"128"
+				"y"			"256"
+				"width"		"128"
+				"height"	"128"			
+		}
+		"tip_spitter_spit"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"256"
+				"y"			"256"
+				"width"		"128"
+				"height"	"128"			
+		}
+		"tip_spitter_claw"
+		{
+				"file"		"vgui/tipgraphic"
+				"x"			"384"
+				"y"			"256"
+				"width"		"128"
+				"height"	"128"			
+		}	
+}

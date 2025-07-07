@@ -36,14 +36,15 @@ function ensure_init () {
   fi
 }
 
-function init_pathvars() {
-  shpath="$(echo "${funcfiletrace[*]}" | sed "s/:[0-9]*$//")"
-  ensure_file "${shpath}"
-  pathvarspath="$(readlink -f --  "$(echo "${funcsourcetrace[*]}" | sed "s/:[0-9]*$//")" )"
+function init_pythonvars() {
+  # $1 = shutilspath
+  if ! [[ "${1}" ]]; then
+    exit 1
+  fi
 
-  shutilspath="$(readlink -f -- "$( dirname "${pathvarspath}" )" )"
-  pyvenvpath="$(readlink -f -- "${shutilspath}/../.venv" )"
-  pyscriptspath="$(readlink -f -- "${shutilspath}/pythonscripts")"
+  pyvenvpath="$(readlink -f -- "${1}/../.venv" )"
+  pyscriptspath="$(readlink -f -- "${1}/pythonscripts")"
+
   if [[ ! -d "${pyvenvpath}" ]]; then
     echo "python venv not created, doing it for you..."
     python3 -m venv "${pyvenvpath}"
@@ -54,6 +55,15 @@ function init_pathvars() {
   fi
 #  declare -gx PYTHONPATH="${pyscriptspath}:${PYTHONPATH}"
   export PYTHONPATH="${pyscriptspath}:${PYTHONPATH}"
+}
+
+function init_pathvars() {
+  shpath="$(echo "${funcfiletrace[*]}" | sed "s/:[0-9]*$//")"
+  ensure_file "${shpath}"
+  pathvarspath="$(readlink -f --  "$(echo "${funcsourcetrace[*]}" | sed "s/:[0-9]*$//")" )"
+
+  shutilspath="$(readlink -f -- "$( dirname "${pathvarspath}" )" )"
+  init_pythonvars "${shutilspath}"
 
 #  ensure_file "${shutilspath}/l4d2path.txt"
   l4d2path="$(python "${shutilspath}/pythonscripts/get_l4d2_dir.py")"

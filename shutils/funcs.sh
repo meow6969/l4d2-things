@@ -128,3 +128,12 @@ function get_file_date () {
 function get_most_recent_file_date () {
   get_file_date "$(get_most_recent_file "${1}" )"
 }
+
+function get_file_extension () {
+  if ! [[ "${1}" ]]; then
+    return 1
+  fi
+  filename="$(basename -- "${1}")"
+  echo "${filename##*.}"
+  return 0
+}

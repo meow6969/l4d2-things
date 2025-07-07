@@ -1,0 +1,24 @@
+LightmappedGeneric
+{
+$basetexture "dev/water"
+$no_draw 1
+"%compilewater" 1
+$surfaceprop water
+$forcecheap 1
+$bottommaterial "lighthouse/water/invisible_water_beneath"
+$abovewater 1
+$fogenable 1
+$fogstart 1
+$fogend 16
+$lightmapwaterfog 0
+">=DX90_20b"
+{
+$fogcolor "{ 0   64  128 }"
+$flashlighttint 50
+}
+"<DX90_20b"
+{
+$fogcolor "{ 0   64  128 }"
+$flashlighttint 20
+}
+}

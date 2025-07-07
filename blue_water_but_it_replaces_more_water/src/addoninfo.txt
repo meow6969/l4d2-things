@@ -1,0 +1,17 @@
+// The addoninfo.txt file is a metadata file that is required by all Source Engine Add-ons.
+ 
+"AddonInfo"
+{
+	addonSteamAppID		550
+	addontitle		"Blue Water but it replaces more water"    // Add-on title that shows up in Add-ons list. ~20 chars max
+	addonversion		1.0
+	addontagline		""
+	addonauthor		"Kanna M Kamui"
+	addonSteamGroupName	""
+	addonauthorSteamID	"" 
+	addonContent_Script	1
+	addonURL0		""
+	addonDescription	"Replaces muddy waters into blue waters nya"
+	addonDescription_FR	""   
+ 
+}

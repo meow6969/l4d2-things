@@ -1,0 +1,188 @@
+"graphics_nya"
+{
+// Bottom of Tipgraphic file
+// Infected Panels (find a place to spawn)
+    "tip_hunter"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"832"
+			"y"			"448"
+			"width"		"192"
+			"height"	"192"		
+	}
+	"tip_spitter"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"256"
+			"y"			"640"
+			"width"		"192"
+			"height"	"192"		
+	}
+	"tip_jockey"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"256"
+			"y"			"832"
+			"width"		"192"
+			"height"	"192"		
+	}
+	"tip_charger"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"256"
+			"y"			"448"
+			"width"		"192"
+			"height"	"192"		
+	}
+	"tip_boomer"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"64"
+			"y"			"832"
+			"width"		"192"
+			"height"	"192"		
+	}
+	"tip_tank"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"64"
+			"y"			"640"
+			"width"		"192"
+			"height"	"192"		
+	}
+	"tip_smoker"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"832"
+			"y"			"832"
+			"width"		"192"
+			"height"	"192"		
+	}	
+// StatScreenIcons
+	"Stat_Most_Tank_Dmg"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"64"
+			"y"			"640"
+			"width"		"192"
+			"height"	"192"
+	}	
+	"Stat_Most_Special_Kills"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"448"
+			"y"			"448"
+			"width"		"192"
+			"height"	"192"
+	}	
+	"Stat_Most_Melee_Kills"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"448"
+			"y"			"832"
+			"width"		"192"
+			"height"	"192"
+	}	
+	"Stat_Most_Infected_Kills"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"640"
+			"y"			"640"
+			"width"		"192"
+			"height"	"192"
+	}	    
+	"Stat_Most_Headshots"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"448"
+			"y"			"640"
+			"width"		"192"
+			"height"	"192"
+	}
+	"Stat_Most_Witch_Dmg"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"832"
+			"y"			"640"
+			"width"		"192"
+			"height"	"192"
+	}	
+
+    "Stat_vs_Most_Damage_Done"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"640"
+			"y"			"448"
+			"width"		"192"
+			"height"	"192"
+	}
+	"Stat_vs_Most_Hunter_Pounces"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"832"
+			"y"			"448"
+			"width"		"192"
+			"height"	"192"
+	}
+	"Stat_vs_Most_Smoker_Pulls"
+	{
+			"file"		"vgui/tipgraphic"
+			"x"			"832"
+			"y"			"832"
+			"width"		"192"
+			"height"	"192"
+	}
+	"Stat_vs_Most_Vomit_Hit"
+	{
+
+			"file"		"vgui/tipgraphic"
+			"x"			"64"
+			"y"			"832"
+			"width"		"192"
+			"height"	"192"
+	}
+	"Stat_vs_Most_Spit_Dmg"
+	{
+
+			"file"		"vgui/tipgraphic"
+			"x"			"256"
+			"y"			"640"
+			"width"		"192"
+			"height"	"192"
+	}
+	"Stat_vs_Most_Jockey_Rides"
+	{
+
+			"file"		"vgui/tipgraphic"
+			"x"			"256"
+			"y"			"832"
+			"width"		"192"
+			"height"	"192"
+	}
+	"Stat_vs_Most_Damage_As_Tank"
+	{
+
+			"file"		"vgui/tipgraphic"
+			"x"			"64"
+			"y"			"640"
+			"width"		"192"
+			"height"	"192"
+	}
+	"Stat_vs_Most_Damage_As_Charger"
+	{
+
+			"file"		"vgui/tipgraphic"
+			"x"			"256"
+			"y"			"448"
+			"width"		"192"
+			"height"	"192"
+	}
+	"baka_nick_picture"
+	{
+		"file" 			"vgui/tipgraphic"
+		"x" 			"640"
+		"y" 			"832"
+		"width" 		"192"
+		"height" 		"192"
+	}
+}

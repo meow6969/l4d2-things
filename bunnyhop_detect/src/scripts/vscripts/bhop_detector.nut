@@ -16,7 +16,7 @@ IncludeScript("json.nut");
 	BunnyTickerEnt			= null,
 	JumpingList			= {}, 		//	dict[str, entity<player>]
 							//	this maps entity indexes to player objects
-	build_num=12
+	build_num=14
 }
 
 ::BhopFunc <-
@@ -103,7 +103,7 @@ IncludeScript("json.nut");
 	
 	SendToAllNonIgnoredPlayers = function (message)
 	{
-		printl("SendToAllNon");
+		// printl("SendToAllNon");
 		local player = null;
 		while (player = Entities.FindByClassname(player, "player"))
 		{
@@ -113,7 +113,7 @@ IncludeScript("json.nut");
 			}
 			if (IsPlayerIgnored(player))
 			{
-				printl(player.GetPlayerName()+" was ignored SendToALlNon");
+				// printl(player.GetPlayerName()+" was ignored SendToAllNon");
 				continue;
 			}
 			ClientPrint(player,5,message);
@@ -124,7 +124,7 @@ IncludeScript("json.nut");
 	{
 		if (!this.IsAlive(player) || ::BhopFunc.IsPlayerIgnored(player))
 		{
-			printl("checkBhop(): ignoring player");
+			// printl("checkBhop(): ignoring player");
 			return false;
 		}
 		
@@ -153,7 +153,7 @@ IncludeScript("json.nut");
 			LBT[index] = 0;
 
 			BGT[index]=0;
-			printl("checkBhop(): failure");
+			// printl("checkBhop(): failure");
 			return false;
 		}
 

@@ -1,0 +1,147 @@
+pics64/animegirlwithhersillypet.png = ['tips_spitter']
+
+// https://ru.pinterest.com/imnyasix/
+pics64/coolanimepicture4.png = ['tip_tank_incap']
+
+// https://danbooru.donmai.us/posts/6671050
+pics64/coolcirnopicture2.png = ['tip_shove', 'tip_crouch']
+
+// https://www.tumblr.com/ratazanarte
+pics64/nyn is beary.png = ['tip_witch']
+
+// cant find source
+pics64/TOUHOU.png = ['tips_smoker']
+
+// cant find exact source 
+// https://x.com/uni_mafumafu/status/901767123176873984
+pics64/700750654372708392.png = ['tips_hunter']
+
+// screenshot from senko san anime
+pics64/c52ef1eead9a8b19722d0aa988a3d41a.png = ['tip_heal', 'tip_pipebomb']
+
+// cant find source
+pics64/coolcirnopicture3.png = ['tip_doorbreak']
+
+// https://x.com/purplenipple4
+pics64/nanachihasak47.png = ['tip_items', 'tip_shotguns']
+
+// cant find source
+pics64/mikuiscomputerwires.png = ['tip_boomer_bile']
+
+// cant find source
+pics64/nekoanimefigure.png = ['tip_upgradepack']
+
+// no game no life screenshot
+pics64/15032958.png = ['tip_lasersight']
+
+// https://x.com/hitsukuya/status/1837254157595725862
+pics64/0ebec5e9ad50c5578df47406324c061c.png = ['tip_melee']
+
+// https://danbooru.donmai.us/posts/7611875
+pics64/offeringfumotomion.png = ['tips_charger']
+
+// monogatari screenshot
+pics64/animegirl.png = ['tips_jockey']
+
+// cant find source
+pics64/d33de656548bfec1c30e51bd211a39bd.png = ['tip_revive']
+
+// https://x.com/suzsentoo/status/1668247801984348161
+pics64/pfp17.jpg = ['tips_tank']
+
+// https://x.com/CirnoTV/status/1071995308140191744
+pics64/sillycirnobaka.png = ['tips_boomer']
+
+// cant find source
+pics64/schizo.png = ['tip_checkpoint']
+
+// cant find source
+pics64/coolcirnopicture3.jpg = ['tip_explosive_ammo']
+
+// https://www.pixiv.net/en/users/869368
+pics64/a12b685f-17d8-4f69-8b2a-ff2ba0487a6f.png = ['tip_incendiary_ammo']
+
+// not sure, think its from a konosuba special
+pics64/0b877837d91faf3bab4cf29821798b17.png = ['tip_syringe']
+
+// steam emoji for this game: https://store.steampowered.com/app/882710/_TouHou_Makuka_Sai__Fantastic_Danmaku_Festival/
+pics64/baka.png = ['tip_grenadelauncher']
+
+// cant find source, popular internet image 
+pics128/animehedgehogbestimageeversaddepressionepicamazinglifechanging.png = ['tip_boomer_vomit']
+
+// pretty sure its https://www.reddit.com/r/GawrGura/comments/k4vev4/emo_gura/
+pics128/emo gawr gura.png = ['tip_boomer_swipe']
+
+// https://danbooru.donmai.us/posts/3683017
+pics128/meusingdiscord.png = ['tip_hunter_pounce']
+
+// https://ru.pinterest.com/imnyasix/
+pics128/coolanimepicture29.png = ['tip_hunter_swipe']
+
+// https://ru.pinterest.com/imnyasix/
+pics128/coolanimepicture28.png = ['tip_smoker_pull']
+
+// cant find source
+pics128/coolkonatapictureluckystar.png = ['tip_smoker_swipe']
+
+// cant find source, popular internet image 
+pics128/homuradoingcocainedrugs.png = ['tip_jockey_pounce']
+
+// https://ru.pinterest.com/imnyasix/
+pics128/coolanimepicture27.png = ['tip_jockey_swipe']
+
+// https://danbooru.donmai.us/posts/5092429
+pics128/funnyanimegirlonpc.png = ['tip_charger_charge']
+
+// screenshot of kuina from hinako note anime
+pics128/image1.png = ['tip_charger_pummel']
+
+// https://danbooru.donmai.us/posts/9550469
+pics128/coolcirnopicture7.png = ['tip_spitter_spit']
+
+// https://ru.pinterest.com/imnyasix/
+pics128/coolanimepicture32.png = ['tip_spitter_claw']
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//// these are all album covers from cyte/cytekinesis or their side project rbm noise ensemble ////
+
+pics192/cytekinesis_shutupfool.png = ['tip_hunter', 'Stat_vs_Most_Hunter_Pounces']
+
+pics192/rbmnoiseensemble_rbmnoiseensemble.png = ['tip_spitter', 'Stat_vs_Most_Spit_Dmg']
+
+pics192/cytekinesis_qualitystart.png = ['tip_jockey', 'Stat_vs_Most_Jockey_Rides']
+
+pics192/rbmnoiseensemble_rbmnoiseensemble3.jpg = ['tip_charger', 'Stat_vs_Most_Damage_As_Charger']
+
+pics192/cytekinesis_im11.png = ['tip_boomer', 'Stat_vs_Most_Vomit_Hit']
+
+pics192/rbmnoiseensemble_rbmnoiseensemble4.png = ['tip_tank', 'Stat_Most_Tank_Dmg', 'Stat_vs_Most_Damage_As_Tank']
+
+pics192/cytekinesis_cytekinesisdomesticanthology.jpg = ['tip_smoker', 'Stat_vs_Most_Smoker_Pulls']
+
+pics192/cytekinesis_cytekinesiscompilationcollection.jpg = ['Stat_Most_Special_Kills']
+
+pics192/cytekinesis_ceruleansquad.png = ['Stat_Most_Melee_Kills']
+
+pics192/cytekinesis_drewmeindreaming.png = ['Stat_Most_Infected_Kills']
+
+pics192/cytekinesis_extrainout.jpg = ['Stat_Most_Headshots']
+
+pics192/cytekinesis_fortunately.png = ['Stat_Most_Witch_Dmg']
+
+pics192/cytekinesis_impactdamage.jpg = ['Stat_vs_Most_Damage_Done']
+
+pics192/rbmnoiseensemble_rbmnoiseensemble2.jpeg = ['baka_nick_picture']
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+// i think this is the source? https://www.reddit.com/r/2hujerk/comments/pz74xs/beautiful/
+pics64/reimuwatermelon.png = ['baka_nick_hit_zombie']
+
+// cant find source, popular internet image 
+pics64/cirnoplsrespond.jpg = ['baka_pills_and_medkit']
+
+// cant find source, popular internet image 
+pics64/reimucrying.png = ['baka_gun_and_molotov']
+

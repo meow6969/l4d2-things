@@ -30,10 +30,16 @@ for kittycat in "${realdir}/"*; do
   fi
   kittylastbuild="$(get_last_build "${kittycat}")"
   kittymostrecentfile="$(get_most_recent_file "${kittycat}")"
-  if [ "$(basename "${kittymostrecentfile}")" = "last_build.txt" ]; then 
+  # echo "kittymostrecentfile=${kittymostrecentfile}"
+  
+  if [ ! "$(basename "${kittymostrecentfile}")" = "last_build.txt" ]; then 
     kittymostrecentfiledate="$(get_file_date "${kittymostrecentfile}")"
+  else
+		  output "skipping $(format_path "${kittycatname}"):\t$(format_key "last_build")=$(format_value "${kittylastbuild}")" \
+				  "most recent file is last_build.txt"
+		  continue
   fi
-
+  # echo "kittymostrecentfiledate=${kittymostrecentfiledate}"
   if [ "${kittylastbuild}" ] && [ "${kittymostrecentfiledate}" ]; then
     if [ "${kittylastbuild}" -ge "${kittymostrecentfiledate}" ]; then
       output "skipping $(format_path "${kittycatname}"):\t$(format_key "last_build")=$(format_value "${kittylastbuild}")" \
