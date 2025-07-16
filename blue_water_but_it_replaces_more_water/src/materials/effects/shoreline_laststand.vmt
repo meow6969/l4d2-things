@@ -1,6 +1,0 @@
-SpriteCard
-{
-$color "{ 0   64  128 }"
-$basetexture "effects/shoreline_laststand"
-$translucent 1
-}

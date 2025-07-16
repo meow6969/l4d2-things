@@ -4,6 +4,7 @@
 ### to be used with [this addon](https://steamcommunity.com/sharedfiles/filedetails/?id=1305079670)  
 
 this mod just makes the blue water effect apply to more water sources  
+this mod copies and pastes water files from the original mod  
 
 ### normal & cheap water materials  
 

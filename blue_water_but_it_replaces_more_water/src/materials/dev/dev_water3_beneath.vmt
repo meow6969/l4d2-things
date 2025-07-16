@@ -1,44 +1,28 @@
 Water
 {
-Water_DX60
-{
-$fallbackmaterial "nature/water_dx70_beneath"
-}
-$abovewater 0
-"%compilewater" 1
-
-$CHEAPWATERSTARTDISTANCE 500.0
-$CHEAPWATERENDDISTANCE 1000.0
-
-
-"%tooltexture" "dev/water_normal"
-$refractamount 1
-
-$reflectamount "1.0"
-
-
+$normalmap "liquids/water_river_normal_sharp"
+$flowmap "liquids/water_flow_temp"
+$flow_normaluvscale 155.0
+$flow_worlduvscale .5
+$flow_timeintervalinseconds 0.2 
+$flow_uvscrolldistance 0.075 
+$flow_bumpstrength 0.4
+$flow_timescale 0.35
+$flow_noise_texture "liquids/water_noise"
+$flow_noise_scale 0.0005
+$flow_debug 0
 $refract 1
-$scale "[1 1]"
-$bumpmap "nature/water_frame01_dudv"
-$normalmap "nature/water_frame01_normal"
-$surfaceprop water
-$bumpframe 0
+$refractamount "0.25"
+$refracttint "{  0 32 64}"
+$abovewater 0
 $fogenable 1
-$fogcolor "{ 0   32  64  }"
-$fogstart 1.00
-$fogend 120.00
-$scroll1 "[.01 .01 .05]"
-$scroll2 "[-.025 .025 .075]"
-Proxies
-{
-TextureScroll
-{
-texturescrollvar $bumptransform
-texturescrollrate .05
-texturescrollangle 45.00
-}
-WaterLOD
-{
-}
-}
+$fogstart 0
+$fogend 15
+$lightmapwaterfog 0
+
+$fogcolor "[ 0 32 64]"
+$flashlighttint 200
+"%compilewater" 1
+"%tooltexture" "nature/water_frame01_normal"
+$surfaceprop slime
 }

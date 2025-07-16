@@ -1,37 +1,34 @@
 Water
 {
-"%tooltexture" "nature/water_frame01_normal"
-$refract 1
-$refractamount ".5"
+$normalmap "liquids/water_river_normal_sharp"
+$flowmap "liquids/water_flow_temp"
+$flow_normaluvscale 155.0
+$flow_worlduvscale 0.5
+$flow_timeintervalinseconds 0.2 
+$flow_uvscrolldistance 0.075 
+$flow_bumpstrength 0.4
+$flow_timescale 0.5
+$flow_noise_texture "liquids/water_noise"
+$flow_noise_scale 0.0005
+$flow_debug 0
 $reflecttexture _rt_WaterReflection
-$reflectamount ".5"
-$reflecttint "{ 0   64  128 }"
+$reflectamount "0.4"
+$reflecttint "{ 0 64 128 }"
 $reflectskyboxonly 1
 $reflectentities 1
-$envmap env_cubemap
-$envmapmask "lighthouse/water/water_estuary_ref"
-$envmaptint "[.3 .32 .35]"
+$refract 1
+$refractamount "0.25"
+$refracttint "{ 0 64 128 }"
 $abovewater 1
-$scale "[1 1]"
-$bumpmap "nature/water_frame01_dudv"
-$normalmap "nature/water_frame01_normal"
-"%compilewater" 1
-$surfaceprop water
-$bottommaterial "lighthouse/water/water_estuary_beneath"
-$bumpframe 0
+$bottommaterial "liquids/water_milltown_m4_beneath"
 $fogenable 1
-$fogcolor "{ 0   64  128 }"
-$fogstart 8.00
-$fogend 32.00
-$scroll1 "[.01 .01 .05]"
-$scroll2 "[-.025 .025 .075]"
-Proxies
-{
-TextureScroll
-{
-texturescrollvar $bumptransform
-texturescrollrate .5
-texturescrollangle 270.00
-}
-}
+$fogstart 0
+$fogend 15
+$lightmapwaterfog 1
+
+$fogcolor "[0 64 128]"
+$flashlighttint 1
+"%compilewater" 1
+"%tooltexture" "nature/water_frame01_normal"
+$surfaceprop slime
 }

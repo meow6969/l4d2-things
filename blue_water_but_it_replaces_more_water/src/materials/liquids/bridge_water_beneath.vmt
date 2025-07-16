@@ -1,32 +1,28 @@
 Water
 {
-$refracttint "{ 0   32  64  }"
-
-$abovewater 0
-"%tooltexture" "nature/water_frame01_normal"
-$refract 1
-$refractamount ".1"
 $normalmap "liquids/water_river_normal_sharp"
-"%compilewater" 1
-$surfaceprop water
-$bottommaterial "liquids/bridge_water_beneath"
-$bumpframe 0
+$flowmap "liquids/c3m1_hflowmap"
+$flow_normaluvscale 155.0
+$flow_worlduvscale 0.5
+$flow_timeintervalinseconds 0.2 
+$flow_uvscrolldistance 0.075 
+$flow_bumpstrength 0.4
+$flow_timescale 0.5
+$flow_noise_texture "liquids/water_noise"
+$flow_noise_scale 0.0003
+$flow_debug 0
+$refract 1
+$refractamount "0.15"
+$refracttint "{  0 32 64 }"
+$abovewater 0
 $fogenable 1
-$fogcolor "{ 0   32  64  }"
-$fogstart "1.00"
-$fogend "150.00"
-$scroll1 "[.01 .01 .05]"
-$scroll2 "[-.025 .025 .075]"
-Proxies
-{
-TextureScroll
-{
-texturescrollvar $bumptransform
-texturescrollrate ".05"
-texturescrollangle "45.00"
-}
-WaterLOD
-{
-}
-}
+$fogstart 0
+$fogend 6
+$lightmapwaterfog 0
+
+$fogcolor "[ 0 32 64]"
+$flashlighttint 200
+"%compilewater" 1
+"%tooltexture" "nature/water_frame01_normal"
+$surfaceprop slime
 }
