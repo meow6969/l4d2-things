@@ -5,20 +5,25 @@
 
 this is a list of errors with the [pink material textures mod by sephora](https://steamcommunity.com/sharedfiles/filedetails/?id=2829210319)  
 i have produced a version of the mod with the errors i have noticed fixed  
-you can download this version [here](https://github.com/meow6969/l4d2-things/raw/refs/heads/master/2829210319_pink_material_textures_fixed.vpk)
+you can download this version [here](https://uploads.jestershelter.xyz/uploads/meow_1752636427_2829210319_pink_material_textures_fixed.vpk)  
 the files that are marked `original texture (not pink)` have been removed from this version  
-the files that are in the wrong places have been fixed in this version  
+the files that are in the wrong places have been fixed in this version 
+   
 this version of the mod can be directly reuploaded to the workshop without issue  
 this version will only fix pink textures that are in the wrong places or remove redundant unaltered game textures  
 u do not need to credit me  
 thank u  
+
+
+
+ERRORS
+---
 
 if the explanations here are hard to follow u can read `build.sh`  
 `build.sh` contains the script i used to remove and rename the necessary files  
 my code is probably easier to understand then my writing  
 it also created a `log.txt` file that u can read to see all of the changes that it made  
 
-ERRORS
 ---
 
 **this file is the original texture (not pink)**  
