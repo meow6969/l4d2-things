@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+
+// this is to prevent the maps from applying a different colored
+// tint to the cars
+$allowdiffusemodulation 0
+
+$baseTexture "models\props_vehicles/Cement_Truck01"
+$Envmap env_cubemap
+$EnvmapMask "models\props_vehicles\Cement_Truck01_ref"
+$envmapfresnel 1
+$envmapFresnelMinMaxExp "[.5 1.5 4]"
+$EnvmapTint "[.5 .5 .5]"
+}

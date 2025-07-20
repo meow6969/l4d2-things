@@ -1,0 +1,13 @@
+VertexLitGeneric
+{
+$basetexture "Models/props_junk/food_used"
+
+
+
+// this is to prevent the maps from applying a color tint to this texture
+$allowdiffusemodulation 0
+
+
+
+
+}

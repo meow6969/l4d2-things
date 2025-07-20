@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+// this is to prevent the maps from applying a color tint to this texture
+$allowdiffusemodulation 0
+
+$basetexture "Models/props_junk/garbage001a_01"
+$surfaceprop plastic
+}

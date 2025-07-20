@@ -1,0 +1,16 @@
+// The addoninfo.txt file is a metadata file that is required by all Source Engine Add-ons. 
+ 
+"AddonInfo"
+{
+     addonSteamAppID         500
+     addontitle              "save states"
+     addonversion           1.0
+     addontagline            "adds save states"	
+     addonauthor             "elitezrule2"
+     addonURL0               ""
+ 
+     // short description that appears in the Add-on list screen...
+     addonDescription        "adds save states" 
+
+     addonContent_Script    "1"
+}

@@ -1,0 +1,9 @@
+
+VertexLitGeneric
+{
+
+// this is to prevent the maps from applying a color tint to this texture
+$allowdiffusemodulation 0
+
+$baseTexture "models/props_urban/concreteblock_wall002.vtf"
+}

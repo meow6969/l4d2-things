@@ -1,0 +1,2 @@
+EntFire( "worldspawn", "RunScriptFile", "savestate" );
+

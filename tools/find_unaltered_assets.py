@@ -45,8 +45,8 @@ def find_all_unaltered_assets():
 
 
 def main():
-    # extract_all_addons()
-    # extract_all_game_assets()
+    extract_all_addons()
+    extract_all_game_assets()
     find_all_unaltered_assets()
 
 

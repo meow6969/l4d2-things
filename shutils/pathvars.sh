@@ -58,7 +58,7 @@ function init_pythonvars() {
 }
 
 function init_pathvars() {
-  shpath="$(echo "${funcfiletrace[*]}" | sed "s/:[0-9]*$//")"
+  shpath="$(readlink -f -- $(echo "${funcfiletrace[*]}" | sed "s/:[0-9]*$//"))"
   ensure_file "${shpath}"
   pathvarspath="$(readlink -f --  "$(echo "${funcsourcetrace[*]}" | sed "s/:[0-9]*$//")" )"
 

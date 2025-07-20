@@ -1,0 +1,16 @@
+VertexLitGeneric
+{
+$baseTexture "models\props_vehicles/PickupTruck"
+$Envmap env_cubemap
+$EnvmapMask "models\props_vehicles\PickupTruck_ref"
+$EnvmapTint "[1 1 1]"
+$EnvmapSaturation ".75"
+
+// this is to prevent the maps from applying a different colored
+// tint to the cars
+$allowdiffusemodulation 0
+
+$BlendTintByBaseAlpha 1
+$envmapfresnel 1
+$envmapFresnelMinMaxExp "[.05 .35 1]"
+}

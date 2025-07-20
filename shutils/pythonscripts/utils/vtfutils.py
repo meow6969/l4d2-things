@@ -8,6 +8,7 @@ import traceback
 from enum import Enum
 
 import vdf
+import sourcepp
 
 from utils.miscutils import debug_log, DebugLogLevel
 
@@ -61,6 +62,75 @@ class Flags(Enum):
         return r
 
 
+class MeowSequence(sourcepp.vtfpp.SHT.Sequence):
+    def __init__(self):
+        pass
+
+
+class MeowFrame(sourcepp.vtfpp.SHT.Sequence.Frame):
+    def __init__(self):
+        pass
+
+
+class MeowBounds(sourcepp.vtfpp.SHT.Sequence.Frame.Bounds):
+    def __init__(self):
+        pass
+
+
+def vtf_info_to_sht(vtf_info: dict) -> sourcepp.vtfpp.SHT | None:
+    if "resources" not in vtf_info.keys():
+        return None
+    if "particle_sheet" not in vtf_info["resources"].keys():
+        return None
+    p_sheet = vtf_info["resources"]["particle_sheet"]
+    if p_sheet["malformed"] == "1":
+        return None
+
+    ver = int(p_sheet["version"])
+    sequences = []
+    for sequence_id in p_sheet["sequences"].keys():
+        sequence_data = p_sheet["sequences"][sequence_id]
+        duration_total: float = float(sequence_data["duration_total"])
+        loop: bool = sequence_data["loop"] == "1"
+        frames = []
+        for frame_id in sequence_data["frames"].keys():
+            frame_data = sequence_data["frames"][frame_id]
+            duration: float = float(frame_data["duration"])
+            bounds = []
+            for bound_id in frame_data["bounds"]:
+                bound_data = frame_data["bounds"][bound_id]
+                x1: float = float(bound_data["x1"])
+                y1: float = float(bound_data["y1"])
+                x2: float = float(bound_data["x2"])
+                y2: float = float(bound_data["y2"])
+                # b = MeowBounds()
+                def emptyinit(self):
+                    pass
+
+                sourcepp.vtfpp.SHT.Sequence.Frame.Bounds.__init__ = emptyinit
+                # b = sourcepp.vtfpp.SHT.Sequence.Frame.Bounds.__new__(sourcepp.vtfpp.SHT.Sequence.Frame.Bounds)
+                b = sourcepp.vtfpp.SHT.Sequence.Frame.Bounds()
+                b.x1 = float(x1)
+                b.y1 = y1
+                b.x2 = x2
+                b.y2 = y2
+                bounds.append(b)
+            f = sourcepp.vtfpp.SHT.Sequence.Frame()
+            f.duration = duration
+            f.bounds = bounds
+            frames.append(f)
+        s = MeowSequence()
+        s.id = int(sequence_id)
+        s.loop = loop
+        s.frames = frames
+        s.duration_total = duration_total
+        sequences.append(s)
+    sht = sourcepp.vtfpp.SHT()
+    sht.version = ver
+    sht.sequences = sequences
+    return sht
+
+
 class VtfData:
     platform_type: str = "PC"
     version: str = "7.4"
@@ -79,11 +149,13 @@ class VtfData:
     thumbnail_present: bool
     thumbnail_format: str
     thumbnail_size: tuple[int, int]
+    particle_sheet: sourcepp.vtfpp.SHT | None = None
 
     def __init__(self, platform_type: str, version: str, image_format: str, size: tuple[int, int], depth: int,
                  mips: int, frames: int, faces: int, flags: list[Flags], reflectivity: tuple[float, float, float],
                  start_frame: int, bumpmap_scale: float, compression_method: str, compression_level: int,
-                 thumbnail_present: bool, thumbnail_format: str, thumbnail_size: tuple[int, int]):
+                 thumbnail_present: bool, thumbnail_format: str, thumbnail_size: tuple[int, int],
+                 particle_sheet: sourcepp.vtfpp.SHT | None):
         self.platform_type = platform_type
         self.version = version
         self.image_format = image_format
@@ -101,6 +173,7 @@ class VtfData:
         self.thumbnail_present = thumbnail_present
         self.thumbnail_format = thumbnail_format
         self.thumbnail_size = thumbnail_size
+        self.particle_sheet = particle_sheet
 
     def __str__(self):
         d = self.__dict__
@@ -108,6 +181,7 @@ class VtfData:
         for e in d["flags"]:
             f.append(str(e))
         d["flags"] = f
+        d["particle_sheet"] = self.particle_sheet is None
 
         return json.dumps(d, indent=2)
 
@@ -122,7 +196,8 @@ class VtfData:
             "--format", f"{self.image_format}",
             "--platform", f"{self.platform_type}",
             "--start-frame", f"{self.start_frame}",
-            "--bumpscale", f"{self.bumpmap_scale}"
+            "--bumpscale", f"{self.bumpmap_scale}",
+            "--pointsample"
         ]
         if self.compression_method != "NONE":
             cmd += [
@@ -140,11 +215,27 @@ class VtfData:
         if out_file is not None:
             cmd += ["--output", out_file]
         cmd += ["create", f"{in_file}"]
-        r = subprocess.run(cmd)
+        r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode != 0:
             debug_log(r.stdout, DebugLogLevel.ERROR)
             debug_log(r.stderr, DebugLogLevel.ERROR)
             raise RuntimeError(f"failed to create {in_file}")
+        if self.particle_sheet is None:
+            return
+        sht_path: Path = Path(f"/tmp/{in_file.name[:-4]}.sht")
+        self.particle_sheet.bake_to_file(str(sht_path))
+        r = subprocess.run([
+            "maretf",
+            "--yes",
+            "--set-particle-sheet-resource", f"{sht_path}",
+            "edit",
+            f"{out_file}"
+        ], capture_output=True, text=True)
+        if r.returncode != 0:
+            debug_log(r.stdout, DebugLogLevel.ERROR)
+            debug_log(r.stderr, DebugLogLevel.ERROR)
+            debug_log(f"particle sheet path: {sht_path}", DebugLogLevel.ERROR)
+            raise RuntimeError(f"failed to add particle sheet to {in_file}")
 
     # @staticmethod
     # def to_png(f: Path, out_file: Path | None = None) -> None:
@@ -170,11 +261,17 @@ class VtfData:
             raise FileNotFoundError(f)
         if not f.suffix == ".vtf":
             raise Exception("file is not vtf")
+        debug_log(str(["maretf", "--info-output-mode", "kv1", "info", str(f)]), DebugLogLevel.DEBUG)
         r = subprocess.run(["maretf", "--info-output-mode", "kv1", "info", str(f)], capture_output=True)
         if r.returncode != 0:
             raise Exception(r.stderr)
         data = vdf.loads(r.stdout.decode("utf-8"))
-        # print(json.dumps(data, indent=2))
+
+        sht = None
+        if "particle_sheet" in data["resources"]:
+            f = sourcepp.vtfpp.VTF(str(f), False)
+            sht = f.get_resource(sourcepp.vtfpp.Resource.Type.PARTICLE_SHEET_DATA).get_data_as_particle_sheet()
+
         return VtfData(
             platform_type=data["format"]["platform"],
             version=f"{data['format']['version_major']}.{data['format']['version_minor']}",
@@ -202,7 +299,8 @@ class VtfData:
             thumbnail_size=(
                 int(data["resources"]["thumbnail"]["width"]),
                 int(data["resources"]["thumbnail"]["height"])
-            )
+            ),
+            particle_sheet=sht
         )
 
 
@@ -210,7 +308,7 @@ class BatchVtfEditor:
     input_path: Path
     output_path: Path
 
-    def __init__():
+    def __init__(self):
         pass
 
 
@@ -268,10 +366,11 @@ class BatchVtfEditorStep:
 
     def edit_vtfs(self):
         if self.erase_output_folder:
-            debug_log(f"erasing output folder {self.output_path}...", DebugLogLevel.HUMAN)
-            shutil.rmtree(self.output_path)
-            debug_log(f"done erasing!", DebugLogLevel.HUMAN)
-            self.output_path.mkdir(parents=True, exist_ok=True)
+            if self.output_path.exists():
+                debug_log(f"erasing output folder {self.output_path}...", DebugLogLevel.HUMAN)
+                shutil.rmtree(self.output_path)
+                debug_log(f"done erasing!", DebugLogLevel.HUMAN)
+        self.output_path.mkdir(parents=True, exist_ok=True)
 
         for root, dirs, files in self.input_path.walk():
             root_rela_path: Path = root.relative_to(self.input_path)
@@ -288,6 +387,11 @@ class BatchVtfEditorStep:
                         debug_log(f"skipped: {rela_path}, og_file not found", DebugLogLevel.HUMAN)
                         continue
                     og_vtf_data = VtfData.from_vtf(og_file)
+                    # try:
+                    #     og_vtf_data = VtfData.from_vtf(og_file)
+                    # except Exception as e:
+                    #     debug_log(f"broken file: {og_file}", DebugLogLevel.ERROR)
+                    #     continue
                 elif not og_file.exists():
                     debug_log(f"skipped: {rela_path}, og_file not found", DebugLogLevel.HUMAN)
                 elif self.skip_non_vtf:
