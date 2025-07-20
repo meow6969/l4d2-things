@@ -40,7 +40,7 @@ vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkdecals.vpk" "${shd
 echo "meowmeowpinkmodels:"
 rm -r "${shdirpath}/meowmeowpinkmodels/materials"
 mkdir -p "${shdirpath}/meowmeowpinkmodels/materials/models/" 
-mv -v "${srcpath}/materials/models/"* "${shdirpath}/meowmeowpinkprops/materials/models/"
+mv -v "${srcpath}/materials/models/"* "${shdirpath}/meowmeowpinkmodels/materials/models/"
 vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkmodels.vpk" "${shdirpath}/meowmeowpinkmodels"
 
 
@@ -49,9 +49,9 @@ vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinktextures.vpk" "${s
 
 echo "creating vpks..."
 
-cp "${shdirpath}/meowmeowpinkvehicles" -fv "${l4d2path}/left4dead2/addons/meowmeowpinkvehicles.vpk"
-cp "${shdirpath}/meowmeowpinkprops"    -fv "${l4d2path}/left4dead2/addons/meowmeowpinkprops.vpk"
-cp "${shdirpath}/meowmeowpinkdecals"   -fv "${l4d2path}/left4dead2/addons/meowmeowpinkdecals.vpk"
-cp "${shdirpath}/meowmeowpinkmodels"   -fv "${l4d2path}/left4dead2/addons/meowmeowpinkmodels.vpk"
-cp "${shdirpath}/meowmeowpinktextures" -fv "${l4d2path}/left4dead2/addons/meowmeowpinktextures.vpk"
+cp "${shdirpath}/meowmeowpinkvehicles.vpk" -fv "${l4d2path}/left4dead2/addons/meowmeowpinkvehicles.vpk"
+cp "${shdirpath}/meowmeowpinkprops.vpk"    -fv "${l4d2path}/left4dead2/addons/meowmeowpinkprops.vpk"
+cp "${shdirpath}/meowmeowpinkdecals.vpk"   -fv "${l4d2path}/left4dead2/addons/meowmeowpinkdecals.vpk"
+cp "${shdirpath}/meowmeowpinkmodels.vpk"   -fv "${l4d2path}/left4dead2/addons/meowmeowpinkmodels.vpk"
+cp "${shdirpath}/meowmeowpinktextures.vpk" -fv "${l4d2path}/left4dead2/addons/meowmeowpinktextures.vpk"
 
