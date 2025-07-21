@@ -1,6 +1,6 @@
 "AddonInfo"
 {
-	addontitle		"meowmeow pink props"			//Max 127  characters.
+	addontitle		"meowmeow pink props pt3"			//Max 127  characters.
 	addonauthor		"elitezrule2"			//Max 119  characters.
 	addonDescription	"changes tons of textures to pink versions"		//Max 1023 characters.
 	addonversion		"1.3"				//Max 31   characters. Allows decimals.

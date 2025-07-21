@@ -23,11 +23,38 @@ mv -v "${srcpath}/materials/models/props_vehicles/"* "${shdirpath}/meowmeowpinkv
 vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkvehicles.vpk" "${shdirpath}/meowmeowpinkvehicles"
 
 echo "meowmeowpinkprops:"
-rm -r "${shdirpath}/meowmeowpinkprops/materials"
-mkdir -p "${shdirpath}/meowmeowpinkprops/materials/models/" 
-mv -v "${srcpath}/materials/models/prop"* "${shdirpath}/meowmeowpinkprops/materials/models/"
-mv -v "${srcpath}/materials/prop"* "${shdirpath}/meowmeowpinkprops/materials/"
-vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkprops.vpk" "${shdirpath}/meowmeowpinkprops"
+rm -r "${shdirpath}/meowmeowpinkprops_pt1/materials"
+mkdir -p "${shdirpath}/meowmeowpinkprops_pt1/materials/models/" 
+mv -v "${srcpath}/materials/models/prop"* "${shdirpath}/meowmeowpinkprops_pt1/materials/models/"
+mv -v "${srcpath}/materials/prop"* "${shdirpath}/meowmeowpinkprops_pt1/materials/"
+# vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkprops_pt1.vpk" "${shdirpath}/meowmeowpinkprops_pt1" 
+
+rm -r "${shdirpath}/meowmeowpinkprops_pt2/materials"
+mkdir -p "${shdirpath}/meowmeowpinkprops_pt2/materials/models/" 
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_fairgrounds" "${shdirpath}/meowmeowpinkprops_pt2/materials/models/"
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_unique" "${shdirpath}/meowmeowpinkprops_pt2/materials/models/"
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_mill" "${shdirpath}/meowmeowpinkprops_pt2/materials/models/"
+vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkprops_pt2.vpk" "${shdirpath}/meowmeowpinkprops_pt2"
+
+rm -r "${shdirpath}/meowmeowpinkprops_pt3/materials"
+mkdir -p "${shdirpath}/meowmeowpinkprops_pt3/materials/models/" 
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_street" "${shdirpath}/meowmeowpinkprops_pt3/materials/models/"
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_foliage" "${shdirpath}/meowmeowpinkprops_pt3/materials/models/"
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_buildables" "${shdirpath}/meowmeowpinkprops_pt3/materials/models/"
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_waterfront" "${shdirpath}/meowmeowpinkprops_pt3/materials/models/"
+vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkprops_pt3.vpk" "${shdirpath}/meowmeowpinkprops_pt3"
+
+rm -r "${shdirpath}/meowmeowpinkprops_pt4/materials"
+mkdir -p "${shdirpath}/meowmeowpinkprops_pt4/materials/models/" 
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_mall" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/"
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_signs" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/"
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_placeable" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/"
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_downtown" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/"
+mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_downtown" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/"
+vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkprops_pt4.vpk" "${shdirpath}/meowmeowpinkprops_pt4"
+
+
+vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkprops_pt1.vpk" "${shdirpath}/meowmeowpinkprops_pt1"
 
 echo "meowmeowpinkdecals:"
 rm -r "${shdirpath}/meowmeowpinkdecals/materials"
@@ -49,9 +76,12 @@ vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinktextures.vpk" "${s
 
 echo "creating vpks..."
 
-cp "${shdirpath}/meowmeowpinkvehicles.vpk" -fv "${l4d2path}/left4dead2/addons/meowmeowpinkvehicles.vpk"
-cp "${shdirpath}/meowmeowpinkprops.vpk"    -fv "${l4d2path}/left4dead2/addons/meowmeowpinkprops.vpk"
-cp "${shdirpath}/meowmeowpinkdecals.vpk"   -fv "${l4d2path}/left4dead2/addons/meowmeowpinkdecals.vpk"
-cp "${shdirpath}/meowmeowpinkmodels.vpk"   -fv "${l4d2path}/left4dead2/addons/meowmeowpinkmodels.vpk"
-cp "${shdirpath}/meowmeowpinktextures.vpk" -fv "${l4d2path}/left4dead2/addons/meowmeowpinktextures.vpk"
+cp "${shdirpath}/meowmeowpinkvehicles.vpk"  -fv "${l4d2path}/left4dead2/addons/meowmeowpinkvehicles.vpk"
+cp "${shdirpath}/meowmeowpinkprops_pt1.vpk" -fv "${l4d2path}/left4dead2/addons/meowmeowpinkprops_pt1.vpk"
+cp "${shdirpath}/meowmeowpinkprops_pt2.vpk" -fv "${l4d2path}/left4dead2/addons/meowmeowpinkprops_pt2.vpk"
+cp "${shdirpath}/meowmeowpinkprops_pt3.vpk" -fv "${l4d2path}/left4dead2/addons/meowmeowpinkprops_pt3.vpk"
+cp "${shdirpath}/meowmeowpinkprops_pt4.vpk" -fv "${l4d2path}/left4dead2/addons/meowmeowpinkprops_pt4.vpk"
+cp "${shdirpath}/meowmeowpinkdecals.vpk"    -fv "${l4d2path}/left4dead2/addons/meowmeowpinkdecals.vpk"
+cp "${shdirpath}/meowmeowpinkmodels.vpk"    -fv "${l4d2path}/left4dead2/addons/meowmeowpinkmodels.vpk"
+cp "${shdirpath}/meowmeowpinktextures.vpk"  -fv "${l4d2path}/left4dead2/addons/meowmeowpinktextures.vpk"
 

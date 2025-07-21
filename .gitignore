@@ -21,10 +21,19 @@ meowmeowpinktextures/meowmeowpinkdecals/materials/*
 meowmeowpinktextures/meowmeowpinkmodels/materials/*
 meowmeowpinktextures/meowmeowpinkvehicles/materials/*
 meowmeowpinktextures/meowmeowpinkprops/materials/*
+meowmeowpinktextures/meowmeowpinkprops_pt1/materials/*
+meowmeowpinktextures/meowmeowpinkprops_pt2/materials/*
+meowmeowpinktextures/meowmeowpinkprops_pt3/materials/*
+meowmeowpinktextures/meowmeowpinkprops_pt4/materials/*
 meowmeowpinktextures/meowmeowpinktextures.vpk
 meowmeowpinktextures/meowmeowpinkdecals.vpk
 meowmeowpinktextures/meowmeowpinkmodels.vpk
 meowmeowpinktextures/meowmeowpinkprops.vpk
+meowmeowpinktextures/meowmeowpinkprops_pt1.vpk
+meowmeowpinktextures/meowmeowpinkprops_pt2.vpk
+meowmeowpinktextures/meowmeowpinkprops_pt3.vpk
+meowmeowpinktextures/meowmeowpinkprops_pt4.vpk
+
 meowmeowpinktextures/meowmeowpinkvehicles.vpk
 meowmeowpinktextures.vpk
 
