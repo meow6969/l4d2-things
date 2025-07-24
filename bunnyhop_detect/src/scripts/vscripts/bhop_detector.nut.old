@@ -23,7 +23,7 @@ IncludeScript("json.nut");
 	JumpingList				= {}, 			//	dict[str, entity<player>]
 											//	this maps entity indexes to player objects
 	</ json_ignore = true />
-	build_num=15
+	build_num=18
 } */
 
 ::BhopClasses <-
@@ -74,7 +74,7 @@ class ::BhopClasses.BhopConfig
 	PlayerInitList			= [];			// list[userid]
 												// this helps us keep track of what players are initialized
 	</ json_ignore = true />
-	build_num=15
+	build_num=18
 }
 
 class ::BhopClasses.BhopData
@@ -114,6 +114,7 @@ class ::BhopClasses.BhopChainData
 	bhopChain			= null;			// list[BhopData]
 	bhopVels			= 0;			// float<velocity> (additive)
 	maxVel				= 0;			// float<velocity>
+	</ json_ignore = true />
 	groundTime			= 0;			// int<tick>
 	score				= 0;			// float
 	</ json_ignore = true />
@@ -643,9 +644,10 @@ class ::BhopClasses.BhopChainData
 			::BhopFunc.EnsurePlayerSettings(player);
 			// ::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
 			// newPlayerInit.remove(i);
-			::BhopVars.PlayerInitList.remove(i);
+			// ::BhopVars.PlayerInitList.remove(i);
 		}
 		// ::BhopVars.PlayerInitList = newPlayerInit;
+		::BhopVars.PlayerInitList = [];
 	}
 
 	function ConfigSaveTick()
@@ -818,7 +820,7 @@ class ::BhopClasses.BhopChainData
 				ClientPrint(player,3,"you have no stats tracked!");
 				return true;
 			}
-			ClientPrint(player,5,"\x01high score: \x04"+best["score"]+"\x01, total distance bhopped: \x04"+pSet["TotalDistanceBhopped"]+"\x01, highest velocity: \x04"+pSet["HighestVelocity"]+"\x01");
+			ClientPrint(player,5,"\x01high score: \x04"+best["score"]+"\x01, total distance bhopped: \x04"+pSet["TotalDistanceBhopped"]+"\x01, total bhops: \x04"+pSet["TotalBhops"]+"\x01highest velocity: \x04"+pSet["HighestVelocity"]+"\x01");
 			return true;
 		}
 		if (message == "!bhop rules")
