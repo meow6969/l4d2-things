@@ -3,40 +3,222 @@ printl("<mt2> Load bunny-hop detect script 69  !!! 2.0")
 // dofile("json.nut");
 IncludeScript("json.nut");
 
-::BhopVars <-
+/* ::BhopVars <-
 {
-	ConfigPath			= "simple_bunnyhop_detect/bhop_detect_condition.json",
+	</ json_ignore = true />
+	ConfigPath				= "simple_bunnyhop_detect/bhop_detect_condition.json",
+	</ json_ignore = true />
 	BunnyCounter			= array(32,0),	//	dict[int, jumps<int>]
+	</ json_ignore = true />
 	LastBunnyTopSpeed		= array(32,0),	//	dict[int, velocity<float>]
+	</ json_ignore = true />
 	BunnyGroundTime			= array(32,0),	//	dict[int, ticks<int>]
 	BunnyDetectCount		= 3,
 	BunnyTickLeniency		= 3,
-	DefaultPlayerSettings		= {"IgnoreBhop": false, "IgnorePerfectJumps": false}
-	PlayerSettings			= {},		//	dict[steamID<str>, PlayerSettings[dict]]
+	DefaultPlayerSettings	= {"IgnoreBhop": false, "IgnorePerfectJumps": false},
+	PlayerSettings			= {},			//	dict[steamID<str>, PlayerSettings[dict]]
+	</ json_ignore = true />
 	BunnyTickerEnt			= null,
-	JumpingList			= {}, 		//	dict[str, entity<player>]
-							//	this maps entity indexes to player objects
-	build_num=13
+	</ json_ignore = true />
+	JumpingList				= {}, 			//	dict[str, entity<player>]
+											//	this maps entity indexes to player objects
+	</ json_ignore = true />
+	build_num=15
+} */
+
+::BhopClasses <-
+{
+	
 }
+
+class ::BhopClasses.BhopConfig
+{
+	</ json_ignore = true />
+	ConfigPath				= "simple_bunnyhop_detect/bhop_detect_condition.json";
+	// </ json_ignore = true />
+	// BunnyCounter			= array(32,0);	//	dict[int, jumps<int>]
+	// </ json_ignore = true />
+	// LastBunnyTopSpeed		= array(32,0);	//	dict[int, velocity<float>]
+	// </ json_ignore = true />
+	// BunnyGroundTime			= array(32,0);	//	dict[int, ticks<int>]
+	</ json_ignore = true />
+	ConfigAltered			= false;
+
+	BunnyDetectCount		= 3;
+	BunnyTickLeniency		= 3;
+
+	ScoringSettings			= {
+		"BhopCountMult": 0.2,
+		"BhopAvgVelocityMult": 2.0
+	};
+	
+	DefaultPlayerSettings	= {
+		"Admin": false,
+		"IgnoreBhop": false, 
+		"IgnorePerfectJumps": false, 
+		"TotalBhops": 0, 
+		"HighestVelocity": 0, 
+		"TotalDistanceBhopped": 0,
+		"BestBhop": null					// BhopChainData
+	};
+	PlayerSettings			= {};			//	dict[steamID<str>, PlayerSettings[dict]]
+	</ json_ignore = true />
+	BunnyTickerEnt			= null;
+	</ json_ignore = true />
+	BunnyUtilsTickerEnt		= null;
+	</ json_ignore = true />
+	ConfigTickerEnt			= null;
+	</ json_ignore = true />
+	JumpingList				= {}; 			//	dict[str<steamID>, BhopChainData]
+	</ json_ignore = true />
+	PlayerInitList			= [];			// list[userid]
+												// this helps us keep track of what players are initialized
+	</ json_ignore = true />
+	build_num=15
+}
+
+class ::BhopClasses.BhopData
+{
+	vel						= null;			// float
+	</ json_ignore = true />
+	jumpPos					= null;			// Vector
+	</ json_ignore = true />
+	landPos					= null;			// Vector
+	airTime					= 0;			// int<ticks>		-- idk if needed ?
+		
+	constructor(v, jP)  // , aT)			// v<float>, sP<Vector>, eP<Vector>, aT<int<ticks>>
+	{
+		this.vel = v;
+		this.jumpPos = jP;
+		this.airTime = 0;
+		// this.startPos = sP;
+		// this.landPos = eP;
+		// this.airTime = aT;
+	}
+
+	// function FinishBhop()
+
+	function StrideLength()
+	{
+		return ::BhopFunc.CalculateVectorDistance(this.jumpPos, this.landPos);
+	}
+
+	function _tostring()
+	{
+		return ::Json.Serialize.ToString(this); 
+	}
+}
+
+class ::BhopClasses.BhopChainData
+{
+	bhopChain			= null;			// list[BhopData]
+	bhopVels			= 0;			// float<velocity> (additive)
+	maxVel				= 0;			// float<velocity>
+	groundTime			= 0;			// int<tick>
+	score				= 0;			// float
+	</ json_ignore = true />
+	player				= null;			// Player
+
+	constructor(p, bhop=null)
+	{
+		this.player = p;
+		this.bhopChain = [];
+		this.bhopVels = 0;
+		this.maxVel = 0;
+		if (bhop != null)
+		{
+			this.AddBhop(bhop);
+		}
+	}
+
+	function AddBhop(bhop)
+	{
+		this.bhopChain.append(bhop);
+		/* local l = this.bhopChain.len()
+		if (l > 1)
+		{
+			this.bhopChain[l - 2].landPos = bhop.jumpPos;
+		} */
+		this.bhopVels += bhop.vel;
+		if (this.maxVel < bhop.vel)
+		{
+			this.maxVel = bhop.vel;
+		}
+	}
+
+	function IncrementAirTime()
+	{
+		this.bhopChain[this.bhopChain.len() - 1].airTime++;
+	}
+
+	function AverageVelocity()
+	{
+		return this.bhopVels / this.bhopChain.len();
+	}
+
+	function ChainDistance()
+	{
+		return ::BhopFunc.CalculateVectorDistance(this.bhopChain[0].jumpPos, this.bhopChain[this.bhopChain.len() - 1].landPos);
+	}
+
+	function ScoreBhop()  // -> bool  (false means not best bhop, true means new best bhop)
+	{
+		local numBhops = this.bhopChain.len();
+		local avgVel = this.AverageVelocity();
+		
+		local jumpMult = numBhops * ::BhopVars.ScoringSettings["BhopCountMult"];
+		local velMult = avgVel * ::BhopVars.ScoringSettings["BhopAvgVelocityMult"];
+
+		this.score = jumpMult * velMult;
+
+		local pSID = ::BhopFunc.GetPlayerSteamID(player);
+		::BhopVars.PlayerSettings[pSID]["TotalBhops"] += numBhops;
+		::BhopVars.PlayerSettings[pSID]["TotalDistanceBhopped"] += this.ChainDistance();
+		::BhopVars.ConfigAltered = true;
+		if (this.maxVel > ::BhopVars.PlayerSettings[pSID]["HighestVelocity"])
+		{
+			::BhopVars.PlayerSettings[pSID]["HighestVelocity"] = this.maxVel;
+		}
+		if (::BhopVars.PlayerSettings[pSID]["BestBhop"] == null || this.score > ::BhopVars.PlayerSettings[pSID]["BestBhop"].score)
+		{
+			local previousBest = ::BhopVars.PlayerSettings[pSID]["BestBhop"];
+			::BhopVars.PlayerSettings[pSID]["BestBhop"] = this;
+			if (previousBest == null) 
+			{
+				return 69;
+			}
+			return previousBest;
+		}
+		
+		return null;
+	}
+}
+
+::BhopVars <- ::BhopClasses.BhopConfig();
 
 ::BhopFunc <-
 {
-	
-	loadFile = function()
+	function loadFile()
 	{
-		printl("Bunnyhop detect condition (build num "+::BhopVars.build_num+" :  successfully reload !! yay!");
+		printl("Bunnyhop detect condition (build num "+::BhopVars.build_num+") :  successfully reload !! yay!");
 		local path = ::BhopVars.ConfigPath;
 		local file = FileToString(path);
 
 		if(!file)
 		{
+			printl("not file !!");
 			::BhopFunc.WriteConfig(path);
 			return;
 		}
+		
+		printl("file="+file);
 
 		try
 		{
-			local cfg = ::Json.Deserialize.String(file);
+			::BhopVars <- ::Json.Deserialize.StringToClass(file, ::BhopClasses.BhopConfig);
+			// printl("Bunnyhop detect config: "+::Json.Serialize.ToString(::BhopVars));
+
+			/* local cfg = ::Json.Deserialize.String(file);
 
 			printl("Bunnyhop detect config: "+::Json.Serialize.ToString(cfg));
 			if ("BunnyDetectCount" in cfg)
@@ -54,22 +236,27 @@ IncludeScript("json.nut");
 			if ("PlayerSettings" in cfg)
 			{
 				::BhopVars.PlayerSettings = cfg["PlayerSettings"];
-			}
+			} */
 		}
 		catch(error)
 		{
 			printl("Bunnyhop detect config parse error: "+error);
 		}
 		printl("loaded bunny hop config:");
-		printl("  BunnyDetectCount="+::BhopVars.BunnyDetectCount);
+		printl(::Json.Serialize.ToString(::BhopVars));
+		::BhopFunc.PopulatePlayerInitList();
+		
+		/* printl("  BunnyDetectCount="+::BhopVars.BunnyDetectCount);
 		printl("  BunnyTickLeniency="+::BhopVars.BunnyTickLeniency);
-		printl("  DefaultPlayerSettings="+::Json.Utils.PrintThing(::BhopVars.DefaultPlayerSettings, true));
-		printl("  PlayerSettings="+::Json.Utils.PrintThing(::BhopVars.PlayerSettings, true));
+		printl("  DefaultPlayerSettings="+::Json.Utils.WriteConfig()PrintThing(::BhopVars.DefaultPlayerSettings, true));
+		printl("  PlayerSettings="+::Json.Utils.PrintThing(::BhopVars.PlayerSettings, true)); */
 	}
 
-	WriteConfig = function (path)
+	function WriteConfig(path)
 	{
-		local wTable = {
+		// printl("WriteConfig()");
+		::Json.Serialize.ToFile(path, ::BhopVars);
+		/* local wTable = {
 			"BunnyDetectCount":		::BhopVars.BunnyDetectCount, 
 			"BunnyTickLeniency":		::BhopVars.BunnyTickLeniency, 
 			"DefaultPlayerSettings":	::BhopVars.DefaultPlayerSettings,
@@ -77,10 +264,10 @@ IncludeScript("json.nut");
 		}
 		// printl(typeof wTable);
 		// printl("wTable.keys()="+wTable.keys());
-		::Json.Serialize.ToFile(path, wTable);
+		::Json.Serialize.ToFile(path, wTable); */
 	}
 
-	IsAlive = function(player)
+	function IsAlive(player)
 	{
 		if (!player || !player.IsValid())
 		{
@@ -100,8 +287,33 @@ IncludeScript("json.nut");
 			return player.GetHealth() > 0;
 		}
 	}
+
+	function CalculateVectorDistanceSquared(v1, v2)	// v1<Vector>, v2<Vector> -> float<distanceSquared>
+	{
+		return pow(v1.x - v2.x, 2) + pow(v1.y - v2.y, 2) + pow(v1.z - v2.z, 2);
+	}
+
+	function CalculateVectorDistance(v1, v2)		// v1<Vector>, v2<Vector> -> float<distance>
+	{
+		return sqrt(::BhopFunc.CalculateVectorDistanceSquared(v1, v2));
+	}
+
+	function PopulatePlayerInitList()
+	{
+		local player = null;
+		while (player = Entities.FindByClassname(player, "player"))
+		{
+			if (IsPlayerABot(player))
+			{
+				continue;
+			}
+			local userid = player.GetPlayerUserId();
+			printl("initiating player: "+player.GetPlayerName());
+			::BhopVars.PlayerInitList.append(userid);
+		}
+	}
 	
-	SendToAllNonIgnoredPlayers = function (message)
+	function SendToAllNonIgnoredPlayers(message)
 	{
 		// printl("SendToAllNon");
 		local player = null;
@@ -120,39 +332,41 @@ IncludeScript("json.nut");
 		}
 	}
 
-	checkBhop = function (player)
+	function checkBhop(player)
 	{
-		if (!this.IsAlive(player) || ::BhopFunc.IsPlayerIgnored(player))
+		if (this.ShouldIgnorePlayer(player) || ::BhopFunc.IsPlayerIgnored(player))
 		{
 			// printl("checkBhop(): ignoring player");
 			return false;
 		}
 		
-		local vars = ::BhopVars;
-		local pName = player.GetPlayerName();
-		local index = player.GetEntityIndex();
-		local LBT = vars.LastBunnyTopSpeed;
-		local BGT = vars.BunnyGroundTime;
-		local speed = ::BhopFunc.GetPlayerSpeed(player);
+		// local vars = ::BhopVars;
 		
-		if(speed > LBT[index])
+		local id = this.GetPlayerSteamID(player);
+		// ClientPrint(null,3,"groundTime="+this.BhopVars.JumpingList[id].groundTime);
+		
+		if(this.BhopVars.JumpingList[id].groundTime >= ::BhopVars.BunnyTickLeniency)
 		{
-			LBT[index] = speed;
-		}
-		if(BGT[index] >= vars.BunnyTickLeniency)
-		{
-			local BC = vars.BunnyCounter;
-			local count = BC[index];
-			local topspeed = floor(LBT[index]+0.5); // does +0.5 to always round up i think
-			if(count >= vars.BunnyDetectCount)
+			local pName = player.GetPlayerName();
+			// local speed = this.GetPlayerSpeed(player);
+			local bhopChain = ::BhopVars.JumpingList[id];
+			
+			local count = bhopChain.bhopChain.len();
+			local topspeed = bhopChain.maxVel.tointeger();
+			if(bhopChain.bhopChain.len() >= ::BhopVars.BunnyDetectCount)
 			{
-				::BhopFunc.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 got \x05"+count+"\x01 bunnyhop"+((count > 1)?"s":"")+ " in a row (top speed: \x05"+topspeed+"\x01)");
+				local best = bhopChain.ScoreBhop();
+				this.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 got \x05"+count+"\x01 bunnyhop"+((count > 1)?"s":"")+ " in a row (top speed: \x05"+topspeed+"\x01, score: \x05"+bhopChain.score+"\x01)");
+				if (best == 69)
+				{
+					this.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 got their first bunnyhop record!");
+				}
+				else if (best != null)
+				{
+					this.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 beat their bunnyhop record! \x05+"+(bhopChain.score - best.score)+"\x01 points!");
+				}
 				// ClientPrint(null,5,"\x04"+pName+"\x01 got \x05"+count+"\x01 bunnyhop"+((count > 1)?"s":"")+ " in a row (top speed: \x05"+topspeed+"\x01)");
 			}
-			BC[index] = 0;
-			LBT[index] = 0;
-
-			BGT[index]=0;
 			// printl("checkBhop(): failure");
 			return false;
 		}
@@ -160,38 +374,39 @@ IncludeScript("json.nut");
 		return true;
 	}
 
+	
 	// this function stole from vslib
-	IsEntityOnGroundVSLib = function(entity) 
+	function IsEntityOnGroundVSLib(entity) 
 	{
 		local flags = NetProps.GetPropInt(entity, "m_fFlags");
 		return flags == ( flags | 1 );
 	}
 
-	GetPlayerSpeed = function (player) 
+	function GetPlayerSpeed(player) 
 	{
 		return player.GetVelocity().Length();
 	}
 
-	GetPlayerSteamID = function (player)
+	function GetPlayerSteamID(player)
 	{
 		return NetProps.GetPropString(player, "m_szNetworkIDString");
 	}
 
-	IsPlayerIgnored = function (player)
+	function IsPlayerIgnored(player)
 	{
 		local playerSID = ::BhopFunc.GetPlayerSteamID(player);
 		// printl("IsPlayerIgnored(): "+::BhopVars.PlayerSettings[playerSID]["IgnoreBhop"]);
 		return ::BhopVars.PlayerSettings[playerSID]["IgnoreBhop"];
 	}
 
-	IsPlayerPerfectJumpIgnored = function (player)
+	function IsPlayerPerfectJumpIgnored(player)
 	{
 		local playerSID = ::BhopFunc.GetPlayerSteamID(player);
 		return ::BhopVars.PlayerSettings[playerSID]["IgnorePerfectJumps"];
 	}
 
 
-	IgnorePlayer = function (player, ignore=true)
+	function IgnorePlayer(player, ignore=true)
 	{
 		local pIgnored = ::BhopFunc.IsPlayerIgnored(player);
 		local pSID = ::BhopFunc.GetPlayerSteamID(player);
@@ -201,6 +416,7 @@ IncludeScript("json.nut");
 			{
 				return false;
 			}
+			::BhopVars.ConfigAltered = true;
 			::BhopVars.PlayerSettings[pSID]["IgnoreBhop"] = false;
 		}
 		else
@@ -209,14 +425,33 @@ IncludeScript("json.nut");
 			{
 				return false;
 			}
+			::BhopVars.ConfigAltered = true;
 			::BhopVars.PlayerSettings[pSID]["IgnoreBhop"] = true;
 		}
 		
-		::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
+		// ::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
 		return true;
 	}
 
-	PerfectJumpIgnorePlayer = function (player, ignore=true)
+	function GetPlayerFromSteamID(steamid)
+	{
+		// printl("SendToAllNon");
+		local player = null;
+		while (player = Entities.FindByClassname(player, "player"))
+		{
+			if (IsPlayerABot(player))
+			{
+				continue;
+			}
+			if (::BhopFunc.GetPlayerSteamID(player) == steamid)
+			{
+				return player;
+			}
+		}
+		return null;
+	}	
+
+	function PerfectJumpIgnorePlayer(player, ignore=true)
 	{
 		local pIgnored = ::BhopFunc.IsPlayerIgnored(player);
 		local pSID = ::BhopFunc.GetPlayerSteamID(player);
@@ -226,6 +461,7 @@ IncludeScript("json.nut");
 			{
 				return false;
 			}
+			::BhopVars.ConfigAltered = true;
 			::BhopVars.PlayerSettings[pSID]["IgnorePerfectJumps"] = false;
 		}
 		else
@@ -234,15 +470,38 @@ IncludeScript("json.nut");
 			{
 				return false;
 			}
+			::BhopVars.ConfigAltered = true;
 			::BhopVars.PlayerSettings[pSID]["IgnorePerfectJumps"] = true;
 		}
 		
-		::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
+		// ::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
 		return true;
 	}
 
-	EnsurePlayerSettings = function (player)
+	function ShouldIgnorePlayer(player)
 	{
+		if (IsPlayerABot(player))
+		{
+			return true;
+		}
+
+		if (::BhopVars.PlayerInitList.find(player.GetPlayerUserId()) != null)
+		{
+			printl("player "+player.GetPlayerName()+" in init list");
+			printl(::Json.Serialize.ToString(::BhopVars.PlayerInitList));
+			return true;
+		}
+
+		if (!::BhopFunc.IsAlive(player))
+		{
+			return true;
+		}
+		return false;
+	}
+
+	function EnsurePlayerSettings(player)
+	{
+		printl("EnsurePlayerSettings("+player.GetPlayerName()+")");
 		local pSID = ::BhopFunc.GetPlayerSteamID(player);
 		if (IsPlayerABot(player))
 		{
@@ -257,67 +516,91 @@ IncludeScript("json.nut");
 			// printl("setting playersettings[PSID]");
 			::BhopVars.PlayerSettings[pSID] <- {};
 		}
+
 		foreach (tableKey, keyValue in ::BhopVars.DefaultPlayerSettings)
 		{
 			if (!(tableKey in ::BhopVars.PlayerSettings[pSID]))
 			{
+				::BhopVars.ConfigAltered = true;
 				::BhopVars.PlayerSettings[pSID][tableKey] <- keyValue;
 			}
 		}
-		::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
+		// ::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
 		return true;
 	}
 
-	BhopTick = function () 
+	function BhopTick() 
 	{
-		local markedForDeletion = [];  // list[index<str>]
-		foreach (indexName,player in ::BhopVars.JumpingList)
+		local markedForDeletion = [];  // list[steamID<str>]
+		foreach (steamid, bhopChain in ::BhopVars.JumpingList)
 		{
-			if (::BhopFunc.IsPlayerIgnored(player))
+			local player = ::BhopFunc.GetPlayerFromSteamID(steamid);
+			if (player == null)
 			{
-				printl("BhopTick(): ignoring player");
-				markedForDeletion.append(indexName);
-				continue;
-			}
-
-			local index = player.GetEntityIndex();
-			if (!(::BhopFunc.IsEntityOnGroundVSLib(player))) 
-			{
-				::BhopVars.BunnyGroundTime[index] = 0;
+				printl("couldnt get player from steamid");
+				markedForDeletion.append(steamid);
 				continue;
 			}
 			
-			::BhopVars.BunnyGroundTime[index]++;
+			if (::BhopFunc.IsPlayerIgnored(player))
+			{
+				printl("BhopTick(): ignoring player");
+				markedForDeletion.append(steamid);
+				continue;
+			}
+			if (::BhopFunc.ShouldIgnorePlayer(player))
+			{
+				printl("BhopTick(): should ignoring player");
+				markedForDeletion.append(steamid);
+				continue;
+			}
+
+			if (!(::BhopFunc.IsEntityOnGroundVSLib(player))) 
+			{
+				// printl("BhopTick(): player not on ground");
+				::BhopVars.JumpingList[steamid].IncrementAirTime();
+				::BhopVars.JumpingList[steamid].groundTime = 0;
+				// ::BhopVars.BunnyGroundTime[index] = 0;
+				continue;
+			}
+			local bhopChainLen = ::BhopVars.JumpingList[steamid].bhopChain.len();
+			if (::BhopVars.JumpingList[steamid].bhopChain[bhopChainLen - 1].landPos == null) 
+			{
+				::BhopVars.JumpingList[steamid].bhopChain[bhopChainLen - 1].landPos = player.EyePosition();
+			}
+			::BhopVars.JumpingList[steamid].groundTime++;
+			// ::BhopVars.BunnyGroundTime[index]++;
 
 			if(::BhopFunc.checkBhop(player) == false)
 			{
-				printl(player.GetPlayerName()+" failed bhop");
-				markedForDeletion.append(indexName);
+				// printl(player.GetPlayerName()+" failed bhop");
+				// ClientPrint(null,3,player.GetPlayerName()+" failed bhop");
+				markedForDeletion.append(steamid);
 			}
 		}
-		foreach (arrayIndex, jumpIndex in markedForDeletion) 
+		foreach (i, steamid in markedForDeletion) 
 		{
-			delete ::BhopVars.JumpingList[jumpIndex];
+			delete ::BhopVars.JumpingList[steamid];
 		}
 	}
 
-	BhopThink = function () 
+	function BhopThink() 
 	{
 		::BhopFunc.BhopTick();
 	}
 
 	// we do this as a workaround bcs there is no on_tick() game event
-	AddBhopTicker = function()
+	function AddBhopTicker()
 	{
 		local tEnt = null;
-		::BhopVars.BunnyTickerEnt <- Entities.FindByName(tEnt, "bhopTicker");
+		::BhopVars.BunnyTickerEnt = Entities.FindByName(tEnt, "bhopTicker");
 		if (tEnt == null) 
 		{
-			::BhopVars.BunnyTickerEnt <- SpawnEntityFromTable("info_target", {targetname = "bhopTicker"});
+			::BhopVars.BunnyTickerEnt = SpawnEntityFromTable("info_target", {targetname = "bhopTicker"});
 		}
 		else
 		{
-			::BhopVars.BunnyTickerEnt <- tEnt;
+			::BhopVars.BunnyTickerEnt = tEnt;
 		}		
 
 		::BhopVars.BunnyTickerEnt.ValidateScriptScope();
@@ -327,23 +610,108 @@ IncludeScript("json.nut");
 		}
 		AddThinkToEnt(::BhopVars.BunnyTickerEnt,"BhopThink");
 	}
+
+	function UtilityTick()
+	{
+		// printl("UtilityTick()!");
+
+		if (::BhopVars.PlayerInitList.len() == 0)
+		{
+			return;
+		}
+
+		local newPlayerInit = clone ::BhopVars.PlayerInitList;
+		
+		foreach (i, userid in newPlayerInit)
+		{
+			local player = GetPlayerFromUserID(userid);
+			/* try
+			{
+				// SendGlobalGameEvent("player_activate", {userid = userid});
+				FireGameEvent("player_activate", {userid = userid});
+				if (player.GetTeam() == 0)
+				{
+					SendGlobalGameEvent("player_activate", {userid = userid});
+				} 
+			}
+			catch (error)
+			{
+				printl("error="+error);
+				continue;
+			} */
+			printl("ensuring settings for player "+player.GetPlayerName());
+			::BhopFunc.EnsurePlayerSettings(player);
+			// ::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
+			// newPlayerInit.remove(i);
+			::BhopVars.PlayerInitList.remove(i);
+		}
+		// ::BhopVars.PlayerInitList = newPlayerInit;
+	}
+
+	function ConfigSaveTick()
+	{
+		
+		if (::BhopVars.ConfigAltered)
+		// if (true)
+		{
+			printl("ConfigSaveTick()");
+			::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
+			::BhopVars.ConfigAltered = false;
+		}
+	}
+	
+	function AddConfigSaveTicker()
+	{	
+		local tEnt = null;
+		::BhopVars.ConfigTickerEnt = Entities.FindByName(tEnt, "ConfigSaveTicker");
+		if (tEnt == null) 
+		{
+			::BhopVars.ConfigTickerEnt = SpawnEntityFromTable("logic_timer", {targetname = "ConfigSaveTicker", start_disabled = false, RefireTime = 30.0});
+		}
+		else
+		{
+			::BhopVars.ConfigTickerEnt = tEnt;
+		}
+		::BhopVars.ConfigTickerEnt.ConnectOutput("OnTimer", "ConfigThink");
+
+		::BhopVars.ConfigTickerEnt.ValidateScriptScope();
+		::BhopVars.ConfigTickerEnt.GetScriptScope().ConfigThink <- function()
+		{
+			::BhopFunc.ConfigSaveTick();
+		}
+	}
+
+	function AddUtilityTicker()
+	{
+		local tEnt = null;
+		::BhopVars.BunnyUtilsTickerEnt = Entities.FindByName(tEnt, "bhopUtilsTicker");
+		if (tEnt == null) 
+		{
+			::BhopVars.BunnyUtilsTickerEnt = SpawnEntityFromTable("logic_timer", {targetname = "bhopUtilsTicker", start_disabled = false, RefireTime = 1.0});
+		}
+		else
+		{
+			::BhopVars.BunnyUtilsTickerEnt = tEnt;
+		}
+		::BhopVars.BunnyUtilsTickerEnt.ConnectOutput("OnTimer", "UtilityThink");
+
+		::BhopVars.BunnyUtilsTickerEnt.ValidateScriptScope();
+		::BhopVars.BunnyUtilsTickerEnt.GetScriptScope().UtilityThink <- function()
+		{
+			::BhopFunc.UtilityTick();
+		}
+	}
 }
 
 ::BhopEvent <-
 {
-	OnGameEvent_player_jump = function (params)
+	function OnGameEvent_player_jump(params)
 	{
-		local vars = ::BhopVars;
-		
 		local player = GetPlayerFromUserID(params.userid);
-		if (IsPlayerABot(player))
+
+		if (::BhopFunc.ShouldIgnorePlayer(player))
 		{
-			// printl("player a bot");
-			return;
-		}
-		if (!::BhopFunc.EnsurePlayerSettings(player))
-		{
-			printl("not ensured");
+			printl("player_jump(): ignoring player "+player.GetPlayerName());
 			return;
 		}
 
@@ -353,12 +721,29 @@ IncludeScript("json.nut");
 			return;
 		}
 
-		local index = player.GetEntityIndex();
+		local id = BhopFunc.GetPlayerSteamID(player);
 		local speed = ::BhopFunc.GetPlayerSpeed(player);
 		local pName = player.GetPlayerName();
-		local indexName = "bhop"+index;
+		local jumpPos = player.EyePosition();  // this is the value returned by cl_showpos 1 i think
+		// local indexName = "bhop"+index;
 		
-		if(!(indexName in vars.JumpingList))
+		if (!(id in ::BhopVars.JumpingList))
+		{
+			local bhopData = ::BhopClasses.BhopChainData(player, ::BhopClasses.BhopData(speed, jumpPos));
+			::BhopVars.JumpingList[id] <- bhopData;
+		}
+		else
+		{
+			local bhopChain = ::BhopVars.JumpingList[id];
+			if (bhopChain.groundTime <= 1 && !::BhopFunc.IsPlayerPerfectJumpIgnored(player))
+			{
+				ClientPrint(player,3,"\x04perfect jump! speed=\x05"+speed.tointeger()+"\x01");
+			}
+			bhopChain.groundTime = 0;
+			bhopChain.AddBhop(::BhopClasses.BhopData(speed, jumpPos));
+			::BhopVars.JumpingList[id] <- bhopChain;
+		}
+		/* if(!(indexName in vars.JumpingList))
 		{
 			vars.BunnyGroundTime[index] = 0;
 			vars.BunnyCounter[index] = 0;
@@ -378,24 +763,40 @@ IncludeScript("json.nut");
 			{
 				vars.LastBunnyTopSpeed[index] = speed;
 			}
-		}
+		} */
 	}
 	
 	// this is so the player steam id is always initialized
-	OnGameEvent_player_spawn = function (params)
+	function OnGameEvent_player_spawn(params)
 	{
-		local player = GetPlayerFromUserID(params.userid);
+		::BhopVars.PlayerInitList.append(params.userid);
+		/* local player = GetPlayerFromUserID(params.userid);
 		if (player.GetTeam() == 0)
 		{
 			SendGlobalGameEvent("player_activate", {userid = params.userid});
 		}
 		::BhopFunc.EnsurePlayerSettings(player);
-		::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
+		::BhopFunc.WriteConfig(::BhopVars.ConfigPath); */
 	}
 
-	OnGameEvent_player_say = function (params)
+	function OnGameEvent_player_team(params)
+	{
+		
+		if (params.disconnect)
+		{
+			local i = ::BhopVars.PlayerInitList.find(params.userid);
+			if (i == null)
+			{
+				return;
+			}
+			::BhopVars.PlayerInitList.remove(i);
+		}
+	}
+
+	function OnGameEvent_player_say(params)
 	{
 		local player = GetPlayerFromUserID(params.userid);
+		local pSID = ::BhopFunc.GetPlayerSteamID(player);
 		local message = strip(params.text).tolower();
 
 		if (message == "!bhop help" || message == "!bhop")
@@ -406,6 +807,18 @@ IncludeScript("json.nut");
 			ClientPrint(player,3,"  \"!bhop rules\"  : show the current bhop detection config");
 			ClientPrint(player,3,"  \"!bhop toggle  :  toggle bhop announcing for you");
 			ClientPrint(player,3,"  \"!bhop toggle perfectjump\"  :  toggle perfect jump announcing for you");
+			return true;
+		}
+		if (message == "!bhop stats")
+		{
+			local pSet = ::BhopVars.PlayerSettings[pSID];
+			local best = pSet["BestBhop"];
+			if (best == null)
+			{
+				ClientPrint(player,3,"you have no stats tracked!");
+				return true;
+			}
+			ClientPrint(player,5,"\x01high score: \x04"+best["score"]+"\x01, total distance bhopped: \x04"+pSet["TotalDistanceBhopped"]+"\x01, highest velocity: \x04"+pSet["HighestVelocity"]+"\x01");
 			return true;
 		}
 		if (message == "!bhop rules")
@@ -481,5 +894,7 @@ IncludeScript("json.nut");
 
 ::BhopFunc.loadFile();
 ::BhopFunc.AddBhopTicker();
+::BhopFunc.AddConfigSaveTicker();
+::BhopFunc.AddUtilityTicker();
 
 __CollectEventCallbacks(::BhopEvent, "OnGameEvent_", "GameEventCallbacks", RegisterScriptGameEventListener);
