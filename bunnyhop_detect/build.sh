@@ -13,3 +13,6 @@ sed -i".old" -e "s/build_num=[0-9]*[0-9]/&@/g;:a {s/0@/1/g;s/1@/2/g;s/2@/3/g;s/3
 
 # echo "${shpath}"
 vpkeditcli -v 1 -s -o "${pakpath}" "${srcpath}"
+cp -fv "${pakpath}" "${l4d2path}/left4dead2/addons"
+
+

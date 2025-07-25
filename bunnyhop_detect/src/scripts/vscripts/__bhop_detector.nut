@@ -24,7 +24,7 @@ IncludeScript("argparse.nut");
 	JumpingList				= {}, 			//	dict[str, entity<player>]
 											//	this maps entity indexes to player objects
 	</ json_ignore = true />
-	build_num=32
+	build_num=33
 } */
 
 ::BhopClasses <-
@@ -78,7 +78,7 @@ class ::BhopClasses.BhopConfig
 	PlayerInitList			= [];			// list[userid]
 												// this helps us keep track of what players are initialized
 	</ json_ignore = true />
-	build_num=32
+	build_num=33
 }
 
 class ::BhopClasses.BhopData
@@ -408,6 +408,20 @@ class ::BhopClasses.BhopChainData
 		return ::BhopVars.PlayerSettings[playerSID]["IgnoreBhop"];
 	}
 
+	function IsPlayerAdmin(player)
+	{
+		if (::BhopFunc.IsPlayerInInitList(player) || IsPlayerABot(player))
+		{
+			return false;
+		}
+		local playerSID = ::BhopFunc.GetPlayerSteamID(player);
+		if (!(playerSID in ::BhopVars.PlayerSettings))
+		{
+			return false;
+		}
+		return ::BhopVars.PlayerSettings[playerSID]["Admin"];
+	}
+
 	function IsPlayerPerfectJumpIgnored(player)
 	{
 		local playerSID = ::BhopFunc.GetPlayerSteamID(player);
@@ -522,7 +536,12 @@ class ::BhopClasses.BhopChainData
 		tVals.sort(MeowCompare);
 		tVals.reverse();
 		
-		bestBhops = tVals.slice(0, ::BhopVars.NumLeaderboardSlots);
+		if (tVals.len() > ::BhopVars.NumLeaderboardSlots)
+		{
+			tVals = tVals.slice(0, ::BhopVars.NumLeaderboardSlots - 1);
+		}	
+		// bestBhops = tVals.slice(0, ::BhopVars.NumLeaderboardSlots);
+		bestBhops = tVals;
 		local leaderboardSlot = 1;
 		foreach (i, t in bestBhops)
 		{
@@ -568,6 +587,15 @@ class ::BhopClasses.BhopChainData
 		return true;
 	}
 
+	function IsPlayerInInitList(player)
+	{
+		if (::BhopVars.PlayerInitList.find(player.GetPlayerUserId()) != null)
+		{
+			return true;
+		}
+		return false;
+	}
+
 	function ShouldIgnorePlayer(player)
 	{
 		if (IsPlayerABot(player))
@@ -575,7 +603,7 @@ class ::BhopClasses.BhopChainData
 			return true;
 		}
 
-		if (::BhopVars.PlayerInitList.find(player.GetPlayerUserId()) != null)
+		if (::BhopFunc.IsPlayerInInitList(player))
 		{
 			printl("player "+player.GetPlayerName()+" in init list");
 			printl(::Json.Serialize.ToString(::BhopVars.PlayerInitList));
@@ -915,30 +943,30 @@ class ::BhopClasses.BhopChainData
 	{
 		local player = GetPlayerFromUserID(params.userid);
 		local pSID = ::BhopFunc.GetPlayerSteamID(player);
-		local message = strip(params.text).tolower();
+		local message = strip(params.text)// .tolower();
 		local args = ::ArgParse.GetArgList(message);
-		if (args.len() < 1 || args[0] != "!bhop")
+		if (args.len() < 1 || args[0].tolower() != "!bhop")
 		{
 			return true;
 		}
 
-		if (args.len() == 1 || args[1] == "help")
+		if (args.len() == 1 || args[1].tolower() == "help")
 		{
 			ClientPrint(player,3,"bhop detector help command");
 			ClientPrint(player,3,"  \"!bhop\"	:	show this text");
 			ClientPrint(player,3,"  \"!bhop help\"	:	show this text");
 			ClientPrint(player,3,"  \"!bhop rules\"	:	show the current bhop detection config");
-			if (::BhopVars.PlayerSettings[pSID]["Admin"])
+			if (::BhopFunc.IsPlayerAdmin(player))
 			{
 				ClientPrint(player,3,"  \"!bhop settings <setting> <value>\"	:	[ADMIN] change setting value");
 			}
-			ClientPrint(player,3,"	\"!bhop stats\"	:	show your bhop stats");
-			ClientPrint(player,3,"	\"!bhop leaderboard\":	display the bhop leaderboard");
+			ClientPrint(player,3,"  \"!bhop stats\"	:	show your bhop stats");
+			ClientPrint(player,3,"  \"!bhop leaderboard\":	display the bhop leaderboard");
 			ClientPrint(player,3,"  \"!bhop toggle\"	:	toggle bhop announcing for you");
 			ClientPrint(player,3,"  \"!bhop toggle perfectjump\"	:	toggle perfect jump announcing for you");
 			return true;
 		}
-		if (args[1] == "stats")
+		if (args[1].tolower() == "stats")
 		{
 			local pSet = ::BhopVars.PlayerSettings[pSID];
 			local best = pSet["BestBhop"];
@@ -951,12 +979,12 @@ class ::BhopClasses.BhopChainData
 			::BhopFunc.SendToAllNonIgnoredPlayers("\x01high score: \x04"+best["score"]+"\x01, total distance bhopped: \x04"+pSet["TotalDistanceBhopped"]+"\x01, total bhops: \x04"+pSet["TotalBhops"]+"\x01highest velocity: \x04"+pSet["HighestVelocity"]+"\x01");
 			return true;
 		}
-		if (args[1] == "leaderboard")
+		if (args[1].tolower() == "leaderboard")
 		{
 			::BhopFunc.DisplayLeaderboard(player);
 			return true;
 		}
-		if (args[1] == "settings")
+		if (args[1].tolower() == "settings")
 		{
 			if (args.len() != 4)
 			{
@@ -967,6 +995,11 @@ class ::BhopClasses.BhopChainData
 			if (varPath.len() == 0)
 			{
 				ClientPrint(player,3,"ERROR: invalid index");
+				return true;
+			}
+			if (!::BhopFunc.IsPlayerAdmin(player))
+			{
+				ClientPrint(player,3,"you must be admin to use this commmand");
 				return true;
 			}
 			
@@ -983,7 +1016,7 @@ class ::BhopClasses.BhopChainData
 				}
 				if (!(keyName in curTable.ref()))
 				{
-					ClientPrint(player,3,"ERROR: couldnt find index");
+					ClientPrint(player,3,"ERROR: couldnt find index for keyname: \""+keyName+"\"");
 					return true;  // i forgot what this did  ? ??????????
 				}
 				try
@@ -1001,35 +1034,63 @@ class ::BhopClasses.BhopChainData
 
 			local foundVal = lastTable.ref()[lastKey];
 			local foundType = typeof foundVal;
+			// if (typeof lastTable.ref() 
 			local replaceVal = args[3];
 			try
 			{
+				local convVal;
 				switch (foundType)
 				{
 					case "string":
-						lastTable.ref()[lastKey] <- replaceVal;
+						convVal = replaceVal;
+						// lastTable.ref()[lastKey] <- replaceVal;
 						break;
 					case "integer":
-						lastTable.ref()[lastKey] <- replaceVal.tointeger();
+						convVal = replaceVal.tointeger();
+						// lastTable.ref()[lastKey] <- replaceVal.tointeger();
 						break;
 					case "float":
-						lastTable.ref()[lastKey] <- replaceVal.tofloat();
+						convVal = replaceVal.tofloat();
+						// lastTable.ref()[lastKey] <- replaceVal.tofloat();
 						break;
+					case "bool":
+						if (replaceVal.tolower() == "true")
+						{
+							convVal = true;
+							break;
+						}
+						if (replaceVal.tolower() == "false")
+						{
+							convVal = false;
+							break;
+						}
+						ClientPrint(player,3,"ERROR: input is not of bool type: \""+replaceVal+"\"");
 					default:
 						ClientPrint(player,3,"ERROR: original value has invalid type: \""+foundType+"\"");
 						return true;
 						break;
 				}
+				local writeThingType = typeof lastTable.ref();
+				if (writeThingType == "instance")
+				{
+					lastTable.ref()[lastKey] = convVal;
+				}
+				else
+				{
+					lastTable.ref()[lastKey] <- convVal;
+				}
+				return true;
 			}
 			catch (e)
 			{
-				ClientPrint(player,3,"ERROR: "+e);
+				ClientPrint(player,3,"ERROR1031: "+e);
 				return true;
 			}
+			::BhopVars.ConfigAltered = true;
 			ClientPrint(player,3,"set!");
 			return true;
 		}
-		if (args[1] == "rules")
+		if (args[1].tolower() == "rules")
 		{
 			ClientPrint(player,3,"current bhop ruleset:");
 			ClientPrint(player,3,"  tick leniency	:	"+::BhopVars.BunnyTickLeniency);
@@ -1039,7 +1100,7 @@ class ::BhopClasses.BhopChainData
 			ClientPrint(player,3,"  bhop velocity mult	:	"+::BhopVars["ScoringSettings"]["BhopAvgVelocityMult"]);
 			return true;
 		}
-		if (args.len() == 2 && args[1] == "toggle")
+		if (args.len() == 2 && args[1].tolower() == "toggle")
 		{
 			if (::BhopFunc.IsPlayerIgnored(player))
 			{
@@ -1051,7 +1112,7 @@ class ::BhopClasses.BhopChainData
 			ClientPrint(player,3,"you will now be ignored by the bhop detector!");
 			return true;
 		}
-		if (args.len() == 3 && args[1] == "toggle" && args[2] == "perfectjump")
+		if (args.len() == 3 && args[1].tolower() == "toggle" && args[2].tolower() == "perfectjump")
 		{
 			if (::BhopFunc.IsPlayerPerfectJumpIgnored(player))
 			{
