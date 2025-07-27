@@ -35,7 +35,8 @@ contrast_png_folder = Path("./contrast").resolve()
 modified_png_folder = Path("./modified").resolve()
 output_textures_folder = Path("./src").resolve()
 
-gradient_file = Path("./gradient14.png").resolve()
+# gradient_file = Path("./gradient14.png").resolve()
+gradient_file = Path("./gradient_pinhead1.png").resolve()
 
 
 def convert_og_to_png_vtf_editor():
@@ -206,9 +207,9 @@ def main():
     # print(Flags.from_int(nya))
     # print(VtfFile.from_vtf(Path("/mnt/f/stuff/git/l4d2-things/meowmeowpinktextures/urban_brickwall_06c.vtf")))
     # print(VtfFile.to_png(Path("/mnt/f/stuff/git/l4d2-things/meowmeowpinktextures/urban_brickwall_06c.vtf")))
-    #convert_og_to_png_vtf_editor()
-    #contrast_pngs_vtf_editor()
-    #modify_pngs_vtf_editor()
+    convert_og_to_png_vtf_editor()
+    contrast_pngs_vtf_editor()
+    modify_pngs_vtf_editor()
     convert_modify_to_vtf_vtf_editor()
 
 

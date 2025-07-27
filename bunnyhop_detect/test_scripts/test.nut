@@ -132,6 +132,8 @@ function PrintMeow()
 // printl("type(MeowMeow)="+typeof MeowMeow);
 
 // printl(::Json.Serialize.ToString(::ArgParse.GetArgList("    \"  nyaaA \\\" :3c\"  KITTY!!!!   I LOVE U  KITTY")));
+
+if (false) return;
 printl(::Json.Serialize.ToString(::ArgParse.Split("PlayerSettings", "|")));
 
 

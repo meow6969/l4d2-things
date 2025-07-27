@@ -25,6 +25,24 @@ if (!("Json" in getroottable()))
 	isCharHexRegexPattern = regexp("[a-fA-F0-9]")
 }
 
+function Json::Utils::Error(e)
+{
+	local context = ""; 
+	local sI = getstackinfos(2);
+	if ("parseTracker" in sI.locals)
+	{
+		local parseTracker = sI.locals["parseTracker"];
+		// printl("PARSETRACKER");
+		local leftBound = parseTracker.pointer - 50;
+		local rightBound = parseTracker.pointer + 1;
+		if (leftBound < 0) leftBound = 0;
+		if (rightBound > parseTracker.jsonData.len()) rightBound = parseTracker.jsonData.len();
+		// printl("PARSETRACKER2");
+		context = "\n[JsonError|Context] "+parseTracker.jsonData.slice(leftBound, rightBound)+"<<<";
+	}
+	throw "[JsonError|"+sI.src+":"+sI.func+"():"+sI.line+"] "+e+context;
+}
+
 function Json::Utils::PrintThing(theThing, returnString=false)
 {
 	local pStr;
@@ -439,6 +457,7 @@ function Json::Deserialize::ParseTable(parseTracker)
 	local rTable = {}
 	
 	local currentGoal = 0;
+	local firstLoop = true;
 	local currentKey;
 	while (parseTracker.PointerNotReachedEnd())
 	{
@@ -450,9 +469,14 @@ function Json::Deserialize::ParseTable(parseTracker)
 		}
 		if (currentGoal == 0)
 		{
+			if (firstLoop && theChar == "}") return rTable;
 			if (theChar != "\"")
 			{
-				throw "Json::Deserialize::ParseTable(): expected \", got "+theChar;
+				// throw "Json::Deserialize::ParseTable(): expected \", got "+theChar;
+				e = "expected \"\"\" "; 
+				if (firstLoop) e += "or \"}\"";
+				e += ", got \""+theChar+"\"";
+				::Json.Utils.Error(e);
 			}
 			currentKey = ::Json.Deserialize.ParseString(parseTracker);
 			currentGoal++;
@@ -462,7 +486,7 @@ function Json::Deserialize::ParseTable(parseTracker)
 		{
 			if (theChar != ":")
 			{
-				throw "Json::Deserialize::ParseTable(): expected :, got "+theChar;
+				::Json.Utils.Error("expected \":\", got \""+theChar+"\"");
 			}
 			currentGoal++;
 			continue;
@@ -477,6 +501,7 @@ function Json::Deserialize::ParseTable(parseTracker)
 		{
 			if (theChar == ",")
 			{
+				firstLoop = false;
 				currentGoal = 0;
 				continue;
 			}
@@ -485,8 +510,8 @@ function Json::Deserialize::ParseTable(parseTracker)
 			{
 				break;
 			}
-			printl("context: "+parseTracker.jsonData.slice(parseTracker.pointer - 50, parseTracker.pointer + 1)+"<<<");
-			throw "Json::Deserialize::ParseTable(): pointer="+parseTracker.pointer+" expected , or }, got "+theChar;
+			// printl("context: "+parseTracker.jsonData.slice(parseTracker.pointer - 50, parseTracker.pointer + 1)+"<<<");
+			::Json.Utils.Error("expected \",\" or \"}\", got \""+theChar+"\"");
 		}
 	}
 	return rTable;
@@ -659,21 +684,92 @@ function Json::Deserialize::ExtractClassProperties(jsonTable, theClass)
 
 	foreach (member, val in theClass)
 	{
-		if (::Json.Serialize.defaultOptions.IgnoreType(val) || typeof val == "class")
+		local valType = typeof val;
+		if (::Json.Serialize.defaultOptions.IgnoreType(val) || valType == "class")
 		{
 			continue;
 		}
+		local attrs = theClass.getattributes(member);
+		
+		/* local valType;
+		if ("json_value_type" in attrs)
+			if (typeof attrs["json_value_type"] == "class")
+			valType = attrs["json_value_type"];
+		else valType = null; */
 		
 		local jsonName = namingPolicy[member];
-		if (jsonName in jsonTable)
+		//                        this is so it just ignores it if its default value
+		if (jsonName in jsonTable && theClass[member] != jsonTable[jsonName])
 		{
-			if (typeof val == "instance")
+			if (valType == "instance")
 			{
 				rClass.rawset(member, ::Json.Deserialize.ExtractClassProperties(jsonTable[jsonName], val.getclass()));
 				continue;
 			}
+			
+			if ("json_sub_type" in attrs && typeof attrs["json_sub_type"] == "class")
+			{
+				local newThing;
+				local parType;
+				if ("json_type" in attrs)
+					parType = attrs["json_type"];
+				else parType = valType;
+				local jsonValType = typeof jsonTable[jsonName];
+				if (parType != jsonValType && jsonValType != "null")
+				{
+					if ("json_type" in attrs)
+						::Json.Utils.Error("error: \"json_type\" value \""+parType+"\" does not match up with type of json table value type \""+jsonValType+"\"");
+					::Json.Utils.Error("error: class member \""+member+"\" type \""+parType+"\" does not match up with type of json table value type \""+jsonValType+"\"");
+				}
+
+				switch (parType)
+				{
+					case "table":
+						newThing = {};
+						foreach (key, keyVal in jsonTable[jsonName])
+						{
+							newThing[key] <- ::Json.Deserialize.ExtractClassProperties(keyVal, attrs["json_sub_type"]);
+						}
+						break;
+					case "array":
+						newThing = [];
+						foreach (_, arrVal in jsonTable[jsonName])
+						{
+							newThing.append(::Json.Deserialize.ExtractClassProperties(arrVal, attrs["json_sub_type"]));
+						}
+						break;
+					default:
+						::Json.Utils.Error("error: \"json_sub_type\" attribute can only deserialize to parent types of \"table\" and \"array\", not type \""+parType+"\"");
+						break;
+				}
+				// rClass.rawset(member, ::Json.Deserialize.ExtractClassProperties(jsonTable[jsonName], attrs["json_value_type"]));
+				rClass.rawset(member, newThing);
+				continue;
+			}
+			if ("json_type" in attrs && theClass[member] != jsonTable[jsonName] && typeof attrs["json_type"] == "class")
+			{
+				rClass.rawset(member, ::Json.Deserialize.ExtractClassProperties(jsonTable[jsonName], attrs["json_type"]));
+				continue;
+			}
 			rClass.rawset(member, jsonTable[jsonName]);
 		}
+		/* else if ("json_type" in attrs)
+		{
+			local newThing;
+			switch (attrs["json_sub_type_container"])
+			{
+				case "table":
+					newThing = {};
+					break;
+				case "array":
+					newThing = [];
+					break;
+				default:
+					::Json.Utils.Error("error: \"json_sub_type\" attribute can only deserialize to parent types of \"table\" and \"array\", not type \""+attrs["json_sub_type_container"]+"\"");
+					break;
+			}
+			rClass.rawset(member, newThing);
+		} */
 	}
 	return rClass;
 }
