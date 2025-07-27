@@ -151,14 +151,17 @@ this response is only broadcast to you
 
 changes values of variables that are in the config file or the ::BhopVars instance  
 if you are marked as an admin, you can change these values in game with a chat command  
-for example, if you wanted to set the bunny tick leniency to 5 you can enter this message in chat:  
-`!bhop settings "BunnyTickLeniency" 5`  
+ * for example, if you wanted to set the bunny tick leniency to 5 you can enter this message in chat:  
+ * `!bhop settings "BunnyTickLeniency" 5`  
+
 you can also change values inside of tables by seperating the table name and the member name with the pipe character "|"  
-`!bhop settings DefaultPlayerSettings|IgnorePerfectJumps true`  
+ * `!bhop settings DefaultPlayerSettings|IgnorePerfectJumps true`  
+
 you can even change player settings:  
-`!bhop settings PlayerSettings|STEAM_1:1:460132072|Admin true` (here, just replace the `STEAM_1:1:460132072` with your friends steam ID, for example to make them admin)  
+ * `!bhop settings PlayerSettings|STEAM_1:1:460132072|Admin true` (here, just replace the `STEAM_1:1:460132072` with your friends steam ID, for example to make them admin)  
+
 or even alter their best bhop score:  
-`!bhop settings "PlayerSettings|STEAM_1:1:460132072|BestBhop|score" 99999999`  
+ * `!bhop settings "PlayerSettings|STEAM_1:1:460132072|BestBhop|score" 99999999`  
 
 if it responds with `set!` then the value is properly changed  
 this response is only broadcast to you  
