@@ -9,8 +9,9 @@ this one is heavily modified to add new features and alter bunny hop detection
 ```jsonc
 // FILE: "Left 4 Dead 2/left4dead2/ems/simple_bunnyhop_detect/bhop_detect_condition.json"
 {
-  // you shouldnt need to edit this, unless you are giving yourself Admin
-  // this just holds data for the users settings and their bhop related statistics
+  // you shouldnt need to edit PlayerSettings, unless you are giving yourself Admin
+  // PlayerSettings just holds data for the users settings and their bhop related statistics
+  // further down in the file is more important settings
   "PlayerSettings": {
     // the players steam ID
     "STEAM_1:1:460132072": {
