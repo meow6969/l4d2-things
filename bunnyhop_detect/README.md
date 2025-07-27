@@ -98,7 +98,8 @@ bhop detector help command
   "!bhop toggle perfectjump"          :  toggle perfect jump announcing for you
 ```
 
-### input parsing  
+### input parsing 
+ 
 bhop detector parses chat input similar to a computer command line  
 quotation marks `""` will tell bhop detector that what is enclosed in them should be parsed as 1 argument  
  * for example, the input `"!bhop" "lead"er"board"` will be turned into the argument list `["!bhop", "leaderboard"]`  
@@ -130,7 +131,7 @@ scoring rules:
 
 this response is only broadcast to you  
 
-### !bhop settings  
+## !bhop settings  
 
 changes values of variables that are in the config file or the ::BhopVars instance  
 if you are marked as an admin, you can change these values in game with a chat command  
@@ -146,7 +147,7 @@ or even alter their best bhop score:
 if it responds with `set!` then the value is properly changed  
 this response is only broadcast to you  
 
-### !bhop stats <playerName?>
+## !bhop stats <playerName?>
 
 shows the stats of yourself or another player  
 provide the <playerName?> argument if you want to see someone elses stats, otherwise it will display yours
@@ -160,7 +161,7 @@ high score: 2277.25, total distance bhopped: 89013.3, total bhops: 708, highest 
 
 this response is broadcast to everyone  
 
-### !bhop leaderboard  
+## !bhop leaderboard  
 
 displays the bhop leaderboard  
 
@@ -172,7 +173,7 @@ displays the bhop leaderboard
 
 this response is only broadcast to you  
 
-### !bhop toggle  
+## !bhop toggle  
 
 enables/disables the script for you specifically  
 if you are ignored, your bhop stats will not be tracked, you will not see any bhop announcements, you will not see perfect jump announcements, and all commands that are marked as `broadcast to everyone` will not broadcast to you  
@@ -184,7 +185,7 @@ you will now be ignored by the bhop detector!
 
 this response is only broadcast to you  
 
-### !bhop toggle perfectjump  
+## !bhop toggle perfectjump  
 
 enables/disables perfect jump announcing for you specifically  
 if you are perfectjump ignored, you will not see a chat message when you make a perfect jump  
