@@ -116,7 +116,21 @@ to type a single `\`, escape a `\` with a `\`
 
 ## !bhop <"help"?>  
 
-shows the help menu  
+shows the help menu 
+
+```
+bhop detector help command
+  "!bhop"                             :  show this text
+  "!bhop help"                        :  show this text
+  "!bhop rules"                       :  show the current bhop detection config
+  "!bhop settings <setting> <value>"  :  [ADMIN] change setting value
+  "!bhop stats <playerName?>"         :  show your bhop stats, supply name for others' stats
+  "!bhop leaderboard"                 :  display the bhop leaderboard
+  "!bhop toggle"                      :  toggle bhop announcing for you
+  "!bhop toggle perfectjump"          :  toggle perfect jump announcing for you
+```
+
+this response is only broadcast to you  
 
 ## !bhop rules
 
