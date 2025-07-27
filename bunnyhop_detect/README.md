@@ -105,9 +105,11 @@ quotation marks `""` will tell bhop detector that what is enclosed in them shoul
  * for example, the input `"!bhop" "lead"er"board"` will be turned into the argument list `["!bhop", "leaderboard"]`  
    * this is because there is no unquoted spaces in `"lead"er"board"`, if instead it was `"lead" er "board"`, it would be read as `["lead", "er", "board"]`  
  * the input `!bhop stats "soft cookie"` will be turned into the argument list `["!bhop", "stats", "soft cookie"]`  
+
 you can escape both spaces and quotation marks with a `\`  
  * for example, the input `!bhop lead\ er\ board` will be turned into the argument list `["!bhop", "lead er board"]`  
  * the input `!bhop stats soft\ cookie` turns into the argument list `["!bhop", "stats", "soft cookie"]`  
+
 to type a single `\`, escape a `\` with a `\`  
  * for example, the input `!bhop stats \\\"weird"name"` turns into the argument list `["!bhop", "stats", '\"weirdname']`  
    * the `\\` turns into `\`, the `\"` turns into `"`, and the `"name"` is interpreted as `name`, giving us `\"weirdname`  
