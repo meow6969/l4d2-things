@@ -111,11 +111,11 @@ to type a single `\`, escape a `\` with a `\`
  * for example, the input `!bhop stats \\\"weird"name"` turns into the argument list `["!bhop", "stats", '\"weirdname']`  
    * the `\\` turns into `\`, the `\"` turns into `"`, and the `"name"` is interpreted as `name`, giving us `\"weirdname`  
 
-### !bhop <"help"?>  
+## !bhop <"help"?>  
 
 shows the help menu  
 
-### !bhop rules
+## !bhop rules
 
 shows the values of the variables related to bhop scoring and bhop detection  
 
