@@ -152,7 +152,7 @@ this response is only broadcast to you
 changes values of variables that are in the config file or the ::BhopVars instance  
 if you are marked as an admin, you can change these values in game with a chat command  
  * for example, if you wanted to set the bunny tick leniency to 5 you can enter this message in chat:  
- * `!bhop settings "BunnyTickLeniency" 5`  
+   `!bhop settings "BunnyTickLeniency" 5`  
 
 you can also change values inside of tables by seperating the table name and the member name with the pipe character "|"  
  * `!bhop settings DefaultPlayerSettings|IgnorePerfectJumps true`  
