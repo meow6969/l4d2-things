@@ -6,7 +6,7 @@ this one is heavily modified to add new features and alter bunny hop detection
 
 # config documentation  
 
-```JSON with Comments
+```jsonc
 // FILE: "Left 4 Dead 2/left4dead2/ems/simple_bunnyhop_detect/bhop_detect_condition.json"
 {
   // you shouldnt need to edit this, unless you are giving yourself Admin
