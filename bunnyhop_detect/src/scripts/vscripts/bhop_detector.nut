@@ -91,6 +91,12 @@ class ::BhopClasses.BhopChainData
 			this.maxVel = bhop.vel;
 		}
 	}
+	
+	function GetNumBhops()
+	{
+		// - 1 because the original jump that started the chain is also counted, even though its not a bhop
+		return this.bhopChain.len() - 1;
+	}
 
 	function IncrementAirTime()
 	{
@@ -99,6 +105,7 @@ class ::BhopClasses.BhopChainData
 
 	function AverageVelocity()
 	{
+		// i do bhopChain.len() instead of GetNumBhops() cause like idk why change it i guess 
 		return this.bhopVels / this.bhopChain.len();
 	}
 
@@ -117,7 +124,7 @@ class ::BhopClasses.BhopChainData
 
 	function ScoreBhop()  // -> bool|int  (false means not best bhop, true means new best bhop, 69 means user first bhop)
 	{
-		local numBhops = this.bhopChain.len();
+		local numBhops = this.GetNumBhops();
 		local avgVel = this.AverageVelocity();
 		local bhopCountMult = ::BhopVars.ScoringSettings["BhopCountMult"];
 		local bhopAvgVelMult = ::BhopVars.ScoringSettings["BhopAvgVelocityMult"];
@@ -162,7 +169,7 @@ class ::BhopClasses.PlayerSettings
 	TotalDistanceBhopped	= 0;
 	</ json_type = ::BhopClasses.BhopChainData />
 	BestBhop				= null;
-	Name					= null;
+	Name					= "";
 }
 
 class ::BhopClasses.ScoringSettings
@@ -220,7 +227,7 @@ class ::BhopClasses.BhopConfig
 	PlayerInitList			= [];			// list[userid]
 											// this helps us keep track of what players are initialized
 	</ json_ignore = true />
-	build_num=39
+	build_num=44
 }
 
 printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+"  !!!")
@@ -390,9 +397,9 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 			// local speed = this.GetPlayerSpeed(player);
 			local bhopChain = ::BhopVars.JumpingList[id];
 			
-			local count = bhopChain.bhopChain.len();
+			local count = bhopChain.GetNumBhops();
 			local topspeed = bhopChain.maxVel.tointeger();
-			if(bhopChain.bhopChain.len() >= ::BhopVars.BunnyDetectCount)
+			if(count >= ::BhopVars.BunnyDetectCount)
 			{
 				local best = bhopChain.ScoreBhop();
 				this.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 got \x05"+count+"\x01 bunnyhop"+((count > 1)?"s":"")+ " in a row (top speed: \x05"+topspeed+"\x01, score: \x05"+bhopChain.score+"\x01)");
@@ -583,7 +590,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 			{
 				continue;
 			}
-			local s = "  "+leaderboardSlot+": \x04"+t["Name"]+"\x01 \x05("+t["timeString"]+")\x01, score: \x05"+t["BestBhop"]["score"]+"\x01, bhops: \x05"+t["BestBhop"]["bhopChain"].len()+"\x01, max speed: \x05"+t["BestBhop"]["maxVel"]+"\x01";
+			local s = "  "+leaderboardSlot+": \x04"+t["Name"]+"\x01 \x05("+t["BestBhop"]["timeString"]+")\x01, score: \x05"+t["BestBhop"]["score"]+"\x01, bhops: \x05"+t["BestBhop"]["bhopChain"].len()+"\x01, max speed: \x05"+t["BestBhop"]["maxVel"]+"\x01";
 			leaderboardSlot++;
 			if (player == null)
 			{
@@ -762,10 +769,10 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		}
 	}
 
-	function BhopThink() 
+	/* function BhopThink() 
 	{
 		::BhopFunc.BhopTick();
-	}
+	} */
 
 	// we do this as a workaround bcs there is no on_tick() game event
 	function AddBhopTicker()
@@ -780,6 +787,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		::BhopVars.BunnyTickerEnt.ValidateScriptScope();
 		local scrScope = ::BhopVars.BunnyTickerEnt.GetScriptScope();
 		scrScope["BhopThink"] <- function () {
+			printl("BhopThink!");
 			::BhopFunc.BhopTick();
 		}
 		AddThinkToEnt(::BhopVars.BunnyTickerEnt,"BhopThink");
@@ -1010,7 +1018,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 			{
 				local pName = args[2].tolower();
 				local found = false;
-				foreach (_, _pSet in ::BhoPVars.PlayerSettings)
+				foreach (_, _pSet in ::BhopVars.PlayerSettings)
 				{
 					if (_pSet["Name"].tolower() == pName)
 					{
