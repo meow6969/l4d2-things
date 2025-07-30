@@ -912,7 +912,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		bestBhops = tVals;
 
 		local leaderboardSlot = 1;
-		local s = "";
+		// local s = "";
 		foreach (i, t in bestBhops)
 		{
 			if (t["BestBhop"] == null) continue;
