@@ -589,7 +589,7 @@ class ::BhopClasses.BhopConfig
 	</ json_ignore = true />
 	CommandManager			= null;
 	</ json_ignore = true />
-	build_num=46
+	build_num=47
 }
 
 printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+"  !!!")
