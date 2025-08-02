@@ -1,14 +1,6 @@
 // TODO
-//  * save PlayerSettings each in their own file  ---  DONE
-//  * localization & multi language support       ---  idk if will ever be added ,, until i can think of elegant solution probably will not be added
-//                                                ---  problems include: 
-//                                                       ---  individual players should be able to select language
-//                                                       ---  would have to create intuitive solution to inserting variables
-//                                                       ---  this solution would almost certainly be incredibly unintuitive as itd be basically random what information can be included in a string depending on the execution context of the print and the type of message that is being outputted
-//                                                       ---  cant think of a good way to send this information to the function
-//                                                       ---  the BhopCommand architecture would have to be entirely reliant on it , making the entire thing weird and not as universal of a system
-//                                                       ---  having user generated localizations would be incredibly difficult to support
-//                                                       ---  i dont actually know any language other then english so i dont even have a good way to test the usefulness of the system in its applicability to other languages
+//  * save PlayerSettings each in their own file
+//  * localization & multi language support
 
 
 // this happens if the script is not running in l4d2
@@ -525,7 +517,7 @@ class ::BhopClasses.BhopChainData
 		local pSID = this.playerSteamID;
 		::BhopVars.PlayerSettings[pSID]["TotalBhops"] += numBhops;
 		::BhopVars.PlayerSettings[pSID]["TotalDistanceBhopped"] += this.ChainDistance();
-		::BhopVars.PlayerSettings[pSID]["ConfigAltered"] = true;
+		::BhopVars.ConfigAltered = true;
 		if (this.maxVel > ::BhopVars.PlayerSettings[pSID]["HighestVelocity"])
 		{
 			::BhopVars.PlayerSettings[pSID]["HighestVelocity"] = this.maxVel;
@@ -547,8 +539,6 @@ class ::BhopClasses.BhopChainData
 
 class ::BhopClasses.PlayerSettings
 {
-	</ json_ignore = true />
-	ConfigAltered			= false;
 	Admin					= false;
 	IgnoreBhop				= false;
 	IgnorePerfectJumps		= false;
@@ -566,29 +556,22 @@ class ::BhopClasses.ScoringSettings
 	BhopAvgVelocityMult		= 2.0;
 }
 
-class ::BhopClasses.Localization
-{
-	
-}
-
 class ::BhopClasses.BhopConfig
 {
 	</ json_ignore = true />
-	ConfigPath				= "simple_bunnyhop_detect";
+	ConfigPath				= "simple_bunnyhop_detect/bhop_detect_condition.json";
 	</ json_ignore = true />
 	ConfigAltered			= false;
 
 	BunnyDetectCount		= 3;
 	BunnyTickLeniency		= 3;
-	BunnyMinStartingVel		= 0;
 
 	ScoringSettings			= ::BhopClasses.ScoringSettings();
 	NumLeaderboardSlots		= 5;
 	LeaderboardOnGameEnd	= true;
 	
 	DefaultPlayerSettings	= ::BhopClasses.PlayerSettings();
-	// </ json_sub_type = ::BhopClasses.PlayerSettings />
-	</ json_ignore = true />
+	</ json_sub_type = ::BhopClasses.PlayerSettings />
 	PlayerSettings			= {};			//	dict[steamID<str>, PlayerSettings[dict]]
 	</ json_ignore = true />
 	BunnyTickerEnt			= null;
@@ -606,7 +589,7 @@ class ::BhopClasses.BhopConfig
 	</ json_ignore = true />
 	CommandManager			= null;
 	</ json_ignore = true />
-	build_num=49
+	build_num=46
 }
 
 printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+"  !!!")
@@ -697,16 +680,6 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		return null;
 	}
 
-	function TableKeys(t)
-	{
-		local r = [];
-		foreach (k, v in t)
-		{
-			r.append(k);
-		}
-		return r;
-	}
-
 	function TableValues(t)
 	{
 		local r = [];
@@ -748,20 +721,6 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		}
 		return rStr.slice(0, -sep.len());
 	}
-
-	function MergeArrays(a1, a2)
-	{
-		local r = [];
-		foreach (o in a1)
-		{
-			if (r.find(o) == null) r.append(o);
-		}
-		foreach (o in a2)
-		{
-			if (r.find(o) == null) r.append(o);
-		}
-		return r;
-	}
 }
 
 ::BhopFunc <-
@@ -769,48 +728,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 	function loadFile()
 	{
 		printl("Bunnyhop detect condition (build num "+::BhopVars.build_num+") :  successfully reload !! yay!");
-		
-		printl("loaded bunny hop config:");
-		::BhopFunc.ReadConfig();
-		printl(::Json.Serialize.ToString(::BhopVars));
-		::BhopVars.CommandManager = ::BhopClasses.CommandManager(::BhopCmds, "!bhop", ::BhopClasses.HelpCommand);
-		::BhopFunc.WriteConfig();
-		::BhopFunc.PopulatePlayerInitList();
-		
-		/* printl("  BunnyDetectCount="+::BhopVars.BunnyDetectCount);
-		printl("  BunnyTickLeniency="+::BhopVars.BunnyTickLeniency);
-		printl("  DefaultPlayerSettings="+::Json.Utils.WriteConfig()PrintThing(::BhopVars.DefaultPlayerSettings, true));
-		printl("  PlayerSettings="+::Json.Utils.PrintThing(::BhopVars.PlayerSettings, true)); */
-	}
-
-	function ReadPlayersManifest()  // -> array<string>
-	{
-		local path = ::BhopVars.ConfigPath+"/playersmanifest.txt";
-		local file = FileToString(path);
-		if (!file) return [];
-		return ::ArgParse.Split(file, "\n");
-	}
-
-	function WritePlayersManifest()
-	{
-		local l = ::BhopFunc.ReadPlayersManifest();
-		local steamids = ::BhopUtils.TableKeys(::BhopVars.PlayerSettings);
-		steamids = steamids.filter(@(i, v) v.len() > 10);
-		steamids.apply(@(v) v.slice(10));
-		// printl("steamidstype="+typeof steamids);
-		// printl("ltype="+typeof l);
-		
-		local r = ::BhopUtils.MergeArrays(l, steamids);
-		printl("len(r)="+r.len()+", len(steamids)="+steamids.len()+", len(l)="+l.len());
-		// this means nothing new was added,,,, probably,,,
-		if (r.len() == steamids.len() && steamids.len() == l.len()) return;
-		local path = ::BhopVars.ConfigPath+"/playersmanifest.txt";
-		StringToFile(path, ::BhopUtils.ArrayJoin(r, "\n"));
-	}
-
-	function ReadConfig(doPlayers=true)
-	{
-		local path = ::BhopVars.ConfigPath+"/config.json";
+		local path = ::BhopVars.ConfigPath;
 		local file = FileToString(path);
 
 		if(!file)
@@ -830,65 +748,23 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		{
 			throw "Bunnyhop detect config parse error: "+error;
 		}
-		if (!doPlayers) return;
-
-		local r = ::BhopFunc.ReadPlayersManifest();
-		foreach (steamid in r)
-		{
-			local fullSteamid = "STEAM_1:1:"+steamid;
-			local pSetPath = ::BhopVars.ConfigPath+"/players/"+steamid+".json";
-			printl("pSetPath="+pSetPath);
-			printl("fullSteamid="+fullSteamid);
-			local pSet;
-			try
-			{
-				pSet = ::Json.Deserialize.FileToClass(pSetPath, ::BhopClasses.PlayerSettings);
-			}
-			catch(error)
-			{
-				throw "Bunnyhop detect player config parse error for playerid="+steamid+": "+error;
-			}
-			::BhopVars.PlayerSettings[fullSteamid] <- pSet;
-		}
-		printl("::BhopVars.PlayerSettings="+::Json.Serialize.ToString(::BhopVars.PlayerSettings));
-	}
-
-	function WritePlayerSettings()
-	{
-		foreach (steamid, pSet in ::BhopVars.PlayerSettings)
-		{
-			if (steamid.len() < 10) continue;
-			//                                              remove starting "STEAM_1:1:"
-			local fName = ::BhopVars.ConfigPath+"/players/"+steamid.slice(10)+".json";
-			if (!pSet.ConfigAltered) 
-			{
-				try
-				{
-					local c = ::Json.Deserialize.FileToClass(fName, ::BhopClasses.PlayerSettings);
-					if (c != null)
-					{
-						::BhopVars.PlayerSettings[steamid] <- c;
-						continue;
-					}
-				}
-				catch (e)
-				{
-					// sex
-				}
-			}
-			
-			::Json.Serialize.ToFile(fName, pSet);
-		}
-		::BhopFunc.WritePlayersManifest();
+		printl("loaded bunny hop config:");
+		printl(::Json.Serialize.ToString(::BhopVars));
+		::BhopVars.CommandManager = ::BhopClasses.CommandManager(::BhopCmds, "!bhop", ::BhopClasses.HelpCommand);
+		::BhopFunc.WriteConfig();
+		::BhopFunc.PopulatePlayerInitList();
+		
+		/* printl("  BunnyDetectCount="+::BhopVars.BunnyDetectCount);
+		printl("  BunnyTickLeniency="+::BhopVars.BunnyTickLeniency);
+		printl("  DefaultPlayerSettings="+::Json.Utils.WriteConfig()PrintThing(::BhopVars.DefaultPlayerSettings, true));
+		printl("  PlayerSettings="+::Json.Utils.PrintThing(::BhopVars.PlayerSettings, true)); */
 	}
 
 	function WriteConfig(path=null)
 	{
-		if (path == null) path = ::BhopVars.ConfigPath+"/config.json";
+		if (path == null) path = ::BhopVars.ConfigPath;
 		// printl("WriteConfig()");
 		::Json.Serialize.ToFile(path, ::BhopVars);
-
-		::BhopFunc.WritePlayerSettings();  // AAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 	}
 
 	function PopulatePlayerInitList()
@@ -933,8 +809,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 	{
 		local pIgnored = ::BhopFunc.IsPlayerIgnored(steamid);
 		if (ignore == pIgnored) return false;
-		// ::BhopVars.ConfigAltered = true;
-		::BhopVars.PlayerSettings[steamid]["ConfigAltered"] = true;
+		::BhopVars.ConfigAltered = true;
 		::BhopVars.PlayerSettings[steamid]["IgnoreBhop"] = ignore;
 		
 		return true;
@@ -944,8 +819,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 	{
 		local pIgnored = ::BhopFunc.IsPlayerPerfectJumpIgnored(steamid);
 		if (pIgnored == ignore) return false;
-		// ::BhopVars.ConfigAltered = true;
-		::BhopVars.PlayerSettings[steamid]["ConfigAltered"] = true;
+		::BhopVars.ConfigAltered = true;
 		::BhopVars.PlayerSettings[steamid]["IgnorePerfectJumps"] = ignore;
 		
 		return true;
@@ -1038,7 +912,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		bestBhops = tVals;
 
 		local leaderboardSlot = 1;
-		// local s = "";
+		local s = "";
 		foreach (i, t in bestBhops)
 		{
 			if (t["BestBhop"] == null) continue;
@@ -1079,7 +953,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		{
 			return true;
 		}
-		
+
 		if (::BhopFunc.IsPlayerInInitList(userid))
 		{
 			printl("player "+player.GetPlayerName()+" in init list, ignoring...");
@@ -1116,42 +990,19 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 			// printl("player "+pName+" has invalid steamid, skipping...");
 			return false;
 		}
-		// TODO
-		// AAAHHH ITS BUGGED ITS BUGGED AHH
-		// ok so write config when it says its altered
-		// otherwise read 
-		// should try to read file first, then check if its in player settings
-		local fPath = ::BhopVars.ConfigPath+"/players/"+strip(steamid).slice(10)+".json"
-		local fi = FileToString(fPath);
-		if (fi == null)
+		if (!(steamid in ::BhopVars.PlayerSettings))
 		{
-			if (!(steamid in ::BhopVars.PlayerSettings))
-			{
-				printl("setting playersettings[steamid] for player "+pName);
-				::BhopVars.PlayerSettings[steamid] <- ::BhopClasses.PlayerSettings();
-				ClientPrint(player, 5, "\x01hello \x05"+pName+"\x01! you seem to be new to bhop detector!");
-				ClientPrint(player, 5, "\x01"+"enter \"\x05!bhop help\x01\" to see the help command, and do \"\x05!bhop toggle\x01\" to enable/disable me!");
-				// dont need to set configaltered since it 100% runs later
-			}
-		}
-		else
-		{
-			printl("reading playersettings[steamid] json file for player "+pName);
-			try
-			{
-				::BhopVars.PlayerSettings[steamid] <- ::Json.Deserialize.StringToClass(fi, ::BhopClasses.PlayerSettings);
-			}
-			catch
-			{
-				throw "error reading playersettings[steamid] json file \""+fPath+"\"";
-			}
+			printl("setting playersettings[steamid] for player "+pName);
+			::BhopVars.PlayerSettings[steamid] <- ::BhopClasses.PlayerSettings();
+			ClientPrint(player, 5, "\x01hello \x05"+pName+"\x01! you seem to be new to bhop detector!");
+			ClientPrint(player, 5, "\x01enter \"\x05!bhop help\x01\" to see the help command, and do \"!bhop toggle\" to enable/disable me!");
+			// dont need to set configaltered since it 100% runs later
 		}
 
 		if (::BhopVars.PlayerSettings[steamid].Name != pName)
 		{
 			::BhopVars.PlayerSettings[steamid].Name = pName;
-			// ::BhopVars.ConfigAltered = true;
-			::BhopVars.PlayerSettings[steamid].ConfigAltered = true;
+			::BhopVars.ConfigAltered = true;
 		}
 		// ::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
 		return true;
@@ -1256,16 +1107,9 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		if (::BhopVars.ConfigAltered)
 		{
 			printl("ConfigSaveTick()");
-			::BhopFunc.WriteConfig();
+			::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
 			::BhopVars.ConfigAltered = false;
-			return;
 		}
-		else
-		{
-			::BhopFunc.ReadConfig(false);
-		}
-		printl("ConfigSaveTick(): WritePlayerSettings!");
-		::BhopFunc.WritePlayerSettings();
 	}
 
 	function UtilityTick()
@@ -1595,9 +1439,7 @@ class ::BhopCmds.Settings extends ::BhopClasses.BhopCommand
 			ClientPrint(player, 5, "ERROR1031: "+e);
 			return;
 		}
-		if (varPath.len() > 2 && varPath[0] == "PlayerSettings" && varPath[1] in ::BhopVars.PlayerSettings)
-			::BhopVars.PlayerSettings[varPath[1]].ConfigAltered = true;
-		else ::BhopVars.ConfigAltered = true;
+		::BhopVars.ConfigAltered = true;
 		ClientPrint(ctx.player, 5, "set variable \x05\""+settingPath+"\"\x01 to \x04\""+convVal+"\"\x01");
 		return;
 	}
@@ -1616,7 +1458,6 @@ class ::BhopCmds.Rules extends ::BhopClasses.BhopCommand
 		ClientPrint(ctx.player, 5, "current bhop ruleset:");
 		ClientPrint(ctx.player, 5, "  \x05"+"tick leniency\x01		: \x04"+::BhopVars.BunnyTickLeniency+"\x01");
 		ClientPrint(ctx.player, 5, "  \x05"+"detection count\x01	: \x04"+::BhopVars.BunnyDetectCount+"\x01");
-		ClientPrint(ctx.player, 5, "  \x05"+"min starting vel\x01	: \x05"+::BhopVars.BunnyMinStartingVel+"\x01");
 		ClientPrint(ctx.player, 5, "scoring rules:");
 		ClientPrint(ctx.player, 5, "  \x05"+"bhop count mult\x01	: \x04"+::BhopVars["ScoringSettings"]["BhopCountMult"]+"\x01");
 		ClientPrint(ctx.player, 5, "  \x05"+"bhop speed mult\x01	: \x04"+::BhopVars["ScoringSettings"]["BhopAvgVelocityMult"]+"\x01");
@@ -1657,22 +1498,6 @@ class ::BhopCmds.Toggle extends ::BhopClasses.BhopCommand
 		return true;
 	}
 }
-//    define your custom command class
-class ::BhopCmds.PinheadCommand extends ::BhopClasses.BhopCommand
-{
-	// put your aliases
-	aliases = ["pinheadsex", "pinheadcuminsideofmee", "ppinheadcockinsidemyvaginaaanow"];
-	// the brief is shown in !bhop help
-	brief = "PINHEAD PINEHDA  I CANT TAKE IT I NEED YOUR COCK  NOOOWW";
-	// the help is shown in !bhop help <cmdAlias>
-	help = ":3";
-
-	// this function gets called when someone runs your command
-	function Callback(ctx)
-	{
-		ClientPrint(ctx.player, 5, "hehe.....  im cumming.,.  i,,   cm c   nm ibiiiio t  figu");
-	}
-}
 
 ::BhopEvent <-
 {
@@ -1700,8 +1525,6 @@ class ::BhopCmds.PinheadCommand extends ::BhopClasses.BhopCommand
 		
 		if (!(steamid in ::BhopVars.JumpingList))
 		{
-			if (speed < ::BhopVars.BunnyMinStartingVel) 
-				continue;
 			local bhopData = ::BhopClasses.BhopChainData(player, steamid, ::BhopClasses.BhopData(speed, jumpPos));
 			::BhopVars.JumpingList[steamid] <- bhopData;
 		}

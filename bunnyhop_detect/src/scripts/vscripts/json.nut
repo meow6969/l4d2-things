@@ -783,7 +783,7 @@ function Json::Deserialize::StringToClass(jsonData, theClass, options=::Json.Des
 
 function Json::Deserialize::FileToClass(filepath, theClass, options=::Json.Deserialize.defaultOptions)
 {
-	local jsonContent = ::Json.Utils.FileToString(filepath);
+	local jsonContent = FileToString(filepath);
 	return ::Json.Deserialize.StringToClass(jsonContent, theClass, options);
 }
 
