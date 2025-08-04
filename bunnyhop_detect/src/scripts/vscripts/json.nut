@@ -784,6 +784,7 @@ function Json::Deserialize::StringToClass(jsonData, theClass, options=::Json.Des
 function Json::Deserialize::FileToClass(filepath, theClass, options=::Json.Deserialize.defaultOptions)
 {
 	local jsonContent = FileToString(filepath);
+	if (!jsonContent) return null;
 	return ::Json.Deserialize.StringToClass(jsonContent, theClass, options);
 }
 
