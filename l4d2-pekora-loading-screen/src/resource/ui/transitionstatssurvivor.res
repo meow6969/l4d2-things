@@ -158,7 +158,7 @@
 		"dulltext"				"0"
 		"brighttext"			"0"
 		"wrap"					"0"
-		"fgcolor_override"		"MediumGray"
+		"fgcolor_override"		"200 200 200 255"
 		"font"					"Default"
 		"usetitlesafe"			"1"
 	}

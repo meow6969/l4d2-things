@@ -1,0 +1,15 @@
+VertexLitGeneric
+{
+	$baseTexture "models\meowmeow\d_u_hunt\ltd_underlinghunter_hair_c"
+	$bumpmap "models\meowmeow\d_u_hunt\ltd_underlinghunter_hair_n"
+	"$nodecal" "1"
+	"$nocull" "1"
+	"$halflambert" "1"
+	"$lightwarptexture" "models\touhougalaxyproject\sharedcontent\toon_skin"
+	"$phong" "1"
+	"$phongboost"	"0.5"
+	"$phongexponent" ".1"
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "models\touhougalaxyproject\sharedcontent\phong_exp"
+	"$phongfresnelranges"	"[0.02 0.1 1]"
+}

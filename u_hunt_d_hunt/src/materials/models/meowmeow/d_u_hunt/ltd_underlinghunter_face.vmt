@@ -1,0 +1,16 @@
+VertexLitGeneric
+{
+	$baseTexture "models\meowmeow\d_u_hunt\ltd_underlinghunter_face_c"
+	$bumpmap "models\meowmeow\d_u_hunt\ltd_underlinghunter_face_n"
+	"$halflambert" "1"
+	"$lightwarptexture" "models\touhougalaxyproject\sharedcontent\toon_skin"
+	"$phong" "1"
+	"$phongboost"	"0.5"
+	"$phongexponent" ".1"
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "models\touhougalaxyproject\sharedcontent\phong_exp"
+	"$phongfresnelranges"	"[0.05 0.1 1]"
+	"$rimlight"               "1"
+	"$rimlightexponent"       "1"
+	"$rimlightboost"          "1"
+}

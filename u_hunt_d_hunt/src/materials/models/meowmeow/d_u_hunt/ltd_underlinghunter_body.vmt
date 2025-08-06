@@ -1,0 +1,13 @@
+VertexLitGeneric
+{
+	$baseTexture			"models\meowmeow\d_u_hunt\ltd_underlinghunter_body_c"
+	$bumpmap				"models\meowmeow\d_u_hunt\ltd_underlinghunter_body_n"
+	$alphatest				"1"
+	$halflambert			"1"
+	$lightwarptexture		"models\touhougalaxyproject\sharedcontent\lightwarptexture"
+	$phong					"1"
+	$phongboost				"10"
+	$phongalbedotint		"1"
+	$phongexponenttexture	"models\touhougalaxyproject\sharedcontent\phong_exp"
+	$phongfresnelranges		"[0.001 0.05 0.08]"
+}

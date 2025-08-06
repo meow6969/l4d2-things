@@ -1,0 +1,55 @@
+vertexlitgeneric
+{
+	$baseTexture "Mastodonmk2\underling_hunter\ltd_underlinghunter_face_c"
+	$bumpmap "Mastodonmk2\underling_hunter\ltd_underlinghunter_face_n"
+	"$halflambert" "1"
+	"$lightwarptexture" "models\TouhouGalaxyProject\SharedContent\toon_skin"
+	"$phong" "1"
+	"$phongboost"	"0.5"
+	"$phongexponent" ".1"
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "models\TouhouGalaxyProject\SharedContent\phong_exp"
+	"$phongfresnelranges"	"[0.05 0.1 1]"
+	"$rimlight"               "1"
+	"$rimlightexponent"       "1"
+	"$rimlightboost"          "1"
+	$detail "effects/burned.vtf"
+	$detailscale 2
+	$detailblendfactor .001 
+	$detailblendmode 0
+	$detailAmount 0
+	$bbqamount 1
+	$BurnLevel 0.0
+	$multi 3.5
+	$blendMin 0.0
+	$blendMax 1.2
+	Proxies
+	{
+		BBQLevel
+		{
+			resultVar $bbqamount
+		}
+		BurnLevel
+		{
+			resultVar $burnlevel
+		}
+		Multiply
+		{
+			srcVar1 $BurnLevel
+			srcVar2 $multi
+			resultVar $BurnLevel
+		}
+		Clamp
+		{
+			min $blendMin
+			max $blendMax
+			srcVar1 $BurnLevel
+			resultVar $BurnLevel
+		}
+		Equals
+		{
+			srcVar1 $BurnLevel
+			resultVar $detailblendfactor
+		}
+	}
+}
