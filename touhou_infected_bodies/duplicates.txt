@@ -1,0 +1,17 @@
+cemetary/fence_a.mdl		==	common_male_fence01.mdl
+
+cemetary/fence_c.mdl		==	common_worker_male01_fence01.mdl
+
+cemetary/pose_c.mdl			==	dead_female_civilian_02.mdl
+
+cemetary/*					==	deepswamp/*							==	default/*	==	human/*	==	milltownrain/*	==	sugarmill/*	==	sugarmillrain/*	==	swamp/*
+
+bodies128_a.mdl				==	bodies128_fresh_a.mdl
+
+bodies128_b.mdl				==	bodies128_fresh_b.mdl
+
+dead_male_civilian_01.mdl	==	dead_male_civilian_body.mdl
+
+
+
+

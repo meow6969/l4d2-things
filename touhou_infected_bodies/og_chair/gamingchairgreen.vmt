@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props/gaming_chair/gamingchairgreen"
+	"$bumpmap" "models/props/gaming_chair/gamingchairgreennormal"
+}

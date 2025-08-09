@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/props/gaming_chair/gamingchair"
+	"$normalmap" "models/props/gaming_chair/gamingchairnormal"
+}
