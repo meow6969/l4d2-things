@@ -209,7 +209,7 @@ def main():
     # print(VtfFile.to_png(Path("/mnt/f/stuff/git/l4d2-things/meowmeowpinktextures/urban_brickwall_06c.vtf")))
     #convert_og_to_png_vtf_editor()
     #contrast_pngs_vtf_editor()
-    modify_pngs_vtf_editor()
+    #modify_pngs_vtf_editor()
     convert_modify_to_vtf_vtf_editor()
 
 

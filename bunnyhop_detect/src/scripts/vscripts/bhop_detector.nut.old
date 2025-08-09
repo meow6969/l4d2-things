@@ -606,7 +606,7 @@ class ::BhopClasses.BhopConfig
 	</ json_ignore = true />
 	CommandManager			= null;
 	</ json_ignore = true />
-	build_num=48
+	build_num=50
 }
 
 printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+"  !!!")
@@ -773,7 +773,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		printl("loaded bunny hop config:");
 		::BhopFunc.ReadConfig();
 		printl(::Json.Serialize.ToString(::BhopVars));
-		::BhopVars.CommandManager = ::BhopClasses.CommandManager(::BhopCmds, "!bhop", ::BhopClasses.HelpCommand);
+		::BhopFunc.SetCommandManager();
 		::BhopFunc.WriteConfig();
 		::BhopFunc.PopulatePlayerInitList();
 		
@@ -781,6 +781,11 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		printl("  BunnyTickLeniency="+::BhopVars.BunnyTickLeniency);
 		printl("  DefaultPlayerSettings="+::Json.Utils.WriteConfig()PrintThing(::BhopVars.DefaultPlayerSettings, true));
 		printl("  PlayerSettings="+::Json.Utils.PrintThing(::BhopVars.PlayerSettings, true)); */
+	}
+
+	function SetCommandManager()
+	{
+		::BhopVars.CommandManager = ::BhopClasses.CommandManager(::BhopCmds, "!bhop", ::BhopClasses.HelpCommand);
 	}
 
 	function ReadPlayersManifest()  // -> array<string>
@@ -825,6 +830,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		try
 		{
 			::BhopVars <- ::Json.Deserialize.StringToClass(file, ::BhopClasses.BhopConfig);
+			::BhopFunc.SetCommandManager();
 		}
 		catch(error)
 		{
@@ -1141,9 +1147,9 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 			{
 				::BhopVars.PlayerSettings[steamid] <- ::Json.Deserialize.StringToClass(fi, ::BhopClasses.PlayerSettings);
 			}
-			catch
+			catch (e)
 			{
-				throw "error reading playersettings[steamid] json file \""+fPath+"\"";
+				throw "error reading playersettings[steamid] json file \""+fPath+"\", "+e;
 			}
 		}
 
@@ -1701,7 +1707,7 @@ class ::BhopCmds.PinheadCommand extends ::BhopClasses.BhopCommand
 		if (!(steamid in ::BhopVars.JumpingList))
 		{
 			if (speed < ::BhopVars.BunnyMinStartingVel) 
-				continue;
+				return;
 			local bhopData = ::BhopClasses.BhopChainData(player, steamid, ::BhopClasses.BhopData(speed, jumpPos));
 			::BhopVars.JumpingList[steamid] <- bhopData;
 		}
@@ -1743,7 +1749,7 @@ class ::BhopCmds.PinheadCommand extends ::BhopClasses.BhopCommand
 	function OnGameEvent_player_say(params)
 	{
 		local player = GetPlayerFromUserID(params.userid);
-		
+		print("::BhopVars.CommandManager="+::BhopVars.CommandManager);
 		::BhopVars.CommandManager.Invoke(player, params.text);
 	}
 

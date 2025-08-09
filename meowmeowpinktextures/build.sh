@@ -51,7 +51,7 @@ function create_subaddons () {
   mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_signs" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/" > `tty`
   mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_placeable" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/" > `tty`
   mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_downtown" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/" > `tty`
-  mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_downtown" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/" > `tty`
+  mv -v "${shdirpath}/meowmeowpinkprops_pt1/materials/models/props_urban" "${shdirpath}/meowmeowpinkprops_pt4/materials/models/" > `tty`
   vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinkprops_pt4.vpk" "${shdirpath}/meowmeowpinkprops_pt4" > `tty`
 
 
@@ -90,6 +90,6 @@ vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinktextures.vpk" "${s
 
 echo "creating vpks..."
 
-copy_subaddons
+# copy_subaddons
 cp "${shdirpath}/meowmeowpinktextures.vpk"  -fv "${l4d2path}/left4dead2/addons/meowmeowpinktextures.vpk"
 
