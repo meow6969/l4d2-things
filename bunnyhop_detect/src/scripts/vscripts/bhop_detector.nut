@@ -57,6 +57,8 @@ class ::BhopClasses.BhopCommand
 	privileged = false;
 	// in ticks -- not implemented yet
 	cooldown = 0;
+	// this means it wont show up in the help menu
+	hidden = false;
 
 	constructor(cmdMan)
 	{
@@ -154,9 +156,8 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 			{
 				// printl("variable params");
 				local clbkAttrs = cmd.GetCallbackAttributes();
-				if ("bhopCmd_vargvName" in clbkAttrs) rStr += "["+clbkAttrs["bhopCmd_vargvName"]+"]...";
-				else rStr += "...";
-				rStr += "\x01";
+				if ("bhopCmd_vargvName" in clbkAttrs) rStr += "["+clbkAttrs["bhopCmd_vargvName"]+"]";
+				rStr += "...\x01";
 				// rLst.append(rStr);
 				rLst.append([rStr, "vargv"]);
 				// continue;
@@ -217,7 +218,8 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 		if (strip(cmd.help) != "") rStr += "  \x01"+cmd.help;
 		if (cmd.GetNumArgs() == 0) return rStr;
 		rStr += "\n";
-		rStr += "\x01"+"arguments:\n"
+		// rStr += "\x01"+"arguments:\n"
+		rStr += "\x01"+"arguments:";
 		local longestParam = ::BhopUtils.GetLongestStringLen(paramLst);
 		local clbkAttrs = cmd.GetCallbackAttributes();
 		// local paramLst
@@ -240,9 +242,11 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 			if (prmBlah.len() == 3)
 				paramDescription += " (default: \x05"+::Json.Serialize.ToString(prmBlah[2], 0)+"\x01)";
 
-			rStr += "  "+prm+padding+" : "+paramDescription+"\n";
+			// rStr += "  "+prm+padding+" : "+paramDescription+"\n"; 
+			rStr += "\n  "+prm+padding+" : "+paramDescription;
 		}
-		return rStr.slice(0, -1);  // remove the last "\n"
+		// return rStr.slice(0, -1);  // remove the last "\n"
+		return rStr;
 	}
 
 	function GetAllParamsHelps(ctx)  // -> table<alias[0]<string>, string>
@@ -251,6 +255,7 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 		// if (pfx == null) pfx = this.GetPrefix(ctx);
 		foreach (cmd in this.commandMan.commands)
 		{
+			if (cmd.hidden) continue;
 			if (cmd.privileged && !ctx.playerPrivileged) continue;
 			local alias = cmd.aliases[0];
 			// local paramStr = pfx+" "+alias+" "+this.GetHelpCmdParams(cmd);
@@ -273,6 +278,7 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 		
 		foreach (cmd in this.commandMan.commands)
 		{
+			// if (cmd.hidden) continue;
 			local alias = cmd.aliases[0];
 			if (!(alias in allHelps)) continue;
 			local numTabs = ceil((longestHelp - allHelps[alias].len()) / tabWidth.tofloat());
@@ -1672,6 +1678,7 @@ class ::BhopCmds.PinheadCommand extends ::BhopClasses.BhopCommand
 	brief = "PINHEAD PINEHDA  I CANT TAKE IT I NEED YOUR COCK  NOOOWW";
 	// the help is shown in !bhop help <cmdAlias>
 	help = ":3";
+	hidden = true;
 
 	// this function gets called when someone runs your command
 	function Callback(ctx)

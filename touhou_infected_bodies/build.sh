@@ -47,14 +47,14 @@ function copy_duplicates() {
 	cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/sugarmillrain/"
 	cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/swamp/"
 
-	for i in "${srcpath}/models/deadbodies/bodies128_a."*; do
-		ext="${i#*.}"
-		cp "${i}" -fv "${srcpath}/models/deadbodies/bodies128_fresh_a.${ext}"
-	done
-	for i in "${srcpath}/models/deadbodies/bodies128_b."*; do
-		ext="${i#*.}"
-		cp "${i}" -fv "${srcpath}/models/deadbodies/bodies128_fesh_b.${ext}"
-	done
+	#for i in "${srcpath}/models/deadbodies/bodies128_a."*; do
+	#	ext="${i#*.}"
+	#	cp "${i}" -fv "${srcpath}/models/deadbodies/bodies128_fresh_a.${ext}"
+	#done
+	#for i in "${srcpath}/models/deadbodies/bodies128_b."*; do
+	#	ext="${i#*.}"
+	#	cp "${i}" -fv "${srcpath}/models/deadbodies/bodies128_fesh_b.${ext}"
+	#done
 	for i in "${srcpath}/models/deadbodies/dead_male_civilian_01."*; do
 		ext="${i#*.}"
 		cp "${i}" -fv "${srcpath}/models/deadbodies/dead_male_civilian_body.${ext}"
@@ -63,7 +63,7 @@ function copy_duplicates() {
 	echo "done copying duplicates!"
 }
 
-# copy_duplicates
+copy_duplicates
 
 # echo "${shpath}"
 

@@ -4,6 +4,7 @@ import subprocess
 from pathlib import Path
 from enum import Enum
 from unittest import case
+import shutil
 
 from valvepcf.unloader import unload_pcf, save_pcf
 from valvepcf import Pcf, PcfSystemNode, PcfOperatorNode, PcfAttribute, PcfNode
@@ -366,7 +367,7 @@ class PcfEditor:
             debug_log(f"", DebugLogLevel.VERBOSE)
         return pcf, edits_made > 0
 
-    def patch_particles(self, output_dir: Path, extract_folder: Path = Path("./extractparticles")) \
+    def patch_particles(self, output_dir: Path, extract_folder: Path = Path("./extractparticles"), override_particles_folder: Path | None = None) \
             -> None:
         # extract_folder = Path("./extractparticles")
         if extract_folder.exists():
@@ -378,6 +379,11 @@ class PcfEditor:
         folder_to_extract = "/particles/"
         suffixes_to_extract = [".pcf"]
         extract_folder_from_l4d2(extract_folder, folder_to_extract, suffixes_to_extract)
+        if override_particles_folder is not None:
+            if not override_particles_folder.exists():
+                raise FileNotFoundError(f"override_particles_folder ({override_particles_folder}) doesnt exist!")
+            debug_log("copying override particles...", DebugLogLevel.HUMAN)
+            shutil.copytree(override_particles_folder, extract_folder, dirs_exist_ok=True)
 
         file: Path
         for file in extract_folder.iterdir():

@@ -80,6 +80,7 @@ def edit_fire(edited_folder: Path, extract_folder: Path):
         "footstep_fx.pcf",
         "blood_fx.pcf",
         "boomer_fx.pcf",
+        "charger_fx.pcf",
         "smoker_fx.pcf",
         "spitter_fx.pcf",
         "environmental_fx_river.pcf",

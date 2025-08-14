@@ -19,7 +19,8 @@ $illumposition -5.54 -11.106 26.855
 $mostlyopaque
 
 // $origin 0 20 3
-$origin -30 -10 -116
+// $origin -30 -10 -116
+$origin 0 20 3
 
 $cdmaterials "models\mokou\"
 $cdmaterials ""

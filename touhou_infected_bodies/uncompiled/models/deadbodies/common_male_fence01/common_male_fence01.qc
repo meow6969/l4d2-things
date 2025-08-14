@@ -16,7 +16,7 @@ $contents "solid"
 
 $illumposition 0.842 1.833 -11.926
 
-$origin 0 7 33
+$origin 0 -7 33
 
 $cdmaterials "models\sanae\"
 

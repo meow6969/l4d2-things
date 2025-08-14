@@ -1,12 +1,12 @@
 // Created by Crowbar 0.74
 
-$modelname "DeadBodies\Bodies96_A.mdl"
+$modelname "deadbodies\bodies96_a.mdl"
 
 $staticprop
 
 $bodygroup "Body"
 {
-	studio "Bodies96_A_REF.smd"
+	studio "bodies96_a_ref.smd"
 }
 
 
@@ -16,7 +16,9 @@ $contents "solid"
 
 $illumposition -16.668 15.268 7.312
 
-$cdmaterials "models\DeadBodies\"
+$origin 67 -43 -7
+
+$cdmaterials "models\sanae\"
 
 $cbox 0 0 0 0 0 0
 

@@ -1,0 +1,35 @@
+// Created by Crowbar 0.74
+
+$modelname "deadbodies/cemetary/wall_192_a.mdl"
+
+$staticprop
+
+$bodygroup "body"
+{
+	studio "wall_192_a.smd"
+}
+
+
+$surfaceprop "default"
+
+$contents "solid"
+
+$illumposition -14.078 -33.797 8.53
+
+$origin -7.5 16 -5.4
+
+$cdmaterials "models\sanae\"
+
+$cbox 0 0 0 0 0 0
+
+$bbox -0.379 -120.006 -1.491 67.972 91.851 18.552
+
+$definebone "static_prop" "" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "ref" {
+	"wall_192_a_anims\ref.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
