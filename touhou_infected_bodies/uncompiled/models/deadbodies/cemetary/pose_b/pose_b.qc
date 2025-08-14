@@ -1,0 +1,35 @@
+// Created by Crowbar 0.74
+
+$modelname "deadbodies/cemetary/pose_b.mdl"
+
+$staticprop
+
+$bodygroup "body"
+{
+	studio "pose_b.smd"
+}
+
+
+$surfaceprop "default"
+
+$contents "solid"
+
+$illumposition 2.084 -18.973 11.165
+
+$origin 0 -15 0
+
+$cdmaterials "models\sanae\"
+
+$cbox 0 0 0 0 0 0
+
+$bbox 0 -14.442 -0.7 37.946 18.611 23.03
+
+$definebone "static_prop" "" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "ref" {
+	"pose_b_anims\ref.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}

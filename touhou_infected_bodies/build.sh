@@ -22,6 +22,16 @@ mkdir -p "${srcpath}/models/deadbodies/sugarmill/"
 mkdir -p "${srcpath}/models/deadbodies/sugarmillrain/"
 mkdir -p "${srcpath}/models/deadbodies/swamp/"
 
+duplicated_folders=(
+	"deepswamp"
+	"default"
+	"human"
+	"milltownrain"
+	"sugarmill"
+	"sugarmillrain"
+	"swamp"
+)
+
 # based on duplicates.txt
 function copy_duplicates() {
 	echo "copying duplicates..."
@@ -39,22 +49,36 @@ function copy_duplicates() {
 		cp "${i}" -fv "${srcpath}/models/deadbodies/cemetary/pose_c.${ext}"
 	done
 
-	cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/deepswamp/"
-	cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/default/"
-	cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/human/"
-	cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/milltownrain/"
-	cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/sugarmill/"
-	cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/sugarmillrain/"
-	cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/swamp/"
+	for i in "${srcpath}/models/deadbodies/cemetary/"*; do
+		if ! [[ -f "${i}" ]]; then
+			continue
+		fi
+		fname="$(basename -- "${i}")"
+		for duplicat in "${duplicated_folders[@]}"; do
+			# echo "duplicat=${duplicat}"
+			if ! [[ -f "${shdirpath}/og/models/deadbodies/${duplicat}/${fname}" ]]; then
+				continue
+			fi
+			cp "${i}" -fv "${srcpath}/models/deadbodies/${duplicat}/${fname}"
+		done
+	done
 
-	#for i in "${srcpath}/models/deadbodies/bodies128_a."*; do
-	#	ext="${i#*.}"
-	#	cp "${i}" -fv "${srcpath}/models/deadbodies/bodies128_fresh_a.${ext}"
-	#done
-	#for i in "${srcpath}/models/deadbodies/bodies128_b."*; do
-	#	ext="${i#*.}"
-	#	cp "${i}" -fv "${srcpath}/models/deadbodies/bodies128_fesh_b.${ext}"
-	#done
+	#cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/deepswamp/"
+	#cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/default/"
+	#cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/human/"
+	#cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/milltownrain/"
+	#cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/sugarmill/"
+	#cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/sugarmillrain/"
+	#cp "${srcpath}/models/deadbodies/cemetary/"* -fv "${srcpath}/models/deadbodies/swamp/"
+
+	for i in "${srcpath}/models/deadbodies/bodies128_a."*; do
+		ext="${i#*.}"
+		cp "${i}" -fv "${srcpath}/models/deadbodies/bodies128_fresh_a.${ext}"
+	done
+	for i in "${srcpath}/models/deadbodies/bodies128_b."*; do
+		ext="${i#*.}"
+		cp "${i}" -fv "${srcpath}/models/deadbodies/bodies128_fresh_b.${ext}"
+	done
 	for i in "${srcpath}/models/deadbodies/dead_male_civilian_01."*; do
 		ext="${i#*.}"
 		cp "${i}" -fv "${srcpath}/models/deadbodies/dead_male_civilian_body.${ext}"

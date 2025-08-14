@@ -21,9 +21,15 @@
 
  * `cemetary/`
     * `barricade_a.mdl`
+    * `barricade_b.mdl`
+    * `barricade_c.mdl`
     * `oval_128_a.mdl`
+    * `pose_a.mdl`
+    * `pose_b.mdl`
+    * `pose_d.mdl`
     * `corner_b.mdl`
     * `corner_c.mdl`
+    * `fence_b.mdl`
     * `wall_192_a.mdl`
     * `wall_192_b.mdl`
     * `wall_192_c.mdl`
