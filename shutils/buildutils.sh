@@ -209,3 +209,85 @@ function file_increment_number_after_string () {
   fi
 
 }
+
+function native_path_to_wine () {
+	if [[ ! "${1}" ]]; then
+		return 1
+	fi
+	nya="$(get_realpath "${1}")"
+	# echo "nya=\"${nya}\"" > `tty`
+	echo -E "Z:$(echo "${nya}" | sed 's/\//\\/g')"
+}
+
+# 1=input_qc, 2=output_folder
+function compile_model () {
+	if [[ ! "${1}" ]] || [[ ! "${2}" ]]; then
+		return 1
+	fi
+	if ! [[ -f "${1}" ]]; then
+		return 2
+	fi
+	if ! [[ -d "${2}" ]]; then
+		return 3
+	fi
+
+	out="$(get_realpath "${2}")"
+	studiomdl="$(native_path_to_wine "${l4d2path}/bin/studiomdl.exe")"
+	game="$(native_path_to_wine "${l4d2path}/left4dead2")"
+	qc="$(native_path_to_wine "${1}")"
+
+	relapath="$(grep -Po '(?<=^\$modelname ")[^"]*' "${1}")"
+	relapath="${relapath%.*}"  # remove extension
+	relapath="$(echo -E "${relapath}" | sed 's/\\/\//g')"  # replace \ with /
+	relapath="${relapath:l}"  # make lowercase
+	reladir="$(dirname "${relapath}")"
+	echo -E "studiomdl=\"${studiomdl}\""
+	echo -E "game=\"${game}\""
+	echo -E "qc=\"${qc}\""
+	echo -E "relapath=\"${relapath}\""
+	echo -E "reladir=\"${reladir}\""
+	
+	wine "${studiomdl}" -game "${game}" -verbose -nop4 "${qc}"
+	outpath="${out}/models/${reladir}/"
+	mkdir -p "${outpath}"
+
+	mv -fv "${l4d2path}/left4dead2/models/${relapath}."* "${outpath}"
+} > `tty`
+
+
+function build_mod () {
+	copy_to_addons=false
+	output_dir="${pakdir}"
+	output_name="${pakname}"
+	copy_flag_to=""
+	
+	for flag in "${@}"; do
+		# if $copy_flag_to isnt empty
+		if [[ "${copy_flag_to}" ]]; then
+			eval "${copy_flag_to}="
+		fi
+		case "${flag}" in 
+
+			"--copy") 
+				copy_to_addons=true
+				;;
+			"--output-dir")
+				#if [[ "${copy_flag_to}" ]]; then
+				#	echo "build_mod(): flags error"
+				#	exit 1
+				#fi
+				copy_flag_to="output_dir"
+				;;
+			"--output-name")
+				copy_flag_to="output_name"
+				;;
+			*)
+				echo "build_mod(): invalid flag: ${flag}"
+				exit 1
+				;;
+		esac
+	done
+
+}
+
+

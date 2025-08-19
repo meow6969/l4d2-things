@@ -20,7 +20,7 @@ $origin 75 -10 -30
 
 $mostlyopaque
 
-$cdmaterials "models\tenshi\"
+$cdmaterials "models\meowmeow\deadbodies\tenshi\"
 
 $cbox 0 0 0 0 0 0
 

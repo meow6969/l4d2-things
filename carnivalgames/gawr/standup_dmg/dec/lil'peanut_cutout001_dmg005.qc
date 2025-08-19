@@ -1,12 +1,12 @@
 // Created by Crowbar 0.74
 
-$modelname "props_fairgrounds/Lil'Peanut_cutout001_dmg005.mdl"
+$modelname "props_fairgrounds/lil'peanut_cutout001_dmg005.mdl"
 
 $staticprop
 
 $bodygroup "body"
 {
-	studio "Lil'Peanut_cutout001_dmg005.smd"
+	studio "lil'peanut_cutout001_dmg005.smd"
 }
 
 
@@ -15,6 +15,8 @@ $surfaceprop "wood"
 $contents "solid"
 
 $illumposition 3.281 8.75 30.188
+
+$origin 0 -13 0 
 
 $cdmaterials "models\meowmeow\lilpeanuthomu\"
 

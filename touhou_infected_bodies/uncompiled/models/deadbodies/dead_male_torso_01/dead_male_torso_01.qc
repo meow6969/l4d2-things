@@ -19,7 +19,7 @@ $origin 0 52 -4
 
 // $cdmaterials "models\meowmeow\deadbodies\"
 $cdmaterials "models\deadbodies\"
-$cdmaterials "models\sanae\"
+$cdmaterials "models\meowmeow\deadbodies\sanae\"
 
 $cbox 0 0 0 0 0 0
 

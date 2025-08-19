@@ -18,13 +18,13 @@ $illumposition 42.666 0.095 19.622
 
 $mostlyopaque
 
-$cdmaterials "models\sanae\"
+$cdmaterials "models\meowmeow\deadbodies\mokou\"
 $cdmaterials ""
 
 $cbox 0 0 0 0 0 0
 
 // $origin 50 -31 -12
-$origin -50 31 -12
+// $origin -50 31 -12
 
 $bbox -34.122 0 -0.899 33.932 85.333 40.144
 

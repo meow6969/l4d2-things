@@ -20,7 +20,7 @@ $mostlyopaque
 
 $origin 13 120 -67
 
-$cdmaterials "models\mokou\"
+$cdmaterials "models\meowmeow\deadbodies\mokou\"
 $cdmaterials ""
 
 $cbox 0 0 0 0 0 0

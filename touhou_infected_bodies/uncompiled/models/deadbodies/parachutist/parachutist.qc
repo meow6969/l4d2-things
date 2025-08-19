@@ -17,7 +17,7 @@ $contents "solid"
 $illumposition 0.472 -4.973 32.801
 
 $cdmaterials "models\meowmeow\deadbodies\"
-$cdmaterials "pacagma\touhou\alice_margatroid\"
+$cdmaterials "models\meowmeow\deadbodies\alice\"
 
 $cbox 0 0 0 0 0 0
 

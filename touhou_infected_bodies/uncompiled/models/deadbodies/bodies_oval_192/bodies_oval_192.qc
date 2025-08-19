@@ -18,7 +18,7 @@ $illumposition 0.741 -3.674 7.669
 
 $origin 29 12 -1.5
 
-$cdmaterials "models\sanae\"
+$cdmaterials "models\meowmeow\deadbodies\sanae\"
 
 $cbox 0 0 0 0 0 0
 

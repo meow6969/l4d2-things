@@ -17,8 +17,8 @@ $illumposition -1.872 -17.12 28.945
 
 $origin -6 30 3
 
-$cdmaterials "models\props\gaming_chair\"
-$cdmaterials "models\sanae\"
+$cdmaterials "models\meowmeow\deadbodies\chair\"
+$cdmaterials "models\meowmeow\deadbodies\sanae\"
 
 $cbox 0 0 0 0 0 0
 

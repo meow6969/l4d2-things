@@ -234,7 +234,7 @@ $ambientboost
 
 $mostlyopaque
 
-$cdmaterials "models\Sanae\"
+$cdmaterials "models\meowmeow\deadbodies\sanae\"
 
 $attachment "eyes" "ValveBiped.Bip01_Head1" 2.04 -3.5 0 rotate 0 -80.1 -90
 $attachment "mouth" "ValveBiped.Bip01_Head1" -0.3 -3.5 0 rotate 0 -80 -90

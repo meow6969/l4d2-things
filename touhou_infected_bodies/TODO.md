@@ -2,7 +2,7 @@
 # ON HOLD:  
 
  * ~~do all of the draped models ( idk how im gonna do this, but , . well idk i need to figure this out )~~ DONE  
- * do all of the models with multiple bodies  
+ * ~~do all of the models with multiple bodies~~ DONE  
  * ~~do the `dead_male_sittingchair.mdl`~~ DONE  
  * ~~do all of the models that are only body parts ( like `dead_male_legs_01.mdl` )~~ DONE  
  * maybe remove some bodies from the dead body piles to decrease triangle counts  
@@ -11,6 +11,9 @@
 # if a model is marked as a duplicate ( as can be seen via duplicates.txt ), it will not be listed. only the original will be  
 
 # TESTED MODELS ( test everything not on this list )  
+
+ * `../c1_chargerexit/`
+    * `common_male_carexit.mdl`
 
  * `ceda/`  
     * `ceda_msgboard_a.mdl`  
@@ -30,6 +33,12 @@
     * `corner_b.mdl`
     * `corner_c.mdl`
     * `fence_b.mdl`
+    * `oval_128_a.mdl`
+    * `oval_128_b.mdl`
+    * `oval_128_c.mdl`
+    * `oval_192_a.mdl`
+    * `oval_192_b.mdl`
+    * `oval_192_c.mdl`
     * `wall_192_a.mdl`
     * `wall_192_b.mdl`
     * `wall_192_c.mdl`
@@ -84,6 +93,12 @@
 
 # PINHEAD MODELS  
 
- * `cemetary/barricade_a.mdl`
- * `cemetary/oval_128_a.mdl`
+ * `cemetary/`
+    * `barricade_a.mdl`
+    * `oval_128_a.mdl`
+    * `oval_128_b.mdl`
+    * `oval_128_c.mdl`
+    * `oval_192_a.mdl`
+    * `oval_192_b.mdl`
+    * `oval_192_c.mdl`
 

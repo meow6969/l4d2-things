@@ -16,9 +16,13 @@ $contents "solid"
 
 $illumposition -2.9 -0.411 8.279
 
-$origin 0 -40 5
+// $origin 5.6 4.8 5.4
+// $origin -41.1 -10.9 4
+// $origin 38 -27 10
+// $origin 10 -38 10 -120
+$origin 7.5 -40 10 
 
-$cdmaterials "models\sanae\"
+$cdmaterials "models\meowmeow\deadbodies\sanae\"
 
 $cbox 0 0 0 0 0 0
 

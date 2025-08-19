@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/meowmeow/deadbodies/chair/gamingchair"
+	"$normalmap" "models/meowmeow/deadbodies/chair/gamingchairnormal"
+}

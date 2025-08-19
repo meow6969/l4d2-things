@@ -8,7 +8,10 @@
 
 source "$(dirname "${0}")/../shutils/pathvars.sh"
 init_pathvars 
-# echo_pathvars
+
+source "${shutilspath}/buildutils.sh"
+
+# echo_pathvarsi
 # python3 "edit_all_textures.py"
 
 mkdir -p "${srcpath}/models/deadbodies/ceda/"
@@ -31,6 +34,17 @@ duplicated_folders=(
 	"sugarmillrain"
 	"swamp"
 )
+
+function compile_all() {
+	echo "compiling all models..."
+	#export -f compile_model
+	#find "${shdirpath}/uncompiled" -type f -name "*.qc" -exec zsh -c "compile_model \"\${0}\" \"${srcpath}\"" {} ";"
+	find "${shdirpath}/uncompiled" -type f -name "*.qc" | while read file; do
+		compile_model "${file}" "${srcpath}" > `tty` 
+	done
+	wineserver -w
+	echo "done compiling models!"
+} > `tty`
 
 # based on duplicates.txt
 function copy_duplicates() {
@@ -86,6 +100,11 @@ function copy_duplicates() {
 
 	echo "done copying duplicates!"
 }
+
+# compile_all
+
+# compile_model "${shdirpath}/uncompiled/models/deadbodies/cemetary/oval_192_c/oval_192_c.qc" "${srcpath}"
+# wineserver -w
 
 copy_duplicates
 

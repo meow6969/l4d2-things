@@ -70,10 +70,11 @@ function init_pathvars() {
   ensure_dir "${l4d2path}"
   
 
-  shdirpath="$(dirname "$shpath")"
+  shdirpath="$(dirname "${shpath}")"
 
   pakname="$(basename "$shdirpath").vpk"
-  pakpath="$(readlink -f -- "${shdirpath}/..")/${pakname}"
+  pakdir="$(readlink -f -- "${shdirpath}/..")"
+  pakpath="${pakdir}/${pakname}"
   
 
   srcpath="${1}"
@@ -82,8 +83,11 @@ function init_pathvars() {
   else 
     srcpath="${shdirpath}/src"
   fi
+
   source "${shutilspath}/funcs.sh"
   source "${shutilspath}/output.sh"
+  source "${shutilspath}/buildutils.sh"
+
   ensure_srcpath
   ensure_pakpath
   lastbuild="$(get_last_build "${shdirpath}")"
@@ -108,6 +112,7 @@ function echo_pathvars () {
   output "	$(format_key "shpath")		$(format_path "${shpath}")"
   output "	$(format_key "srcpath")		$(format_path "${srcpath}")"
   output "	$(format_key "shdirpath")	$(format_path "${shdirpath}")"
+  output "  $(format_key "pakdir")		$(format_path "${pakdir}")"
   output "	$(format_key "pakpath")		$(format_path "${pakpath}")"
   output "	$(format_key "lastbuild")	$(format_value "${lastbuild}")"
   output "	$(format_key "pakname")		$(format_value "${pakname}")"
