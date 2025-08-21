@@ -55,8 +55,12 @@ class ::BhopClasses.BhopCommand
 	help = "";
 	// true means that this command is [ADMIN]
 	privileged = false;
-	// in ticks -- not implemented yet
+	// in seconds -- not implemented yet
 	cooldown = 0;
+	// this means it wont show up in the help menu
+	hidden = false;
+
+	cooldownTracker = {};
 
 	constructor(cmdMan)
 	{
@@ -100,11 +104,28 @@ class ::BhopClasses.BhopCommand
 		params = params.slice(0, -fInfos["defparams"].len());
 		return params.len();
 	}
+
+	// Time() returns a float value of the number of seconds the server has been alive
+	function IsCooldown(pSID)
+	{
+		if (this.cooldown <= 0) return false;
+		if (!(pSID in this.cooldownTracker)) return false;
+		local diff = Time() - this.cooldownTracker[pSID];
+		if (diff > 0) return diff;
+		delete this.cooldownTracker[pSID];
+		return false;
+	}
+
+	function AddCooldown(pSID)
+	{
+		if (this.cooldown <= 0) return;
+		this.cooldownTracker[pSID] <- Time();
+	}
 }
 
 class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 {
-	aliases = ["help"];
+	aliases = ["help", "h"];
 	brief = "show this text";
 	help = "syntax: \"?\" means that a argument is not required, \"...\" means that a variable number of that argument can be passed";
 
@@ -154,9 +175,8 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 			{
 				// printl("variable params");
 				local clbkAttrs = cmd.GetCallbackAttributes();
-				if ("bhopCmd_vargvName" in clbkAttrs) rStr += "["+clbkAttrs["bhopCmd_vargvName"]+"]...";
-				else rStr += "...";
-				rStr += "\x01";
+				if ("bhopCmd_vargvName" in clbkAttrs) rStr += "["+clbkAttrs["bhopCmd_vargvName"]+"]";
+				rStr += "...\x01";
 				// rLst.append(rStr);
 				rLst.append([rStr, "vargv"]);
 				// continue;
@@ -217,7 +237,8 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 		if (strip(cmd.help) != "") rStr += "  \x01"+cmd.help;
 		if (cmd.GetNumArgs() == 0) return rStr;
 		rStr += "\n";
-		rStr += "\x01"+"arguments:\n"
+		// rStr += "\x01"+"arguments:\n"
+		rStr += "\x01"+"arguments:";
 		local longestParam = ::BhopUtils.GetLongestStringLen(paramLst);
 		local clbkAttrs = cmd.GetCallbackAttributes();
 		// local paramLst
@@ -240,9 +261,11 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 			if (prmBlah.len() == 3)
 				paramDescription += " (default: \x05"+::Json.Serialize.ToString(prmBlah[2], 0)+"\x01)";
 
-			rStr += "  "+prm+padding+" : "+paramDescription+"\n";
+			// rStr += "  "+prm+padding+" : "+paramDescription+"\n"; 
+			rStr += "\n  "+prm+padding+" : "+paramDescription;
 		}
-		return rStr.slice(0, -1);  // remove the last "\n"
+		// return rStr.slice(0, -1);  // remove the last "\n"
+		return rStr;
 	}
 
 	function GetAllParamsHelps(ctx)  // -> table<alias[0]<string>, string>
@@ -251,6 +274,7 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 		// if (pfx == null) pfx = this.GetPrefix(ctx);
 		foreach (cmd in this.commandMan.commands)
 		{
+			if (cmd.hidden) continue;
 			if (cmd.privileged && !ctx.playerPrivileged) continue;
 			local alias = cmd.aliases[0];
 			// local paramStr = pfx+" "+alias+" "+this.GetHelpCmdParams(cmd);
@@ -273,6 +297,7 @@ class ::BhopClasses.HelpCommand extends ::BhopClasses.BhopCommand
 		
 		foreach (cmd in this.commandMan.commands)
 		{
+			// if (cmd.hidden) continue;
 			local alias = cmd.aliases[0];
 			if (!(alias in allHelps)) continue;
 			local numTabs = ceil((longestHelp - allHelps[alias].len()) / tabWidth.tofloat());
@@ -366,6 +391,12 @@ class ::BhopClasses.CommandManager
 			ClientPrint(p, 5, "ERROR: you do not have the permission to run this command");
 			return;
 		}
+		local cldwn = cmd.IsCooldown(ctx.playerSteamID);
+		if (cldwn)
+		{
+			ClientPrint(p, 5, "ERROR: this command is on cooldown! you have \x04"+cldwn+"\x01 seconds left");
+			return;
+		}
 		//                        sliced prefix, alias
 		local providedArgs = args.len() - 2;
 		local maxArgs = cmd.GetNumArgs();
@@ -393,6 +424,7 @@ class ::BhopClasses.CommandManager
 		{
 			ClientPrint(p, 5, "ERROR: internal error processing your command, "+e);
 		}
+		cmd.AddCooldown(ctx.playerSteamID);
 	}
 }
 
@@ -491,6 +523,10 @@ class ::BhopClasses.BhopChainData
 	function AverageVelocity()
 	{
 		// i do bhopChain.len() instead of GetNumBhops() cause like idk why change it i guess 
+		// ok i didnt explain this well
+		// so like basically at the start i did this.bhopChain.len() for the number of bhops 
+		// but then found this was off by +1, so then i did the GetNumBhops, but then that would change
+		// how the rest of the bhops in my database was scored , so i was like,  whatever it doesnt  matter
 		return this.bhopVels / this.bhopChain.len();
 	}
 
@@ -606,7 +642,7 @@ class ::BhopClasses.BhopConfig
 	</ json_ignore = true />
 	CommandManager			= null;
 	</ json_ignore = true />
-	build_num=50
+	build_num=52
 }
 
 printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+"  !!!")
@@ -653,8 +689,8 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		local pClass = player.GetClassname();
 
 		if (pClass == "player"
-		|| pClass == "witch"
-		|| pClass == "infected")
+			|| pClass == "witch"
+			|| pClass == "infected")
 		{
 			return NetProps.GetPropInt(player,"m_lifeState") == 0;
 		}
@@ -800,14 +836,16 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 	{
 		local l = ::BhopFunc.ReadPlayersManifest();
 		local steamids = ::BhopUtils.TableKeys(::BhopVars.PlayerSettings);
+		// filters out only steamids that have a len greater than 10
 		steamids = steamids.filter(@(i, v) v.len() > 10);
+		// slices off the initial STEAM_1:1:
 		steamids.apply(@(v) v.slice(10));
 		// printl("steamidstype="+typeof steamids);
 		// printl("ltype="+typeof l);
 		
 		local r = ::BhopUtils.MergeArrays(l, steamids);
 		printl("len(r)="+r.len()+", len(steamids)="+steamids.len()+", len(l)="+l.len());
-		// this means nothing new was added,,,, probably,,,
+		// this means nothing new was added,,,, probably,,,  --  mmaybe ,,  I HOPE!!!!!!!!!!!! SHINJITE!!!!!
 		if (r.len() == steamids.len() && steamids.len() == l.len()) return;
 		local path = ::BhopVars.ConfigPath+"/playersmanifest.txt";
 		StringToFile(path, ::BhopUtils.ArrayJoin(r, "\n"));
@@ -848,7 +886,9 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 			local pSet;
 			try
 			{
+				// if the file doesnt exist, just returns null
 				pSet = ::Json.Deserialize.FileToClass(pSetPath, ::BhopClasses.PlayerSettings);
+				if (pSet == null) continue;
 			}
 			catch(error)
 			{
@@ -894,7 +934,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		// printl("WriteConfig()");
 		::Json.Serialize.ToFile(path, ::BhopVars);
 
-		::BhopFunc.WritePlayerSettings();  // AAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+		::BhopFunc.WritePlayerSettings();  // AAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH  --  me too
 	}
 
 	function PopulatePlayerInitList()
@@ -1123,6 +1163,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 			return false;
 		}
 		// TODO
+		// i forgot if i fixed this
 		// AAAHHH ITS BUGGED ITS BUGGED AHH
 		// ok so write config when it says its altered
 		// otherwise read 
@@ -1135,9 +1176,11 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 			{
 				printl("setting playersettings[steamid] for player "+pName);
 				::BhopVars.PlayerSettings[steamid] <- ::BhopClasses.PlayerSettings();
-				ClientPrint(player, 5, "\x01hello \x05"+pName+"\x01! you seem to be new to bhop detector!");
+				ClientPrint(player, 5, "\x01hello \x04"+pName+"\x01! you seem to be new to bhop detector!");
 				ClientPrint(player, 5, "\x01"+"enter \"\x05!bhop help\x01\" to see the help command, and do \"\x05!bhop toggle\x01\" to enable/disable me!");
-				// dont need to set configaltered since it 100% runs later
+				ClientPrint(player, 5, "\x04"+"elitezrule2\x01 is currently testing this mod, expect bugs!");
+				ClientPrint(player, 4, "\x01"+"feedback is welcome!");
+				// dont need to set configaltered since it 100% runs later  -- dis is bcs the pName changes
 			}
 		}
 		else
@@ -1316,6 +1359,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		::BhopEnts.TickTracker = 0;
 	} */
 
+	// this is the one that handles bhop logic
 	// we do this as a workaround bcs there is no on_tick() game event
 	function AddBhopTicker()
 	{
@@ -1334,13 +1378,15 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		scrScope["BhopThink"] <- function () {
 			// printl("BhopThink!");
 			::BhopEnts.BhopTick();
-			// return 0.03333;
+			// these numbers are the minimum amt of time that will pass (in seconds) before running this think function again
+			// return 0.03333;  // dis is the tick time for  30 tick server, which is default, idk if this should be returned, probably not though
 			// return 0.01111;
 			return 0.0001;  // without this it doesnt run every tick
 		}
 		AddThinkToEnt(::BhopVars.BunnyTickerEnt,"BhopThink");
 	}
 	
+	// this is the one that saves config files
 	function AddConfigSaveTicker()
 	{	
 		::BhopVars.ConfigTickerEnt = Entities.FindByName(null, "bhopConfigSaveTicker");
@@ -1361,6 +1407,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 		}
 	}
 
+	// this is the one that like initializes new players that join server and stuff
 	function AddUtilityTicker()
 	{
 		::BhopVars.BunnyUtilsTickerEnt = Entities.FindByName(null, "bhopUtilsTicker");
@@ -1425,7 +1472,7 @@ printl("<mt2> Load bunny-hop detect script "+::BhopClasses.BhopConfig.build_num+
 
 class ::BhopCmds.Stats extends ::BhopClasses.BhopCommand
 {
-	aliases = ["stats"];
+	aliases = ["stats", "s"];
 	brief = "show your bhop stats, supply name for others' stats";
 	help = "show your bhop stats, supply name for others' stats. player name is case insensitive. put the players name in quotes \"\" if they have a space in their name";
 	privileged = false;
@@ -1481,7 +1528,7 @@ class ::BhopCmds.Leaderboard extends ::BhopClasses.BhopCommand
 	cooldown = 0;
 
 	// </ bhopCmd_vargvName = "meows", bhopCmd_vargvHelp = "epic meow meow gangster gaming" />
-	function Callback(ctx, ...)
+	function Callback(ctx)
 	{
 		::BhopFunc.DisplayLeaderboard(ctx.player);
 	}
@@ -1632,11 +1679,11 @@ class ::BhopCmds.Rules extends ::BhopClasses.BhopCommand
 
 class ::BhopCmds.Toggle extends ::BhopClasses.BhopCommand
 {
-	aliases = ["toggle"];
+	aliases = ["toggle", "t"];
 	brief = "toggle bhop announcing for you";
 	help = "add the \"perfectjump\" parameter to only disable perfectjump announcing";
 
-	</ bhopCmd_param_type = "type of thing to toggle. can either be anything or \"perfectjump\"" />
+	</ bhopCmd_param_type = "type of thing to toggle. can either be nothing, \"all\" or \"perfectjump\"" />
 	function Callback(ctx, type="all")
 	{
 		local toggleType = type;
@@ -1672,6 +1719,7 @@ class ::BhopCmds.PinheadCommand extends ::BhopClasses.BhopCommand
 	brief = "PINHEAD PINEHDA  I CANT TAKE IT I NEED YOUR COCK  NOOOWW";
 	// the help is shown in !bhop help <cmdAlias>
 	help = ":3";
+	hidden = true;
 
 	// this function gets called when someone runs your command
 	function Callback(ctx)
