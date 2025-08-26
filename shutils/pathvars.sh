@@ -102,6 +102,7 @@ function ensure_pakpath () {
 
 function echo_pathvars () {
   ensure_init
+  # 2 tab indents at the stat of the keys
   output "${BRACKET_COLOR}echo_pathvars"
   output "${BRACKET_COLOR}{"
   output "	$(format_key "l4d2path")	$(format_path "${l4d2path}")"
@@ -112,7 +113,7 @@ function echo_pathvars () {
   output "	$(format_key "shpath")		$(format_path "${shpath}")"
   output "	$(format_key "srcpath")		$(format_path "${srcpath}")"
   output "	$(format_key "shdirpath")	$(format_path "${shdirpath}")"
-  output "  $(format_key "pakdir")		$(format_path "${pakdir}")"
+  output "	$(format_key "pakdir")		$(format_path "${pakdir}")"
   output "	$(format_key "pakpath")		$(format_path "${pakpath}")"
   output "	$(format_key "lastbuild")	$(format_value "${lastbuild}")"
   output "	$(format_key "pakname")		$(format_value "${pakname}")"

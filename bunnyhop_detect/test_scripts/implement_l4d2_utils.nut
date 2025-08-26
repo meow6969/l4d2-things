@@ -237,9 +237,18 @@ class L4D2ImplementedClasses.EntitiesHandle extends L4D2ImplementedClasses.CBase
 	}
 }
 
+class L4D2ImplementedClasses.CDirector
+{
+	function GetMapName()
+	{
+		return "c1m1_hotel";
+	}
+}
+
 ::L4D2ImplementedSingletons <-
 {
-	Entities = L4D2ImplementedClasses.EntitiesHandle()
+	Entities = L4D2ImplementedClasses.EntitiesHandle(),
+	Director = L4D2ImplementedClasses.CDirector()
 }
 	
 	
