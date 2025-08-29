@@ -115,6 +115,19 @@
 	{
 
 	}
+
+	function LocalTime(a)
+	{
+		local d = date();
+		a["second"]          <- d["sec"];
+		a["minute"]          <- d["min"];
+		a["hour"]            <- d["hour"];
+		a["day"]             <- d["day"];
+		a["month"]           <- d["month"];
+		a["dayofweek"]       <- d["wday"];
+		a["dayofyear"]       <- d["yday"];
+		a["daylightsavings"] <- 0;
+	}
 }
 
 ::L4D2ImplementedClasses <-
