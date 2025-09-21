@@ -1,0 +1,319 @@
+// this file is just filled with all of the stuff i tried that didnt work
+
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/common/death_screen"
+	"$translucent" 1
+	//"$frame" "0"
+
+	"$numFrames" "96"
+	"$frameWorkNum" "0.0"
+	"$frameAddAmount" "0.06"
+
+	//"$currentTeam" "0"
+	//"$newTeam" "0"
+	//"$teamAdd" "0"
+
+	//"$lastTime" "0"
+	//"$newTime" "0"
+	//"$addTime" "0"
+
+	"$aliveState" "1" // 0 = dead, 1 = alive
+	"$currentVel" "0.0"
+	"$lastX" "0.0"
+	"$newPos" "[ 0 0 0 ]"
+	"$newX" "0.0"
+	"$subX" "0.0"
+	"$compareVelPos1" "0.0"
+	"$compareBuffer" "0"
+	// we have to set aliveState after the other stuff ok just ... ok
+	"$aliveCompareBuffer" "0"
+
+	"$zero" "0"
+	"$one" "1"
+	"$onepointnine" "1.9"
+	"$twopointnine" "2.9"
+	"$zeropointzeroone" "0.01"
+	"$zeropointnine" "0.9"
+
+
+	"Proxies"
+	{
+		//"AnimatedTexture"
+		//{
+		//	"animatedtexturevar" "$basetexture"
+		//	"animatedtextureframenumvar" "$frame"
+		//	"animatedtextureframerate" "14"
+		//	"animationnowrap" "1"
+		//}
+
+		"Add"
+		{
+			"srcVar1" "$frameWorkNum"
+			"srcVar2" "$frameAddAmount"
+			"resultVar" "$frameWorkNum"
+		}
+		
+		"LessOrEqual"
+		{
+			"lessEqualVar" "$frameWorkNum"
+			"greaterVar" "$numFrames"
+			"srcVar1" "$frameWorkNum"
+			"srcVar2" "$numFrames"
+			"resultVar" "$frameWorkNum"
+		}
+
+		// if the player dies, then respawns, then dies again, we need to make sure $frame is reset to 0
+
+		// attempt to fix the 2nd death bug by tracking velocity and position
+
+		"PlayerSpeed"
+		{
+			"scale" "1.0"
+			"resultVar" "$currentVel"
+		}
+		// idk if $currentVel can be negative? ill just abs to make sure
+		"Abs"
+		{
+			"srcVar1" "$currentVel"
+			"resultVar" "$currentVel"
+		}
+
+		"PlayerPosition"
+		{
+			"scale" "1.0"
+			"resultVar" "$newPos"
+		}
+		// we only save the X value cause checking for all 3 position values would be way to much work
+
+		// doesnt work  - Equals doesnt support [0] syntax
+		//"Equals"
+		//{
+		//	"srcVar1" "$newPos[0]"
+		//	"resultVar" "$newX"
+		//}
+		"Clamp"
+		{
+			"srcVar1" "$zero"
+			"min" "$newPos[0]"
+			"max" "$newPos[0]"
+			"resultVar" "$newX"
+		}
+		"Abs"
+		{
+			"srcVar1" "$newX"
+			"resultVar" "$newX"
+		}
+		
+		// now we can just subtract newX from lastX and get the absolute value to find the difference
+		"Subtract"
+		{
+			"srcVar1" "$lastX"
+			"srcVar2" "$newX"
+			"resultVar" "$subX"
+		}
+		"Abs"
+		{
+			"srcVar1" "$subX"
+			"resultVar" "$subX"
+		}
+
+		// now we just need to check if $subX > 0 && $currentVel == 0
+		"Equals"
+		{
+			"srcVar1" "$zero"
+			"resultVar" "$compareVelPos1"
+		}
+		"Equals"
+		{
+			"srcVar1" "$zero"
+			"resultVar" "$compareBuffer"
+		}
+
+		"LessOrEqual"
+		{
+			"lessEqualVar" "$zero"
+			"greaterVar" "$one"
+			"srcVar1" "$subX"
+			"srcVar2" "$zero"
+			"resultVar" "$compareBuffer"
+		}
+		"Add"
+		{
+			"srcVar1" "$compareBuffer"
+			"srcVar2" "$compareVelPos1"
+			"resultVar" "$compareVelPos1"
+		}
+		// we do LessOrEqual so we can add a epsilon since $currentVel is a float
+		"LessOrEqual"
+		{
+			"lessEqualVar" "$one"
+			"greaterVar" "$zero"
+			"srcVar1" "$currentVel"
+			"srcVar2" "$zeropointzeroone"
+			"resultVar" "$compareBuffer"
+		}
+		"Add"
+		{
+			"srcVar1" "$compareBuffer"
+			"srcVar2" "$compareVelPos1"
+			"resultVar" "$compareVelPos1"
+		}
+
+		// $compareVelPos1 will be 2 if both previous conditions are true
+
+		// we need this saved to set $aliveState later
+		"Equals"
+		{
+			"srcVar1" "$compareBuffer"
+			"resultVar" "$aliveCompareBuffer"
+		}
+
+		// $aliveState; 0 = dead, 1 = alive
+		// we check if $aliveState = 1 because these same conditions will set it to 0
+		"LessOrEqual"
+		{
+			"lessEqualVar" "$zero"
+			"greaterVar" "$one"
+			"srcVar1" "$aliveState"
+			"srcVar2" "$zeropointnine"
+			"resultVar" "$compareBuffer"
+		}
+		"Add"
+		{
+			"srcVar1" "$compareBuffer"
+			"srcVar2" "$compareVelPos1"
+			"resultVar" "$compareVelPos1"
+		}
+
+		// now $compareVelPos1 will be 3 if all previous conditions are true
+
+		// now we finally set the frame value
+		"LessOrEqual"
+		{
+			"lessEqualVar" "$frameWorkNum"
+			"greaterVar" "$zero"
+			"srcVar1" "$compareVelPos1"
+			"srcVar2" "$twopointnine"
+			"resultVar" "$frameWorkNum"
+		}
+		
+		// if the player is moving and velocity is 0
+		"LessOrEqual"
+		{
+			"lessEqualVar" "$aliveState"
+			"greaterVar" "$zero"
+			"srcVar1" "$aliveCompareBuffer"
+			"srcVar2" "$onepointnine"
+			"resultVar" "$aliveState"
+		}
+
+		// reset $aliveState to 1 when velocity > epsilon
+		"LessOrEqual"
+		{
+			"lessEqualVar" "$aliveState"
+			"greaterVar" "$one"
+			"srcVar1" "$currentVel"
+			"srcVar2" "$zeropointzeroone"
+			"resultVar" "$aliveState"
+		}
+		
+
+		// attempt to fix the 2nd death bug by tracking time, but the material is continually updated even when it cant be seen
+
+		//"CurrentTime"
+		//{
+		//	"resultVar" "$newTime"
+		//}
+		
+		//"Add"
+		//{
+		//	"srcVar1" "$lastTime"
+		//	"srcVar2" "2"
+		//	"resultVar" "$addTime"
+		//}
+		
+		//"LessOrEqual"
+		//{
+		//	"lessEqualVar" "0"
+		//	"greaterVar" "$frameWorkNum"
+		//	"srcVar1" "$addTime"
+		//	"srcVar2" "$newTime"
+		//	"resultVar" "$frameWorkNum"
+		//}
+
+		"Int"
+		{
+			"srcVar1" "$frameWorkNum"
+			"resultVar" "$frame"
+		}
+
+
+		// below code doesnt work as the player doesnt switch to spectator when they die
+		
+		//"PlayerTeam"
+		//{
+		//	"resultVar" "$newTeam"  // 0 = survivor, 1 = infected, 2 = spectator
+		//}
+		
+		// if its the frame the person dies, $newTeam will be 2 and $currentTeam will be 0, this means we can add both and check if they are 2, to see if the person has just died
+		// if its the frame after the person dies, both $newTeam and $currentTeam will be 4
+		//"LessOrEqual"
+		//{
+		//	"lessEqualVar" "0"
+		//	"greaterVar" "$newTeam"
+		//	"srcVar1" "$newTeam"
+		//	"srcVar2" "1.5"
+		//	"resultVar" "$newTeam"
+		//}
+		//"Int"
+		//{
+		//	"srcVar1" "$newTeam"
+		//	"resultVar" "$newTeam"
+		//}
+		//"Add"
+		//{
+		//	"srcVar1" "$currentTeam"
+		//	"srcVar2" "$newTeam"
+		//	"resultVar" "$teamAdd"
+		//}
+		
+		// this will wrap $teamAdd back to 0 if it is the frame after they die
+		//"WrapMinMax"
+		//{
+		//	"srcVar1" "$teamAdd"
+		//	"minVal" "0"
+		//	"maxVal" "3"
+		//	"resultVar" "$teamAdd"
+		//}
+		//"Int"
+		//{
+		//	"srcVar1" "$teamAdd"
+		//	"resultVar" "$teamAdd"
+		//}
+		
+		// finally, reset $frameWorkNum if needed
+		//"LessOrEqual"
+		//{
+		//	"lessEqualVar" "$frameWorkNum"
+		//	"greaterVar" "0"
+		//	"srcVar1" "$teamAdd"
+		//	"srcVar2" "1"
+		//	"resultVar" "$frameWorkNum"
+		//}
+		
+
+		//"Equals"
+		//{
+		//	"srcVar1" "$newTeam"
+		//	"resultVar" "$currentTeam"
+		//}
+		//"Equals"
+		//{
+		//	"srcVar1" "1.0"
+		//	"resultVar" "$alpha"
+		//}
+				
+		
+	}
+}

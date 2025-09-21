@@ -1,0 +1,87 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/common/death_screen"
+	"$translucent" 1
+	//"$frame" "0"
+
+	"$numFrames" "96"
+	"$frameWorkNum" "0.0"
+	"$frameAddAmount" "0.06"
+
+	"$lastTime" "0.0"
+	"$newTime" "0.0"
+	"$addTime" "0.0"
+
+	"$zero" "0"
+	"$one" "1"
+	"$two" "2.0"
+
+
+	"Proxies"
+	{
+		//"AnimatedTexture"
+		//{
+		//	"animatedtexturevar" "$basetexture"
+		//	"animatedtextureframenumvar" "$frame"
+		//	"animatedtextureframerate" "14"
+		//	"animationnowrap" "1"
+		//}
+
+		// we can bypass AnimatedTexture by just doing all of its functions with other material proxies
+
+		"Add"
+		{
+			"srcVar1" "$frameWorkNum"
+			"srcVar2" "$frameAddAmount"
+			"resultVar" "$frameWorkNum"
+		}
+		
+		"LessOrEqual"
+		{
+			"lessEqualVar" "$frameWorkNum"
+			"greaterVar" "$numFrames"
+			"srcVar1" "$frameWorkNum"
+			"srcVar2" "$numFrames"
+			"resultVar" "$frameWorkNum"
+		}	
+
+		// fix for the material not resetting after 2nd death
+
+		"CurrentTime"
+		{
+			"resultVar" "$newTime"
+		}
+		
+		"Add"
+		{
+			"srcVar1" "$lastTime"
+			"srcVar2" "$two"
+			"resultVar" "$addTime"
+		}
+		
+		"LessOrEqual"
+		{
+			"lessEqualVar" "$zero"
+			"greaterVar" "$frameWorkNum"
+			"srcVar1" "$addTime"
+			"srcVar2" "$newTime"
+			"resultVar" "$frameWorkNum"
+		}
+
+		// finally, write the frame work value
+
+		"Int"
+		{
+			"srcVar1" "$frameWorkNum"
+			"resultVar" "$frame"
+		}
+
+		// save the current time value
+
+		"Equals"
+		{
+			"srcVar1" "$newTime"
+			"resultVar" "$lastTime"
+		}
+	}
+}
