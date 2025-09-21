@@ -6,13 +6,17 @@
 
 	"$numFrames" "96"
 	"$frameWorkNum" "0.0"
-	"$frameAddAmount" "0.06"
+	// "$frameAddAmount" "0.06"
+	"$frameRate" "14.0"
+	"$frameAddAmount" "0.0"
 
 	"$lastTime" "0.0"
 	"$newTime" "0.0"
 	"$addTime" "0.0"
+	"$changeTime" "0.0"
 
 	"$zero" "0"
+	"$zeropointone" "0.1"
 	"$one" "1"
 	"$two" "2.0"
 
@@ -29,6 +33,26 @@
 
 		// we can bypass AnimatedTexture by just doing all of its functions with other material proxies
 
+		"CurrentTime"
+		{
+			"resultVar" "$newTime"
+		}
+
+		// have to increment by delta bcs of people with different frame rates
+		"Subtract"
+		{
+			"srcVar1" "$newTime"
+			"srcVar2" "$lastTime"
+			"resultVar" "$changeTime"
+		}
+
+		"Multiply"
+		{
+			"srcVar1" "$changeTime"
+			"srcVar2" "$frameRate"
+			"resultVar" "$frameAddAmount"
+		}
+		
 		"Add"
 		{
 			"srcVar1" "$frameWorkNum"
@@ -46,11 +70,6 @@
 		}	
 
 		// fix for the material not resetting after 2nd death
-
-		"CurrentTime"
-		{
-			"resultVar" "$newTime"
-		}
 		
 		"Add"
 		{
