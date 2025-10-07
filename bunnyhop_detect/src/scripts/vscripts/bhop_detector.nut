@@ -726,7 +726,7 @@ class ::BhopClasses.BhopConfig
 	</ json_ignore = true />
 	SessionData				= null;			// table[pSID, ::BhopClasses.BhopChainData]
 	</ json_ignore = true />
-	build_num=84
+	build_num=86
 }
 
 printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_num+"  !!!")
@@ -1131,7 +1131,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			return;
 		}
 		
-		::BhopUtils.Log("file="+file);
+		// ::BhopUtils.Log("file="+file);
 
 		try
 		{
@@ -1173,7 +1173,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			}
 			::BhopVars.PlayerSettings[fullSteamid] <- pSet;
 		}
-		::BhopUtils.Log("::BhopVars.PlayerSettings="+::Json.Serialize.ToString(::BhopVars.PlayerSettings));
+		// ::BhopUtils.Log("::BhopVars.PlayerSettings="+::Json.Serialize.ToString(::BhopVars.PlayerSettings));
 	}
 
 	function WritePlayerSettings()
@@ -1301,11 +1301,11 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 
 	function IsPlayerAdmin(steamid)
 	{
-		::BhopUtils.Log("IsPlayerAdmin(): steamid="+steamid);
+		// ::BhopUtils.Log("IsPlayerAdmin(): steamid="+steamid);
 
 		if (!(steamid in ::BhopVars.PlayerSettings))
 		{
-			::BhopUtils.Log("IsPlayerAdmin(): steamid not found");
+			// ::BhopUtils.Log("IsPlayerAdmin(): steamid not found");
 			return false;
 		}
 		return ::BhopVars.PlayerSettings[steamid]["Admin"];
@@ -1485,7 +1485,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		if (::BhopFunc.IsPlayerInInitList(userid))
 		{
 			::BhopUtils.Log("player "+player.GetPlayerName()+" in init list, ignoring...");
-			::BhopUtils.Log(::Json.Serialize.ToString(::BhopVars.PlayerInitList));
+			// ::BhopUtils.Log(::Json.Serialize.ToString(::BhopVars.PlayerInitList));
 			return true;
 		}
 
@@ -1621,13 +1621,13 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			
 			if (::BhopFunc.IsPlayerIgnored(steamid))
 			{
-				::BhopUtils.Log("BhopTick(): ignoring player");
+				// ::BhopUtils.Log("BhopTick(): ignoring player");
 				markedForDeletion.append(steamid);
 				continue;
 			}
 			if (::BhopFunc.ShouldIgnorePlayer(pUserID, player))
 			{
-				::BhopUtils.Log("BhopTick(): should ignoring player");
+				// ::BhopUtils.Log("BhopTick(): should ignoring player");
 				markedForDeletion.append(steamid);
 				continue;
 			}
@@ -1664,7 +1664,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 	{
 		if (::BhopVars.ConfigAltered)
 		{
-			::BhopUtils.Log("ConfigSaveTick()");
+			// ::BhopUtils.Log("ConfigSaveTick()");
 			::BhopFunc.WriteConfig();
 			::BhopVars.ConfigAltered = false;
 			return;
@@ -1673,13 +1673,13 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		{
 			::BhopFunc.ReadConfig(false);
 		}
-		::BhopUtils.Log("ConfigSaveTick(): WritePlayerSettings!");
+		// ::BhopUtils.Log("ConfigSaveTick(): WritePlayerSettings!");
 		::BhopFunc.WritePlayerSettings();
 	}
 
 	function UtilityTick()
 	{
-		::BhopUtils.Log("UtilityTick()!");
+		// ::BhopUtils.Log("UtilityTick()!");
 		// we do it here as this means entities and stuff are loaded , so we know the script isnt being arbitrarily executed for no reason on map load
 		if (::BhopVars.SessionData == null)
 			::BhopVars.SessionData = ::BhopFunc.ReadSessionData();

@@ -186,6 +186,7 @@ def download_workshop_mod(workshop_id: int | str, out_dir: Path = Path.cwd(), on
         # print(json.dumps(r_data, indent=2))
         # print()
         file_url = r_data["file_url"]
+        filename = r_data["title"] + ".vpk"
         if only_print_name:
             print(f"workshop item id: {CCs.OKCYAN}{workshop_id}{CCs.ENDC}\n"
                   f"title:            {CCs.OKGREEN}{r_data['title']}{CCs.ENDC}")
@@ -200,20 +201,20 @@ def download_workshop_mod(workshop_id: int | str, out_dir: Path = Path.cwd(), on
     try:
         with requests.get(file_url, stream=True) as r:
             r.raise_for_status()
-            params = r.headers["Content-Disposition"]
-            filename: str | None = None
-            for param in params.split(";"):
-                param = param.strip()
-                if param.startswith("filename="):
-                    if filename is not None:
-                        raise Exception(f"workshop mod download file for url: {file_url}\n"
-                                        f"returned invalid headers: {r.headers}")
-                    filename = param.split("=", maxsplit=1)[-1].replace("\"", "").replace("'", "")
-                elif param.startswith("filename*=UTF-8"):
-                    filename = param.split("UTF-8", maxsplit=1)[-1].replace("\"", "").replace("'", "")
-            if filename is None:
-                raise Exception(f"workshop mod download file for url: {file_url}\n"
-                                f"returned invalid headers: {r.headers}")
+            #params = r.headers["Content-Disposition"]
+            #filename: str | None = None
+            #for param in params.split(";"):
+            #    param = param.strip()
+            #    if param.startswith("filename="):
+            #        if filename is not None:
+            #            raise Exception(f"workshop mod download file for url: {file_url}\n"
+            #                            f"returned invalid headers: {r.headers}")
+            #        filename = param.split("=", maxsplit=1)[-1].replace("\"", "").replace("'", "")
+            #    elif param.startswith("filename*=UTF-8"):
+            #        filename = param.split("UTF-8", maxsplit=1)[-1].replace("\"", "").replace("'", "")
+            #if filename is None:
+            #    raise Exception(f"workshop mod download file for url: {file_url}\n"
+            #                    f"returned invalid headers: {r.headers}")
             out_file = Path(out_dir, f"{workshop_id}_{filename}")
 
             if out_file.exists():
