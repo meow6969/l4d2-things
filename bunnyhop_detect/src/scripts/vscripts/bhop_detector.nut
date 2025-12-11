@@ -615,8 +615,8 @@ class ::BhopClasses.BhopChainData
 	{
 		local numBhops = this.GetNumBhops();
 		local avgVel = this.AverageVelocity();
-		local bhopCountMult = ::BhopVars.ScoringSettings["BhopCountMult"];
-		local bhopAvgVelMult = ::BhopVars.ScoringSettings["BhopAvgVelocityMult"];
+		// local bhopCountMult = ::BhopVars.ScoringSettings["BhopCountMult"];
+		// local bhopAvgVelMult = ::BhopVars.ScoringSettings["BhopAvgVelocityMult"];
 		
 		// this.score = this.GetScore(numBhops, avgVel, bhopCountMult, bhopAvgVelMult);
 		this.score = this.GetScore(numBhops, this.maxVel, 0, 0);
@@ -646,10 +646,12 @@ class ::BhopClasses.BhopChainData
 		{
 			local previousBest = ::BhopVars.PlayerSettings[pSID]["BestBhop"];
 			::BhopVars.SessionData[pSID] <- this;  // if its the users best bhop that guarantees its their best session bhop
-			if (previousBest == null) 
-				return 2;  // this is the return code that means its the users first bhop record
+			
 			::BhopVars.PlayerSettings[pSID]["BestBhop"] = this;
 			
+			if (previousBest == null) 
+				return 2;  // this is the return code that means its the users first bhop record
+
 			return [3, previousBest];
 		}
 		if (!(pSID in ::BhopVars.SessionData))
@@ -683,16 +685,16 @@ class ::BhopClasses.PlayerSettings
 	Name					= "";
 }
 
-class ::BhopClasses.ScoringSettings
+/* class ::BhopClasses.ScoringSettings
 {
 	BhopCountMult			= 0.2;
 	BhopAvgVelocityMult		= 2.0;
-}
+} */
 
 class ::BhopClasses.BhopConfig
 {
 	</ json_ignore = true />
-	ConfigPath				= "simple_bunnyhop_detect";
+	ConfigPath				= "meow_bhop_detect";
 	</ json_ignore = true />
 	ConfigAltered			= false;
 
@@ -700,7 +702,7 @@ class ::BhopClasses.BhopConfig
 	BunnyTickLeniency		= 3;
 	BunnyMinStartingVel		= 0;
 
-	ScoringSettings			= ::BhopClasses.ScoringSettings();
+	// ScoringSettings			= ::BhopClasses.ScoringSettings();
 	NumLeaderboardSlots		= 5;
 	LeaderboardOnGameEnd	= true;
 	
@@ -726,7 +728,7 @@ class ::BhopClasses.BhopConfig
 	</ json_ignore = true />
 	SessionData				= null;			// table[pSID, ::BhopClasses.BhopChainData]
 	</ json_ignore = true />
-	build_num=86
+	build_num=91
 }
 
 printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_num+"  !!!")
@@ -1519,7 +1521,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			return false;
 		}
 		// TODO
-		// i forgot if i fixed this  --  still dont know 
+		// i forgot if i fixed this  --  still dont know  --  still dont know 
 		// AAAHHH ITS BUGGED ITS BUGGED AHH
 		// ok so write config when it says its altered
 		// otherwise read 
@@ -2246,7 +2248,7 @@ class ::BhopCmds.About extends ::BhopClasses.BhopCommand
 		// printl("leaderboard event !!!!");
 		if (::BhopVars.LeaderboardOnGameEnd) 
 		{
-			::BhopFunc.DisplayLeaderboard();
+			::BhopFunc.DisplayLeaderboard(null, true);
 		}
 	}
 

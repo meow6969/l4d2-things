@@ -1,0 +1,14 @@
+VertexLitGeneric
+{
+	$basetexture "models/meowmeow/anubis/leaf"
+	$bumpmap "models/meowmeow/anubis/leaf_n"
+	$nocull "1"
+	$ambientocclusion "0"
+	$phong "1"
+	$alphatest "1"
+	$phongboost "0.02"
+	$phongexponent "1"
+	$phongfresnelranges "[ 1 0.1 0.1 ]"
+	$phongwarptexture "models/meowmeow/anubis/shader"
+	$lightwarptexture "models/meowmeow/anubis/toon_all"
+}

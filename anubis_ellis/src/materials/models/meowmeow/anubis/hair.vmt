@@ -1,0 +1,13 @@
+VertexLitGeneric
+{
+	$basetexture "models/meowmeow/anubis/hair"
+	$bumpmap "models/meowmeow/anubis/hair_n"
+	$nocull "1"
+	$ambientocclusion "0"
+	$phong "1"
+	$phongboost "0.02"
+	$phongexponent "1"
+	$phongfresnelranges "[ 1 0.1 0.1 ]"
+	$phongwarptexture "models/meowmeow/anubis/shader"
+	$lightwarptexture "models/meowmeow/anubis/toon_hair"
+}

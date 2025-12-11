@@ -4,10 +4,13 @@
 
 
 // uncomment this line if u are running this script not in l4d2
-// function printl(line="")
-// {
-// 	printf(line+"\n");
-// }
+if (!("printl" in getroottable()))
+{
+	function printl(line="")
+	{
+	 	print(line+"\n");
+	}
+}
 
 if (!("Json" in getroottable()))
 {
@@ -278,24 +281,220 @@ function Json::Utils::GetClassNamingPolicy(theClass)
 	return rDict;
 }
 
+// only works for positive
+// https://stackoverflow.com/questions/68069279/converting-int-to-binary-string-in-c
+function Json::Utils::IntToBin(n, neededLen=null) // -> str
+{
+	if (n < 0)
+		::Json.Utils.Error("cannot convert negative to binary, got "+n);
+	local r = "";
+	local i = 0;
+	while (pow(2, i+1) < n)
+		i++;
+
+	for (; i >= 0; i--)
+	{
+		r = (n & 1)+r;
+		n = n >> 1;
+	}
+
+	if (neededLen != null)
+	{
+		if (neededLen < r.len())
+			::Json.Utils.Error("neededLen="+neededLen+" is less than len of r="+r+" for n="+n);
+		
+		while (r.len() < neededLen)
+			r = "0"+r;
+	}
+
+	return r;
+}
+
+// we need to do this because .tostring() turns integers to scientific notation when they get big enough
+function Json::Utils::IntToStr(n)
+{
+	local swap = false;	
+	local r = "";
+	local i = 0;
+	local b;
+	local dec = null;
+
+	if (n < 0)
+	{
+		n *= -1;
+		swap = true;
+	}
+	
+	if (n - floor(n) > 0.01)
+		dec = n - floor(n);
+
+	while (pow(10, i+1) < n)
+		i++;
+	n = n.tointeger();
+	// printl("n="+n);	
+	for (; i >= 0; i--)
+	{
+		b = floor(n / pow(10, i)).tointeger();
+		// printl("b="+b);
+		// printl("n="+n);
+		r = r+b;
+		n = n - (b * pow(10, i).tointeger());
+	}
+	
+	if (swap)
+		r = "-"+r;
+	if (dec != null)
+		r = r+dec.tostring().slice(1);
+
+	return r;
+}
+
+function Json::Utils::BinToInt(bin /* str */) // -> int
+{
+	local n = 0;
+	local p = 0;
+
+	for (local i = bin.len() - 1; i >= 0; i--)
+	{
+		if (bin[i] == '1')
+			n += pow(2, p);
+		p += 1;
+	}
+	return n;
+}
+
+function Json::Utils::HexToInt(hex /* str */) // -> int
+{
+	local n = 0;
+	local p = 0;
+
+	for (local i = hex.len() - 1; i >= 0; i--)
+	{
+		local c = hex[i].tochar();
+		local b;  // int
+		if (::Json.Utils.IsInteger(c))
+			b = c.tointeger();
+		else
+		{
+			c = c.tolower(); 
+			switch (c)
+			{
+				case "a":
+					b = 10;
+					break;
+				case "b":
+					b = 11;
+					break;
+				case "c":
+					b = 12;
+					break;
+				case "d":
+					b = 13;
+					break;
+				case "e":
+					b = 14;
+					break;
+				case "f":
+					b = 15;
+					break;
+				default:
+					::Json.Utils.Error("invalid hex char passed: "+c);
+					break;
+			}
+		}
+		n += pow(16, p) * b;
+		
+		p += 1;
+	}
+	return n.tointeger();
+}
+
+function Json::Utils::Min(...)
+{
+	if (vargv.len() == 0)
+		throw ::Json.Utils.Error("Min needs at least 2 numbers");
+	local b = vargv[0];
+	foreach (n in vargv)
+		if (n < b)
+			b = n;
+	return b;
+}
+
+function Json::Utils::Max(...)
+{
+	if (vargv.len() == 0)
+		throw ::Json.Utils.Error("Max needs at least 2 numbers");
+	local b = vargv[0];
+	foreach (n in vargv)
+		if (n > b)
+			b = n;
+	return b;
+}
+
+function Json::Utils::UnicodeToUtf(n /* integer */)  // -> str
+{
+	if (n < 0)
+		::Json.Utils.Error("cannot convert negative numbers to utf, n="+n);
+	
+	if (n <= 0x7F)
+		return ""+n.tochar();
+	local bin;
+	local newBin;
+
+	// check man utf-8(7)
+	if (n <= 0x07FF)
+	{
+		bin = ::Json.Utils.IntToBin(n, 11);
+		newBin = "110"+bin.slice(0, 5)+"10"+bin.slice(5);
+	}
+	else if (n <= 0xFFFF)
+	{
+		// printl("n <= 0xFFFF");
+		bin = ::Json.Utils.IntToBin(n, 16);
+		newBin = "1110"+bin.slice(0, 4)+"10"+bin.slice(4, 10)+"10"+bin.slice(10);
+	}
+	else
+	{
+		bin = ::Json.Utils.IntToBin(n, 21);
+		newBin = "11110"+bin.slice(0, 3)+"10"+bin.slice(3, 9)+"10"+bin.slice(9, 15)+"10"+bin.slice(21);
+	}
+
+	// printl("n="+newBin);
+	local r = "";
+	while (newBin.len() != 0)
+	{
+		local sliceCount = ::Json.Utils.Min(newBin.len(), 8);
+		// printl("sliceCount="+sliceCount);
+		
+		local blah = newBin.slice(0, sliceCount);
+		newBin = newBin.slice(sliceCount);
+		local b = ::Json.Utils.BinToInt(blah) - 256;  // subtract 256 bcs 2's compliment
+		// printl("b="+b);
+		r = r+b.tochar();
+	}
+	
+	return r;
+}
+
 ::Json.Deserialize <- 
 {
 	
 }
 
-class ::Json.Deserialize.DeserializeOptions
+/* class ::Json.Deserialize.DeserializeOptions
 {
+	// this is for class deserialization
 	propertyNameCaseSensitive	= true;
 	// ignoredTypes				= ["function", "file", "regexp"];
 
 	constructor(propNameSens=true)  // , iTypes=["function", "file", "regexp"])
 	{
 		this.propertyNameCaseSensitive = propNameSens;
-		
+		// this.ignoredTypes = iTypes;
 	}
-}
+} 
 
-::Json.Deserialize.defaultOptions <- ::Json.Deserialize.DeserializeOptions();
+::Json.Deserialize.defaultOptions <- ::Json.Deserialize.DeserializeOptions(); */
 
 class ::Json.Deserialize.ParserTracker 
 {
@@ -375,6 +574,7 @@ function Json::Deserialize::ParseString(parseTracker)
 {
 	local nextEscaped = false;
 	local gettingHex = -1;
+	local hexChars;
 	local pStr = "";
 	
 	while (parseTracker.PointerNotReachedEnd())
@@ -385,15 +585,21 @@ function Json::Deserialize::ParseString(parseTracker)
 		{
 			if (!::Json.Utils.isCharHexRegexPattern.match(theChar))
 			{
-				printl("Json::Deserialize::ParseString(): WARNING: got improper hex char \""+theChar"\"");
+				::Json.Utils.Error("got improper hex char \""+theChar+"\"");
+				// printl("Json::Deserialize::ParseString(): WARNING: got improper hex char \""+theChar"\"");
 				gettingHex = 0;
 				continue;
 			}
 			gettingHex++;
-			if (gettingHex == 3)
+			hexChars = hexChars+theChar;
+			if (gettingHex == 4)
 			{
+				local hexVal = ::Json.Utils.HexToInt(hexChars);
+				// printl("hexChars="+hexChars+"="+hexVal);
+				pStr += ::Json.Utils.UnicodeToUtf(hexVal);
 				gettingHex = -1;
 			}
+			continue;
 		}
 
 		if (nextEscaped)
@@ -428,8 +634,9 @@ function Json::Deserialize::ParseString(parseTracker)
 					pStr += "\"";
 					break;
 				case "u":
-					printl("Json::Deserialize::ParseString(): WARNING: ignoring escaped \\u char and hex characters");
+					// printl("Json::Deserialize::ParseString(): WARNING: ignoring escaped \\u char and hex characters");
 					gettingHex = 0;
+					hexChars = "";
 					break;
 			}
 			nextEscaped = !nextEscaped;
@@ -447,6 +654,7 @@ function Json::Deserialize::ParseString(parseTracker)
 			break;
 		}
 		pStr += theChar;
+		// printl("theChar="+theChar+", toint="+theChar[0].tointeger()+", len="+theChar.len());
 	}
 	// parseTracker.PointerAdd();
 	return pStr;
@@ -774,18 +982,18 @@ function Json::Deserialize::ExtractClassProperties(jsonTable, theClass)
 	return rClass;
 }
 
-function Json::Deserialize::StringToClass(jsonData, theClass, options=::Json.Deserialize.defaultOptions)
+function Json::Deserialize::StringToClass(jsonData, theClass)
 {
 	local rDict = ::Json.Deserialize.String(jsonData)
 	
 	return ::Json.Deserialize.ExtractClassProperties(rDict, theClass);
 }
 
-function Json::Deserialize::FileToClass(filepath, theClass, options=::Json.Deserialize.defaultOptions)
+function Json::Deserialize::FileToClass(filepath, theClass)
 {
 	local jsonContent = FileToString(filepath);
 	if (!jsonContent) return null;
-	return ::Json.Deserialize.StringToClass(jsonContent, theClass, options);
+	return ::Json.Deserialize.StringToClass(jsonContent, theClass);
 }
 
 ::Json.Serialize <-
@@ -864,7 +1072,7 @@ function Json::Serialize::Table(theTable, options=::Json.Serialize.defaultOption
 		rStr += ::Json.Serialize.ExpandIndent(curIndent + options.baseIndent)+::Json.Serialize.String(tableKey)+":"+options.itemSeperator+::Json.Serialize.Object(keyValue, options, curIndent + options.baseIndent)+","+options.itemSeperator+options.lineSeperator;
 	}
 	
-	// this is from a bizarre bug trying to serialize the root table
+	// this is from a bizarre bug when i tried to serialize the root table
 	// im just gonna remove it since it doesnt make sense to serialize the root table
 	/* local tableLen = 0;
 	try
@@ -1045,7 +1253,8 @@ function Json::Serialize::Object(theObject, options=::Json.Serialize.defaultOpti
 			return ::Json.Serialize.Array(theObject, options, curIndent);
 		case "float":
 		case "integer":
-			return ""+theObject;
+			// TODO: fix this, with large integer values it shortens to scientific notation  -- fixed
+			return ::Json.Utils.IntToStr(theObject);
 			break;
 		case "null":
 			return "null";
@@ -1121,8 +1330,18 @@ function Json::Serialize::ToFile(filepath, theObject, indent=2)
 function TestStuff()
 {
 	// printl("emptyChars = "+::Json.Utils.PrintThing(::Json.Utils.emptyChars, true));
-	local jsonResult = ::Json.Deserialize.String("{\"meow\": \"cat\"}");
+	local jsonResult = ::Json.Deserialize.String("{\"meow\": \"cat\", \"テンションが 上\": \"\\u30c6\\u30f3\\u30b7\\u30e7\\u30f3\\u304c\\u4e0a\\u3042\\u304c\\u308b\", \"num\": \"2133423423123123123.333\"}");
 	printl("jsonResult = "+::Json.Utils.PrintThing(jsonResult, true));
+
+	printl("31="+::Json.Utils.IntToBin(31)+"="+::Json.Utils.BinToInt(::Json.Utils.IntToBin(31)));
+	printl("69="+::Json.Utils.IntToBin(69, 12)+"="+::Json.Utils.BinToInt(::Json.Utils.IntToBin(69, 16)));
+	printl("23523="+::Json.Utils.IntToBin(23523, 16)+"="+::Json.Utils.BinToInt(::Json.Utils.IntToBin(23523, 16)));
+
+	printl("0x30C6="+::Json.Utils.UnicodeToUtf(0x30C6)+"="+::Json.Utils.HexToInt("30C6"));
+	printl("0xE38386="+::Json.Utils.HexToInt("E38386"));
+	printl("123151535="+123151535+"="+::Json.Utils.IntToStr(123151535));
+	printl("123123123.2333="+123123123.2333+"="+::Json.Utils.IntToStr(123123123.2333));
+
 	// printl("jsonResult[\"meow\"] = "+::Json.Utils.PrintThing(jsonResult["meow"], true));
 	// local jsonFileResult = ::Json.Deserialize.File("/mnt/f/stuff/pycharmprojects/newrandomstuff/selfbots/showuploaderbot/filter_complex_builder.json");
 	// printl("jsonFileResult = "+::Json.Utils.PrintThing(jsonFileResult, true));
@@ -1132,5 +1351,5 @@ function TestStuff()
 	printl("TestStuff() exit successfully!");
 }
 
-// TestStuff();
+TestStuff();
 

@@ -7,69 +7,22 @@ this one is heavily modified to add new features and alter bunny hop detection
 # config documentation  
 
 ```jsonc
-// FILE: "Left 4 Dead 2/left4dead2/ems/simple_bunnyhop_detect/bhop_detect_condition.json"
+// FILE: "Left 4 Dead 2/left4dead2/ems/meow_bhop_detect/config.json"
 {
-  // you shouldnt need to edit PlayerSettings, unless you are giving yourself Admin
-  // PlayerSettings just holds data for the users settings and their bhop related statistics
-  // further down in the file is more important settings
-  "PlayerSettings": {
-    // the players steam ID
-    "STEAM_1:1:460132072": {
-      // the total distance bhopped by this user
-      "TotalDistanceBhopped": 89013.3, 
-      "BestBhop": {
-        // the highest velocity achieved during this bhop chain
-        "maxVel": 310.78, 
-        // the added "vel" member values of each member of the "bhopChain" array
-        "bhopVels": 2846.57, 
-        "bhopChain": [
-          {
-            "vel": 220.002, 
-            "airTime": 12          
-          }, 
-          ...
-        ], 
-        // this is the score of this bhop chain, which is used by the leaderboard functions
-        "score": 2277.25,
-        // the date the bhop chain happened (YYYY/MM/DD)
-	    "timeString": "2025/7/26"
-      }, 
-      // setting this to true means the player has access to the !bhop settings command
-      // this should only be set to true for people you truly trust
-      "Admin": true, 
-      // highest velocity this user ever achieved while bhopping
-      "HighestVelocity": 347.024, 
-      // the username of the user
-      "Name": "elitezrule2", 
-      // the total amount of bhops the user has ever made
-      "TotalBhops": 708, 
-      // whether or not this user receives the "perfect jump!" chat message when they make a perfect jump
-      "IgnorePerfectJumps": true, 
-      // whether or not this user is ignored by the script entirely
-      "IgnoreBhop": false    
-    }, 
-    ...  
-  }, 
-  // these are the constants values that control the scoring algorithm
-  // bhopCountMult is multiplied by the number of bhops in the bhop chain
-  // BhopAvgVelocityMult is multiplied by the average velocity of all bhops in the bhop chain
-  // the final score is the product of the previous 2 operations
-  // a higher BhopCountMult causes the amount of bhops to be more favored, while a higher BhopAvgVelocityMult causes bhop speed to be more favored
-  "ScoringSettings": {
-    "BhopCountMult": 0.4, 
-    "BhopAvgVelocityMult": 2  
-  }, 
+   
   // these are the settings that a player will be assigned with when they first join the server
   // some of the only useful things to change are "IgnorePerfectJumps" and "IgnoreBhops"
   // you could set both or either of those to true if you dont want new players to have to deal with the bhop detector
   "DefaultPlayerSettings": {
+    // for documentation on what these do, scroll to the next code block
     "TotalDistanceBhopped": 0, 
     "IgnorePerfectJumps": false, 
     "BestBhop": null, 
     "Admin": false, 
     "HighestVelocity": 0, 
     "IgnoreBhop": false, 
-    "TotalBhops": 0  
+    "TotalBhops": 0,
+    "Name": null 
   }, 
   // this decides the fewest number of bhops in a bhop chain before it qualifies as a actual bhop
   // a "BunnyDetectCount" of 3 means the player must make at least 3 bhops until it qualifies as a actual bhop
@@ -78,10 +31,82 @@ this one is heavily modified to add new features and alter bunny hop detection
   // a "BunnyTickLeniency" value of 1 means that the player must get a perfect jump every time
   // while a "BunnyTickLeniency" value of 3 means that the player can be on the ground for up to 3 ticks before jumping again until their bhop chain is broken
   "BunnyTickLeniency": 2, 
+  // this is the minimum velocity someone needs to be at before a bhop chain will start to be counted
+  "BunnyMinStartingVel": 0,
   // this decides the maximum amount of players that will be reported from the "!bhop leaderboard" command
   "NumLeaderboardSlots": 5, 
-  // this defines whether or not the leaderboard will be displayed when the survivors have beat the finale
+  // this defines whether or not the session leaderboard will be displayed when the survivors have beat the finale
   "LeaderboardOnGameEnd": true
+}
+```
+
+```jsonc
+// FILE: "Left 4 Dead 2/left4dead2/ems/meow_bhop_detect/players/*.json"
+// this folder contains json files containing PlayerSettings player data
+// the file is named after the players steam id, except ":" is replaced with "_"
+// you shouldnt need to edit PlayerSettings, unless you are giving yourself Admin
+// PlayerSettings just holds data for the users settings and their bhop related statistics
+{
+  // the total distance bhopped by this user
+  "TotalDistanceBhopped": 999336, 
+  // the best bhop chain that the bhop detector has tracked
+  "BestBhop": {
+    // the highest velocity achieved during this bhop chain
+    "maxVel": 390.552, 
+    // the added "vel" member values of each member of the "bhopChain" array
+    "bhopVels": 5095.36, 
+    "bhopChain": [
+      {
+        // the speed the player was going when they landed
+        "vel": 220, 
+        // the amount of ticks the player was in the air
+        "airTime": 18          
+      }, 
+      ...
+    ], 
+    // this is the score of this bhop chain, which is used by the leaderboard functions
+    "score": 881,
+    // the date the bhop chain happened (YYYY/MM/DD)
+    "timeString": "2025/10/6"
+  }, 
+  // setting this to true means the player has access to the !bhop settings command
+  // this should only be set to true for people you truly trust
+  "Admin": true, 
+  // highest velocity this user ever achieved while bhopping
+  "HighestVelocity": 552.781, 
+  // the username of the user
+  "Name": "elitezrule2", 
+  // the total amount of bhops the user has ever made
+  "TotalBhops": 6418, 
+  // whether or not this user receives the "perfect jump!" notification when they make a perfect jump
+  "IgnorePerfectJumps": false, 
+  // whether or not this user is ignored by the script entirely
+  "IgnoreBhop": false     
+}
+```
+
+```jsonc
+// FILE: "Left 4 Dead 2/left4dead2/ems/meow_bhop_detect/sessions/*.json"
+// this folder contains bhop session data for the bhop session leaderboard
+// the bhop session leaderboard is a leaderboard that is tracked from the start of the campaign to the end of the campaign
+// these files are temporary files, you shouldnt edit them
+{
+  // these fields are documented in the previous code block
+  "STEAM_1:1:460132072": {
+    "maxVel": 348.471, 
+    "bhopVels": 4455.9, 
+    "playerSteamID": "STEAM_1:1:460132072", 
+    "bhopChain": [
+      {
+        "vel": 219.996, 
+        "airTime": 18      
+      }, 
+      ...
+    ], 
+    "timeString": "2025/8/28", 
+    "score": 775  
+  }, 
+  ...
 }
 ```
 
