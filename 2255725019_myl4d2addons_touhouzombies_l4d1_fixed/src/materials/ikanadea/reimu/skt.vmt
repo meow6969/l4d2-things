@@ -1,0 +1,27 @@
+"VertexlitGeneric"
+{
+
+$allowdiffusemodulation 0 
+$blendtintbybasealpha 0
+
+
+	"$basetexture" "IKanadeA/Reimu/skt"
+	
+	"$phong" "1"
+	"$phongboost"	"2"
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "IKanadeA/Reimu/shader/phong_exp"
+	"$phongfresnelranges"	"[.1 .1 5]"
+
+	"$lightwarptexture" "IKanadeA/Reimu/shader/cartoon_shader"
+
+	"$halflambert" "1"	
+	"$AmbientOcclusion" "1"	
+	"$nocull" "1"
+	"$nodecal" "1"
+	"$alphatest" "0"
+	
+	"$rimlight" "1"
+	"$rimlightexponent" "3"
+	"$rimlightboost" "4"
+}

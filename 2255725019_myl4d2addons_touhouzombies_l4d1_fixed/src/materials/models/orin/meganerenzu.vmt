@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+$allowdiffusemodulation 0 
+$blendtintbybasealpha 0
+	"$basetexture" "models/orin/meganerenzu"
+	"$bumpmap" "models\orin\normal"
+	"$nocull" "1"
+	"$nodecal" "1"
+
+	"$lightwarptexture" "models\orin\lightwarptexture"
+
+	"$phong" "1"
+	"$phongboost"	"24"
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "models\orin\phong_exp"
+	"$phongfresnelranges"	"[0 0 1]"
+
+	"$rimlight"               "1"
+	"$rimlightexponent"       "3"
+	"$rimlightboost"          "4"
+}

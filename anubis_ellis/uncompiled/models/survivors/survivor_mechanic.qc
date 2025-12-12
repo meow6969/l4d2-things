@@ -243,6 +243,18 @@ $model "Mechanic" "mechanic_model_merged.smd" {
 	%AU13L = left_cheek_puffer * max(0, (1 - %mouth * 3))
 }
 
+$bodygroup "body"
+{
+	studio "body.smd"
+	blank
+}
+
+$bodygroup "hair"
+{
+	studio "hair.smd"
+	blank
+}
+
 $surfaceprop "flesh"
 
 $contents "solid"

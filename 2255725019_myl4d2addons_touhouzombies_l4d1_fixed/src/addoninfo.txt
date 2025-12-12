@@ -1,0 +1,12 @@
+"AddonInfo"
+{
+     addonSteamAppID			550
+     addontitle				"Touhou common infected emow"
+     addonauthor                        "imelman"
+     addonversion			1
+     addonContent_Campaign		0
+     addonContent_Script		0
+     addonContent_prop			0
+     addonContent_Skin			1
+     addonDescription			"Replaces common infected with various Touhou characters. Credits to original creators."
+}
