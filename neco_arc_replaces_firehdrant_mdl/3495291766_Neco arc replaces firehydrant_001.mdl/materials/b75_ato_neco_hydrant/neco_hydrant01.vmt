@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "b75_ato_neco_hydrant/Neco_hydrant01"
+	"$surfaceprop" "Metal"
+}

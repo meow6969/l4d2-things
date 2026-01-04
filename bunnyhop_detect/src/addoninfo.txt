@@ -2,16 +2,17 @@
  
 "AddonInfo"
 {
-     addonSteamAppID         500
-     addontitle              "Detect Bunnyhop my fix"
-     addonversion           1.0
-     addontagline            "buunyhop"	
-     addonauthor             "mt2"
-     addonauthorSteamID      "STEAM_1:0:53913343"
-     addonURL0               ""
- 
-     // short description that appears in the Add-on list screen...
-     addonDescription        "simple bhop script" 
+	addonSteamAppID			500
+	addontitle				"Detect Bunnyhop my fix"
+	addonversion			1.0
+	addontagline			"buunyhop"	
+	addonauthor				"mt2"
+	addonauthorSteamID		"STEAM_1:0:53913343"
+	addonURL0				""
 
-     addonContent_Script    "1"
+	// short description that appears in the Add-on list screen...
+	addonDescription		"simple bhop script" 
+
+	addonContent_Script		"1"
+	addonContent_Skin		"1"
 }

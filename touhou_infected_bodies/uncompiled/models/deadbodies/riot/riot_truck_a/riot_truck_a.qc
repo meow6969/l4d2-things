@@ -18,7 +18,7 @@ $illumposition -12.621 -54.384 42.273
 
 $mostlyopaque
 
-$origin -34 -116 -65
+// $origin -34 -116 -65
 
 $cdmaterials "models\meowmeow\deadbodies\tenshi\"
 

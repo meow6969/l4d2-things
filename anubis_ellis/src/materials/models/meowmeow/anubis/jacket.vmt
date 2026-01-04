@@ -4,6 +4,7 @@ VertexLitGeneric
 	// $bumpmap "models/meowmeow/anubis/hat_n"
 	$ambientocclusion "0"
 	$phong "1"
+	$alphatest "1"
 	$phongboost "0.02"
 	$phongexponent "1"
 	$phongfresnelranges "[ 1 0.1 0.1 ]"

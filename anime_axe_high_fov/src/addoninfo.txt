@@ -1,0 +1,9 @@
+"AddonInfo"
+{
+        addonSteamAppID    "550"
+        addontitle         "cool anime axe fov fix"
+        addonversion       "1.0"
+        addontagline       "melee"
+        addonauthor        "Uta"
+        addonDescription   "replaces the fire axe with cool anime axe"
+}

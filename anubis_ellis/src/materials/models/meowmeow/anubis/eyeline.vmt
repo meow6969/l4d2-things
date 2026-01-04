@@ -3,6 +3,7 @@ VertexLitGeneric
 	$basetexture "models/meowmeow/anubis/eyeline"
 	// $bumpmap "models/meowmeow/anubis/body_n"
 	$ambientocclusion "0"
+	$alphatest "1"
 	$phong "1"
 	$phongboost "0.02"
 	$phongexponent "1"

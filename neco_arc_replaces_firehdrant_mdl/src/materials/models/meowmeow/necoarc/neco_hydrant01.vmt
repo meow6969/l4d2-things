@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/meowmeow/necoarc/Neco_hydrant01"
+	"$surfaceprop" "Metal"
+}

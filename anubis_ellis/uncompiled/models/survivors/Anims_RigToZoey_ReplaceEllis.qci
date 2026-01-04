@@ -29,9 +29,9 @@
 // Declare Zoey animations in same order as Ellis's animations.
 
 // This is the first sequence/animation. Sometimes called "idle".
-$sequence CustomEllis "mechanic_model_merged" fps 30.00
+$sequence CustomEllis "anubis" fps 30.00
 // The "ragdoll" animation is the 2nd sequence.
-$sequence ragdoll "mechanic_model_merged" ACT_DIERAGDOLL 1 fps 30.00
+$sequence ragdoll "anubis" ACT_DIERAGDOLL 1 fps 30.00
 
 //TODO: Replace any Ellis anim names with Zoey anim names, from here down.
 $declaresequence Idle_Standing_Align

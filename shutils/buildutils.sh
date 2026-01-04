@@ -247,13 +247,23 @@ function compile_model () {
 	echo -E "relapath=\"${relapath}\""
 	echo -E "reladir=\"${reladir}\""
 	
-	wine "${studiomdl}" -game "${game}" -verbose -nop4 "${qc}"
+	WINEDEBUG="-all" wine "${studiomdl}" -game "${game}" -verbose -nop4 "${qc}"
 	outpath="${out}/models/${reladir}/"
 	mkdir -p "${outpath}"
 
 	mv -fv "${l4d2path}/left4dead2/models/${relapath}."* "${outpath}"
-} > `tty`
+}
 
+function compile_all_models() {
+	echo "compiling all models..."
+	#export -f compile_model
+	#find "${shdirpath}/uncompiled" -type f -name "*.qc" -exec zsh -c "compile_model \"\${0}\" \"${srcpath}\"" {} ";"
+	find "${shdirpath}/uncompiled" -type f -name "*.qc" | while read file; do
+		compile_model "${file}" "${srcpath}"  
+	done
+	wineserver -w
+	echo "done compiling models!"
+}
 
 function build_mod () {
 	copy_to_addons=false

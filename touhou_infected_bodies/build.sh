@@ -40,11 +40,11 @@ function compile_all() {
 	#export -f compile_model
 	#find "${shdirpath}/uncompiled" -type f -name "*.qc" -exec zsh -c "compile_model \"\${0}\" \"${srcpath}\"" {} ";"
 	find "${shdirpath}/uncompiled" -type f -name "*.qc" | while read file; do
-		compile_model "${file}" "${srcpath}" > `tty` 
+		compile_model "${file}" "${srcpath}"  
 	done
 	wineserver -w
 	echo "done compiling models!"
-} > `tty`
+} 
 
 # based on duplicates.txt
 function copy_duplicates() {
@@ -70,6 +70,7 @@ function copy_duplicates() {
 		fname="$(basename -- "${i}")"
 		for duplicat in "${duplicated_folders[@]}"; do
 			# echo "duplicat=${duplicat}"
+			# this checks to make sure the file we are duplicating exists in that directory
 			if ! [[ -f "${shdirpath}/og/models/deadbodies/${duplicat}/${fname}" ]]; then
 				continue
 			fi
@@ -106,7 +107,7 @@ function copy_duplicates() {
 # compile_model "${shdirpath}/uncompiled/models/deadbodies/cemetary/oval_192_c/oval_192_c.qc" "${srcpath}"
 # wineserver -w
 
-copy_duplicates
+# copy_duplicates
 
 # echo "${shpath}"
 

@@ -16,7 +16,7 @@ $contents "solid"
 
 $illumposition -16.668 15.268 7.312
 
-$origin 67 -43 -7
+// $origin 67 -43 -7
 
 $cdmaterials "models\meowmeow\deadbodies\sanae\"
 

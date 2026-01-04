@@ -16,7 +16,7 @@ $contents "solid"
 
 $illumposition 39.19 6.15 19.323
 
-$origin 75 -10 -30
+// $origin 75 -10 -30
 
 $mostlyopaque
 

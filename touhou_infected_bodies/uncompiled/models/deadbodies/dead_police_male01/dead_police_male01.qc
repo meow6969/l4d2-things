@@ -2,182 +2,12 @@
 
 $modelname "deadbodies/dead_police_male01.mdl"
 
-$model "Associates" "tenshi_pm_reference.smd" {
-
-	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
-
-	flexfile "dead_police_male01.vta" 
-	{
-		defaultflex frame 0
-		flex "eye_star" frame 1
-		flex "eye_love" frame 2
-		flex "eye_collapse" frame 3
-		flex "eye_scared" frame 4
-		flex "brow_happy" frame 5
-		flex "brow_serious" frame 6
-		flex "brow_angry" frame 7
-		flex "brow_sad" frame 8
-		flex "brow_sleepy" frame 9
-		flex "brow_up" frame 10
-		flex "brow_down" frame 11
-		flex "brow_front" frame 12
-		flex "face_bigger" frame 13
-		flex "blink" frame 14
-		flex "eye_closeL" frame 15
-		flex "eye_closeR" frame 16
-		flex "eye_happy" frame 17
-		flex "eye_happyL" frame 18
-		flex "eye_happyR" frame 19
-		flex "eye_cute" frame 20
-		flex "eye_cuteL" frame 21
-		flex "eye_cuteR" frame 22
-		flex "eye_down" frame 23
-		flex "eye_downL" frame 24
-		flex "eye_downR" frame 25
-		flex "eye_nagomi" frame 26
-		flex "eye_sharp" frame 27
-		flex "eye_sharpL" frame 28
-		flex "eye_sharpR" frame 29
-		flex "eye_taunt" frame 30
-		flex "eye_bigger" frame 31
-		flex "mouth_a" frame 32
-		flex "mouth_i" frame 33
-		flex "mouth_u" frame 34
-		flex "mouth_e" frame 35
-		flex "mouth_o" frame 36
-		flex "mouth_laugh" frame 37
-		flex "mouth_unhappy" frame 38
-		flex "mouth_triangle" frame 39
-		flex "mouth_meow" frame 40
-		flex "mouth_meow2" frame 41
-		flex "mouth_happy" frame 42
-		flex "mouth_surprised" frame 43
-		flex "mouth_naughty" frame 44
-		flex "mouth_tongue" frame 45
-		flex "mouth_gasp" frame 46
-		flex "mouth_grin" frame 47
-		flex "mouth_curious" frame 48
-		flex "mouth_smile" frame 49
-		flex "mouth_sad" frame 50
-		flex "foots_no" frame 51
-		flex "eye_tear" frame 52
-		flex "eye_reflective" frame 53
-		flex "face_red" frame 54
-		flex "face_red2" frame 55
-	}
-
-	flexcontroller mouth_a range 0 1 "mouth_a"
-	flexcontroller mouth_i range 0 1 "mouth_i"
-	flexcontroller mouth_u range 0 1 "mouth_u"
-	flexcontroller mouth_e range 0 1 "mouth_e"
-	flexcontroller mouth_o range 0 1 "mouth_o"
-	flexcontroller mouth_laugh range 0 1 "mouth_laugh"
-	flexcontroller mouth_unhappy range 0 1 "mouth_unhappy"
-	flexcontroller mouth_triangle range 0 1 "mouth_triangle"
-	flexcontroller mouth_meow range 0 1 "mouth_meow"
-	flexcontroller mouth_meow2 range 0 1 "mouth_meow2"
-	flexcontroller mouth_happy range 0 1 "mouth_happy"
-	flexcontroller mouth_surprised range 0 1 "mouth_surprised"
-	flexcontroller mouth_naughty range 0 1 "mouth_naughty"
-	flexcontroller mouth_tongue range 0 1 "mouth_tongue"
-	flexcontroller mouth_gasp range 0 1 "mouth_gasp"
-	flexcontroller mouth_grin range 0 1 "mouth_grin"
-	flexcontroller mouth_curious range 0 1 "mouth_curious"
-	flexcontroller face_bigger range 0 1 "face_bigger"
-	flexcontroller mouth_smile range 0 1 "mouth_smile"
-	flexcontroller mouth_sad range 0 1 "mouth_sad"
-	flexcontroller eyelid range 0 1 "blink"
-	flexcontroller eye_closeL range 0 1 "eye_closeL"
-	flexcontroller eye_closeR range 0 1 "eye_closeR"
-	flexcontroller eye_happy range 0 1 "eye_happy"
-	flexcontroller eye_happyL range 0 1 "eye_happyL"
-	flexcontroller eye_happyR range 0 1 "eye_happyR"
-	flexcontroller eye_cute range 0 1 "eye_cute"
-	flexcontroller eye_cuteL range 0 1 "eye_cuteL"
-	flexcontroller eye_cuteR range 0 1 "eye_cuteR"
-	flexcontroller eye_down range 0 1 "eye_down"
-	flexcontroller eye_downL range 0 1 "eye_downL"
-	flexcontroller eye_downR range 0 1 "eye_downR"
-	flexcontroller eye_nagomi range 0 1 "eye_nagomi"
-	flexcontroller eye_sharp range 0 1 "eye_sharp"
-	flexcontroller eye_sharpL range 0 1 "eye_sharpL"
-	flexcontroller eye_sharpR range 0 1 "eye_sharpR"
-	flexcontroller eye_taunt range 0 1 "eye_taunt"
-	flexcontroller eye_bigger range 0 1 "eye_bigger"
-	flexcontroller eye_tear range 0 1 "eye_tear"
-	flexcontroller eye_star range 0 1 "eye_star"
-	flexcontroller eye_love range 0 1 "eye_love"
-	flexcontroller eye_collapse range 0 1 "eye_collapse"
-	flexcontroller eye_reflective range 0 1 "eye_reflective"
-	flexcontroller eye_scared range 0 1 "eye_scared"
-	flexcontroller brow_happy range 0 1 "brow_happy"
-	flexcontroller brow_serious range 0 1 "brow_serious"
-	flexcontroller brow_angry range 0 1 "brow_angry"
-	flexcontroller brow_sad range 0 1 "brow_sad"
-	flexcontroller brow_sleepy range 0 1 "brow_sleepy"
-	flexcontroller brow_up range 0 1 "brow_up"
-	flexcontroller brow_down range 0 1 "brow_down"
-	flexcontroller brow_front range 0 1 "brow_front"
-	flexcontroller foots_no range 0 1 "foots_no"
-	flexcontroller face_red range 0 1 "face_red"
-	flexcontroller face_red2 range 0 1 "face_red2"
-
-	%mouth_a = mouth_a
-	%mouth_i = mouth_i
-	%mouth_u = mouth_u
-	%mouth_e = mouth_e
-	%mouth_o = mouth_o
-	%mouth_laugh = mouth_laugh
-	%mouth_unhappy = mouth_unhappy
-	%mouth_triangle = mouth_triangle
-	%mouth_meow = mouth_meow
-	%mouth_meow2 = mouth_meow2
-	%mouth_happy = mouth_happy
-	%mouth_surprised = mouth_surprised
-	%mouth_naughty = mouth_naughty
-	%mouth_tongue = mouth_tongue
-	%mouth_gasp = mouth_gasp
-	%mouth_grin = mouth_grin
-	%mouth_curious = mouth_curious
-	%face_bigger = face_bigger
-	%mouth_smile = mouth_smile
-	%mouth_sad = mouth_sad
-	%blink = blink
-	%eye_closeL = eye_closeL
-	%eye_closeR = eye_closeR
-	%eye_happy = eye_happy
-	%eye_happyL = eye_happyL
-	%eye_happyR = eye_happyR
-	%eye_cute = eye_cute
-	%eye_cuteL = eye_cuteL
-	%eye_cuteR = eye_cuteR
-	%eye_down = eye_down
-	%eye_downL = eye_downL
-	%eye_downR = eye_downR
-	%eye_nagomi = eye_nagomi
-	%eye_sharp = eye_sharp
-	%eye_sharpL = eye_sharpL
-	%eye_sharpR = eye_sharpR
-	%eye_taunt = eye_taunt
-	%eye_bigger = eye_bigger
-	%eye_tear = eye_tear
-	%eye_star = eye_star
-	%eye_love = eye_love
-	%eye_collapse = eye_collapse
-	%eye_reflective = eye_reflective
-	%eye_scared = eye_scared
-	%brow_happy = brow_happy
-	%brow_serious = brow_serious
-	%brow_angry = brow_angry
-	%brow_sad = brow_sad
-	%brow_sleepy = brow_sleepy
-	%brow_up = brow_up
-	%brow_down = brow_down
-	%brow_front = brow_front
-	%foots_no = foots_no
-	%face_red = face_red
-	%face_red2 = face_red2
+$bodygroup "tenshi"
+{
+	studio "tenshi_pm_reference.smd"
+	blank
 }
+
 $bodygroup "Hair"
 {
 	studio "tenshi_pm_tenshi_hair.smd"
@@ -937,7 +767,7 @@ $sequence "ragdoll" {
 	fps 30
 }
 
-$collisionjoints "dead_police_male01_physics.smd"
+/* $collisionjoints "dead_police_male01_physics.smd"
 {
 	$mass 0
 	$inertia 10
@@ -1001,9 +831,74 @@ $collisionjoints "dead_police_male01_physics.smd"
 	$jointconstrain "ValveBiped.Bip01_R_Foot" x limit -10 10 0
 	$jointconstrain "ValveBiped.Bip01_R_Foot" y limit -20 20 0
 	$jointconstrain "ValveBiped.Bip01_R_Foot" z limit -20 25 0
+} */
+$collisionjoints "dead_police_male01_physics.smd"
+{
+	$mass 100
+	$inertia 5
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone " "
+
+
+	$jointconstrain "ValveBiped.Bip01_R_Thigh" x limit -25 25 0
+	$jointconstrain "ValveBiped.Bip01_R_Thigh" y limit -10 15 0
+	$jointconstrain "ValveBiped.Bip01_R_Thigh" z limit -95 25 0
+
+	$jointconstrain "ValveBiped.Bip01_R_Calf" x limit 0 0 0
+	$jointconstrain "ValveBiped.Bip01_R_Calf" y limit 0 0 0
+	$jointconstrain "ValveBiped.Bip01_R_Calf" z limit -8 126 0
+
+	$jointconstrain "ValveBiped.Bip01_L_Thigh" x limit -25 25 0
+	$jointconstrain "ValveBiped.Bip01_L_Thigh" y limit -15 10 0
+	$jointconstrain "ValveBiped.Bip01_L_Thigh" z limit -95 25 0
+
+	$jointconstrain "ValveBiped.Bip01_L_Calf" x limit 0 0 0
+	$jointconstrain "ValveBiped.Bip01_L_Calf" y limit 0 0 0
+	$jointconstrain "ValveBiped.Bip01_L_Calf" z limit -8 126 0
+
+	$jointconstrain "ValveBiped.Bip01_L_Foot" x limit -10 10 0
+	$jointconstrain "ValveBiped.Bip01_L_Foot" y limit -20 20 0
+	$jointconstrain "ValveBiped.Bip01_L_Foot" z limit -18 35 0
+
+	$jointconstrain "ValveBiped.Bip01_Spine2" x limit -10 10 0
+	$jointconstrain "ValveBiped.Bip01_Spine2" y limit -10 10 0
+	$jointconstrain "ValveBiped.Bip01_Spine2" z limit -25 50 0
+
+	$jointconstrain "ValveBiped.Bip01_R_UpperArm" x limit -39 39 0
+	$jointconstrain "ValveBiped.Bip01_R_UpperArm" y limit -79 95 0
+	$jointconstrain "ValveBiped.Bip01_R_UpperArm" z limit -93 23 0
+
+	$jointconstrain "ValveBiped.Bip01_R_Forearm" x limit -40 15 0
+	$jointconstrain "ValveBiped.Bip01_R_Forearm" y limit 0 0 0
+	$jointconstrain "ValveBiped.Bip01_R_Forearm" z limit -120 10 0
+
+	$jointconstrain "ValveBiped.Bip01_L_UpperArm" x limit -30 30 0
+	$jointconstrain "ValveBiped.Bip01_L_UpperArm" y limit -95 84 0
+	$jointconstrain "ValveBiped.Bip01_L_UpperArm" z limit -86 26 0
+
+	$jointconstrain "ValveBiped.Bip01_L_Forearm" x limit -40 15 0
+	$jointconstrain "ValveBiped.Bip01_L_Forearm" y limit 0 0 0
+	$jointconstrain "ValveBiped.Bip01_L_Forearm" z limit -120 10 0
+
+	$jointconstrain "ValveBiped.Bip01_L_Hand" x limit -25 25 0
+	$jointconstrain "ValveBiped.Bip01_L_Hand" y limit -35 35 0
+	$jointconstrain "ValveBiped.Bip01_L_Hand" z limit -50 50 0
+
+	$jointconstrain "ValveBiped.Bip01_Head1" x limit -20 20 0
+	$jointconstrain "ValveBiped.Bip01_Head1" y limit -25 25 0
+	$jointconstrain "ValveBiped.Bip01_Head1" z limit -13 30 0
+
+	$jointconstrain "ValveBiped.Bip01_R_Hand" x limit -25 25 0
+	$jointconstrain "ValveBiped.Bip01_R_Hand" y limit -35 35 0
+	$jointconstrain "ValveBiped.Bip01_R_Hand" z limit -50 50 0
+
+	$jointconstrain "ValveBiped.Bip01_R_Foot" x limit -10 10 0
+	$jointconstrain "ValveBiped.Bip01_R_Foot" y limit -20 20 0
+	$jointconstrain "ValveBiped.Bip01_R_Foot" z limit -18 35 0
 }
 
-$collisiontext
+/* $collisiontext
 {
 	animatedfriction 
 	{
@@ -1018,4 +913,4 @@ $collisiontext
 		"rootname" "valvebiped.bip01_pelvis"
 		"totalmass" "100.000000"
 	}
-}
+} */

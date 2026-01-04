@@ -1,0 +1,71 @@
+studiomdl="Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\studiomdl.exe"
+game="Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2"
+qc="Z:\mnt\f\stuff\git\l4d2-things\touhou_infected_bodies\uncompiled\models\deadbodies\dead_male_sittingchair\dead_male_sittingchair.qc"
+relapath="deadbodies/dead_male_sittingchair"
+reladir="deadbodies"
+Using shader api: shaderapiempty.dll
+qdir:    "z:\mnt\f\stuff\git\l4d2-things\touhou_infected_bodies\uncompiled\models\deadbodies\dead_male_sittingchair\"
+gamedir: "Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\"
+g_path:  "Z:\mnt\f\stuff\git\l4d2-things\touhou_infected_bodies\uncompiled\models\deadbodies\dead_male_sittingchair\dead_male_sittingchair.qc"
+Building binary model files...
+Working on "dead_male_sittingchair.qc"
+SMD MODEL dead_male_sittingchair_ref.smd
+SMD MODEL dead_male_sittingchair_anims\idle.smd
+SMD MODEL dead_male_sittingchair_physics.smd
+Processing LOD for material: Hair_d
+Processing LOD for material: face_d
+Processing LOD for material: Body
+Processing LOD for material: cloth3_d
+Processing LOD for material: gamingchair
+Processing LOD for material: hoho_tere
+Model has 13 convex sub-parts
+Collision model completed.
+---------------------
+writing Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\models/DeadBodies\dead_male_sittingchair.mdl:
+bones          964 bytes (1)
+   animation       x       y       ips    angle
+animations     112 bytes (1 anims) (1 frames) [0:00]
+sequences      220 bytes (1 seq) 
+ik/pose        164 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       404 bytes
+keyvalues        0 bytes
+bone transforms        0 bytes
+Collision model volume 19836.55 in^3
+Please check if you need to delete Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\models/DeadBodies\dead_male_sittingchair.phz
+collision        0 bytes
+total         2728
+---------------------
+writing Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\models/DeadBodies\dead_male_sittingchair.vvd:
+vertices    565920 bytes (11790 vertices)
+tangents    188640 bytes (11790 vertices)
+total       754624 bytes
+---------------------
+Generating optimized mesh "Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\models/DeadBodies\dead_male_sittingchair.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:         106110 bytes
+indices:       106248 bytes
+bone changes:      56 bytes
+everything:    212844 bytes
+
+Completed "dead_male_sittingchair.qc"
+CDynamicFunction: Loading library 'Kernel32.dll' (7BE90000)
+CDynamicFunction: Lookup of 'TryEnterCriticalSection' in 'Kernel32.dll': 7BF64DA0
+CDynamicFunction: Loading library 'psapi.dll' (7B0E0000)
+CDynamicFunction: Lookup of 'GetProcessMemoryInfo' in 'psapi.dll': 7B0E150C
+CDynamicFunction: Closing library 'psapi.dll' (7B0E0000)
+CDynamicFunction: Closing library 'Kernel32.dll' (7BE90000)
+copied '/mnt/d/SteamLibrary/steamapps/common/Left 4 Dead 2/left4dead2/models/deadbodies/dead_male_sittingchair.dx90.vtx' -> '/mnt/f/stuff/git/l4d2-things/touhou_infected_bodies/src/models/deadbodies/dead_male_sittingchair.dx90.vtx'
+removed '/mnt/d/SteamLibrary/steamapps/common/Left 4 Dead 2/left4dead2/models/deadbodies/dead_male_sittingchair.dx90.vtx'
+copied '/mnt/d/SteamLibrary/steamapps/common/Left 4 Dead 2/left4dead2/models/deadbodies/dead_male_sittingchair.mdl' -> '/mnt/f/stuff/git/l4d2-things/touhou_infected_bodies/src/models/deadbodies/dead_male_sittingchair.mdl'
+removed '/mnt/d/SteamLibrary/steamapps/common/Left 4 Dead 2/left4dead2/models/deadbodies/dead_male_sittingchair.mdl'
+copied '/mnt/d/SteamLibrary/steamapps/common/Left 4 Dead 2/left4dead2/models/deadbodies/dead_male_sittingchair.phy' -> '/mnt/f/stuff/git/l4d2-things/touhou_infected_bodies/src/models/deadbodies/dead_male_sittingchair.phy'
+removed '/mnt/d/SteamLibrary/steamapps/common/Left 4 Dead 2/left4dead2/models/deadbodies/dead_male_sittingchair.phy'
+copied '/mnt/d/SteamLibrary/steamapps/common/Left 4 Dead 2/left4dead2/models/deadbodies/dead_male_sittingchair.vvd' -> '/mnt/f/stuff/git/l4d2-things/touhou_infected_bodies/src/models/deadbodies/dead_male_sittingchair.vvd'
+removed '/mnt/d/SteamLibrary/steamapps/common/Left 4 Dead 2/left4dead2/models/deadbodies/dead_male_sittingchair.vvd'

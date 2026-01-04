@@ -1,0 +1,12 @@
+"AddonInfo"
+{
+     addonSteamAppID			550
+     addontitle				"neco arc replaces firehydrant.mdl"
+     addonauthor                        "elitezrule2"
+     addonversion			1
+     addonContent_Campaign		0
+     addonContent_Script		0
+     addonContent_prop			0
+     addonContent_Skin			1
+     addonDescription			"fire hydrant"
+}
