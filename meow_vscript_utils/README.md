@@ -2,7 +2,7 @@
 
 the included json.nut is a vscript json serializer and deserializer that supports the entire json standard  
 you can use it in your own mods if you want to, i worked very hard on it  
-just put `IncludeScript("json.nut");` at the top of your vscript file (or `dofile("json.nut");` if you are not running the script in L4D2)  
+just put `IncludeScript("meowlib/json.nut");` at the top of your vscript file (or `dofile("json.nut");` if you are not running the script in L4D2)  
 then you can serialize json to a file with `::Json.Serialize.ToFile(file_path, my_table);`, or you can serialize it to a string with `local json_string = ::Json.Serialize.ToString(my_table);`  
 and you can deserialize json from a file with `local my_table = ::Json.Deserialize.File(file_path);` or you can deserialize it from a string with `local my_table = ::Json.Deserialize.String(json_string);`  
   
