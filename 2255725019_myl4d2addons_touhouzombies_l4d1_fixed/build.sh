@@ -101,9 +101,16 @@ function remove_all_proportion_correction() {
 	done
 }
 
+function remove_all_collision_models() {
+	find "${shdirpath}/uncompiled" -type f -name "*.qc" | while read file; do
+		perl -i -0pe 's/^(\$collisionjoints [\s\S]*?\})/\/\* $1 \*\//ms' "${file}"
+		perl -i -0pe 's/^(\$collisiontext [\s\S]*?\})/\/\* $1 \*\//ms' "${file}"
+	done
+}
+
 function copy_fixed_meshes() {
 	echo "copying fixed meshes"
-	for i in "${shdirpath}/fixed_meshes/"*; do
+	for i in "${shdirpath}/fixed_meshes/"*.smd; do
 		filename="$(basename -- "${i}")"
 		#echo "filename=${filename}"
 		find "${shdirpath}/uncompiled" -type f -name "*.smd" | while read file; do
@@ -131,6 +138,8 @@ function remove_all_unneeded() {
 
 	remove_all_declaresequence
 	# add_all_declaresequence
+	
+	remove_all_collision_models
 
 	remove_all_proportion_correction
 
@@ -141,7 +150,21 @@ function remove_all_unneeded() {
 
 remove_all_unneeded
 
+
+function remove_gibs() {
+	echo "removing all gibs"
+
+	replacer="${shdirpath}/gib_replace/all.smd"
+
+	find "${shdirpath}/uncompiled_gibs" -type f -name "common_*infected_w_*.smd" | while read file; do
+		cp -fv "${replacer}" "${file}"
+	done
+}
+
+#remove_gibs
+
 compile_all_models
+#compile_all_models "${shdirpath}/uncompiled_gibs"
 
 # echo "${shpath}"
 vpkeditcli -v 1 -s --no-progress -o "${pakpath}" "${srcpath}"

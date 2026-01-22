@@ -1,0 +1,9 @@
+// Created by Crowbar 0.74
+version 1
+nodes
+  0 "AIRLINER_PRECRASH_EXPORT" -1
+end
+skeleton
+  time 0
+    0 -2560.000000 5376.000000 -807.500000 1.570674 0.000183 -0.000183
+end

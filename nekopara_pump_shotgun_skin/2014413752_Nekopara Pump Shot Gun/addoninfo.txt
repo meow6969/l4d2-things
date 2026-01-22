@@ -1,0 +1,27 @@
+"AddonInfo"
+{
+addonSteamAppID         "550"
+addontitle "nekopara pump shotgun" 
+addonversion "1.2"
+addontagline "weapons,shotgun" 
+addonauthor "fish"
+addonauthorSteamID "https://steamcommunity.com/id/byblowing/"
+addonDescription ".Replace pump shotgun."
+
+addonContent_Script 0
+addonContent_Music 0
+addonContent_Sound 0
+addonContent_prop 0 
+addonContent_Prefab 0 
+
+addonContent_BackgroundMovie 0 
+addonContent_Survivor 0 
+addonContent_BossInfected 0
+addonContent_CommonInfected 0 
+addonContent_WeaponModel 1
+addonContent_weapon  1
+addonContent_Skin 0
+addonContent_Spray 0 
+addonContent_Map 0
+}
+

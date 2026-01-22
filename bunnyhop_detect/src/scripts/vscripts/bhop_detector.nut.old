@@ -359,6 +359,8 @@ class ::BhopClasses.BhopConfig
 	NumLeaderboardSlots		= 5;
 	LeaderboardOnGameEnd	= true;
 
+	NewPlayerIntroduction	= true;
+
 	CommandsPrefix			= "!bhop";
 	
 	DefaultPlayerSettings	= ::BhopClasses.PlayerSettings();
@@ -387,7 +389,7 @@ class ::BhopClasses.BhopConfig
 	</ json_ignore = true />
 	SessionData				= null;			// table[pSID, ::BhopClasses.BhopChainData]
 	</ json_ignore = true />
-	build_num=107
+	build_num=109
 }
 
 printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_num+"  !!!")
@@ -1060,8 +1062,11 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			{
 				::MeowUtils.Log("setting playersettings[steamid] for player "+pName);
 				::BhopVars.PlayerSettings[steamid] <- ::BhopClasses.PlayerSettings();
-				ClientPrint(player, 5, "\x01"+"hello \x04"+pName+"\x01! you seem to be new to MeowBhopDetect!");
-				ClientPrint(player, 5, "\x01"+"enter \"\x05!bhop help\x01\" to see the help command, and do \"\x05!bhop toggle\x01\" to enable/disable me!");
+				if (::BhopVars.NewPlayerIntroduction)
+				{
+					ClientPrint(player, 5, "\x01"+"hello \x04"+pName+"\x01! you seem to be new to MeowBhopDetect!");
+					ClientPrint(player, 5, "\x01"+"enter \"\x05"+::BhopVars.CommandsPrefix+" help\x01\" to see the help command, and do \"\x05!bhop toggle\x01\" to enable/disable me!");
+				}
 				// ClientPrint(player, 5, "\x04"+"elitezrule2\x01 is currently testing this mod, expect bugs!");
 				// ClientPrint(player, 5, "\x01"+"feedback is welcome!");
 				// dont need to set configaltered since it 100% runs later  -- dis is bcs the pName changes
@@ -1229,7 +1234,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			local r = ::BhopFunc.EnsurePlayerSettings(player, pName);
 			if (r)
 			{
-				ClientPrint(player, 5, "you have been initialized by MeowBhopDetect!");
+				// ClientPrint(player, 5, "you have been initialized by MeowBhopDetect!");
 				::MeowUtils.Log("removing player \""+pName+"\" from init list");
 				playersToRemove.append(userid);
 			}
@@ -1436,7 +1441,7 @@ class ::BhopCmds.Leaderboard extends ::Commands.Command
 	privileged = false;
 	cooldown = 0;
 
-	</ bhopCmd_param_session = "put any thing here to print the bhop leaderboard for this session" />
+	</ meowCmd_param_session = "put any thing here to print the bhop leaderboard for this session" />
 	function Callback(ctx, session=false)
 	{
 		if (session != false && strip(session) != "") session = true;
@@ -1452,8 +1457,8 @@ class ::BhopCmds.Settings extends ::Commands.Command
 	privileged = true;
 	cooldown = 0;
 
-	</ bhopCmd_param_var = "the path to the variable, seperated with pipes \"|\"", 
-	   bhopCmd_param_value = "the value to set the variable to. if this isnt supplied, it just prints the value" />
+	</ meowCmd_param_var = "the path to the variable, seperated with pipes \"|\"", 
+	   meowCmd_param_value = "the value to set the variable to. if this isnt supplied, it just prints the value" />
 	function Callback(ctx, var, value=null)
 	{
 		local settingPath = var;
@@ -1617,7 +1622,7 @@ class ::BhopCmds.Rules extends ::Commands.Command
 	function Callback(ctx)
 	{
 		ClientPrint(ctx.player, 5, "current bhop ruleset:");
-		ClientPrint(ctx.player, 5, "  \x05"+"tick leniency\x01		: \x04"+::BhopVars.BunnyTickLeniency+"\x01");
+		ClientPrint(ctx.player, 5, "  \x05"+"tick leniency\x01	: \x04"+::BhopVars.BunnyTickLeniency+"\x01");
 		ClientPrint(ctx.player, 5, "  \x05"+"detection count\x01	: \x04"+::BhopVars.BunnyDetectCount+"\x01");
 		ClientPrint(ctx.player, 5, "  \x05"+"min starting vel\x01	: \x04"+::BhopVars.BunnyMinStartingVel+"\x01");
 		/* ClientPrint(ctx.player, 5, "scoring rules:");
@@ -1633,7 +1638,7 @@ class ::BhopCmds.Toggle extends ::Commands.Command
 	brief = "toggle bhop announcing for you";
 	help = "add the \"perfectjump\" parameter to only disable perfectjump announcing";
 
-	</ bhopCmd_param_type = "type of thing to toggle. can either be nothing, \"all\" or \"perfectjump\"" />
+	</ meowCmd_param_type = "type of thing to toggle. can either be nothing, \"all\" or \"perfectjump\"" />
 	function Callback(ctx, type="all")
 	{
 		local toggleType = type;
@@ -1671,6 +1676,28 @@ class ::BhopCmds.About extends ::Commands.Command
 		ClientPrint(ctx.player, 5, "\x01"+"MeowBhopDetect \x05r"+::BhopVars.build_num+"\x01");
 		ClientPrint(ctx.player, 5, "written by meowmeow, source code: \x05"+"https://github.com/meow6969/l4d2-things/tree/master/bunnyhop_detect\x01");
 		ClientPrint(ctx.player, 5, "a fork of simple bunny hop detect by mt2, link: \x05"+"https://steamcommunity.com/sharedfiles/filedetails/?id=2256379828\x01");
+	}
+}
+
+class ::BhopCmds.Prefix extends ::Commands.Command
+{
+	aliases = ["prefix", "p"];
+	brief = "change the prefix used for commands";
+	privileged = true;
+
+	</ meowCmd_param_prefix = "the new prefix the bot will use" />
+	function Callback(ctx, prefix)
+	{
+		if (prefix.find(" ") != null)
+		{
+			ClientPrint(ctx.player, 5, "prefix cant have a space");
+			return;
+		}
+	
+		ClientPrint(null, 5, "bhop detector prefix changed from \""+::BhopVars.CommandsPrefix+"\"->\""+prefix+"\"");
+		::BhopVars.CommandsPrefix = prefix;
+		::BhopVars.ConfigAltered = true;
+		this.commandMan.prefix = prefix;
 	}
 }
 

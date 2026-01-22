@@ -1884,7 +1884,7 @@ $includemodel "infected/anim_common.mdl"
 $includemodel "infected/anim_common_vomit.mdl"
 $includemodel "infected/anim_common_male_exp.mdl"
 
-$collisionjoints "common_male_fallen_survivor_l4d1_physics.smd"
+/* $collisionjoints "common_male_fallen_survivor_l4d1_physics.smd"
 {
 	$mass 100
 	$inertia 5
@@ -1984,4 +1984,4 @@ $collisionjoints "common_male_fallen_survivor_l4d1_physics.smd"
 	$jointconstrain "ValveBiped.Bip01_R_Foot" x limit -20 30 0
 	$jointconstrain "ValveBiped.Bip01_R_Foot" y limit -30 30 0
 	$jointconstrain "ValveBiped.Bip01_R_Foot" z limit -20 30 0
-}
+} */

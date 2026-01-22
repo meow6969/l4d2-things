@@ -236,10 +236,13 @@ function compile_model () {
 	game="$(native_path_to_wine "${l4d2path}/left4dead2")"
 	qc="$(native_path_to_wine "${1}")"
 
+	# make modelname all lowercase
+	sed -i -e 's/^\(\$modelname "[^"]*\)/\L\1/' "${1}"
+
 	relapath="$(grep -Po '(?<=^\$modelname ")[^"]*' "${1}")"
 	relapath="${relapath%.*}"  # remove extension
 	relapath="$(echo -E "${relapath}" | sed 's/\\/\//g')"  # replace \ with /
-	relapath="${relapath:l}"  # make lowercase
+	# relapath="${relapath:l}"  # make lowercase
 	reladir="$(dirname "${relapath}")"
 	echo -E "studiomdl=\"${studiomdl}\""
 	echo -E "game=\"${game}\""
@@ -256,9 +259,15 @@ function compile_model () {
 
 function compile_all_models() {
 	echo "compiling all models..."
+	if [[ ! "${1}" ]]; then
+		in_folder="${shdirpath}/uncompiled"
+	else
+		in_folder="${1}"
+	fi
+
 	#export -f compile_model
 	#find "${shdirpath}/uncompiled" -type f -name "*.qc" -exec zsh -c "compile_model \"\${0}\" \"${srcpath}\"" {} ";"
-	find "${shdirpath}/uncompiled" -type f -name "*.qc" | while read file; do
+	find "${in_folder}" -type f -name "*.qc" | while read file; do
 		compile_model "${file}" "${srcpath}"  
 	done
 	wineserver -w

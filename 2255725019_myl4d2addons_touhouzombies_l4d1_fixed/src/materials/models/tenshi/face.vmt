@@ -7,10 +7,10 @@ $blendtintbybasealpha 0
 	"$phong" "1"
 	"$phongboost"	"10"
 	"$phongalbedotint" "1"
-	"$phongexponenttexture" "models/Tenshi/shader/phong_exp"
+	"$phongexponenttexture" "shared/phong_exp"
 	"$phongfresnelranges"	"[.01 .01 2]"
 
-	"$lightwarptexture" "models/Tenshi/shader/face_shader"
+	"$lightwarptexture" "shared/face_shader"
 
 	"$halflambert" "1"	
 	"$AmbientOcclusion" "1"	

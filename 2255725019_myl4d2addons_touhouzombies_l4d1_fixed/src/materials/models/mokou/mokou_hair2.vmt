@@ -9,10 +9,10 @@ $blendtintbybasealpha 0
 	"$phong" "1"
 	"$phongboost"	"2"
 	"$phongalbedotint" "1"
-	"$phongexponenttexture" "models/mokou/shader/phong_exp"
+	"$phongexponenttexture" "shared/phong_exp"
 	"$phongfresnelranges"	"[.1 .1 5]"
 
-	"$lightwarptexture" "models/mokou/shader/cartoon_shader"
+	"$lightwarptexture" "shared/cartoon_shader"
 
 	"$halflambert" "1"	
 	"$AmbientOcclusion" "1"	

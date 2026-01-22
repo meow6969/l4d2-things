@@ -1,0 +1,1911 @@
+// Created by Crowbar 0.74
+
+$modelname "survivors/survivor_biker.mdl"
+
+
+$bodygroup "mizumiyaface"
+{
+	studio "Face.smd"
+}
+
+$bodygroup "mizumiyabody"
+{
+	studio "Body.smd"
+}
+
+$bodygroup "mizumiyahair"
+{
+	studio "Hair.smd"
+}
+
+
+$surfaceprop "flesh"
+
+$contents "solid"
+
+$illumposition -2.397 0.123 38.156
+
+$eyeposition 0 0 70
+
+$maxeyedeflection 30
+
+$forcephonemecrossfade
+
+$ambientboost
+
+$mostlyopaque
+
+$cdmaterials "models\meowmeow\mizumiya\"
+
+$attachment "eyes" "ValveBiped.Bip01_Head1" 4.04 -2.79 0.06 rotate 0 -89.37 -90
+$attachment "mouth" "ValveBiped.Bip01_Head1" 0.84 -6.09 -0.16 rotate 0 -80 -90
+$attachment "pistol" "ValveBiped.Bip01_R_Thigh" -3.47 2.15 -5.69 rotate -3.66 -0.47 88.48
+$attachment "medkit" "ValveBiped.Bip01_Spine4" -1.34 -5.84 -1.37 rotate 5.03 77.16 0
+$attachment "primary" "ValveBiped.Bip01_Spine4" 3.21 -5.16 -2.75 rotate -13.7 170.19 174.29
+$attachment "attach_R_shoulderBladeAim" "ValveBiped.Bip01_Spine4" -11.07 -1.46 -5.33 rotate -90 -102.85 0
+$attachment "attach_L_shoulderBladeAim" "ValveBiped.Bip01_Spine4" -11.07 -1.46 3.69 rotate -90 -102.85 0
+$attachment "molotov" "ValveBiped.Bip01_Spine" -3.78 -2.89 8.29 rotate -63.44 -74.67 -101.41
+$attachment "grenade" "ValveBiped.Bip01_Spine" -0.8 1.38 9.33 rotate -90 -175.23 0
+$attachment "pills" "ValveBiped.Bip01_Spine" -3.1 0.74 -8.47 rotate -41.18 -88.48 -87.05
+$attachment "melee" "ValveBiped.Bip01_Spine4" 3.01 -5.84 5.74 rotate 24 175 97
+$attachment "grenade" "ValveBiped.Bip01_Spine" -0.8 1.38 9.33 rotate -90 -175.23 0
+$attachment "molotov" "ValveBiped.Bip01_Spine" -3.78 -2.89 8.29 rotate -63.44 -74.67 -101.41
+$attachment "pills" "ValveBiped.Bip01_Spine" -3.1 0.74 -8.47 rotate -41.18 -88.48 -87.05
+$attachment "medkit" "ValveBiped.Bip01_Spine4" -1.34 -5.84 -1.37 rotate 5.03 77.16 0
+$attachment "pistol" "ValveBiped.Bip01_R_Thigh" -3.47 2.15 -5.69 rotate -3.66 -0.47 88.48
+$attachment "primary" "ValveBiped.Bip01_Spine4" 3.21 -5.16 -2.75 rotate -13.7 170.19 174.29
+$attachment "eholster" "ValveBiped.Bip01_L_Thigh" 5.12 -2.21 5.1 rotate 9.47 -92.11 96.8
+$attachment "lfoot" "ValveBiped.Bip01_L_Foot" 0 5.25 0 rotate 0 0 0
+$attachment "rfoot" "ValveBiped.Bip01_R_Foot" 0 5.25 0 rotate 0 0 0
+$attachment "muzzle_flash" "ValveBiped.Bip01_L_Hand" 0 0 0 rotate 0 0 0
+$attachment "survivor_neck" "ValveBiped.Bip01_Neck1" 0 0 0 rotate 0 0 0
+$attachment "forward" "ValveBiped.forward" 0 0 0 rotate 0 0 0
+$attachment "bleedout" "ValveBiped.Bip01_Pelvis" 9.97 10.5 5.25 rotate 0 0 0
+$attachment "survivor_light" "ValveBiped.Bip01_Spine2" 6.3 25.2 0 rotate 0 0 0
+$attachment "legL_B" "ValveBiped.attachment_bandage_legL" 0 0 0 rotate -90 -90 0
+$attachment "armL_B" "ValveBiped.attachment_bandage_armL" 0 0 0 rotate -90 -90 0
+$attachment "armL_T" "ValveBiped.attachment_armL_T" 0 0 0 rotate -90 -90 0
+$attachment "armR_T" "ValveBiped.attachment_armR_T" 0 0 0 rotate -90 -90 0
+$attachment "armL" "ValveBiped.Bip01_L_Forearm" 0 0 0 rotate 0 0 0
+$attachment "legL" "ValveBiped.Bip01_L_Calf" 0 0 0 rotate 0 0 0
+$attachment "thighL" "ValveBiped.Bip01_L_Thigh" 0 0 0 rotate 0 0 0
+$attachment "spine" "ValveBiped.Bip01_Spine" 0 0 0 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -13 -13 0 13 13 72
+
+$hboxset "L4D"
+$hbox 3 "ValveBiped.Bip01_Pelvis" -6.3 -4.725 -4.725 6.3 4.725 4.725
+$hbox 6 "ValveBiped.Bip01_L_Thigh" 5.25 -3.57 -2.9925 19.949999 2.73 2.2575
+$hbox 6 "ValveBiped.Bip01_L_Calf" 0.525 -2.1 -2.625 20.474998 3.15 2.625
+$hbox 6 "ValveBiped.Bip01_L_Toe0" -3.675 -0.525 -1.4175 1.575 1.575 2.5725
+$hbox 7 "ValveBiped.Bip01_R_Thigh" 5.25 -3.57 -2.9925 19.949999 2.73 2.2575
+$hbox 7 "ValveBiped.Bip01_R_Calf" 0.525 -2.1 -2.625 20.474998 3.15 2.625
+$hbox 7 "ValveBiped.Bip01_R_Toe0" -3.675 -0.525 -1.4175 1.575 1.575 2.5725
+$hbox 3 "ValveBiped.Bip01_Spine1" -5.25 -4.4625 -6.3 5.25 6.5625 6.3
+$hbox 2 "ValveBiped.Bip01_Spine2" -3.15 -3.57 -6.825 12.599999 6.929999 6.825
+$hbox 1 "ValveBiped.Bip01_Neck1" 0 -2.625 -2.3625 4.2 2.625 2.3625
+$hbox 1 "ValveBiped.Bip01_Head1" -0.84 -4.2 -3.2025 7.559999 4.2 2.5725
+$hbox 4 "ValveBiped.Bip01_L_UpperArm" 0 -2.205 -2.1 11.549999 1.995 2.1
+$hbox 4 "ValveBiped.Bip01_L_Forearm" 0.525 -1.8375 -1.8375 12.075 1.8375 1.8375
+$hbox 4 "ValveBiped.Bip01_L_Hand" 1.113 -1.512 -2.52 5.838 0.588 1.365
+$hbox 5 "ValveBiped.Bip01_R_UpperArm" 0 -2.205 -2.1 11.549999 1.995 2.1
+$hbox 5 "ValveBiped.Bip01_R_Forearm" 0.525 -1.8375 -1.8375 12.075 1.8375 1.8375
+$hbox 5 "ValveBiped.Bip01_R_Hand" 1.113 -1.512 -2.52 5.838 0.588 1.365
+$skipboneinbbox
+
+$definebone "ValveBiped.Bip01_Pelvis" "" 0 0.542612 40.233574 0 0 89.999975 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Thigh" "ValveBiped.Bip01_Pelvis" 3.806942 0 0 3.326308 -87.048507 -95.710935 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_L_Thigh" 19.263105 0 0 0 0 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Foot" "ValveBiped.Bip01_L_Calf" 17.5891 0 0 -3.939487 -74.439534 -4.413494 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Toe0" "ValveBiped.Bip01_L_Foot" 6.240662 0 0 -1.587609 -19.272641 1.162818 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Thigh" "ValveBiped.Bip01_Pelvis" -3.806942 0 0 3.326304 -92.951464 -84.289083 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_R_Thigh" 19.263098 0 0 0 0 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_R_Calf" 17.589096 0 0 3.939485 -74.439534 5.084026 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Toe0" "ValveBiped.Bip01_R_Foot" 6.240662 0 0 1.366218 -19.288965 -6.408019 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Spine" "ValveBiped.Bip01_Pelvis" 0 4.246162 -0.018825 4.766603 89.999982 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_Spine" 4.195629 0 0 0 -9.852982 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_Spine1" 3.883152 0.000001 0 0 -0.906993 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Spine4" "ValveBiped.Bip01_Spine2" 5.985943 0.000002 0 0 28.371672 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Neck1" "ValveBiped.Bip01_Spine4" 5.620499 0.000002 0 0 14.358378 179.999855 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_Neck1" 4.684906 0.000002 0 -0.000057 26.575554 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" 4.268658 1.531894 1.575 -73.220092 -107.221566 12.909378 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" 5.782729 -0.000008 0.000001 -22.320309 -15.43947 -89.849294 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_L_UpperArm" 11.452765 0.000001 -0.000004 -0.000003 -7.20247 0.000001 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_L_Forearm" 10.945532 -0.000006 -0.000031 6.507306 7.122675 78.669798 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger4" "ValveBiped.Bip01_L_Hand" 3.147137 0.005676 -1.551344 8.213351 -12.990152 11.742428 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger41" "ValveBiped.Bip01_L_Finger4" 1.585899 0 0 0.955234 -34.374607 0.653397 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger42" "ValveBiped.Bip01_L_Finger41" 0.849079 0 0 -10.048532 -17.354268 -3.121078 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger3" "ValveBiped.Bip01_L_Hand" 3.471083 0.213272 -0.574067 5.954124 -16.778206 11.337861 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger31" "ValveBiped.Bip01_L_Finger3" 1.897537 -0.000008 0 -5.063454 -30.512982 -2.977608 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger32" "ValveBiped.Bip01_L_Finger31" 1.01445 0.000004 0 0.559038 -13.904483 0.138366 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger2" "ValveBiped.Bip01_L_Hand" 3.750084 0.114773 0.430058 3.893595 -14.791072 10.7303 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger21" "ValveBiped.Bip01_L_Finger2" 2.258194 0 0 -3.092653 -37.967177 -2.410839 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger22" "ValveBiped.Bip01_L_Finger21" 1.210388 0.000008 0 0.688638 -8.970351 0.108686 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger1" "ValveBiped.Bip01_L_Hand" 3.868299 -0.166634 1.490139 1.961124 -11.693718 10.352716 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger11" "ValveBiped.Bip01_L_Finger1" 1.786062 0 0 3.66905 -38.756245 2.940814 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger12" "ValveBiped.Bip01_L_Finger11" 1.044445 -0.000004 0 2.209324 -1.89655 0.073161 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger0" "ValveBiped.Bip01_L_Hand" 1.121477 -1.351563 1.030997 -19.741822 -7.111202 97.051428 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger01" "ValveBiped.Bip01_L_Finger0" 1.928114 0 -0.000004 -10.778427 -10.616002 0.000002 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Finger02" "ValveBiped.Bip01_L_Finger01" 1.285139 0 0.000008 -2.32885 11.249045 -0.000001 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4" 4.268658 1.531896 -1.575 73.748558 -114.71968 -24.241033 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_UpperArm" "ValveBiped.Bip01_R_Clavicle" 5.782726 0 0 23.248945 -11.666445 95.170107 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_R_UpperArm" 11.452768 -0.000001 0 0.000007 -7.202484 -0.000001 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_R_Forearm" 10.945511 -0.000005 0.000015 -6.507534 7.122605 -78.876985 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger4" "ValveBiped.Bip01_R_Hand" 3.147156 0.000069 1.551353 -8.213401 -12.98992 -11.535191 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger41" "ValveBiped.Bip01_R_Finger4" 1.585901 -0.000008 0 -0.955229 -34.374607 -0.653401 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger42" "ValveBiped.Bip01_R_Finger41" 0.849083 0.000004 0 10.048539 -17.354268 3.121073 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger3" "ValveBiped.Bip01_R_Hand" 3.471104 0.211185 0.574834 -5.954229 -16.777984 -11.130627 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger31" "ValveBiped.Bip01_R_Finger3" 1.897535 0 0 5.06346 -30.512989 2.977601 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger32" "ValveBiped.Bip01_R_Finger31" 1.014454 0 0 -0.559033 -13.904489 -0.138374 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger2" "ValveBiped.Bip01_R_Hand" 3.750103 0.116325 -0.42964 -3.8937 -14.79091 -10.523119 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger21" "ValveBiped.Bip01_R_Finger2" 2.258196 0.000008 0 3.092658 -37.967177 2.410831 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger22" "ValveBiped.Bip01_R_Finger21" 1.210384 0.000004 0 -0.688635 -8.970354 -0.108695 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger1" "ValveBiped.Bip01_R_Hand" 3.868322 -0.161243 -1.490732 -1.961171 -11.693492 -10.145484 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger11" "ValveBiped.Bip01_R_Finger1" 1.786062 -0.000008 0 -3.669044 -38.756256 -2.940823 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger12" "ValveBiped.Bip01_R_Finger11" 1.044445 0.000004 -0.000001 -2.209318 -1.896554 -0.073171 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger0" "ValveBiped.Bip01_R_Hand" 1.1215 -1.347832 -1.035882 19.767273 -7.037125 -96.83291 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger01" "ValveBiped.Bip01_R_Finger0" 1.92812 -0.000001 0 10.778424 -10.615989 -0.000001 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Finger02" "ValveBiped.Bip01_R_Finger01" 1.285143 0 0 2.32885 11.249053 0.000003 0 0 0 0 0 0
+$definebone "ValveBiped.attachment_bandage_legL" "ValveBiped.Bip01_L_Calf" 7.023272 -6.880002 4.339547 -83.423261 -63.332738 150.153431 0 0 0 0 0 0
+$definebone "ValveBiped.attachment_bandage_armL" "ValveBiped.Bip01_L_Forearm" 3.813803 -3.870654 0.998558 -61.28573 11.452962 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.attachment_armL_T" "ValveBiped.Bip01_L_Forearm" 0 -0.000007 -0.000031 6.507306 7.122668 78.669798 0 0 0 0 0 0
+$definebone "ValveBiped.attachment_armR_T" "ValveBiped.Bip01_R_Forearm" 0 -0.000007 -0.000034 6.507312 7.122668 78.669798 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone" "ValveBiped.Bip01_R_Hand" 2.856899 -1.536194 -0.9738 -15.61642 -90.427695 -86.009389 0 0 0 0 0 0
+$definebone "ValveBiped.forward" "ValveBiped.Bip01_Head1" 2.000008 -3 0 0 -76 -90.000003 0 0 0 0 0 0
+$definebone "ValveBiped.L_weapon_bone" "ValveBiped.Bip01_L_Hand" 3.349001 -1.370995 0.724999 -5.043001 89.255 113.321998 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone_Clip" "ValveBiped.weapon_bone" 0.000004 0 10.000004 0.000003 0.000002 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone_extra" "ValveBiped.weapon_bone" 0.018898 0.665158 9.395884 0.000003 0.000002 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone_Clip2" "ValveBiped.Bip01_L_Hand" 3.028212 -0.923409 -2.009451 -0.743371 90.942357 90.188249 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone_Clip2_Bullets" "ValveBiped.weapon_bone_Clip2" 0.116951 4.311603 0.061861 -0.000027 0.000011 0.000595 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bolt_l" "ValveBiped.Bip01_L_Hand" 0 0 0 -0.000001 0.000003 0.000002 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone_Clip_Bullets" "ValveBiped.weapon_bone_Clip" 0 1 0.000008 0.000003 0.000002 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bolt" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bolt_opposite" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_charger" "ValveBiped.weapon_bone" 0 0 0 0.000003 0.000002 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Knee" "ValveBiped.Bip01_L_Thigh" 19.253853 0 -0.000001 0 1.446891 0.000001 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Knee" "ValveBiped.Bip01_R_Thigh" 19.253841 0 0 0.000001 1.446719 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Ulna" "ValveBiped.Bip01_L_Forearm" 5.884354 0 0.000004 -0.000002 -0.000001 -7.237037 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Wrist" "ValveBiped.Bip01_L_Forearm" 11.768705 -0.000001 0 -0.000002 -0.000001 -13.660905 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Elbow" "ValveBiped.Bip01_L_UpperArm" 11.679201 0 -0.000004 -0.000007 -9.262339 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_L_Bicep" "ValveBiped.Bip01_L_UpperArm" 5.837998 -0.735 -0.525002 -0.000005 -0.000002 -0.000001 0 0 0 0 0 0
+$definebone "ValveBiped.hlp_jacket_arm_front1_L" "ValveBiped.Bip01_L_Clavicle" 5.825531 2.661388 2.409388 -0.935077 -1.404084 -0.111467 0 0 0 0 0 0
+$definebone "ValveBiped.hlp_jacket_arm_top_L" "ValveBiped.Bip01_L_Clavicle" 6.752561 4.039024 -0.341453 1.070353 -1.091604 0.082238 0 0 0 0 0 0
+$definebone "ValveBiped.hlp_jacket_arm_back_L" "ValveBiped.Bip01_L_Clavicle" 7.652452 1.954227 -2.880674 0.67213 0.445368 1.964537 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Wrist" "ValveBiped.Bip01_R_Forearm" 11.768707 0.000001 0.000004 0.000005 0.000006 13.903744 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Ulna" "ValveBiped.Bip01_R_Forearm" 5.884352 0.000001 0 0.000005 0.000006 7.369187 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Elbow" "ValveBiped.Bip01_R_UpperArm" 11.679197 0 0.000008 0.000007 -9.26228 0 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Bicep" "ValveBiped.Bip01_R_UpperArm" 5.837997 -0.641044 0.525002 0.000009 0.000003 -2.835174 0 0 0 0 0 0
+$definebone "ValveBiped.hlp_jacket_arm_front1_R" "ValveBiped.Bip01_R_Clavicle" 5.625286 3.107059 -2.433369 4.724489 -0.393593 6.351416 0 0 0 0 0 0
+$definebone "ValveBiped.hlp_jacket_arm_top_R" "ValveBiped.Bip01_R_Clavicle" 6.677644 4.114117 0.449763 0.587011 -0.410608 -0.513601 0 0 0 0 0 0
+$definebone "ValveBiped.hlp_jacket_arm_back_R" "ValveBiped.Bip01_R_Clavicle" 7.673524 1.768635 2.985535 0.372493 0.714035 -1.829523 0 0 0 0 0 0
+$definebone "ValveBiped.hlp_jacket_armpit_R" "ValveBiped.Bip01_Spine2" 4.902687 0.655644 -8.954903 0.22288 0.009139 4.694948 0 0 0 0 0 0
+$definebone "ValveBiped.jiggy_jacket_right" "ValveBiped.Bip01_Spine" 2.64967 8.412623 -3.003099 -63.666133 107.998289 -104.786583 0 0 0 0 0 0
+$definebone "ValveBiped.jiggy_jacket_left" "ValveBiped.Bip01_Spine" 2.538502 8.321048 3.447679 -61.873939 -87.220498 88.028653 0 0 0 0 0 0
+
+$bonemerge "ValveBiped.Bip01_Pelvis"
+$bonemerge "ValveBiped.Bip01_Spine"
+$bonemerge "ValveBiped.Bip01_Spine1"
+$bonemerge "ValveBiped.Bip01_Spine2"
+$bonemerge "ValveBiped.Bip01_Spine4"
+$bonemerge "ValveBiped.Bip01_L_Clavicle"
+$bonemerge "ValveBiped.Bip01_L_UpperArm"
+$bonemerge "ValveBiped.Bip01_L_Forearm"
+$bonemerge "ValveBiped.Bip01_L_Hand"
+$bonemerge "ValveBiped.Bip01_L_Finger4"
+$bonemerge "ValveBiped.Bip01_L_Finger41"
+$bonemerge "ValveBiped.Bip01_L_Finger42"
+$bonemerge "ValveBiped.Bip01_L_Finger3"
+$bonemerge "ValveBiped.Bip01_L_Finger31"
+$bonemerge "ValveBiped.Bip01_L_Finger32"
+$bonemerge "ValveBiped.Bip01_L_Finger2"
+$bonemerge "ValveBiped.Bip01_L_Finger21"
+$bonemerge "ValveBiped.Bip01_L_Finger22"
+$bonemerge "ValveBiped.Bip01_L_Finger1"
+$bonemerge "ValveBiped.Bip01_L_Finger11"
+$bonemerge "ValveBiped.Bip01_L_Finger12"
+$bonemerge "ValveBiped.Bip01_L_Finger0"
+$bonemerge "ValveBiped.Bip01_L_Finger01"
+$bonemerge "ValveBiped.Bip01_L_Finger02"
+$bonemerge "ValveBiped.Bip01_R_Clavicle"
+$bonemerge "ValveBiped.Bip01_R_UpperArm"
+$bonemerge "ValveBiped.Bip01_R_Forearm"
+$bonemerge "ValveBiped.Bip01_R_Hand"
+$bonemerge "ValveBiped.Bip01_R_Finger4"
+$bonemerge "ValveBiped.Bip01_R_Finger41"
+$bonemerge "ValveBiped.Bip01_R_Finger42"
+$bonemerge "ValveBiped.Bip01_R_Finger3"
+$bonemerge "ValveBiped.Bip01_R_Finger31"
+$bonemerge "ValveBiped.Bip01_R_Finger32"
+$bonemerge "ValveBiped.Bip01_R_Finger2"
+$bonemerge "ValveBiped.Bip01_R_Finger21"
+$bonemerge "ValveBiped.Bip01_R_Finger22"
+$bonemerge "ValveBiped.Bip01_R_Finger1"
+$bonemerge "ValveBiped.Bip01_R_Finger11"
+$bonemerge "ValveBiped.Bip01_R_Finger12"
+$bonemerge "ValveBiped.Bip01_R_Finger0"
+$bonemerge "ValveBiped.Bip01_R_Finger01"
+$bonemerge "ValveBiped.Bip01_R_Finger02"
+$bonemerge "ValveBiped.weapon_bone"
+$bonemerge "ValveBiped.L_weapon_bone"
+$bonemerge "ValveBiped.weapon_bone_Clip"
+$bonemerge "ValveBiped.weapon_bone_extra"
+$bonemerge "ValveBiped.weapon_bone_Clip2"
+$bonemerge "ValveBiped.weapon_bone_Clip2_Bullets"
+$bonemerge "ValveBiped.weapon_bolt_l"
+$bonemerge "ValveBiped.weapon_bone_Clip_Bullets"
+$bonemerge "ValveBiped.weapon_bolt"
+$bonemerge "ValveBiped.weapon_bolt_opposite"
+$bonemerge "ValveBiped.weapon_charger"
+$bonemerge "ValveBiped.Bip01_L_Ulna"
+$bonemerge "ValveBiped.Bip01_L_Wrist"
+$bonemerge "ValveBiped.Bip01_R_Wrist"
+$bonemerge "ValveBiped.Bip01_R_Ulna"
+
+
+$sectionframes 30 168
+
+$poseparameter "body_pitch" -90 90 loop 360
+$poseparameter "body_yaw" -90 90 loop 360
+$poseparameter "head_pitch" -90 90 loop 360
+$poseparameter "head_yaw" -90 90 loop 360
+$poseparameter "move_y" -1 1 loop 0
+$poseparameter "move_x" -1 1 loop 0
+
+$ikchain "rhand" "ValveBiped.Bip01_R_Hand" knee 0.707 0.707 0
+$ikchain "lhand" "ValveBiped.Bip01_L_Hand" knee 0.707 0.707 0
+$ikchain "rfoot" "ValveBiped.Bip01_R_Foot" knee 0.707 -0.707 0
+$ikchain "lfoot" "ValveBiped.Bip01_L_Foot" knee 0.707 -0.707 0
+$ikchain "ikclip" "ValveBiped.weapon_bone_Clip" knee 0.707 -0.707 0
+
+$ikautoplaylock "rfoot" 1 0.1
+$ikautoplaylock "lfoot" 1 0.1
+
+$weightlist "weights_Idlenoise" {
+	 "ValveBiped.Bip01_Pelvis" 0.4
+	 "ValveBiped.Bip01_L_Thigh" 0
+	 "ValveBiped.Bip01_L_Calf" 0
+	 "ValveBiped.Bip01_L_Foot" 0
+	 "ValveBiped.Bip01_L_Toe0" 0
+	 "ValveBiped.Bip01_R_Thigh" 0
+	 "ValveBiped.Bip01_R_Calf" 0
+	 "ValveBiped.Bip01_R_Foot" 0
+	 "ValveBiped.Bip01_R_Toe0" 0
+	 "ValveBiped.Bip01_Spine" 0.2
+	 "ValveBiped.Bip01_Spine1" 0.2
+	 "ValveBiped.Bip01_Spine2" 0.2
+	 "ValveBiped.Bip01_Spine4" 0.2
+	 "ValveBiped.Bip01_Neck1" 0.2
+	 "ValveBiped.Bip01_Head1" 0.2
+	 "ValveBiped.Bip01_L_Clavicle" 0
+	 "ValveBiped.Bip01_L_UpperArm" 0
+	 "ValveBiped.Bip01_L_Forearm" 0
+	 "ValveBiped.Bip01_L_Hand" 0
+	 "ValveBiped.Bip01_L_Finger4" 0
+	 "ValveBiped.Bip01_L_Finger41" 0
+	 "ValveBiped.Bip01_L_Finger42" 0
+	 "ValveBiped.Bip01_L_Finger3" 0
+	 "ValveBiped.Bip01_L_Finger31" 0
+	 "ValveBiped.Bip01_L_Finger32" 0
+	 "ValveBiped.Bip01_L_Finger2" 0
+	 "ValveBiped.Bip01_L_Finger21" 0
+	 "ValveBiped.Bip01_L_Finger22" 0
+	 "ValveBiped.Bip01_L_Finger1" 0
+	 "ValveBiped.Bip01_L_Finger11" 0
+	 "ValveBiped.Bip01_L_Finger12" 0
+	 "ValveBiped.Bip01_L_Finger0" 0
+	 "ValveBiped.Bip01_L_Finger01" 0
+	 "ValveBiped.Bip01_L_Finger02" 0
+	 "ValveBiped.Bip01_R_Clavicle" 0
+	 "ValveBiped.Bip01_R_UpperArm" 0
+	 "ValveBiped.Bip01_R_Forearm" 0
+	 "ValveBiped.Bip01_R_Hand" 0
+	 "ValveBiped.Bip01_R_Finger4" 0
+	 "ValveBiped.Bip01_R_Finger41" 0
+	 "ValveBiped.Bip01_R_Finger42" 0
+	 "ValveBiped.Bip01_R_Finger3" 0
+	 "ValveBiped.Bip01_R_Finger31" 0
+	 "ValveBiped.Bip01_R_Finger32" 0
+	 "ValveBiped.Bip01_R_Finger2" 0
+	 "ValveBiped.Bip01_R_Finger21" 0
+	 "ValveBiped.Bip01_R_Finger22" 0
+	 "ValveBiped.Bip01_R_Finger1" 0
+	 "ValveBiped.Bip01_R_Finger11" 0
+	 "ValveBiped.Bip01_R_Finger12" 0
+	 "ValveBiped.Bip01_R_Finger0" 0
+	 "ValveBiped.Bip01_R_Finger01" 0
+	 "ValveBiped.Bip01_R_Finger02" 0
+	 "ValveBiped.attachment_bandage_legL" 0
+	 "ValveBiped.attachment_bandage_armL" 0
+	 "ValveBiped.attachment_armL_T" 0
+	 "ValveBiped.attachment_armR_T" 0
+	 "ValveBiped.weapon_bone" 0
+	 "ValveBiped.forward" 0.2
+	 "ValveBiped.L_weapon_bone" 0
+	 "ValveBiped.weapon_bone_Clip" 0
+	 "ValveBiped.weapon_bone_extra" 0
+	 "ValveBiped.weapon_bone_Clip2" 0
+	 "ValveBiped.weapon_bone_Clip2_Bullets" 0
+	 "ValveBiped.weapon_bolt_l" 0
+	 "ValveBiped.weapon_bone_Clip_Bullets" 0
+	 "ValveBiped.weapon_bolt" 0
+	 "ValveBiped.weapon_bolt_opposite" 0
+	 "ValveBiped.weapon_charger" 0
+	 "ValveBiped.Bip01_L_Knee" 0
+	 "ValveBiped.Bip01_R_Knee" 0
+	 "ValveBiped.Bip01_L_Ulna" 0
+	 "ValveBiped.Bip01_L_Wrist" 0
+	 "ValveBiped.Bip01_L_Elbow" 0
+	 "ValveBiped.Bip01_L_Bicep" 0
+	 "ValveBiped.hlp_jacket_arm_front1_L" 0
+	 "ValveBiped.hlp_jacket_arm_top_L" 0
+	 "ValveBiped.hlp_jacket_arm_back_L" 0
+	 "ValveBiped.Bip01_R_Wrist" 0
+	 "ValveBiped.Bip01_R_Ulna" 0
+	 "ValveBiped.Bip01_R_Elbow" 0
+	 "ValveBiped.Bip01_R_Bicep" 0
+	 "ValveBiped.hlp_jacket_arm_front1_R" 0
+	 "ValveBiped.hlp_jacket_arm_top_R" 0
+	 "ValveBiped.hlp_jacket_arm_back_R" 0
+	 "ValveBiped.hlp_jacket_armpit_R" 0.2
+	 "ValveBiped.jiggy_jacket_right" 0.2
+	 "ValveBiped.jiggy_jacket_left" 0.2
+}
+
+$weightlist "weights_InjuredIdlenoise" {
+	 "ValveBiped.Bip01_Pelvis" 0
+	 "ValveBiped.Bip01_L_Thigh" 0
+	 "ValveBiped.Bip01_L_Calf" 0
+	 "ValveBiped.Bip01_L_Foot" 0
+	 "ValveBiped.Bip01_L_Toe0" 0
+	 "ValveBiped.Bip01_R_Thigh" 0
+	 "ValveBiped.Bip01_R_Calf" 0
+	 "ValveBiped.Bip01_R_Foot" 0
+	 "ValveBiped.Bip01_R_Toe0" 0
+	 "ValveBiped.Bip01_Spine" 0
+	 "ValveBiped.Bip01_Spine1" 0
+	 "ValveBiped.Bip01_Spine2" 0
+	 "ValveBiped.Bip01_Spine4" 0
+	 "ValveBiped.Bip01_Neck1" 0
+	 "ValveBiped.Bip01_Head1" 0
+	 "ValveBiped.Bip01_L_Clavicle" 0
+	 "ValveBiped.Bip01_L_UpperArm" 0
+	 "ValveBiped.Bip01_L_Forearm" 0
+	 "ValveBiped.Bip01_L_Hand" 0
+	 "ValveBiped.Bip01_L_Finger4" 0
+	 "ValveBiped.Bip01_L_Finger41" 0
+	 "ValveBiped.Bip01_L_Finger42" 0
+	 "ValveBiped.Bip01_L_Finger3" 0
+	 "ValveBiped.Bip01_L_Finger31" 0
+	 "ValveBiped.Bip01_L_Finger32" 0
+	 "ValveBiped.Bip01_L_Finger2" 0
+	 "ValveBiped.Bip01_L_Finger21" 0
+	 "ValveBiped.Bip01_L_Finger22" 0
+	 "ValveBiped.Bip01_L_Finger1" 0
+	 "ValveBiped.Bip01_L_Finger11" 0
+	 "ValveBiped.Bip01_L_Finger12" 0
+	 "ValveBiped.Bip01_L_Finger0" 0
+	 "ValveBiped.Bip01_L_Finger01" 0
+	 "ValveBiped.Bip01_L_Finger02" 0
+	 "ValveBiped.Bip01_R_Clavicle" 0
+	 "ValveBiped.Bip01_R_UpperArm" 0
+	 "ValveBiped.Bip01_R_Forearm" 0
+	 "ValveBiped.Bip01_R_Hand" 0
+	 "ValveBiped.Bip01_R_Finger4" 0
+	 "ValveBiped.Bip01_R_Finger41" 0
+	 "ValveBiped.Bip01_R_Finger42" 0
+	 "ValveBiped.Bip01_R_Finger3" 0
+	 "ValveBiped.Bip01_R_Finger31" 0
+	 "ValveBiped.Bip01_R_Finger32" 0
+	 "ValveBiped.Bip01_R_Finger2" 0
+	 "ValveBiped.Bip01_R_Finger21" 0
+	 "ValveBiped.Bip01_R_Finger22" 0
+	 "ValveBiped.Bip01_R_Finger1" 0
+	 "ValveBiped.Bip01_R_Finger11" 0
+	 "ValveBiped.Bip01_R_Finger12" 0
+	 "ValveBiped.Bip01_R_Finger0" 0
+	 "ValveBiped.Bip01_R_Finger01" 0
+	 "ValveBiped.Bip01_R_Finger02" 0
+	 "ValveBiped.attachment_bandage_legL" 0
+	 "ValveBiped.attachment_bandage_armL" 0
+	 "ValveBiped.attachment_armL_T" 0
+	 "ValveBiped.attachment_armR_T" 0
+	 "ValveBiped.weapon_bone" 0
+	 "ValveBiped.forward" 0
+	 "ValveBiped.L_weapon_bone" 0
+	 "ValveBiped.weapon_bone_Clip" 0
+	 "ValveBiped.weapon_bone_extra" 0
+	 "ValveBiped.weapon_bone_Clip2" 0
+	 "ValveBiped.weapon_bone_Clip2_Bullets" 0
+	 "ValveBiped.weapon_bolt_l" 0
+	 "ValveBiped.weapon_bone_Clip_Bullets" 0
+	 "ValveBiped.weapon_bolt" 0
+	 "ValveBiped.weapon_bolt_opposite" 0
+	 "ValveBiped.weapon_charger" 0
+	 "ValveBiped.Bip01_L_Knee" 0
+	 "ValveBiped.Bip01_R_Knee" 0
+	 "ValveBiped.Bip01_L_Ulna" 0
+	 "ValveBiped.Bip01_L_Wrist" 0
+	 "ValveBiped.Bip01_L_Elbow" 0
+	 "ValveBiped.Bip01_L_Bicep" 0
+	 "ValveBiped.hlp_jacket_arm_front1_L" 0
+	 "ValveBiped.hlp_jacket_arm_top_L" 0
+	 "ValveBiped.hlp_jacket_arm_back_L" 0
+	 "ValveBiped.Bip01_R_Wrist" 0
+	 "ValveBiped.Bip01_R_Ulna" 0
+	 "ValveBiped.Bip01_R_Elbow" 0
+	 "ValveBiped.Bip01_R_Bicep" 0
+	 "ValveBiped.hlp_jacket_arm_front1_R" 0
+	 "ValveBiped.hlp_jacket_arm_top_R" 0
+	 "ValveBiped.hlp_jacket_arm_back_R" 0
+	 "ValveBiped.hlp_jacket_armpit_R" 0
+	 "ValveBiped.jiggy_jacket_right" 0
+	 "ValveBiped.jiggy_jacket_left" 0
+}
+
+
+
+$include "Anims_RigToZoey_ReplaceFrancis.qci"
+$sequence Proportion_Trick survivor_biker_anims/Proportion.smd delta subtract Proportion_Trick 1 numframes 1 autoplay noautoik
+
+
+// bust
+
+
+$jigglebone "J_Sec_L_Bust1"
+{
+	is_flexible
+	{
+		length 5
+		tip_mass 10
+		pitch_stiffness 500
+		pitch_damping 15
+		yaw_stiffness 500
+		yaw_damping 15
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 3
+	}
+	has_base_spring
+	{
+		base_mass 0
+		stiffness 500
+		damping 15
+		left_constraint -0.2 0.2
+		left_friction 0
+		up_constraint -0.5 0.5
+		up_friction 0
+		forward_constraint -0.5 0.5
+		forward_friction 0
+	}
+}
+
+$jigglebone "J_Sec_L_Bust2"
+{
+	is_flexible
+	{
+		length 5
+		tip_mass 10
+		pitch_stiffness 500
+		pitch_damping 15
+		yaw_stiffness 500
+		yaw_damping 15
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 3
+	}
+	has_base_spring
+	{
+		base_mass 0
+		stiffness 500
+		damping 15
+		left_constraint -0.2 0.2
+		left_friction 0
+		up_constraint -0.5 0.5
+		up_friction 0
+		forward_constraint -0.5 0.5
+		forward_friction 0
+	}
+}
+
+$jigglebone "J_Sec_R_Bust1"
+{
+	is_flexible
+	{
+		length 5
+		tip_mass 10
+		pitch_stiffness 500
+		pitch_damping 15
+		yaw_stiffness 500
+		yaw_damping 15
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 3
+	}
+	has_base_spring
+	{
+		base_mass 0
+		stiffness 500
+		damping 15
+		left_constraint -0.2 0.2
+		left_friction 0
+		up_constraint -0.5 0.5
+		up_friction 0
+		forward_constraint -0.5 0.5
+		forward_friction 0
+	}
+}
+
+$jigglebone "J_Sec_R_Bust2"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+// hair
+
+
+$jigglebone "J_Sec_Hair1_1"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_1"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair3_1"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair4_1"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_2"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_2"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair3_2"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_3"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_3"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair3_3"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_4"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_4"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair3_4"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_5"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_5"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair3_5"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_6"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_6"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair3_6"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_7"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_7"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_8"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_8"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_9"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_9"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_10"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_10"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_11"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_11"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_12"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_12"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_13"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_13"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_14"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_14"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_15"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_15"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_16"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_16"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair3_16"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_17"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_17"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair3_17"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair4_17"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair5_17"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair6_17"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair7_17"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_18"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_18"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair3_18"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair4_18"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair5_18"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair6_18"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair7_18"
+{
+	is_flexible
+	{
+		length 50
+		tip_mass 0
+		pitch_stiffness 200
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+}
+
+
+
+
+$jigglebone "J_Sec_Hair1_19"
+{
+	is_flexible
+	{
+		length 10
+		tip_mass 10
+		pitch_stiffness 50
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+	has_base_spring
+	{
+		base_mass 0
+		stiffness 100
+		damping 15
+		left_constraint -3 3
+		left_friction 0
+		up_constraint -3 3
+		up_friction 0
+		forward_constraint -3 3
+		forward_friction 0
+	}
+}
+
+
+
+$jigglebone "J_Sec_Hair2_19"
+{
+	is_flexible
+	{
+		length 10
+		tip_mass 10
+		pitch_stiffness 50
+		pitch_damping 14
+		yaw_stiffness 200
+		yaw_damping 14
+		along_stiffness 100
+		along_damping 0
+		yaw_constraint -3 39.999999
+		yaw_friction 0
+		yaw_bounce 0
+		angle_constraint 39.999999
+	}
+	has_base_spring
+	{
+		base_mass 0
+		stiffness 100
+		damping 15
+		left_constraint -3 3
+		left_friction 0
+		up_constraint -3 3
+		up_friction 0
+		forward_constraint -3 3
+		forward_friction 0
+	}
+}
+
+
+$collisionjoints "survivor_biker_physics.smd"
+{
+	$mass 100
+	$inertia 10
+	$damping 0.05
+	$rotdamping 5
+	$rootbone "valvebiped.bip01_pelvis"
+
+	$jointrotdamping "ValveBiped.Bip01_Pelvis" 3
+
+	$jointmassbias "ValveBiped.Bip01_Spine1" 8
+	$jointconstrain "ValveBiped.Bip01_Spine1" x limit -10 10 0
+	$jointconstrain "ValveBiped.Bip01_Spine1" y limit -16 16 0
+	$jointconstrain "ValveBiped.Bip01_Spine1" z limit -20 30 0
+
+	$jointmassbias "ValveBiped.Bip01_Spine2" 9
+	$jointconstrain "ValveBiped.Bip01_Spine2" x limit -10 10 0
+	$jointconstrain "ValveBiped.Bip01_Spine2" y limit -10 10 0
+	$jointconstrain "ValveBiped.Bip01_Spine2" z limit -20 20 0
+
+	$jointmassbias "ValveBiped.Bip01_R_Clavicle" 4
+	$jointrotdamping "ValveBiped.Bip01_R_Clavicle" 6
+	$jointconstrain "ValveBiped.Bip01_R_Clavicle" x limit -15 15 0
+	$jointconstrain "ValveBiped.Bip01_R_Clavicle" y limit -10 10 0
+	$jointconstrain "ValveBiped.Bip01_R_Clavicle" z limit 0 45 0
+
+	$jointmassbias "ValveBiped.Bip01_L_Clavicle" 4
+	$jointrotdamping "ValveBiped.Bip01_L_Clavicle" 6
+	$jointconstrain "ValveBiped.Bip01_L_Clavicle" x limit -15 15 0
+	$jointconstrain "ValveBiped.Bip01_L_Clavicle" y limit -10 10 0
+	$jointconstrain "ValveBiped.Bip01_L_Clavicle" z limit 0 45 0
+
+	$jointmassbias "ValveBiped.Bip01_L_UpperArm" 5
+	$jointrotdamping "ValveBiped.Bip01_L_UpperArm" 2
+	$jointconstrain "ValveBiped.Bip01_L_UpperArm" x limit -15 20 0
+	$jointconstrain "ValveBiped.Bip01_L_UpperArm" y limit -40 32 0
+	$jointconstrain "ValveBiped.Bip01_L_UpperArm" z limit -80 25 0
+
+	$jointmassbias "ValveBiped.Bip01_L_Forearm" 4
+	$jointrotdamping "ValveBiped.Bip01_L_Forearm" 4
+	$jointconstrain "ValveBiped.Bip01_L_Forearm" x limit -40 15 0
+	$jointconstrain "ValveBiped.Bip01_L_Forearm" y limit 0 0 0
+	$jointconstrain "ValveBiped.Bip01_L_Forearm" z limit -120 10 0
+
+	$jointrotdamping "ValveBiped.Bip01_L_Hand" 1
+	$jointconstrain "ValveBiped.Bip01_L_Hand" x limit -25 25 0
+	$jointconstrain "ValveBiped.Bip01_L_Hand" y limit -35 35 0
+	$jointconstrain "ValveBiped.Bip01_L_Hand" z limit -50 50 0
+
+	$jointmassbias "ValveBiped.Bip01_R_UpperArm" 5
+	$jointrotdamping "ValveBiped.Bip01_R_UpperArm" 2
+	$jointconstrain "ValveBiped.Bip01_R_UpperArm" x limit -15 20 0
+	$jointconstrain "ValveBiped.Bip01_R_UpperArm" y limit -40 32 0
+	$jointconstrain "ValveBiped.Bip01_R_UpperArm" z limit -80 25 0
+
+	$jointmassbias "ValveBiped.Bip01_R_Forearm" 4
+	$jointrotdamping "ValveBiped.Bip01_R_Forearm" 4
+	$jointconstrain "ValveBiped.Bip01_R_Forearm" x limit -40 15 0
+	$jointconstrain "ValveBiped.Bip01_R_Forearm" y limit 0 0 0
+	$jointconstrain "ValveBiped.Bip01_R_Forearm" z limit -120 10 0
+
+	$jointrotdamping "ValveBiped.Bip01_R_Hand" 1
+	$jointconstrain "ValveBiped.Bip01_R_Hand" x limit -25 25 0
+	$jointconstrain "ValveBiped.Bip01_R_Hand" y limit -35 35 0
+	$jointconstrain "ValveBiped.Bip01_R_Hand" z limit -50 50 0
+
+	$jointmassbias "ValveBiped.Bip01_R_Thigh" 7
+	$jointrotdamping "ValveBiped.Bip01_R_Thigh" 7
+	$jointconstrain "ValveBiped.Bip01_R_Thigh" x limit -25 25 0
+	$jointconstrain "ValveBiped.Bip01_R_Thigh" y limit -10 15 0
+	$jointconstrain "ValveBiped.Bip01_R_Thigh" z limit -55 25 0
+
+	$jointmassbias "ValveBiped.Bip01_R_Calf" 4
+	$jointconstrain "ValveBiped.Bip01_R_Calf" x limit -10 25 0
+	$jointconstrain "ValveBiped.Bip01_R_Calf" y limit -5 5 0
+	$jointconstrain "ValveBiped.Bip01_R_Calf" z limit -10 115 0
+
+	$jointrotdamping "ValveBiped.Bip01_R_Foot" 2
+	$jointconstrain "ValveBiped.Bip01_R_Foot" x limit -20 30 0
+	$jointconstrain "ValveBiped.Bip01_R_Foot" y limit -30 20 0
+	$jointconstrain "ValveBiped.Bip01_R_Foot" z limit -30 50 0
+
+	$jointmassbias "ValveBiped.Bip01_L_Thigh" 7
+	$jointrotdamping "ValveBiped.Bip01_L_Thigh" 7
+	$jointconstrain "ValveBiped.Bip01_L_Thigh" x limit -25 25 0
+	$jointconstrain "ValveBiped.Bip01_L_Thigh" y limit -10 15 0
+	$jointconstrain "ValveBiped.Bip01_L_Thigh" z limit -55 25 0
+
+	$jointmassbias "ValveBiped.Bip01_L_Calf" 4
+	$jointconstrain "ValveBiped.Bip01_L_Calf" x limit -10 25 0
+	$jointconstrain "ValveBiped.Bip01_L_Calf" y limit -5 5 0
+	$jointconstrain "ValveBiped.Bip01_L_Calf" z limit -10 115 0
+
+	$jointrotdamping "ValveBiped.Bip01_L_Foot" 2
+	$jointconstrain "ValveBiped.Bip01_L_Foot" x limit -20 30 0
+	$jointconstrain "ValveBiped.Bip01_L_Foot" y limit -30 20 0
+	$jointconstrain "ValveBiped.Bip01_L_Foot" z limit -30 50 0
+
+	$jointmassbias "ValveBiped.Bip01_Head1" 4
+	$jointrotdamping "ValveBiped.Bip01_Head1" 3
+	$jointconstrain "ValveBiped.Bip01_Head1" x limit -50 50 0
+	$jointconstrain "ValveBiped.Bip01_Head1" y limit -20 20 0
+	$jointconstrain "ValveBiped.Bip01_Head1" z limit -26 30 0
+
+	$jointcollide "ValveBiped.Bip01_R_Foot" "ValveBiped.Bip01_L_Foot"
+	$jointcollide "ValveBiped.Bip01_R_Calf" "ValveBiped.Bip01_L_Foot"
+	$jointcollide "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_R_Foot"
+	$jointcollide "ValveBiped.Bip01_L_Calf" "ValveBiped.Bip01_R_Calf"
+	$jointcollide "ValveBiped.Bip01_L_Thigh" "ValveBiped.Bip01_R_Thigh"
+	$jointcollide "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_R_Hand"
+	$jointcollide "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_L_Hand"
+	$jointcollide "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_R_Hand"
+	$jointcollide "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_L_Hand"
+	$jointcollide "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_L_UpperArm"
+	$jointcollide "ValveBiped.Bip01_Spine2" "ValveBiped.Bip01_R_UpperArm"
+	$jointcollide "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_Head1"
+	$jointcollide "ValveBiped.Bip01_R_Forearm" "ValveBiped.Bip01_Spine1"
+	$jointcollide "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_Head1"
+	$jointcollide "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_Spine1"
+	$jointcollide "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_R_Forearm"
+	$jointcollide "ValveBiped.Bip01_L_Forearm" "ValveBiped.Bip01_R_UpperArm"
+	$jointcollide "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_R_Thigh"
+	$jointcollide "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_L_Thigh"
+	$jointcollide "ValveBiped.Bip01_R_Hand" "ValveBiped.Bip01_Pelvis"
+	$jointcollide "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_R_Thigh"
+	$jointcollide "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_L_Thigh"
+	$jointcollide "ValveBiped.Bip01_L_Hand" "ValveBiped.Bip01_Pelvis"
+	$jointcollide "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_R_Hand"
+	$jointcollide "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_L_Hand"
+	$jointcollide "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_R_Clavicle"
+	$jointcollide "ValveBiped.Bip01_Head1" "ValveBiped.Bip01_L_Clavicle"
+}

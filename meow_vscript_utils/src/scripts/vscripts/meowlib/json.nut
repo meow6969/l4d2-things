@@ -1337,6 +1337,8 @@ function TestStuff()
 	// printl("emptyChars = "+::Json.Utils.PrintThing(::Json.Utils.emptyChars, true));
 	local jsonResult = ::Json.Deserialize.String("{\"meow\": \"cat\", \"テンションが 上\": \"\\u30c6\\u30f3\\u30b7\\u30e7\\u30f3\\u304c\\u4e0a\\u3042\\u304c\\u308b\", \"num\": \"2133423423123123123.333\"}");
 	printl("jsonResult = "+::Json.Utils.PrintThing(jsonResult, true));
+	jsonResult = ::Json.Deserialize.String("{\"kit\": 12345678901234567890}");
+	printl("jsonResult = "+::Json.Utils.PrintThing(jsonResult, true));
 
 	printl("31="+::Json.Utils.IntToBin(31)+"="+::Json.Utils.BinToInt(::Json.Utils.IntToBin(31)));
 	printl("69="+::Json.Utils.IntToBin(69, 12)+"="+::Json.Utils.BinToInt(::Json.Utils.IntToBin(69, 16)));

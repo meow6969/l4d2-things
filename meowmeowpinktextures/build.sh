@@ -16,6 +16,8 @@ cp -rv "${shdirpath}/copy/"* "${srcpath}/"
 # echo "${shpath}"
 
 function create_subaddons () {
+  echo "creat ubsadon"
+
   echo "moving to sub addons..." > `tty`
   echo "meowmeowpinkvehicles:" > `tty`
   rm -r "${shdirpath}/meowmeowpinkvehicles/materials" > `tty`
@@ -82,14 +84,14 @@ function copy_subaddons() {
   cp "${shdirpath}/meowmeowpinkmodels.vpk"    -fv "${l4d2path}/left4dead2/addons/meowmeowpinkmodels.vpk" > `tty`
 }
 
-echo "creat ubsadon"
-create_subaddons
+
+#create_subaddons
 
 echo "meowmeowpinktextures:"
 vpkeditcli --no-progress -v 1 -s -o "${shdirpath}/meowmeowpinktextures.vpk" "${srcpath}"
 
 echo "creating vpks..."
 
-# copy_subaddons
+#copy_subaddons
 cp "${shdirpath}/meowmeowpinktextures.vpk"  -fv "${l4d2path}/left4dead2/addons/meowmeowpinktextures.vpk"
 

@@ -6,15 +6,15 @@ $blendtintbybasealpha 0
 
 
 	"$basetexture" "IKanadeA/Reimu/face"
-	"$bumpmap" "IKanadeA/Reimu/shader/normal"
+	"$bumpmap" "shared/normal"
 	
 	"$phong" "1"
 	"$phongboost"	"24"
 	"$phongalbedotint" "1"
-	"$phongexponenttexture" "IKanadeA/Reimu/shader/phong_exp"
+	"$phongexponenttexture" "shared/phong_exp"
 	"$phongfresnelranges"	"[0 0 1]"
 
-	"$lightwarptexture" "IKanadeA/Reimu/shader/lightwarptexture"
+	"$lightwarptexture" "shared/lightwarptexture"
 	
 	$nodecal 1
 	$alphatest 1

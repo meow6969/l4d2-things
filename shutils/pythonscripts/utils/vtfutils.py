@@ -38,7 +38,7 @@ class Flags(Enum):
     FLAG_V3_VERTEX_TEXTURE = 1 << 26
     FLAG_V3_SSBUMP = 1 << 27
     FLAG_V3_BORDER = 1 << 29
-    FLAG_V4_SRGB = 1 << 6
+    FLAG_SRGB_V4 = 1 << 6
     FLAG_V4_TF2_STAGING_MEMORY = 1 << 19
     FLAG_V4_TF2_IMMEDIATE_CLEANUP = 1 << 20
     FLAG_V4_TF2_IGNORE_PICMIP = 1 << 21
@@ -58,6 +58,8 @@ class Flags(Enum):
             if n & e.value:
                 if str(e) == "MIN_MIP":
                     continue
+                #if str(e) == "NO_MIP":
+                #    continue
                 r.append(e)
         return r
 
@@ -206,19 +208,28 @@ class VtfData:
             ]
         if not self.thumbnail_present:
             cmd.append("--no-thumbnail")
-        if self.frames <= 1:
-            cmd.append("--no-animation")
+        #if self.frames <= 1:
+        #    cmd.append("--no-animation")
         if self.mips <= 1:
             cmd.append("--no-mips")
         for flag in self.flags:
+            if flag == Flags.FLAG_NO_MIP:
+                if "--no-mips" not in cmd:
+                    cmd.append("--no-mips")
+                continue
+            if flag == Flags.FLAG_ENVMAP:
+                continue
+            debug_log(f"adding flag {flag}", DebugLogLevel.DEBUG)
             cmd += ["--flag", f"{flag}"]
         if out_file is not None:
             cmd += ["--output", out_file]
+        cmd += ["--yes"]
         cmd += ["create", f"{in_file}"]
         r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode != 0:
             debug_log(r.stdout, DebugLogLevel.ERROR)
             debug_log(r.stderr, DebugLogLevel.ERROR)
+            debug_log(cmd, DebugLogLevel.ERROR)
             raise RuntimeError(f"failed to create {in_file}")
         if self.particle_sheet is None:
             return
@@ -261,17 +272,19 @@ class VtfData:
             raise FileNotFoundError(f)
         if not f.suffix == ".vtf":
             raise Exception("file is not vtf")
-        debug_log(str(["maretf", "--info-output-mode", "kv1", "info", str(f)]), DebugLogLevel.DEBUG)
-        r = subprocess.run(["maretf", "--info-output-mode", "kv1", "info", str(f)], capture_output=True)
+        debug_log(str(["maretf", "--info-output-mode", "kv1", "--verbose", "info", str(f)]), DebugLogLevel.DEBUG)
+        r = subprocess.run(["maretf", "--info-output-mode", "kv1", "--verbose", "info", str(f)], capture_output=True)
         if r.returncode != 0:
             raise Exception(r.stderr)
+        #print(r.stdout)
         data = vdf.loads(r.stdout.decode("utf-8"))
 
         sht = None
         if "particle_sheet" in data["resources"]:
             f = sourcepp.vtfpp.VTF(str(f), False)
             sht = f.get_resource(sourcepp.vtfpp.Resource.Type.PARTICLE_SHEET_DATA).get_data_as_particle_sheet()
-
+        #print(f"data={data}")
+        #input()
         return VtfData(
             platform_type=data["format"]["platform"],
             version=f"{data['format']['version_major']}.{data['format']['version_minor']}",

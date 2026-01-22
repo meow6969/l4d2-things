@@ -3,14 +3,14 @@
 $allowdiffusemodulation 0 
 $blendtintbybasealpha 0
 	"$basetexture" "models/orin/hada"
-	"$bumpmap" "models\orin\normal"
+	"$bumpmap" "shared\normal"
 
-	"$lightwarptexture" "models\orin\lightwarptexture"
+	"$lightwarptexture" "shared\lightwarptexture"
 
 	"$phong" "1"
 	"$phongboost"	"24"
 	"$phongalbedotint" "1"
-	"$phongexponenttexture" "models\orin\phong_exp"
+	"$phongexponenttexture" "shared\phong_exp"
 	"$phongfresnelranges"	"[0 0 1]"
 
 	"$rimlight"               "1"

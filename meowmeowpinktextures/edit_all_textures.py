@@ -35,7 +35,7 @@ contrast_png_folder = Path("./contrast").resolve()
 modified_png_folder = Path("./modified").resolve()
 output_textures_folder = Path("./src").resolve()
 
-gradient_file = Path("./gradient14.png").resolve()
+gradient_file = Path("./new_gradient.png").resolve()
 # gradient_file = Path("./gradient_pinhead1.png").resolve()
 
 

@@ -1994,7 +1994,7 @@ $sequence "proportions" {
 $includemodel "infected/anim_common_female.mdl"
 $includemodel "infected/anim_common_female_exp.mdl"
 
-$collisionjoints "common_female_rural01_physics.smd"
+/* $collisionjoints "common_female_rural01_physics.smd"
 {
 	$mass 0
 	$inertia 10
@@ -2069,10 +2069,10 @@ $collisiontext
 		"animfrictiontimein" "0.100000"
 		"animfrictiontimeout" "0.200000"
 		"animfrictiontimehold" "1.000000"
-	}
+	} 
 	editparams 
 	{
 		"rootname" "valvebiped.bip01_pelvis"
 		"totalmass" "100.000000"
 	}
-}
+}*/

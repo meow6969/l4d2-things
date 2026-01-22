@@ -2277,7 +2277,7 @@ $includemodel "infected/anim_common.mdl"
 $includemodel "infected/anim_common_vomit.mdl"
 $includemodel "infected/anim_common_male_exp.mdl"
 
-$collisionjoints "common_male_ceda_physics.smd"
+/* $collisionjoints "common_male_ceda_physics.smd"
 {
 	$mass 40
 	$inertia 10
@@ -2341,4 +2341,4 @@ $collisionjoints "common_male_ceda_physics.smd"
 	$jointconstrain "ValveBiped.Bip01_R_Foot" x limit -10 10 0
 	$jointconstrain "ValveBiped.Bip01_R_Foot" y limit -20 20 0
 	$jointconstrain "ValveBiped.Bip01_R_Foot" z limit -20 25 0
-}
+} */

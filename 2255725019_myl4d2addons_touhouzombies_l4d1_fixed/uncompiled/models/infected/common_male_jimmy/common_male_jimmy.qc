@@ -2081,7 +2081,7 @@ $includemodel "infected/anim_common.mdl"
 $includemodel "infected/anim_common_vomit.mdl"
 $includemodel "infected/anim_common_male_exp.mdl"
 
-$collisionjoints "common_male_jimmy_physics.smd"
+/* $collisionjoints "common_male_jimmy_physics.smd"
 {
 	$mass 100
 	$inertia 10
@@ -2199,4 +2199,4 @@ $collisiontext
 		"rootname" "valvebiped.bip01_pelvis"
 		"totalmass" "50.000000"
 	}
-}
+} */

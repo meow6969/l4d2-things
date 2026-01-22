@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+	// "$basetexture" "models\captainbigbutt\vocaloid\shadow-miku\eye"
+	"$translucent" "1"
+	"$nodecal" "1"
+
+	"$emissiveblendenabled" "1"
+	"$emissiveblendstrength" "1"
+	"$emissiveblendtexture" "vgui/white"
+	"$emissiveblendbasetexture" "vgui/white"
+	"$emissiveblendflowtexture" "vgui/white"
+	"$emissiveblendtint" "[ 1 1 1 ]"
+	"$emissiveblendscrollvector" "[ 0 0 ]"
+	
+
+	// "$selfillum" "1"
+	// "$selfillumtint" "[255 255 255]"
+	//"$nocull" "1"
+
+	"$flashlightnolambert" "1"
+}
