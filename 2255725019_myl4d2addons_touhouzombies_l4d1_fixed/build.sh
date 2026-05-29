@@ -148,7 +148,7 @@ function remove_all_unneeded() {
 	echo "done"
 }
 
-remove_all_unneeded
+#remove_all_unneeded
 
 
 function remove_gibs() {
@@ -163,7 +163,7 @@ function remove_gibs() {
 
 #remove_gibs
 
-compile_all_models
+#compile_all_models
 #compile_all_models "${shdirpath}/uncompiled_gibs"
 
 # echo "${shpath}"

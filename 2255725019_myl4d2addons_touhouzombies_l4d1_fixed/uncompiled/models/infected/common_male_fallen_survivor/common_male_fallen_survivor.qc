@@ -949,7 +949,7 @@ $animation "a_proportions" "common_male_fallen_survivor_anims\a_proportions.smd"
 	subtract "a_proportions_corrective_animation" 0
 } */
 
-$sequence "ragdoll" {
+/* $sequence "ragdoll" {
 	"common_male_fallen_survivor_anims\ragdoll.smd"
 	activity "ACT_DIERAGDOLL" 1
 	fadein 0.2
@@ -1031,7 +1031,7 @@ $sequence "ragdoll_06" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
 	ikrule "rfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 2
 	ikrule "lfoot" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 3
-}
+} */
 
 // $declaresequence "common_male_aim_matrix_run"
 
@@ -1984,4 +1984,4 @@ $includemodel "infected/anim_common_male_exp.mdl"
 	$jointconstrain "ValveBiped.Bip01_R_Foot" x limit -20 30 0
 	$jointconstrain "ValveBiped.Bip01_R_Foot" y limit -30 30 0
 	$jointconstrain "ValveBiped.Bip01_R_Foot" z limit -20 30 0
-} */
+} */ 

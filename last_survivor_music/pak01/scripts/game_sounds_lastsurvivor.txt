@@ -1,0 +1,25 @@
+
+
+"Event.Meow_LastSurvivor"
+{
+	"channel"					"CHAN_STATIC"
+	"volume"					"1.0"
+	"soundlevel"				"SNDLVL_NONE"
+	"rndwave"
+	{
+		"wave"					"@#music/last_survivor/stopper.wav"
+	}	
+
+	GameData
+	{
+		"MusicPriority"			"CRITICAL"
+		"MusicTrack"			"lastsurvivor"
+		// "MusicBlockTrackList"	"all"
+		// "MusicStopTrackList"	"all"
+		"MusicStopTrackList"	"witch, witchChoir, zombat_tp, zombat, zombat2, zombat3, zombatIntro, ambient, tank, tank2"
+		//"MusicDuckTrackList"	"all"
+		"MusicMaster"			"PLAY_SPLIT"
+	}
+}
+
+

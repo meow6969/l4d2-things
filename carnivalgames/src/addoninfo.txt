@@ -6,6 +6,7 @@
 	addonauthor "elitezrule2"
 	addonauthorSteamID ""
 	addonContent_Script		1 			//Modifies a script.						Represented ingame as: Scripts
+	addonContent_Skin 1
 
 	addonDescription "meow"
 }

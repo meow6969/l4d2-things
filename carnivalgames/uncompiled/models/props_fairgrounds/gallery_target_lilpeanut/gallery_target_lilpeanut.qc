@@ -22,6 +22,9 @@ $cbox 0 0 0 0 0 0
 
 $bbox -2.5 -25.523 -53.5 3.504 22.756 40.909
 
+// this is to prevent the prop from being invisible at low effects detail setting in the last row of the minigame
+$noforcedfade
+
 $definebone "root" "" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "static_prop" "" 0 0 0 0 0 0 0 0 0 0 0 0
 

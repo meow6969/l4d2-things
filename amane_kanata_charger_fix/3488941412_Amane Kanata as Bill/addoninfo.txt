@@ -1,0 +1,20 @@
+"AddonInfo"
+{
+	addonSteamAppID         550
+	addontitle              "Hololive Amane Kanata as Bill"
+	addonversion            1
+	addonauthor             "KonstaStarlightVT★•: ﾟ."
+	addonDescription        "Replaces Bill with Vtuber Amane Kanata from Hololive"
+	addonContent_Campaign		0
+	addonContent_Map		0
+	addonContent_Skin		1
+	addonContent_weapon		0
+	addonContent_BossInfected	0
+	addonContent_CommonInfected	0
+	addonContent_Survivor		1
+	addonContent_Sound		0
+	addonContent_Music		0
+	addonContent_Script		0
+	addonContent_prop		0
+}
+

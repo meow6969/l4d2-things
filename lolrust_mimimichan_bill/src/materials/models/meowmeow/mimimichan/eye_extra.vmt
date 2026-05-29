@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/meowmeow/mimimichan/eye_extra"
+	"$ambientocclusion" "0"
+	"$phong" "1"
+	"$phongboost" "0.2"
+	"$phongexponent" "1"
+	"$phongfresnelranges" "[ 1 0.1 0.1 ]"
+	"$phongwarptexture" "models/meowmeow/mimimichan/shader"
+	"$lightwarptexture" "models/meowmeow/mimimichan/toon_all"
+	"$halflambert" "1"
+	"$nodecal" "1"
+	
+	$alphatest 1
+}

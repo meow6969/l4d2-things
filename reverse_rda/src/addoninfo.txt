@@ -1,0 +1,15 @@
+"AddonInfo"
+{
+addonSteamAppID         "550"
+addontitle "reverse dead air capaign" 
+addonversion "1.2"
+addontagline "weapons,shotgun" 
+addonauthor "elitezrule2"
+addonauthorSteamID "https://steamcommunity.com/id/byblowing/"
+addonDescription ".Replace pump shotgun."
+
+addonContent_Skin 1
+addonContent_Campaign 1
+}
+
+

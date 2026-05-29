@@ -46,13 +46,14 @@ textures_to_remove=(
 	"materials/wood/woodsiding_ext_02.vtf"
 )
 
-for texture in "${textures_to_remove[@]}"; do
-	rm -v "${srcpath}/${texture}" >> "log.txt"
-done
+#for texture in "${textures_to_remove[@]}"; do
+#	rm -v "${srcpath}/${texture}" >> "log.txt"
+#done
 
 
-mv -v "${srcpath}/materials/tile/ceilingtiles"* "${srcpath}/materials/plaster" >> "log.txt"
+#mv -v "${srcpath}/materials/tile/ceilingtiles"* "${srcpath}/materials/plaster" >> "log.txt"
 
 
 vpkeditcli --no-progress -v 1 -s -o "${pakpath}" "${srcpath}" >> "log.txt"
+cp -fv "${pakpath}" "${l4d2path}/left4dead2/addons"
 

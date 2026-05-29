@@ -274,6 +274,86 @@ function compile_all_models() {
 	echo "done compiling models!"
 }
 
+function full_final_compile_map() {
+	if [[ ! "${1}" ]] || [[ ! "${2}" ]]; then
+		return 1
+	fi
+	if ! [[ -f "${1}" ]]; then
+		return 2
+	fi
+	if ! [[ -d "${2}" ]]; then
+		return 3
+	fi
+	
+	out="$(get_realpath "${2}")"
+	vbsp="$(native_path_to_wine "${l4d2path}/bin/vbsp.exe")"
+	#vvis="$(native_path_to_wine "${l4d2path}/bin/vvis.exe")"
+	vvis="$(native_path_to_wine "${l4d2path}/bin/vvisplusplus.exe")"
+	vrad="$(native_path_to_wine "${l4d2path}/bin/vrad.exe")"
+	game="$(native_path_to_wine "${l4d2path}/left4dead2")"
+	vmf="$(get_realpath "${1}")"
+	#echo "dirname=$(dirname "${1}")"
+	vmfdir="$(dirname "${1}")"
+	wine_vmf="$(native_path_to_wine "${vmf}")"
+	mapname="$(basename -- "${vmf}")"
+	mapname="${mapname%.*}"
+	out_bsp="${out}/maps/${mapname}.bsp"
+	echo -E "vbsp=${vbsp}"
+	echo -E "vvis=${vvis}"
+	echo -E "vrad=${vrad}"
+
+	echo "vmf=${vmf}"
+	echo -E "vmfdir=${vmfdir}"
+	echo "mapname=${mapname}"
+
+	WINEDEBUG="-all" wine "${vbsp}" -game "${game}" "${wine_vmf}"
+	WINEDEBUG="-all" wine "${vvis}" -game "${game}" "${wine_vmf}"
+	WINEDEBUG="-all" wine "${vrad}" -hdr -final -staticproplighting -game "${game}" "${wine_vmf}"
+
+	mv -v "${vmfdir}/${mapname}.bsp" "${out_bsp}"
+}
+
+function full_compile_map() {
+	if [[ ! "${1}" ]] || [[ ! "${2}" ]]; then
+		return 1
+	fi
+	if ! [[ -f "${1}" ]]; then
+		return 2
+	fi
+	if ! [[ -d "${2}" ]]; then
+		return 3
+	fi
+	
+	out="$(get_realpath "${2}")"
+	vbsp="$(native_path_to_wine "${l4d2path}/bin/vbsp.exe")"
+	#vvis="$(native_path_to_wine "${l4d2path}/bin/vvis.exe")"
+	vvis="$(native_path_to_wine "${l4d2path}/bin/vvisplusplus.exe")"
+	vrad="$(native_path_to_wine "${l4d2path}/bin/vrad.exe")"
+	game="$(native_path_to_wine "${l4d2path}/left4dead2")"
+	vmf="$(get_realpath "${1}")"
+	#echo "dirname=$(dirname "${1}")"
+	vmfdir="$(dirname "${1}")"
+	wine_vmf="$(native_path_to_wine "${vmf}")"
+	mapname="$(basename -- "${vmf}")"
+	mapname="${mapname%.*}"
+	out_bsp="${out}/maps/${mapname}.bsp"
+	echo -E "vbsp=${vbsp}"
+	echo -E "vvis=${vvis}"
+	echo -E "vrad=${vrad}"
+
+	echo "vmf=${vmf}"
+	echo -E "vmfdir=${vmfdir}"
+	echo "mapname=${mapname}"
+
+	WINEDEBUG="-all" wine "${vbsp}" -game "${game}" "${wine_vmf}"
+	WINEDEBUG="-all" wine "${vvis}" -game "${game}" "${wine_vmf}"
+	WINEDEBUG="-all" wine "${vrad}" -hdr -staticproplighting -game "${game}" "${wine_vmf}"
+
+	mv -v "${vmfdir}/${mapname}.bsp" "${out_bsp}"
+}
+
+
+# i really need to like finish this wah
 function build_mod () {
 	copy_to_addons=false
 	output_dir="${pakdir}"

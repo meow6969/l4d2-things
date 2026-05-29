@@ -1,0 +1,815 @@
+
+$jigglebone "HairJoint-BowLeft1"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-BowRight1"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-BowLeft2"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-BowRight2"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-BowLeft3"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-BowRight3"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-BowLeft4"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-BowRight4"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-BowLeft5"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-BowRight5"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-HairBack1"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-HairBack2"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-HairBack3"
+{
+	is_flexible
+	{
+		length 6
+		tip_mass 20
+		pitch_constraint -40 40
+		pitch_stiffness 85
+		pitch_damping 1
+		yaw_stiffness 85
+		yaw_damping 1
+		along_stiffness 80
+		yaw_constraint -80 80
+		along_damping 1
+		angle_constraint 100
+	}
+}
+
+
+$jigglebone "HairJoint-RibbonLeft1"
+{
+	is_flexible
+	{
+		length 20
+		tip_mass 0
+		pitch_constraint -30 30
+		pitch_stiffness 55
+		pitch_damping 20
+		yaw_stiffness 35
+		yaw_damping 20
+		along_stiffness 100
+		yaw_constraint -15 15
+		along_damping 0
+		angle_constraint 39.999999
+	}
+    has_base_spring
+	{
+		base_mass 1
+		stiffness 100
+		damping 8
+		left_constraint -0.20 0.20
+		left_friction 0.01
+		up_constraint -.2 .2
+		up_friction 0.01
+		forward_constraint -0.1 0.1
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "HairJoint-RibbonRight1"
+{
+	is_flexible
+	{
+		length 20
+		tip_mass 0
+		pitch_constraint -30 30
+		pitch_stiffness 55
+		pitch_damping 20
+		yaw_stiffness 35
+		yaw_damping 20
+		along_stiffness 100
+		yaw_constraint -15 15
+		along_damping 0
+		angle_constraint 39.999999
+	}
+    has_base_spring
+	{
+		base_mass 1
+		stiffness 100
+		damping 8
+		left_constraint -0.20 0.20
+		left_friction 0.01
+		up_constraint -.2 .2
+		up_friction 0.01
+		forward_constraint -0.1 0.1
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "HairJoint-RibbonLeft2"
+{
+	is_flexible
+	{
+		length 20
+		tip_mass 0
+		pitch_constraint -30 30
+		pitch_stiffness 55
+		pitch_damping 20
+		yaw_stiffness 35
+		yaw_damping 20
+		along_stiffness 100
+		yaw_constraint -15 15
+		along_damping 0
+		angle_constraint 39.999999
+	}
+    has_base_spring
+	{
+		base_mass 1
+		stiffness 100
+		damping 8
+		left_constraint -0.20 0.20
+		left_friction 0.01
+		up_constraint -.2 .2
+		up_friction 0.01
+		forward_constraint -0.1 0.1
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "HairJoint-RibbonRight2"
+{
+	is_flexible
+	{
+		length 20
+		tip_mass 0
+		pitch_constraint -30 30
+		pitch_stiffness 55
+		pitch_damping 20
+		yaw_stiffness 35
+		yaw_damping 20
+		along_stiffness 100
+		yaw_constraint -15 15
+		along_damping 0
+		angle_constraint 39.999999
+	}
+    has_base_spring
+	{
+		base_mass 1
+		stiffness 100
+		damping 8
+		left_constraint -0.20 0.20
+		left_friction 0.01
+		up_constraint -.2 .2
+		up_friction 0.01
+		forward_constraint -0.1 0.1
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "HairJoint-RibbonLeft3"
+{
+	is_flexible
+	{
+		length 20
+		tip_mass 0
+		pitch_constraint -30 30
+		pitch_stiffness 55
+		pitch_damping 20
+		yaw_stiffness 35
+		yaw_damping 20
+		along_stiffness 100
+		yaw_constraint -15 15
+		along_damping 0
+		angle_constraint 39.999999
+	}
+    has_base_spring
+	{
+		base_mass 1
+		stiffness 100
+		damping 8
+		left_constraint -0.20 0.20
+		left_friction 0.01
+		up_constraint -.2 .2
+		up_friction 0.01
+		forward_constraint -0.1 0.1
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "HairJoint-RibbonRight3"
+{
+	is_flexible
+	{
+		length 20
+		tip_mass 0
+		pitch_constraint -30 30
+		pitch_stiffness 55
+		pitch_damping 20
+		yaw_stiffness 35
+		yaw_damping 20
+		along_stiffness 100
+		yaw_constraint -15 15
+		along_damping 0
+		angle_constraint 39.999999
+	}
+    has_base_spring
+	{
+		base_mass 1
+		stiffness 100
+		damping 8
+		left_constraint -0.20 0.20
+		left_friction 0.01
+		up_constraint -.2 .2
+		up_friction 0.01
+		forward_constraint -0.1 0.1
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "HairJoint-RibbonLeft4"
+{
+	is_flexible
+	{
+		length 20
+		tip_mass 0
+		pitch_constraint -30 30
+		pitch_stiffness 55
+		pitch_damping 20
+		yaw_stiffness 35
+		yaw_damping 20
+		along_stiffness 100
+		yaw_constraint -15 15
+		along_damping 0
+		angle_constraint 39.999999
+	}
+    has_base_spring
+	{
+		base_mass 1
+		stiffness 100
+		damping 8
+		left_constraint -0.20 0.20
+		left_friction 0.01
+		up_constraint -.2 .2
+		up_friction 0.01
+		forward_constraint -0.1 0.1
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "HairJoint-RibbonRight4"
+{
+	is_flexible
+	{
+		length 20
+		tip_mass 0
+		pitch_constraint -30 30
+		pitch_stiffness 55
+		pitch_damping 20
+		yaw_stiffness 35
+		yaw_damping 20
+		along_stiffness 100
+		yaw_constraint -15 15
+		along_damping 0
+		angle_constraint 39.999999
+	}
+    has_base_spring
+	{
+		base_mass 1
+		stiffness 100
+		damping 8
+		left_constraint -0.20 0.20
+		left_friction 0.01
+		up_constraint -.2 .2
+		up_friction 0.01
+		forward_constraint -0.1 0.1
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "J_Sec_L_SkirtFront1"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_R_SkirtFront1"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_L_SkirtFront2"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_R_SkirtFront2"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_L_SkirtSide1"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_R_SkirtSide1"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_L_SkirtSide2"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_R_SkirtSide2"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_L_SkirtBack1"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_R_SkirtBack1"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_L_SkirtBack2"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_R_SkirtBack2"
+{
+	is_flexible
+	{
+		length 35
+		tip_mass 5
+		pitch_stiffness 200
+		pitch_damping 7
+		yaw_stiffness 30
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 15.000011
+	}
+}
+
+
+$jigglebone "J_Sec_L_Bust1"
+{
+	is_flexible
+	{
+		length 15
+		tip_mass 2
+		pitch_stiffness 240
+		pitch_damping 7
+		yaw_stiffness 240
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 14
+	}
+	has_base_spring
+	{
+		base_mass 1
+		stiffness 250
+		damping 8
+		left_constraint -0.15 0.15
+		left_friction 0.01
+		up_constraint -0.15 0.15
+		up_friction 0.01
+		forward_constraint -0.01 0.01
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "J_Sec_R_Bust1"
+{
+	is_flexible
+	{
+		length 15
+		tip_mass 2
+		pitch_stiffness 240
+		pitch_damping 7
+		yaw_stiffness 240
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 14
+	}
+	has_base_spring
+	{
+		base_mass 1
+		stiffness 250
+		damping 8
+		left_constraint -0.15 0.15
+		left_friction 0.01
+		up_constraint -0.15 0.15
+		up_friction 0.01
+		forward_constraint -0.01 0.01
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "J_Sec_L_Bust2"
+{
+	is_flexible
+	{
+		length 15
+		tip_mass 2
+		pitch_stiffness 240
+		pitch_damping 7
+		yaw_stiffness 240
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 14
+	}
+	has_base_spring
+	{
+		base_mass 1
+		stiffness 250
+		damping 8
+		left_constraint -0.15 0.15
+		left_friction 0.01
+		up_constraint -0.15 0.15
+		up_friction 0.01
+		forward_constraint -0.01 0.01
+		forward_friction 0.05
+	}
+}
+
+
+$jigglebone "J_Sec_R_Bust2"
+{
+	is_flexible
+	{
+		length 15
+		tip_mass 2
+		pitch_stiffness 240
+		pitch_damping 7
+		yaw_stiffness 240
+		yaw_damping 7
+		along_stiffness 100
+		along_damping 0
+		angle_constraint 14
+	}
+	has_base_spring
+	{
+		base_mass 1
+		stiffness 250
+		damping 8
+		left_constraint -0.15 0.15
+		left_friction 0.01
+		up_constraint -0.15 0.15
+		up_friction 0.01
+		forward_constraint -0.01 0.01
+		forward_friction 0.05
+	}
+}
+

@@ -1,0 +1,3150 @@
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540198 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (535940 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3475 texinfos to 1564
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (535940 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3475 texinfos to 1564
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 32 visible clusters (0.00%)
+Total clusters visible: 59492
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+1 second elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+5921 faces
+23718634 square feet [3415483392.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5921 patches before subdivision
+37071 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3780245, max 1070
+transfer lists:  28.8 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1625, 1715, 1752)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(134, 155, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0149 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1242/8192        14904/98304    (15.2%) 
+brushsides           19966/65536      159728/524288   (30.5%) 
+planes               31750/65536      635000/1310720  (48.4%) 
+vertexes              8768/65536      105216/786432   (13.4%) 
+nodes                 4934/65536      157888/2097152  ( 7.5%) 
+texinfos              1564/12288      112608/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5921/65536      331576/3670016  ( 9.0%) 
+hdr faces             5921/65536      331576/3670016  ( 9.0%) 
+origfaces             2853/65536      159768/3670016  ( 4.4%) 
+leaves                5011/65536      160352/2097152  ( 7.6%) 
+leaffaces             6414/65536       12828/131072   ( 9.8%) 
+leafbrushes           5105/65536       10210/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            38924/512000     155696/2048000  ( 7.6%) 
+edges                22966/256000      91864/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      118687/393216   (30.2%) 
+LDR ambient table     5011/65536       20044/262144   ( 7.6%) 
+HDR ambient table     5011/65536       20044/262144   ( 7.6%) 
+LDR leaf ambient      5011/65536      140308/1835008  ( 7.6%) 
+HDR leaf ambient      2897/65536       81116/1835008  ( 4.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      535940/4194304  (12.8%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15352
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+8 minutes, 53 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (535940 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3475 texinfos to 1564
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540755 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540755 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540755 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540755 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540755 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540755 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 32 visible clusters (0.00%)
+Total clusters visible: 59492
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+5964 faces
+24200968 square feet [3484939264.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5964 patches before subdivision
+37114 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3785222, max 1070
+transfer lists:  28.9 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1631, 1722, 1760)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(134, 155, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0149 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  77/1024         3696/49152    ( 7.5%) 
+brushes               1255/8192        15060/98304    (15.3%) 
+brushsides           20071/65536      160568/524288   (30.6%) 
+planes               31846/65536      636920/1310720  (48.6%) 
+vertexes              8834/65536      106008/786432   (13.5%) 
+nodes                 4964/65536      158848/2097152  ( 7.6%) 
+texinfos              1566/12288      112752/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5964/65536      333984/3670016  ( 9.1%) 
+hdr faces             5964/65536      333984/3670016  ( 9.1%) 
+origfaces             2894/65536      162064/3670016  ( 4.4%) 
+leaves                5042/65536      161344/2097152  ( 7.7%) 
+leaffaces             6457/65536       12914/131072   ( 9.9%) 
+leafbrushes           5119/65536       10238/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39295/512000     157180/2048000  ( 7.7%) 
+edges                23178/256000      92712/1024000  ( 9.1%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      119126/393216   (30.3%) 
+LDR ambient table     5042/65536       20168/262144   ( 7.7%) 
+HDR ambient table     5042/65536       20168/262144   ( 7.7%) 
+LDR leaf ambient      5042/65536      141176/1835008  ( 7.7%) 
+HDR leaf ambient      2914/65536       81592/1835008  ( 4.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540755/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15474
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+7 minutes, 57 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540755 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540754 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540754 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+5964 faces
+24188918 square feet [3483204096.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5964 patches before subdivision
+5964 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 775170, max 1018
+transfer lists:   5.9 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(392, 440, 458)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(29, 31, 27)
+Build Patch/Sample Hash Table(s).....Done<0.0148 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  77/1024         3696/49152    ( 7.5%) 
+brushes               1255/8192        15060/98304    (15.3%) 
+brushsides           20071/65536      160568/524288   (30.6%) 
+planes               31846/65536      636920/1310720  (48.6%) 
+vertexes              8834/65536      106008/786432   (13.5%) 
+nodes                 4964/65536      158848/2097152  ( 7.6%) 
+texinfos              1566/12288      112752/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5964/65536      333984/3670016  ( 9.1%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces             2894/65536      162064/3670016  ( 4.4%) 
+leaves                5042/65536      161344/2097152  ( 7.7%) 
+leaffaces             6457/65536       12914/131072   ( 9.9%) 
+leafbrushes           5119/65536       10238/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39295/512000     157180/2048000  ( 7.7%) 
+edges                23178/256000      92712/1024000  ( 9.1%) 
+LDR worldlights         10/8192         1000/819200   ( 0.1%) 
+HDR worldlights          0/8192            0/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]     1230668/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]       24635/16777216 ( 0.1%) 
+entdata               [variable]      119140/393216   (30.3%) 
+LDR ambient table     5042/65536       20168/262144   ( 7.7%) 
+HDR ambient table     5042/65536       20168/262144   ( 7.7%) 
+LDR leaf ambient      2867/65536       80276/1835008  ( 4.4%) 
+HDR leaf ambient      5042/65536      141176/1835008  ( 7.7%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     1135650/0        ( 0.0%) 
+physics               [variable]      540754/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 1
+
+Total triangle count: 15474
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+35 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: D:\programfile\steam\steamapps\common\left 4 dead 2\left4dead2\materials
+Loading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (540754 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+6 seconds elapsed
+
+
+
+8 threads
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...10Optimized: 693 visible clusters (0.00%)
+Total clusters visible: 67123
+Average clusters visible: 225
+Building PAS...
+Average clusters audible: 284
+visdatasize:24635  compressed from 23840
+writing c:\users\rtaab\documents\hammer\reverse_dead_air\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (540754 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3490 texinfos to 1566
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5 seconds elapsed
+
+
+
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 32 visible clusters (0.00%)
+Total clusters visible: 59492
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+2 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5964 faces
+24188918 square feet [3483204096.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5964 patches before subdivision
+37114 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3879698, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0114 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  77/1024         3696/49152    ( 7.5%) 
+brushes               1255/8192        15060/98304    (15.3%) 
+brushsides           20071/65536      160568/524288   (30.6%) 
+planes               31846/65536      636920/1310720  (48.6%) 
+vertexes              8834/65536      106008/786432   (13.5%) 
+nodes                 4964/65536      158848/2097152  ( 7.6%) 
+texinfos              1566/12288      112752/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5964/65536      333984/3670016  ( 9.1%) 
+hdr faces             5964/65536      333984/3670016  ( 9.1%) 
+origfaces             2894/65536      162064/3670016  ( 4.4%) 
+leaves                5042/65536      161344/2097152  ( 7.7%) 
+leaffaces             6457/65536       12914/131072   ( 9.9%) 
+leafbrushes           5119/65536       10238/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39295/512000     157180/2048000  ( 7.7%) 
+edges                23178/256000      92712/1024000  ( 9.1%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      119098/393216   (30.3%) 
+LDR ambient table     5042/65536       20168/262144   ( 7.7%) 
+HDR ambient table     5042/65536       20168/262144   ( 7.7%) 
+LDR leaf ambient      5042/65536      141176/1835008  ( 7.7%) 
+HDR leaf ambient      2923/65536       81844/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540754/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15474
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+6 minutes, 38 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (1)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (540197 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+
+
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 32 visible clusters (0.00%)
+Total clusters visible: 59492
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5958 faces
+24159342 square feet [3478945280.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5958 patches before subdivision
+37108 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3878831, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0114 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1254/8192        15048/98304    (15.3%) 
+brushsides           20065/65536      160520/524288   (30.6%) 
+planes               31832/65536      636640/1310720  (48.6%) 
+vertexes              8826/65536      105912/786432   (13.5%) 
+nodes                 4958/65536      158656/2097152  ( 7.6%) 
+texinfos              1563/12288      112536/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5958/65536      333648/3670016  ( 9.1%) 
+hdr faces             5958/65536      333648/3670016  ( 9.1%) 
+origfaces             2888/65536      161728/3670016  ( 4.4%) 
+leaves                5035/65536      161120/2097152  ( 7.7%) 
+leaffaces             6451/65536       12902/131072   ( 9.8%) 
+leafbrushes           5118/65536       10236/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39247/512000     156988/2048000  ( 7.7%) 
+edges                23154/256000      92616/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      118849/393216   (30.2%) 
+LDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+HDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+LDR leaf ambient      5035/65536      140980/1835008  ( 7.7%) 
+HDR leaf ambient      2918/65536       81704/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540197/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15462
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+7 minutes, 8 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (540197 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+
+
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 32 visible clusters (0.00%)
+Total clusters visible: 59492
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5958 faces
+24159342 square feet [3478945280.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5958 patches before subdivision
+37108 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3878831, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0100 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1254/8192        15048/98304    (15.3%) 
+brushsides           20065/65536      160520/524288   (30.6%) 
+planes               31832/65536      636640/1310720  (48.6%) 
+vertexes              8826/65536      105912/786432   (13.5%) 
+nodes                 4958/65536      158656/2097152  ( 7.6%) 
+texinfos              1563/12288      112536/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5958/65536      333648/3670016  ( 9.1%) 
+hdr faces             5958/65536      333648/3670016  ( 9.1%) 
+origfaces             2888/65536      161728/3670016  ( 4.4%) 
+leaves                5035/65536      161120/2097152  ( 7.7%) 
+leaffaces             6451/65536       12902/131072   ( 9.8%) 
+leafbrushes           5118/65536       10236/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39247/512000     156988/2048000  ( 7.7%) 
+edges                23154/256000      92616/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      118849/393216   (30.2%) 
+LDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+HDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+LDR leaf ambient      5035/65536      140980/1835008  ( 7.7%) 
+HDR leaf ambient      2918/65536       81704/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540197/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15462
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+6 minutes, 0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (1)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (540197 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+
+
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 32 visible clusters (0.00%)
+Total clusters visible: 59492
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5958 faces
+24159342 square feet [3478945280.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5958 patches before subdivision
+37108 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3878831, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0107 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1254/8192        15048/98304    (15.3%) 
+brushsides           20065/65536      160520/524288   (30.6%) 
+planes               31832/65536      636640/1310720  (48.6%) 
+vertexes              8826/65536      105912/786432   (13.5%) 
+nodes                 4958/65536      158656/2097152  ( 7.6%) 
+texinfos              1563/12288      112536/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5958/65536      333648/3670016  ( 9.1%) 
+hdr faces             5958/65536      333648/3670016  ( 9.1%) 
+origfaces             2888/65536      161728/3670016  ( 4.4%) 
+leaves                5035/65536      161120/2097152  ( 7.7%) 
+leaffaces             6451/65536       12902/131072   ( 9.8%) 
+leafbrushes           5118/65536       10236/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39247/512000     156988/2048000  ( 7.7%) 
+edges                23154/256000      92616/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      118849/393216   (30.2%) 
+LDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+HDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+LDR leaf ambient      5035/65536      140980/1835008  ( 7.7%) 
+HDR leaf ambient      2918/65536       81704/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540197/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15462
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+6 minutes, 44 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (540197 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5 seconds elapsed
+
+
+
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+max farz in all env_fog_controller entities: 35000.000000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 32 visible clusters (0.00%)
+Total clusters visible: 59492
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5960 faces
+24159328 square feet [3478943232.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5960 patches before subdivision
+37110 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3879760, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0156 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1254/8192        15048/98304    (15.3%) 
+brushsides           20065/65536      160520/524288   (30.6%) 
+planes               31834/65536      636680/1310720  (48.6%) 
+vertexes              8826/65536      105912/786432   (13.5%) 
+nodes                 4958/65536      158656/2097152  ( 7.6%) 
+texinfos              1563/12288      112536/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5960/65536      333760/3670016  ( 9.1%) 
+hdr faces             5960/65536      333760/3670016  ( 9.1%) 
+origfaces             2888/65536      161728/3670016  ( 4.4%) 
+leaves                5035/65536      161120/2097152  ( 7.7%) 
+leaffaces             6453/65536       12906/131072   ( 9.8%) 
+leafbrushes           5118/65536       10236/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39259/512000     157036/2048000  ( 7.7%) 
+edges                23158/256000      92632/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      118849/393216   (30.2%) 
+LDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+HDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+LDR leaf ambient      5035/65536      140980/1835008  ( 7.7%) 
+HDR leaf ambient      2918/65536       81704/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540197/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15470
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+1 minute, 13 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (1)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (540197 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+==================================================================
+Date: 2026-04-20 08:26:34
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 35000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 31 visible clusters (0.05%)
+Total clusters visible: 59491
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Wrote ZIP buffer, estimated size 1142162, actual size 1135650
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5960 faces
+24159328 square feet [3478943232.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5960 patches before subdivision
+37110 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3879760, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0104 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1254/8192        15048/98304    (15.3%) 
+brushsides           20065/65536      160520/524288   (30.6%) 
+planes               31834/65536      636680/1310720  (48.6%) 
+vertexes              8826/65536      105912/786432   (13.5%) 
+nodes                 4958/65536      158656/2097152  ( 7.6%) 
+texinfos              1563/12288      112536/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5960/65536      333760/3670016  ( 9.1%) 
+hdr faces             5960/65536      333760/3670016  ( 9.1%) 
+origfaces             2888/65536      161728/3670016  ( 4.4%) 
+leaves                5035/65536      161120/2097152  ( 7.7%) 
+leaffaces             6453/65536       12906/131072   ( 9.8%) 
+leafbrushes           5118/65536       10236/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39259/512000     157036/2048000  ( 7.7%) 
+edges                23158/256000      92632/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      118885/393216   (30.2%) 
+LDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+HDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+LDR leaf ambient      5035/65536      140980/1835008  ( 7.7%) 
+HDR leaf ambient      2917/65536       81676/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540197/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15470
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+6 minutes, 16 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (540197 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+==================================================================
+Date: 2026-04-24 05:10:50
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 35000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 31 visible clusters (0.05%)
+Total clusters visible: 59491
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Wrote ZIP buffer, estimated size 1142162, actual size 1135650
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5960 faces
+24159328 square feet [3478943232.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5960 patches before subdivision
+37110 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3879760, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0117 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1254/8192        15048/98304    (15.3%) 
+brushsides           20065/65536      160520/524288   (30.6%) 
+planes               31834/65536      636680/1310720  (48.6%) 
+vertexes              8826/65536      105912/786432   (13.5%) 
+nodes                 4958/65536      158656/2097152  ( 7.6%) 
+texinfos              1563/12288      112536/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5960/65536      333760/3670016  ( 9.1%) 
+hdr faces             5960/65536      333760/3670016  ( 9.1%) 
+origfaces             2888/65536      161728/3670016  ( 4.4%) 
+leaves                5035/65536      161120/2097152  ( 7.7%) 
+leaffaces             6453/65536       12906/131072   ( 9.8%) 
+leafbrushes           5118/65536       10236/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39259/512000     157036/2048000  ( 7.7%) 
+edges                23158/256000      92632/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      118885/393216   (30.2%) 
+LDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+HDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+LDR leaf ambient      5035/65536      140980/1835008  ( 7.7%) 
+HDR leaf ambient      2918/65536       81704/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540197/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15470
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+7 minutes, 31 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (540197 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+==================================================================
+Date: 2026-04-24 07:51:53
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 35000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 31 visible clusters (0.05%)
+Total clusters visible: 59491
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Wrote ZIP buffer, estimated size 1142162, actual size 1135650
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5960 faces
+24159328 square feet [3478943232.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5960 patches before subdivision
+37110 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3879760, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0106 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1254/8192        15048/98304    (15.3%) 
+brushsides           20065/65536      160520/524288   (30.6%) 
+planes               31834/65536      636680/1310720  (48.6%) 
+vertexes              8826/65536      105912/786432   (13.5%) 
+nodes                 4958/65536      158656/2097152  ( 7.6%) 
+texinfos              1563/12288      112536/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5960/65536      333760/3670016  ( 9.1%) 
+hdr faces             5960/65536      333760/3670016  ( 9.1%) 
+origfaces             2888/65536      161728/3670016  ( 4.4%) 
+leaves                5035/65536      161120/2097152  ( 7.7%) 
+leaffaces             6453/65536       12906/131072   ( 9.8%) 
+leafbrushes           5118/65536       10236/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39259/512000     157036/2048000  ( 7.7%) 
+edges                23158/256000      92632/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      118885/393216   (30.2%) 
+LDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+HDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+LDR leaf ambient      5035/65536      140980/1835008  ( 7.7%) 
+HDR leaf ambient      2918/65536       81704/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540197/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15470
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+6 minutes, 34 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (540197 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3487 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+==================================================================
+Date: 2026-04-27 03:25:54
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 35000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 31 visible clusters (0.05%)
+Total clusters visible: 59491
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Wrote ZIP buffer, estimated size 1142162, actual size 1135650
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5960 faces
+24159328 square feet [3478943232.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5960 patches before subdivision
+37110 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3879760, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0100 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1254/8192        15048/98304    (15.3%) 
+brushsides           20065/65536      160520/524288   (30.6%) 
+planes               31834/65536      636680/1310720  (48.6%) 
+vertexes              8826/65536      105912/786432   (13.5%) 
+nodes                 4958/65536      158656/2097152  ( 7.6%) 
+texinfos              1563/12288      112536/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5960/65536      333760/3670016  ( 9.1%) 
+hdr faces             5960/65536      333760/3670016  ( 9.1%) 
+origfaces             2888/65536      161728/3670016  ( 4.4%) 
+leaves                5035/65536      161120/2097152  ( 7.7%) 
+leaffaces             6453/65536       12906/131072   ( 9.8%) 
+leafbrushes           5118/65536       10236/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39259/512000     157036/2048000  ( 7.7%) 
+edges                23158/256000      92632/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      118885/393216   (30.2%) 
+LDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+HDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+LDR leaf ambient      5035/65536      140980/1835008  ( 7.7%) 
+HDR leaf ambient      2918/65536       81704/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      540197/4194304  (12.9%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15470
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+6 minutes, 8 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (504560 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3517 texinfos to 1552
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+==================================================================
+Date: 2026-05-07 15:13:51
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 35000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 309 portalclusters
+ 685 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 55 visible clusters (0.08%)
+Total clusters visible: 65446
+Average clusters visible: 211
+Building PAS...
+Average clusters audible: 289
+visdatasize:25544  compressed from 24720
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Wrote ZIP buffer, estimated size 1142162, actual size 1135650
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5867 faces
+23606386 square feet [3399319552.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5867 patches before subdivision
+37001 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3860584, max 1066
+transfer lists:  29.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1602, 1678, 1709)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 155, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0101 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  72/1024         3456/49152    ( 7.0%) 
+brushes               1232/8192        14784/98304    (15.0%) 
+brushsides           19870/65536      158960/524288   (30.3%) 
+planes               31638/65536      632760/1310720  (48.3%) 
+vertexes              8695/65536      104340/786432   (13.3%) 
+nodes                 4910/65536      157120/2097152  ( 7.5%) 
+texinfos              1552/12288      111744/884736   (12.6%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5867/65536      328552/3670016  ( 9.0%) 
+hdr faces             5867/65536      328552/3670016  ( 9.0%) 
+origfaces             2813/65536      157528/3670016  ( 4.3%) 
+leaves                4983/65536      159456/2097152  ( 7.6%) 
+leaffaces             6431/65536       12862/131072   ( 9.8%) 
+leafbrushes           5101/65536       10202/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            38535/512000     154140/2048000  ( 7.5%) 
+edges                22762/256000      91048/1024000  ( 8.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9978/65536       19956/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230444/0        ( 0.0%) 
+visdata               [variable]       25544/16777216 ( 0.2%) 
+entdata               [variable]      121778/393216   (31.0%) 
+LDR ambient table     4983/65536       19932/262144   ( 7.6%) 
+HDR ambient table     4983/65536       19932/262144   ( 7.6%) 
+LDR leaf ambient      4983/65536      139524/1835008  ( 7.6%) 
+HDR leaf ambient      3010/65536       84280/1835008  ( 4.6%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21560    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      504560/4194304  (12.0%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15231
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+7 minutes, 6 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (515029 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3547 texinfos to 1563
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+==================================================================
+Date: 2026-05-07 18:46:13
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 35000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 31 visible clusters (0.05%)
+Total clusters visible: 59491
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Wrote ZIP buffer, estimated size 1142162, actual size 1135650
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5960 faces
+24159328 square feet [3478943232.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5960 patches before subdivision
+37110 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3879760, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1628, 1695, 1724)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 156, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0108 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1254/8192        15048/98304    (15.3%) 
+brushsides           20065/65536      160520/524288   (30.6%) 
+planes               31834/65536      636680/1310720  (48.6%) 
+vertexes              8826/65536      105912/786432   (13.5%) 
+nodes                 4958/65536      158656/2097152  ( 7.6%) 
+texinfos              1563/12288      112536/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5960/65536      333760/3670016  ( 9.1%) 
+hdr faces             5960/65536      333760/3670016  ( 9.1%) 
+origfaces             2888/65536      161728/3670016  ( 4.4%) 
+leaves                5035/65536      161120/2097152  ( 7.7%) 
+leaffaces             6453/65536       12906/131072   ( 9.8%) 
+leafbrushes           5118/65536       10236/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            39259/512000     157036/2048000  ( 7.7%) 
+edges                23158/256000      92632/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      122478/393216   (31.1%) 
+LDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+HDR ambient table     5035/65536       20140/262144   ( 7.7%) 
+LDR leaf ambient      5035/65536      140980/1835008  ( 7.7%) 
+HDR leaf ambient      2917/65536       81676/1835008  ( 4.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      515029/4194304  (12.3%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15470
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+6 minutes, 55 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+Patching WVT material: maps/r_c11m5_runway/concrete/blendconcrete38a12a_noshadow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (510216 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3530 texinfos to 1561
+Reduced 104 texdatas to 95 (3145 bytes to 2827)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+4 seconds elapsed
+
+==================================================================
+Date: 2026-05-18 19:39:06
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 35000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.prt
+ 298 portalclusters
+ 638 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 31 visible clusters (0.05%)
+Total clusters visible: 59491
+Average clusters visible: 199
+Building PAS...
+Average clusters audible: 278
+visdatasize:24307  compressed from 23840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+Wrote ZIP buffer, estimated size 1142162, actual size 1135650
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+5917 faces
+23826824 square feet [3431062528.00 square inches]
+15 Displacements
+323427 Square Feet [46573596.00 Square Inches]
+5917 patches before subdivision
+37067 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 3874858, max 1067
+transfer lists:  29.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(1605, 1682, 1715)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(136, 155, 141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21, 23, 18)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(4, 4, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0106 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  75/1024         3600/49152    ( 7.3%) 
+brushes               1241/8192        14892/98304    (15.1%) 
+brushsides           19960/65536      159680/524288   (30.5%) 
+planes               31738/65536      634760/1310720  (48.4%) 
+vertexes              8760/65536      105120/786432   (13.4%) 
+nodes                 4928/65536      157696/2097152  ( 7.5%) 
+texinfos              1561/12288      112392/884736   (12.7%) 
+texdata                 95/2048         3040/65536    ( 4.6%) 
+dispinfos               15/0            2640/0        ( 0.0%) 
+disp_verts            2087/0           41740/0        ( 0.0%) 
+disp_tris             3552/0            7104/0        ( 0.0%) 
+disp_lmsamples      226179/0          226179/0        ( 0.0%) 
+faces                 5917/65536      331352/3670016  ( 9.0%) 
+hdr faces             5917/65536      331352/3670016  ( 9.0%) 
+origfaces             2847/65536      159432/3670016  ( 4.3%) 
+leaves                5004/65536      160128/2097152  ( 7.6%) 
+leaffaces             6410/65536       12820/131072   ( 9.8%) 
+leafbrushes           5104/65536       10208/131072   ( 7.8%) 
+areas                    8/256            64/2048     ( 3.1%) 
+surfedges            38888/512000     155552/2048000  ( 7.6%) 
+edges                22946/256000      91784/1024000  ( 9.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            573/32768        5730/327680   ( 1.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          9975/65536       19950/131072   (15.2%) 
+cubemapsamples          12/1024          192/16384    ( 1.2%) 
+overlays                46/512         16192/180224   ( 9.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1230668/0        ( 0.0%) 
+visdata               [variable]       24307/16777216 ( 0.1%) 
+entdata               [variable]      122397/393216   (31.1%) 
+LDR ambient table     5004/65536       20016/262144   ( 7.6%) 
+HDR ambient table     5004/65536       20016/262144   ( 7.6%) 
+LDR leaf ambient      5004/65536      140112/1835008  ( 7.6%) 
+HDR leaf ambient      2901/65536       81228/1835008  ( 4.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/21550    ( 0.0%) 
+pakfile               [variable]     3168482/0        ( 0.0%) 
+physics               [variable]      510216/4194304  (12.2%) 
+physics terrain       [variable]        6380/1048576  ( 0.6%) 
+
+Level flags = 2
+
+Total triangle count: 15348
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m5_runway.bsp
+1 minute, 6 seconds elapsed

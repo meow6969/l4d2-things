@@ -11,6 +11,8 @@ if ("MeowUtils" in getroottable())
 // this is for functions that are more general and not specifically related to bhop detector
 ::MeowUtils <-
 {
+	build_num=13
+
 	// this function stole from vslib
 	function IsEntityOnGroundVSLib(entity) 
 	{
@@ -187,10 +189,193 @@ if ("MeowUtils" in getroottable())
 		// print("newStr=\""+newStr+"\"\n");
 	}
 
+	//                       float (seconds)
+	function DurationToUnits(duration, days=true, hours=true, minutes=true, seconds=true)  // -> list[list[str, int]] 
+	{
+		duration = duration.tofloat();
+		//             day,   hour, minute, second
+		// local units = [86400, 3600, 60,     1];
+		if (duration < 60)
+			seconds = true;
+		else if (duration < 3600)
+			minutes = true;
+		local units = [];
+		if (days)
+			units.append(["d", 86400.0]);
+		if (hours)
+			units.append(["h", 3600.0]);
+		if (minutes)
+			units.append(["m", 60.0]);
+		if (seconds)
+			units.append(["s", 1.0]);
+		
+		local amounts = [];
+		local remainder = 0;
+
+		foreach (u in units)
+		{
+			remainder = duration / u[1];  // 30
+			local a = (remainder).tointeger();  // 30
+			duration -= a * u[1];  // 30 * 1 = 30
+			amounts.append([u[0], a]);  // ["s", 30]
+			remainder -= a;
+			//printl("duration="+duration);
+		}
+		amounts[amounts.len()-1][1] += remainder;
+		// this is the remainder (the decimal part)
+		/* if (!seconds)
+		{
+			duration -= duration.tointeger();
+		} */
+		//amounts.append(["r", remainder]);
+
+		return amounts;
+	}
+
+	//                    float, integer
+	function DecimalRound(num,   decimal_places)  // -> str
+	{
+		return num.tointeger()+"."+((num - num.tointeger()) * pow(10, decimal_places)).tointeger();
+	}
+
+	// split by |
+	function IndexTableByString(settingPath, tbl)
+	{
+		local varPath = split(settingPath, "|");
+		if (varPath.len() == 0)
+		{
+			throw "invalid blah blah";
+		}
+
+		local curTable = tbl.weakref();
+		local lastTable = curTable;
+		local lastKey = strip(varPath[0]);
+		
+		foreach (keyName in varPath)
+		{
+			keyName = strip(keyName);
+			if (keyName == "")
+			{
+				throw "invalid index";
+			}
+			if (!(keyName in curTable.ref()))
+			{
+				throw "couldnt find index for keyname: \""+keyName+"\"";
+			}
+			lastTable = curTable;
+			curTable = curTable.ref()[keyName].weakref();
+			lastKey = keyName;
+		}
+
+		return lastTable.ref()[lastKey];
+	}
+
+	function GetAllPlayers(validPlayerFunc=null)
+	{
+		local r = [];
+		local player = null;
+		while (player = Entities.FindByClassname(player, "player"))
+		{
+			if (IsPlayerABot(player))
+			{
+				continue;
+			}
+			local userid = player.GetPlayerUserId();
+			if (userid == null) continue;
+			if (validPlayerFunc != null)
+				if (!validPlayerFunc(player))
+					continue;
+			r.append(player);
+		}
+		return r;
+	}
+
+	function LangCoder(code, extraInfos)
+	{
+		local white = "\x01";
+		local brightGreen = "\x03";
+		local orange = "\x04";
+		local oliveGreen = "\x05";
+		
+		switch (code)
+		{
+			case "WHITE":
+				return white;
+			case "BRIGHT_GREEN":
+				return brightGreen;
+			case "ORANGE":
+				return orange;
+			case "OLIVE_GREEN":
+				return oliveGreen;
+				
+			case "NAME":
+				return orange+"\""+extraInfos["name"]+"\""+white;
+			case "STEAMID":
+				return brightGreen+"\""+extraInfos["steamID"]+"\""+white;
+
+			case "ERROR":
+				return extraInfos["error"];
+			case "KEYNAME":
+				return "\""+extraInfos["keyName"]+"\"";
+			case "USER_INPUT":
+				return "\""+extraInfos["userInput"]+"\"";
+			case "SQUIRREL_TYPE":
+				return "\""+extraInfos["squirrelType"]+"\"";
+			case "VARIABLE_PATH":
+				return oliveGreen+"\""+extraInfos["variablePath"]+"\""+white;  
+			case "VARIABLE_VALUE":
+				return orange+"\""+extraInfos["variableValue"]+"\""+white;
+
+			case "VERSION":
+				return oliveGreen+"r"+extraInfos["version"]+white;
+			case "PREFIX":
+				return "\""+extraInfos["prefix"]+"\"";
+			case "COOLDOWN":
+				return orange+extraInfos["cooldown"]+white;
+			case "CMD_NAME":
+				return "\""+extraInfos["cmdName"]+"\"";
+
+			case default:
+				return null;
+		}
+	}
+
+	//                          string, table, table,      function
+	function GetLocalizedString(path,   lang,  extraInfos, stringCoder=null)
+	{
+		local foundVal = ::MeowUtils.IndexTableByString(path, lang);
+
+		local ex = regexp("%%([A-Z_]+?)%%");
+		
+		// local test =  "%%NAME%%";
+		//local test = "%%NAME%% got %%NUM_BHOPS%% bunnyhop in a row (score: %%SCORE%%, top speed: %%TOP_SPEED%%, avg speed: %%AVG_SPEED%%)";
+	
+		local res;
+		local start = 0;
+		local formattedString = foundVal;
+		while (res = ex.capture(foundVal, start))
+		{
+			start = res[0].end;
+			local full_match = test.slice(res[0].begin, res[0].end);
+			local code = test.slice(res[1].begin, res[1].end);
+			local formattedCode = ::MeowUtils.LangCoder(code, extraInfos);
+			if (formattedCode == null && stringCoder != null)
+				formattedCode = stringCoder(code, extraInfos);
+			if (formattedCode == null)
+				throw "code \""+code+"\" doesnt correspond to anything !!"
+			formattedString = ::MeowUtils.StringReplace(formattedString, full_match, formattedCode);
+
+			//printl("match=("+res[0].begin+"-"+res[0].end+")="+test.slice(res[0].begin, res[0].end));
+			//printl("match=("+res[1].begin+"-"+res[1].end+")="+test.slice(res[1].begin, res[1].end));
+			//printl();
+		}
+		return formattedString;
+	}
+
 	function Log(s)
 	{
 		local stackinfo = getstackinfos(2);
-		local prefix = "<"+stackinfo.src+":"+stackinfo.func+"():"+stackinfo.line+">";
+		local prefix = "<"+stackinfo.src.slice(17)+":"+stackinfo.func+"():"+stackinfo.line+">";
 		foreach (l in split(s, "\n"))
 		{
 			printl(prefix+" "+l);
@@ -260,4 +445,6 @@ if ("MeowUtils" in getroottable())
 	}
 }
 
+IncludeScript("meowlib/lang/en.nut");
 
+printl("successfully loaded meowutils.nut version r"+::MeowUtils.build_num);

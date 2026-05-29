@@ -1,0 +1,22 @@
+
+
+"Event.Meow_LastSurvivor"
+{
+	"channel"					"CHAN_STATIC"
+	"volume"					"1.0"
+	"soundlevel"				"SNDLVL_NONE"
+	"rndwave"
+	{
+		"wave"					"@#music/last_survivor/track.wav"
+	}	
+
+	GameData
+	{
+		"MusicPriority"			"CRITICAL"
+		//"MusicTrack"			"zombat"
+		"MusicBlockTrackList"	"all"
+		"MusicStopTrackList"	"all"
+	}
+}
+
+

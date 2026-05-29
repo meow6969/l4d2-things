@@ -9,4 +9,5 @@ VertexLitGeneric
 	$phongfresnelranges "[ 1 0.1 0.1 ]"
 	$phongwarptexture "models/meowmeow/anubis/shader"
 	$lightwarptexture "models/meowmeow/anubis/toon_skin"
+	$nodecal 1
 }

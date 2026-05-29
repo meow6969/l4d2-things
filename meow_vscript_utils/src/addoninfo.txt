@@ -14,4 +14,5 @@
      addonDescription        "simple bhop script" 
 
      addonContent_Script    "1"
+	 addonContent_Skin		"1"
 }

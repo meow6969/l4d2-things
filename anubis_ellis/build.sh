@@ -12,7 +12,7 @@ echo_pathvars
 
 source "${shutilspath}/buildutils.sh"
 
-compile_model "${shdirpath}/uncompiled/models/survivors/survivor_mechanic.qc" "${srcpath}"
+#compile_model "${shdirpath}/uncompiled/models/survivors/survivor_mechanic.qc" "${srcpath}"
 # compile_model "${shdirpath}/redo/uncompiled/models/weapons/arms/v_arms_mechanic_new.qc" "${srcpath}"
 
 # echo "${shpath}"

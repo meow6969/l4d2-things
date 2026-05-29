@@ -1,0 +1,45 @@
+$lod 10
+{
+	bonetreecollapse "ValveBiped.Bip01_L_Finger01"
+	bonetreecollapse "ValveBiped.Bip01_L_Finger11"
+	bonetreecollapse "ValveBiped.Bip01_L_Finger21"
+	bonetreecollapse "ValveBiped.Bip01_L_Finger31"
+	bonetreecollapse "ValveBiped.Bip01_L_Finger41"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger01"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger11"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger21"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger31"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger41"
+}
+
+$lod 15
+{
+	bonetreecollapse "ValveBiped.Bip01_L_Finger2"
+	bonetreecollapse "ValveBiped.Bip01_L_Finger1"
+	bonetreecollapse "ValveBiped.Bip01_L_Finger0"
+	bonetreecollapse "ValveBiped.Bip01_L_Finger31"
+	bonetreecollapse "ValveBiped.Bip01_L_Finger41"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger2"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger1"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger0"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger31"
+	bonetreecollapse "ValveBiped.Bip01_R_Finger41"
+}
+	
+	
+$lod 40
+{
+	bonetreecollapse "ValveBiped.Bip01_Head1"
+	replacebone "ValveBiped.Bip01_Neck1" "ValveBiped.Bip01_Spine4"
+	bonetreecollapse "ValveBiped.Bip01_L_Forearm"
+	bonetreecollapse "ValveBiped.Bip01_R_Forearm"
+	bonetreecollapse "ValveBiped.Bip01_L_Calf"
+	bonetreecollapse "ValveBiped.Bip01_R_Calf"
+	replacebone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4"
+	replacebone "ValveBiped.Bip01_R_Clavicle" "ValveBiped.Bip01_Spine4"
+	replacebone "ValveBiped.Bip01_Spine1" "ValveBiped.Bip01_Spine2"
+	replacebone "ValveBiped.Bip01_Spine" "ValveBiped.Bip01_Pelvis"
+	bonetreecollapse "ValveBiped.weapon_bone"
+	nofacial
+}
+

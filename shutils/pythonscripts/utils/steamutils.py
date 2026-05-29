@@ -4,6 +4,7 @@ import requests
 import json
 import inspect
 import os
+import re
 
 import vdf
 
@@ -82,13 +83,34 @@ def get_game_install_path(game_id: int) -> Path | None:
     return r
 
 
+def get_workshop_id(i: int | str) -> int:
+    if isinstance(i, str):
+        if i.isdigit():
+            workshop_id = int(i)
+        else:
+            workshop_id = int(urllib.parse.parse_qs(urllib.parse.urlparse(i).query)["id"][0])
+    else:
+        workshop_id = i
+    return workshop_id
+
+
+def download_workshop_collection(workshop_id: int | str, out_dir: Path = Path.cwd()):
+    workshop_id = get_workshop_id(workshop_id)
+    out_dir = out_dir.joinpath(str(workshop_id))
+    out_dir.mkdir(parents=True, exist_ok=True)
+    find_addons = re.compile(r"SubscribeCollectionItem\( '(\d*)', ")
+    site = requests.get(f"https://steamcommunity.com/sharedfiles/filedetails/?id={workshop_id}")
+    if not site.ok:
+        raise Exception("error downloading collection webpage")
+    addons = find_addons.findall(site.text)
+    for i in addons:
+        download_workshop_mod(i, out_dir)
+    print("downloaded mod!")
+
+
 def download_workshop_mod(workshop_id: int | str, out_dir: Path = Path.cwd(), only_print_name=False, interactive=False,
                           out_replace=False) -> Path | None:
-    if isinstance(workshop_id, str):
-        if workshop_id.isdigit():
-            workshop_id = int(workshop_id)
-        else:
-            workshop_id = int(urllib.parse.parse_qs(urllib.parse.urlparse(workshop_id).query)["id"][0])
+    workshop_id = get_workshop_id(workshop_id)
     assert isinstance(workshop_id, int)
     assert isinstance(out_dir, Path)
 
@@ -186,7 +208,7 @@ def download_workshop_mod(workshop_id: int | str, out_dir: Path = Path.cwd(), on
         # print(json.dumps(r_data, indent=2))
         # print()
         file_url = r_data["file_url"]
-        filename = r_data["title"] + ".vpk"
+        filename = r_data["title"].replace("/", "").replace("\\", "").replace("\n", "") + ".vpk"
         if only_print_name:
             print(f"workshop item id: {CCs.OKCYAN}{workshop_id}{CCs.ENDC}\n"
                   f"title:            {CCs.OKGREEN}{r_data['title']}{CCs.ENDC}")

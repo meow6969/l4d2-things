@@ -11,7 +11,7 @@ if ("Commands" in getroottable())
 }
 
 
-IncludeScript("meowlib/MeowUtils.nut");
+IncludeScript("meowlib/meowutils.nut");
 IncludeScript("meowlib/json.nut");
 
 
@@ -113,6 +113,26 @@ class ::Commands.Command
 	}
 }
 
+// Followups work like this:
+//   first, the command is an extension of FollowupCommand
+//   second, the commands Callback returns something other than null or false
+//   third, the return of the Callback is saved by the CommandManager
+//   fourth, when the original person who entered the command enters another chat command, the CommandManager routes that command to the original commands Followup method and passes as an argument the return of the Callback
+//   this method can then return something other than null or false, which would then get saved by the CommandManager, allowing its return value to be routed into the same Followup method
+//   this means you can write Followup commands that have arbitrarily many Followups. you should be careful when doing this, you could cause an infinite loop.
+//   
+//   an empty return ( "return;" ) statement is interpreted as a null return value.
+//   no return statement is interpreted as a null return value.
+class ::Commands.FollowupCommand extends ::Commands.Command
+{
+	followupData = {};  // pSID{followupData{}}
+
+	function Followup(ctx, followupCtx)
+	{
+		throw "ERROR: ::Commands.FollowupCommand.Followup(): NOT IMPLEMENTED";
+	}
+}
+
 class ::Commands.HelpCommand extends ::Commands.Command
 {
 	aliases = ["help", "h"];
@@ -151,7 +171,7 @@ class ::Commands.HelpCommand extends ::Commands.Command
 
 		foreach (i, arg in params)
 		{
-			::MeowUtils.Log("i="+i+", arg="+arg+"; ");
+			//::MeowUtils.Log("i="+i+", arg="+arg+"; ");
 			local rStr = "\x04";
 
 			// u cant have a arg named "this" (at least from what i can tell from my testing)
@@ -313,21 +333,43 @@ class ::Commands.CommandManager
 	commands = null;
 	prefix = null;
 	adminFunc = null; 
+	langFunc = null;
+	langTable = null;
+	langCoder = null;
+	validPlayerFunc = null;
+	followups = {};  // pSID[command]
 
 	//          table[cmdClassName<string>] <- instanceof ::Commands.Command
-	constructor(cmdTable, pfx, userAdminFunc, helpCmd=::Commands.HelpCommand)
+	constructor(cmdTable, pfx, userAdminFunc=null, helpCmd=::Commands.HelpCommand, userLangFunc=null, userLangTable=null, userLangCoder=null, userValidPlayerFunc=null)
 	{
 		this.commands = [];
 		this.prefix = pfx;
+
 		if (userAdminFunc != null)
 			this.adminFunc = userAdminFunc;
 		else
 			this.adminFunc = function(a) { return false; };
+		if (userLangFunc != null)
+			this.langFunc = userLangFunc;
+		else
+			this.langFunc = function(a) { return "en"; };
+		this.langTable = userLangTable;
+		
+		if (userLangCoder != null)
+			this.langCoder = userLangCoder;
+		else
+			this.langCoder = function(a) { return a; };
+
+		if (userValidPlayerFunc != null)
+			this.validPlayerFunc = userValidPlayerFunc;
+		else
+			this.validPlayerFunc = function(a) { return true; };
+
 		local takenAliases = clone helpCmd.aliases;
 		this.commands.append(helpCmd(this));
 		foreach (clsName, cls in cmdTable)
 		{
-			if (cls.getbase() != ::Commands.Command) continue;
+			if (cls.getbase() != ::Commands.Command && cls.getbase() != ::Commands.FollowupCommand) continue;
 			if (cls.aliases.len() == 0) throw "command \""+clsName+"\" has no aliases";
 			foreach (alias in cls.aliases) 
 			{
@@ -350,6 +392,40 @@ class ::Commands.CommandManager
 		return null;
 	}
 
+	//                                string,  table,      string,  bool
+	function GetPlayerLocalizedString(msgCode, extraInfos, steamid, internal)
+	{
+		local langCode = this.langFunc(steamid).toupper();
+		local langDict;
+	
+		if (internal)
+		{
+			langDict = ::MeowUtilsLang
+		}
+		else
+		{
+			langDict = this.langTable;
+		}
+
+		return ::MeowUtils.GetLocalizedString(msgCode, langDict, extraInfos, this.langCoder);
+	}
+
+	function Send(p, msgCode, extraInfos, internal=false)
+	{
+		if (p == null)
+		{
+			local players = ::MeowUtils.GetAllPlayers(this.validPlayerFunc);
+			foreach (p in players)
+				this.Send(p, msgCode, extraInfos, internal);
+			return;
+		}
+		local steamid = ::MeowUtils.GetPlayerSteamID(p);
+		
+		local s = this.GetPlayerLocalizedString(msgCode, extraInfos, steamid, internal);
+
+		ClientPrint(p, 3, s);
+	}
+
 	function GenerateCtx(p, msg, steamid=null)
 	{
 		if (steamid == null) steamid = ::MeowUtils.GetPlayerSteamID(p);
@@ -360,6 +436,32 @@ class ::Commands.CommandManager
 	function Invoke(p, msg, steamid=null)
 	{
 		local message = strip(msg);
+		local ctx = this.GenerateCtx(p, message, steamid);
+		if (ctx.playerSteamID in this.followups)
+		{
+			local cmd = this.followups[ctx.playerSteamID];
+			local fData = cmd.followupData[ctx.playerSteamID];
+			delete cmd.followupData[ctx.playerSteamID];
+			local r = null;
+			try
+			{
+				r = cmd.Followup(ctx, fData);
+			}
+			catch (e)
+			{
+				ClientPrint(p, 5, "ERROR: internal error processing your command followup, "+e);
+			}
+			if (r != null && r != false)
+			{
+				cmd.followupData[ctx.playerSteamID] <- r;
+			}
+			else
+			{
+				delete this.followups[ctx.playerSteamID];
+			}
+			return;
+		}
+		
 		local args = ::MeowUtils.GetArgList(message);
 		if (args.len() < 1) return false;
 
@@ -367,7 +469,7 @@ class ::Commands.CommandManager
 		if (args[0] != this.prefix) return false;
 
 		if (steamid == null) steamid = ::MeowUtils.GetPlayerSteamID(p);
-		local ctx = this.GenerateCtx(p, message, steamid);
+		
 		if (args.len() == 1) 
 		{
 			this.commands[0].Callback(ctx);
@@ -405,7 +507,7 @@ class ::Commands.CommandManager
 		}
 		if (maxArgs != -1 && providedArgs > maxArgs)
 		{
-			ClientPrint(p, 5, "ERROR: too many args, max \x05"+minArgs+"\x01, provided \x05"+providedArgs+"\x01");
+			ClientPrint(p, 5, "ERROR: too many args, max \x05"+maxArgs+"\x01, provided \x05"+providedArgs+"\x01");
 			return;
 		}
 		local arrayArgs = [cmd, ctx];
@@ -415,7 +517,12 @@ class ::Commands.CommandManager
 		}
 		try
 		{
-			cmd.Callback.acall(arrayArgs);
+			local r = cmd.Callback.acall(arrayArgs);
+			if (cmd instanceof ::Commands.FollowupCommand && r != null && r != false)
+			{
+				cmd.followupData[ctx.playerSteamID] <- r;
+				this.followups[ctx.playerSteamID] <- cmd;
+			}			
 		}
 		catch (e)
 		{

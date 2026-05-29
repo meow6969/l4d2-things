@@ -16,6 +16,8 @@ if (!("printl" in getroottable()))
 	{
 	 	print(line+"\n");
 	}
+	
+	//dofile("implement_l4d2_utils.nut");
 }
 
 
@@ -318,6 +320,7 @@ function Json::Utils::IntToBin(n, neededLen=null) // -> str
 // we need to do this because .tostring() turns integers to scientific notation when they get big enough
 function Json::Utils::IntToStr(n)
 {
+	return n.tostring();  // this function is stupid and just makes it worse
 	local swap = false;	
 	local r = "";
 	local i = 0;
@@ -481,6 +484,25 @@ function Json::Utils::UnicodeToUtf(n /* integer */)  // -> str
 	return r;
 }
 
+function Json::Utils::ClassToTable(theTable)
+{
+	local rDict = {};
+	local options = ::Json.Serialize.defaultOptions;
+	foreach (tableKey, keyValue in theTable)
+	{
+		if (options.IgnoreType(keyValue))
+			continue;
+		if (typeof keyValue == "class")
+		{
+			rDict[tableKey] <- ::Json.Utils.ClassToTable(keyValue);
+			continue;
+		}
+		rDict[tableKey] <- keyValue;
+	}
+	return rDict;
+}
+
+
 ::Json.Deserialize <- 
 {
 	
@@ -504,43 +526,120 @@ function Json::Utils::UnicodeToUtf(n /* integer */)  // -> str
 class ::Json.Deserialize.ParserTracker 
 {
 	jsonData = null;
-	pointer = null;	
+	pointer = null;
+	// jsonDataLength = 0;	
 
 	constructor(jsonDataString)
 	{
-		jsonData = jsonDataString;
-		pointer = 0;
+		this.jsonData = strip(jsonDataString);
+		// this.jsonDataLength = this.jsonData.len();
+		this.pointer = 0;
 	}
 
 	function GetPointer()
 	{
-		return pointer;
+		return this.pointer;
 	}
 	
 	function PointerNotReachedEnd()
 	{
-		return pointer < jsonData.len();
+		return this.pointer < this.jsonData.len();
 	}
 
 	function PointerAdd(amt=1)
 	{
-		pointer = pointer + amt;
+		this.pointer = this.pointer + amt;
 	}
 
-	function DataStrip()
+	/* function DataStrip()
 	{
-		jsonData = strip(jsonData);
-	}
+		this.jsonData = strip(this.jsonData);
+	} */
 
 	function CurChar()
 	{
+		// if (pointer >= this.jsonDataLength)
+		// 	return null;
 		return jsonData[pointer].tochar();
+	}
+
+	function SkipEmptySpace()
+	{
+		local commentState = -1;
+		local theChar = null;
+		while (this.PointerNotReachedEnd())
+		{
+			this.PointerAdd();
+			theChar = this.CurChar();
+			//if (theChar == null)
+			//	return;
+			
+			if (commentState == 2)  // single line comment
+			{
+				if (theChar == "\n")
+				{
+					commentState = -1;
+				}
+				continue;
+			}
+			else if (commentState == 3)  // multi line comment
+			{
+				if (theChar == "*")
+				{
+					commentState = 4;
+				}
+				continue;
+			}
+			else if (commentState == 4)
+			{
+				if (theChar == "/")
+				{
+					commentState = -1;
+					continue;
+				}
+				commentState = 3;
+				continue;
+			}
+			// this is asking "if theChar is a empty character"
+			if (::Json.Utils.emptyChars.find(theChar) != null)
+			{
+				if (commentState == 1)
+					::Json.Utils.Error("no double slash only found single slash");
+				continue;
+			}
+			if (theChar == "/") 
+			{
+				if (commentState == 1)  // we are now in a comment
+				{
+					commentState = 2;
+					continue;
+				}
+				commentState = 1;
+	
+				continue;
+			}
+			if (theChar == "*")
+			{
+				if (commentState == 1)  // we are now in a multi line comment
+				{
+					commentState = 3;
+					continue;
+				}
+				::Json.Utils.Error("invalid token \"*\"");
+			}
+			return theChar;
+		}
+		if (theChar == null)  // can this even happen??
+			::Json.Utils.Error("ERROR: ran out of chars while skipping empty space!!!");
+		return theChar;
 	}
 }
 
 function Json::Deserialize::ParseNumber(parseTracker)
 {
 	local dots = 0;
+	local es = 0;
+	local pluss = 0;
 	local rInt = "";
 	parseTracker.PointerAdd(-1);
 
@@ -556,7 +655,8 @@ function Json::Deserialize::ParseNumber(parseTracker)
 		if (theChar == ".")
 		{
 			dots++;
-			if (dots == 2)
+			if (dots == 2)	// ?? why do i do this and notjust like immediately crash ?
+							// so like "num": 1.2.3  and when i reach 1.2. i go back one to 1.2 then break? then return "1.2".tointeger() ??? huh ??
 			{
 				parseTracker.PointerAdd(-1);
 				break;
@@ -564,12 +664,43 @@ function Json::Deserialize::ParseNumber(parseTracker)
 			rInt += theChar;
 			continue;
 		}
+		if (theChar == "e")
+		{
+			es++;
+			if (es == 2)
+			{
+				parseTracker.PointerAdd(-1);
+				break;
+			}
+			rInt += theChar;
+			continue;
+		}
+		if (theChar == "+")
+		{
+			pluss++;
+			if (pluss == 2)
+			{
+				parseTracker.PointerAdd(-1);
+				break;
+			}
+			rInt += theChar;
+			continue
+		}
 		break;
 	}
 	parseTracker.PointerAdd(-1);
-	if (dots > 0)
+	if (dots > 0 || es > 0 || pluss > 0)
 	{
-		return rInt.tofloat();
+		local r;
+		try 
+		{
+			r = rInt.tofloat();
+		}
+		catch (e)
+		{
+			::Json.Utils.Error("Error parsing float number");
+		}
+		return r;
 	}
 	
 	return rInt.tointeger();
@@ -674,19 +805,43 @@ function Json::Deserialize::ParseTable(parseTracker)
 	local currentKey;
 	while (parseTracker.PointerNotReachedEnd())
 	{
-		parseTracker.PointerAdd();
-		local theChar = parseTracker.CurChar();
-		if (::Json.Utils.emptyChars.find(theChar) != null)
+		// character 'A'  "a cat"
+		// char
+		//parseTracker.PointerAdd();
+		local theChar = parseTracker.SkipEmptySpace();
+		/* local theChar = parseTracker.CurChar();
+		if (commentState == 2)
 		{
+			if (theChar == "\n")
+			{
+				commentState = -1;
+			}
 			continue;
 		}
+		if (::Json.Utils.emptyChars.find(theChar) != null)
+		{
+			if (commentState == 1)
+				throw "ERROR: single slash no comment thingy";
+			continue;
+		}
+		if (theChar == "/") 
+		{
+			if (commentState == 1) // we are now in a comment
+			{
+				commentState = 2;
+				continue;
+			}
+			commentState = 1;
+
+			continue;
+		} */
 		if (currentGoal == 0)
 		{
 			if (firstLoop && theChar == "}") return rTable;
 			if (theChar != "\"")
 			{
 				// throw "Json::Deserialize::ParseTable(): expected \", got "+theChar;
-				e = "expected \"\"\" "; 
+				local e = "expected \"\"\" "; 
 				if (firstLoop) e += "or \"}\"";
 				e += ", got \""+theChar+"\"";
 				::Json.Utils.Error(e);
@@ -736,12 +891,13 @@ function Json::Deserialize::ParseArray(parseTracker)
 	local currentGoal = 0;
 	while (parseTracker.PointerNotReachedEnd())
 	{
-		parseTracker.PointerAdd();
-		local theChar = parseTracker.CurChar();
+		//parseTracker.PointerAdd();
+		/* local theChar = parseTracker.CurChar();
 		if (::Json.Utils.emptyChars.find(theChar) != null)
 		{
 			continue;
-		}
+		} */
+		local theChar = parseTracker.SkipEmptySpace();
 		if (currentGoal == 0)
 		{
 			if (theChar == "]" && rArray.len() == 0)
@@ -765,7 +921,8 @@ function Json::Deserialize::ParseArray(parseTracker)
 				continue;
 			}
 
-			throw "Json::Deserialize::ParseArray(): expected ,|] got "+theChar;
+			::Json.Utils.Error("expected ,|] got "+theChar);
+			// throw "Json::Deserialize::ParseArray(): expected ,|] got "+theChar;
 		}
 	}
 	return rArray;
@@ -845,7 +1002,7 @@ function Json::Deserialize::ParseNull(parseTracker)
  
 function Json::Deserialize::ParseValue(parseTracker)
 {
-	parseTracker.DataStrip();
+	// parseTracker.DataStrip();
 	
 	switch (parseTracker.CurChar())
 	{
@@ -856,9 +1013,7 @@ function Json::Deserialize::ParseValue(parseTracker)
 			return ::Json.Deserialize.ParseString(parseTracker);
 			break;
 		case "[":
-			local tArray = ::Json.Deserialize.ParseArray(parseTracker);
-
-			return tArray;
+			return ::Json.Deserialize.ParseArray(parseTracker);
 			break;
 		case "f":
 		case "t":
@@ -866,6 +1021,11 @@ function Json::Deserialize::ParseValue(parseTracker)
 			break;
 		case "n":
 			return ::Json.Deserialize.ParseNull(parseTracker);
+			break;
+		case "-":
+			parseTracker.PointerAdd();
+			return -::Json.Deserialize.ParseNumber(parseTracker);
+			break;
 		default:
 			if (::Json.Utils.IsNumber(parseTracker.CurChar()))
 			{
@@ -879,14 +1039,14 @@ function Json::Deserialize::ParseValue(parseTracker)
 function Json::Deserialize::String(jsonData)
 {
 	local parseTracker = ::Json.Deserialize.ParserTracker(jsonData);
-	parseTracker.DataStrip();
+	// parseTracker.DataStrip();
 
 	return ::Json.Deserialize.ParseValue(parseTracker);
 }
 
 function Json::Deserialize::File(filepath)
 {
-	local jsonContent = ::Json.Utils.FileToString(filepath);
+	local jsonContent = FileToString(filepath);
 	return ::Json.Deserialize.String(jsonContent);
 }
 
@@ -1008,10 +1168,13 @@ function Json::Deserialize::FileToClass(filepath, theClass)
 
 class Json.Serialize.SerializerOptions
 {
-	baseIndent		= 2;
-	lineSeperator	= "\n";
-	itemSeperator	= " ";
-	ignoredTypes 	= ["function", "file", "regexp"];
+	baseIndent					= 2;
+	lineSeperator				= "\n";
+	itemSeperator				= " ";
+	commentedMemberSeperator	= "\n";
+	ignoredTypes 				= ["function", "file", "regexp"];
+	comments					= false;
+	serializeProtected			= true;
 
 	constructor(bInd=2, lSep="\n", iSep=" ", iTypes=["function", "file", "regexp"])
 	{
@@ -1037,6 +1200,24 @@ class Json.Serialize.SerializerOptions
 			}
 			return false;
 		}
+		return false;
+	}
+
+	function GetAttributeComment(obj, theClass, theMember)  // -> string || null
+	{
+		local memberAttrs = theClass.getattributes(theMember);
+		if ("json_comment" in memberAttrs && typeof memberAttrs["json_comment"] == "string")
+			return memberAttrs["json_comment"]
+		return null;
+	}
+
+	function GetProtectedStatus(obj, theClass, theMember)
+	{
+		if (this.serializeProtected)
+			return false;
+		local memberAttrs = theClass.getattributes(theMember);
+		if ("json_protected" in memberAttrs && memberAttrs["json_protected"])
+			return true;
 		return false;
 	}
 }
@@ -1186,8 +1367,11 @@ function Json::Serialize::Function(theFunc, options=::Json.Serialize.defaultOpti
 
 function Json::Serialize::Class(theClass, options=::Json.Serialize.defaultOptions, curIndent=0, theInst=null)
 {
-	local rDict = {};
+	// local rDict = {};
 	local namingPolicy = ::Json.Utils.GetClassNamingPolicy(theClass);
+	local rStr = "{"+options.lineSeperator;
+	local wroteItem = false;
+	local extraSeper = "";
 	foreach (member, val in theClass)
 	{
 		if (theInst != null)
@@ -1204,14 +1388,54 @@ function Json::Serialize::Class(theClass, options=::Json.Serialize.defaultOption
 		{
 			continue;
 		} */
-		if (options.IgnoreType(val, theClass, member))
+		if (options.IgnoreType(val, theClass, member) || options.GetProtectedStatus(val, theClass, member))
 		{
 			continue;
 		}
 		local jsonName = namingPolicy[member];
-		rDict[jsonName] <- val;
+		wroteItem = true;
+		local doCommentSep = false;
+		if (options.comments)
+		{
+			local attrComment = options.GetAttributeComment(val, theClass, member);
+			if (attrComment != null)
+			{
+				// MUST use \n since like ............ lineSeperator can be set to "" to make a minified json
+				if (attrComment.find("\n") != null)  // if its a multiline comment
+				{
+					local indent = ::Json.Serialize.ExpandIndent(curIndent + options.baseIndent);
+					rStr += indent+"/*\n";
+					foreach (l in split(attrComment, "\n"))
+					{
+						rStr += indent+" * "+l+"\n";
+					}
+					rStr += indent+"*/\n";
+				}
+				else
+				{
+					rStr += ::Json.Serialize.ExpandIndent(curIndent + options.baseIndent)+"// "+attrComment+"\n";
+				}
+				extraSeper = options.commentedMemberSeperator;
+				doCommentSep = true;
+			}
+		}
+		rStr += ::Json.Serialize.ExpandIndent(curIndent + options.baseIndent)+::Json.Serialize.String(jsonName)+":"+options.itemSeperator+::Json.Serialize.Object(val, options, curIndent+options.baseIndent)+","+options.itemSeperator+options.lineSeperator;
+		if (doCommentSep)
+			rStr += options.commentedMemberSeperator;
+			
+		// rDict[jsonName] <- val;
+		
 	}
-	return ::Json.Serialize.Table(rDict, options, curIndent);
+	if (wroteItem)
+	{
+		rStr = rStr.slice(0, -(1 + options.itemSeperator.len() + options.lineSeperator.len() + extraSeper.len()));
+		rStr += ::Json.Serialize.ExpandIndent(curIndent)+options.lineSeperator+::Json.Serialize.ExpandIndent(curIndent)+"}";
+	}
+	else
+	{
+		rStr = "{}";
+	}
+	return rStr;
 }
 
 function Json::Serialize::Instance(theInst, options=::Json.Serialize.defaultOptions, curIndent=0)
@@ -1260,6 +1484,7 @@ function Json::Serialize::Object(theObject, options=::Json.Serialize.defaultOpti
 		case "integer":
 			// TODO: fix this, with large integer values it shortens to scientific notation  -- fixed
 			return ::Json.Utils.IntToStr(theObject);
+			// return theObject.tostring();
 			break;
 		case "null":
 			return "null";
@@ -1300,7 +1525,7 @@ function Json::Serialize::Object(theObject, options=::Json.Serialize.defaultOpti
 function Json::Serialize::ToString(theObject, indent=2)
 {
 	local options;
-	if (theObject instanceof ::Json.Serialize.SerializerOptions)
+	if (indent instanceof ::Json.Serialize.SerializerOptions)  // what ????  -- i think theObject should be indent
 	{
 		options = indent;
 	}
@@ -1335,10 +1560,11 @@ function Json::Serialize::ToFile(filepath, theObject, indent=2)
 function TestStuff()
 {
 	// printl("emptyChars = "+::Json.Utils.PrintThing(::Json.Utils.emptyChars, true));
-	local jsonResult = ::Json.Deserialize.String("{\"meow\": \"cat\", \"テンションが 上\": \"\\u30c6\\u30f3\\u30b7\\u30e7\\u30f3\\u304c\\u4e0a\\u3042\\u304c\\u308b\", \"num\": \"2133423423123123123.333\"}");
+	local jsonResult = ::Json.Deserialize.String("{\"meow\": \"cat\", \"テンションが 上\": \"\\u30c6\\u30f3\\u30b7\\u30e7\\u30f3\\u304c\\u4e0a\\u3042\\u304c\\u308b\", \"num\": 2133423423123123123.333, \"neg_num\": -5}");
 	printl("jsonResult = "+::Json.Utils.PrintThing(jsonResult, true));
 	jsonResult = ::Json.Deserialize.String("{\"kit\": 12345678901234567890}");
 	printl("jsonResult = "+::Json.Utils.PrintThing(jsonResult, true));
+	jsonResult = ::Json.Deserialize.String("{\"blah\": 2.13342e+18}");
 
 	printl("31="+::Json.Utils.IntToBin(31)+"="+::Json.Utils.BinToInt(::Json.Utils.IntToBin(31)));
 	printl("69="+::Json.Utils.IntToBin(69, 12)+"="+::Json.Utils.BinToInt(::Json.Utils.IntToBin(69, 16)));
@@ -1346,17 +1572,18 @@ function TestStuff()
 
 	printl("0x30C6="+::Json.Utils.UnicodeToUtf(0x30C6)+"="+::Json.Utils.HexToInt("30C6"));
 	printl("0xE38386="+::Json.Utils.HexToInt("E38386"));
-	printl("123151535="+123151535+"="+::Json.Utils.IntToStr(123151535));
+	printl("12315153533="+123151535333333+"="+::Json.Utils.IntToStr(123151535333333));
 	printl("123123123.2333="+123123123.2333+"="+::Json.Utils.IntToStr(123123123.2333));
 
 	// printl("jsonResult[\"meow\"] = "+::Json.Utils.PrintThing(jsonResult["meow"], true));
 	// local jsonFileResult = ::Json.Deserialize.File("/mnt/f/stuff/pycharmprojects/newrandomstuff/selfbots/showuploaderbot/filter_complex_builder.json");
-	// printl("jsonFileResult = "+::Json.Utils.PrintThing(jsonFileResult, true));
+	//local jsonFileResult = ::Json.Deserialize.File("/mnt/f/stuff/git/l4d2-things/meow_vscript_utils/src/scripts/vscripts/meowlib/1_1_460132072.json");
+	//printl("jsonFileResult = "+::Json.Utils.PrintThing(jsonFileResult, true));
 	// local jsonSerializeResult = ::Json.Serialize.Object(jsonFileResult);
 	// printl("\n\njsonSerializeResult = "+jsonSerializeResult);
 	// ::Json.Serialize.ToFile("./kitty.json", jsonFileResult, 0);
 	printl("TestStuff() exit successfully!");
 }
 
-// TestStuff();
+TestStuff();
 

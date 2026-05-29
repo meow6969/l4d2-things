@@ -1,0 +1,48 @@
+// Created by Crowbar 0.74
+
+$modelname "rda\props_street\bollards_individual.mdl"
+
+$staticprop
+
+//$fadedist 0
+
+$bodygroup "Body"
+{
+	studio "bollards_individual_reference.smd"
+}
+
+
+$surfaceprop "metal"
+
+$contents "solid"
+
+$illumposition -0.178 256 18.961
+
+$cdmaterials "models\props_street\"
+
+$cbox 0 0 0 0 0 0
+
+$bbox -15.107 -6.17 -0.973 3.107 5.842 39.498
+
+$definebone "static_prop" "" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"bollards_individual_anims\idle.smd"
+	activity "act_idle" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$collisionmodel "bollards_individual_physics.smd"
+{
+	$mass 50
+	$inertia 1
+	$damping 0
+	$rotdamping 1
+	$rootbone " "
+	$concave
+	$maxconvexpieces 6
+
+}

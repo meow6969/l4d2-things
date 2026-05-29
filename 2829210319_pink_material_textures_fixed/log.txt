@@ -28,3 +28,6 @@ renamed '/mnt/f/stuff/git/l4d2-things/2829210319_pink_material_textures_fixed/sr
 renamed '/mnt/f/stuff/git/l4d2-things/2829210319_pink_material_textures_fixed/src/materials/tile/ceilingtiles01.vmt' -> '/mnt/f/stuff/git/l4d2-things/2829210319_pink_material_textures_fixed/src/materials/plaster/ceilingtiles01.vmt'
 renamed '/mnt/f/stuff/git/l4d2-things/2829210319_pink_material_textures_fixed/src/materials/tile/ceilingtiles01.vtf' -> '/mnt/f/stuff/git/l4d2-things/2829210319_pink_material_textures_fixed/src/materials/plaster/ceilingtiles01.vtf'
 Successfully created pack file at "/mnt/f/stuff/git/l4d2-things/2829210319_pink_material_textures_fixed.vpk".
+Successfully created pack file at "/mnt/f/stuff/git/l4d2-things/2829210319_pink_material_textures_fixed.vpk".
+Successfully created pack file at "/mnt/f/stuff/git/l4d2-things/2829210319_pink_material_textures_fixed.vpk".
+Successfully created pack file at "/mnt/f/stuff/git/l4d2-things/2829210319_pink_material_textures_fixed.vpk".

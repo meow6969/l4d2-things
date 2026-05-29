@@ -1,15 +1,15 @@
-VertexLitGeneric
+"VertexLitGeneric"
 {
-	$basetexture "models/meowmeow/mizumiya/overshirt"
-
-	$alphatest "1"
-	$nocull "1"
-
-	$ambientocclusion "0"
-	$phong "1"
-	$phongboost "0.02"
-	$phongexponent "1"
-	$phongfresnelranges "[ 1 0.1 0.1 ]"
-	$phongwarptexture "models/meowmeow/mizumiya/shader"
-	$lightwarptexture "models/meowmeow/mizumiya/toon_all"
+	"$basetexture" "models/meowmeow/mizumiya/overshirt"
+	"$alphatest" "1"
+	"$nocull" "1"
+	"$ambientocclusion" "0"
+	"$phong" "1"
+	"$phongboost" "0.02"
+	"$phongexponent" "1"
+	"$phongfresnelranges" "[ 1 0.1 0.1 ]"
+	"$phongwarptexture" "models/meowmeow/mizumiya/shader"
+	"$lightwarptexture" "models/meowmeow/mizumiya/toon_all"
+	"$halflambert" "1"
+	"$nodecal" "1"
 }
