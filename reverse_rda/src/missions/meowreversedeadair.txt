@@ -9,7 +9,7 @@
  	"Author"	"elitezrule2"
  
  	// Where to download the campaign. Seen by people trying to join a server playing this campaign. Not required for workshop submissions.
- 	"Website"	"http://media.steampowered.com/apps/513/deadline2.html"
+ 	"Website"	"https://steamcommunity.com/sharedfiles/filedetails/?id=3761605687"
  
  	// VMT shown behind the end credits when your campaign ends. MUST have "vgui/" at the front.
  	"OuttroImage"	"vgui/outrotitle_reversedeadair"
@@ -119,14 +119,89 @@
 				"SmokerArmsVariant" "models\v_models\weapons\v_claw_smoker_l4d1.mdl"
 				"BoomerArmsVariant" "models\v_models\weapons\v_claw_boomer_l4d1.mdl"
 			}
- 
- 		//	Additional maps listed here, make sure to number them correctly.
- 		//	"2"
- 		//	{
- 		//		"Map"		 "my_map2"
- 		//		"DisplayName"	 "Map 2!"
- 		//		"Image"		 "maps/my_map2"
- 		//	}			
+ 		}
+
+		"versus" //versus Game mode. 
+ 		{
+ 			"1"
+ 			{
+ 				"Map"		"r_c11m5_runway" // BSP file name, without extension
+ 				"DisplayName"	")SV( elaniF yawnuR :1" //Name seen on menu
+ 				"Image"		"maps/r_c11m5_runway" //Thumbnail VMT file, must be saved in "materials\vgui\maps"
+				"TankVariant" "models/infected/hulk_l4d1.mdl"
+				"HunterVariant" "models/infected/hunter_l4d1.mdl"
+				"SmokerVariant" "models/infected/smoker_l4d1.mdl"
+				"BoomerVariant" "models/infected/boomer_l4d1.mdl"
+				"TankArmsVariant" "models\v_models\weapons\v_claw_hulk_L4D1.mdl"
+				"HunterArmsVariant" "models\v_models\weapons\v_claw_hunter_l4d1.mdl"
+				"SmokerArmsVariant" "models\v_models\weapons\v_claw_smoker_l4d1.mdl"
+				"BoomerArmsVariant" "models\v_models\weapons\v_claw_boomer_l4d1.mdl"
+				"VersusCompletionScore"	"400"
+ 			}
+
+			"2"
+			{
+ 				"Map"		"r_c11m4_terminal" // BSP file name, without extension
+ 				"DisplayName"	")SV( lanimreT ehT :2" //Name seen on menu
+ 				"Image"		"maps/r_c11m4_terminal" //Thumbnail VMT file, must be saved in "materials\vgui\maps"
+				"TankVariant" "models/infected/hulk_l4d1.mdl"
+				"HunterVariant" "models/infected/hunter_l4d1.mdl"
+				"SmokerVariant" "models/infected/smoker_l4d1.mdl"
+				"BoomerVariant" "models/infected/boomer_l4d1.mdl"
+				"TankArmsVariant" "models\v_models\weapons\v_claw_hulk_L4D1.mdl"
+				"HunterArmsVariant" "models\v_models\weapons\v_claw_hunter_l4d1.mdl"
+				"SmokerArmsVariant" "models\v_models\weapons\v_claw_smoker_l4d1.mdl"
+				"BoomerArmsVariant" "models\v_models\weapons\v_claw_boomer_l4d1.mdl"
+				"VersusCompletionScore"	"800"
+			}
+
+			"3"
+			{
+ 				"Map"		"r_c11m3_garage" // BSP file name, without extension
+ 				"DisplayName"	")SV( etiS noitcurtsnoC ehT :3" //Name seen on menu
+ 				"Image"		"maps/r_c11m3_garage" //Thumbnail VMT file, must be saved in "materials\vgui\maps"
+				"TankVariant" "models/infected/hulk_l4d1.mdl"
+				"HunterVariant" "models/infected/hunter_l4d1.mdl"
+				"SmokerVariant" "models/infected/smoker_l4d1.mdl"
+				"BoomerVariant" "models/infected/boomer_l4d1.mdl"
+				"TankArmsVariant" "models\v_models\weapons\v_claw_hulk_L4D1.mdl"
+				"HunterArmsVariant" "models\v_models\weapons\v_claw_hunter_l4d1.mdl"
+				"SmokerArmsVariant" "models\v_models\weapons\v_claw_smoker_l4d1.mdl"
+				"BoomerArmsVariant" "models\v_models\weapons\v_claw_boomer_l4d1.mdl"
+				"VersusCompletionScore"	"700"
+			}
+
+			"4"
+			{
+ 				"Map"		"r_c11m2_offices" // BSP file name, without extension
+ 				"DisplayName"	")SV( enarC ehT :4" //Name seen on menu
+ 				"Image"		"maps/r_c11m2_offices" //Thumbnail VMT file, must be saved in "materials\vgui\maps"
+				"TankVariant" "models/infected/hulk_l4d1.mdl"
+				"HunterVariant" "models/infected/hunter_l4d1.mdl"
+				"SmokerVariant" "models/infected/smoker_l4d1.mdl"
+				"BoomerVariant" "models/infected/boomer_l4d1.mdl"
+				"TankArmsVariant" "models\v_models\weapons\v_claw_hulk_L4D1.mdl"
+				"HunterArmsVariant" "models\v_models\weapons\v_claw_hunter_l4d1.mdl"
+				"SmokerArmsVariant" "models\v_models\weapons\v_claw_smoker_l4d1.mdl"
+				"BoomerArmsVariant" "models\v_models\weapons\v_claw_boomer_l4d1.mdl"
+				"VersusCompletionScore"	"700"
+			}
+		
+			"5"
+			{
+ 				"Map"		"r_c11m1_greenhouse" // BSP file name, without extension
+ 				"DisplayName"	")SV( esuohneerG ehT :5" //Name seen on menu
+ 				"Image"		"maps/r_c11m1_greenhouse" //Thumbnail VMT file, must be saved in "materials\vgui\maps"
+				"TankVariant" "models/infected/hulk_l4d1.mdl"
+				"HunterVariant" "models/infected/hunter_l4d1.mdl"
+				"SmokerVariant" "models/infected/smoker_l4d1.mdl"
+				"BoomerVariant" "models/infected/boomer_l4d1.mdl"
+				"TankArmsVariant" "models\v_models\weapons\v_claw_hulk_L4D1.mdl"
+				"HunterArmsVariant" "models\v_models\weapons\v_claw_hunter_l4d1.mdl"
+				"SmokerArmsVariant" "models\v_models\weapons\v_claw_smoker_l4d1.mdl"
+				"BoomerArmsVariant" "models\v_models\weapons\v_claw_boomer_l4d1.mdl"
+				"VersusCompletionScore"	"700"
+			}
  		}
  	}
  }

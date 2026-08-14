@@ -57,7 +57,7 @@ DirectorOptions <-
 	TankLimit = 2
 	WitchLimit = 1
 	CommonLimit = 50
-	HordeEscapeCommonLimit = 40
+	HordeEscapeCommonLimit = 20
 	EscapeSpawnTanks = true
 	//SpecialRespawnInterval = 80
 	ZombieSpawnDistance = 50

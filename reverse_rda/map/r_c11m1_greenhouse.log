@@ -10193,3 +10193,2123 @@ Level flags = 2
 Total triangle count: 21708
 Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
 1 minute, 36 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...Wrote Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.lin
+Areaportal leak ! File: Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.lin 
+Brush 9231: areaportal brush doesn't touch two areas
+
+Brush 11822: areaportal brush doesn't touch two areas
+
+Brush 9217: areaportal brush doesn't touch two areas
+
+Brush 9224: areaportal brush doesn't touch two areas
+
+Brush 11822: areaportal brush doesn't touch two areas
+done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1017943 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4861 texinfos to 2913
+Reduced 442 texdatas to 360 (19738 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-18 16:12:30
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 257 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450761 square feet [1504909568.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107643 patches after subdivision
+38 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8054972, max 1076
+transfer lists:  61.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11724, 11423, 9077)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(2987, 2473, 1536)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1180, 851, 410)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(525, 342, 138)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(259, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(128, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0266 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 133/1024         6384/49152    (13.0%) 
+brushes               2737/8192        32844/98304    (33.4%) 
+brushsides           20430/65536      163440/524288   (31.2%) 
+planes               12876/65536      257520/1310720  (19.6%) 
+vertexes             15529/65536      186348/786432   (23.7%) 
+nodes                 5995/65536      191840/2097152  ( 9.1%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5091/65536      285096/3670016  ( 7.8%) 
+leaves                6129/65536      196128/2097152  ( 9.4%) 
+leaffaces            10117/65536       20234/131072   (15.4%) 
+leafbrushes           8073/65536       16146/131072   (12.3%) 
+areas                   15/256           120/2048     ( 5.9%) 
+surfedges            58520/512000     234080/2048000  (11.4%) 
+edges                37999/256000     151996/1024000  (14.8%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         38/8192         3800/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            779/32768        7790/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14691/65536       29382/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043424/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      367523/393216   (93.5%) VERY FULL!
+LDR ambient table     6129/65536       24516/262144   ( 9.4%) 
+HDR ambient table     6129/65536       24516/262144   ( 9.4%) 
+LDR leaf ambient      6129/65536      171612/1835008  ( 9.4%) 
+HDR leaf ambient     25183/65536      705124/1835008  (38.4%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76668    ( 0.0%) 
+pakfile               [variable]     6646181/0        ( 0.0%) 
+physics               [variable]     1017943/4194304  (24.3%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22074
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+5 minutes, 44 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1017943 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4862 texinfos to 2913
+Reduced 442 texdatas to 360 (19738 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-19 01:36:26
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8059 faces
+1 degenerate faces
+10450759 square feet [1504909312.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8058 patches before subdivision
+107616 patches after subdivision
+38 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8077809, max 1076
+transfer lists:  61.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11721, 11419, 9072)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(2986, 2473, 1535)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1180, 851, 410)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(525, 342, 138)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(259, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(128, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0312 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 133/1024         6384/49152    (13.0%) 
+brushes               2739/8192        32868/98304    (33.4%) 
+brushsides           20442/65536      163536/524288   (31.2%) 
+planes               12880/65536      257600/1310720  (19.7%) 
+vertexes             15544/65536      186528/786432   (23.7%) 
+nodes                 5997/65536      191904/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8059/65536      451304/3670016  (12.3%) 
+hdr faces             8059/65536      451304/3670016  (12.3%) 
+origfaces             5095/65536      285320/3670016  ( 7.8%) 
+leaves                6131/65536      196192/2097152  ( 9.4%) 
+leaffaces            10142/65536       20284/131072   (15.5%) 
+leafbrushes           8084/65536       16168/131072   (12.3%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58570/512000     234280/2048000  (11.4%) 
+edges                38057/256000     152228/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         38/8192         3800/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            782/32768        7820/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14727/65536       29454/131072   (22.5%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043968/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      367634/393216   (93.5%) VERY FULL!
+LDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+HDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+LDR leaf ambient      6131/65536      171668/1835008  ( 9.4%) 
+HDR leaf ambient     25224/65536      706272/1835008  (38.5%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76670    ( 0.0%) 
+pakfile               [variable]     6646181/0        ( 0.0%) 
+physics               [variable]     1017943/4194304  (24.3%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22098
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+6 minutes, 48 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (1)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1017159 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4862 texinfos to 2913
+Reduced 442 texdatas to 360 (19738 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+9 seconds elapsed
+
+==================================================================
+Date: 2026-06-20 08:37:57
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 257 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8061 faces
+1 degenerate faces
+10450763 square feet [1504909824.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8060 patches before subdivision
+107658 patches after subdivision
+38 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8102501, max 1076
+transfer lists:  61.8 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11761, 11452, 9094)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(2991, 2475, 1537)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1180, 851, 410)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(525, 342, 138)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(259, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(128, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0290 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 133/1024         6384/49152    (13.0%) 
+brushes               2737/8192        32844/98304    (33.4%) 
+brushsides           20430/65536      163440/524288   (31.2%) 
+planes               12880/65536      257600/1310720  (19.7%) 
+vertexes             15552/65536      186624/786432   (23.7%) 
+nodes                 5988/65536      191616/2097152  ( 9.1%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8061/65536      451416/3670016  (12.3%) 
+hdr faces             8061/65536      451416/3670016  (12.3%) 
+origfaces             5096/65536      285376/3670016  ( 7.8%) 
+leaves                6122/65536      195904/2097152  ( 9.3%) 
+leaffaces            10140/65536       20280/131072   (15.5%) 
+leafbrushes           8014/65536       16028/131072   (12.2%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58587/512000     234348/2048000  (11.4%) 
+edges                38065/256000     152260/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         38/8192         3800/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            782/32768        7820/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14745/65536       29490/131072   (22.5%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4044328/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      367634/393216   (93.5%) VERY FULL!
+LDR ambient table     6122/65536       24488/262144   ( 9.3%) 
+HDR ambient table     6122/65536       24488/262144   ( 9.3%) 
+LDR leaf ambient      6122/65536      171416/1835008  ( 9.3%) 
+HDR leaf ambient     25156/65536      704368/1835008  (38.4%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76402    ( 0.0%) 
+pakfile               [variable]     6595901/0        ( 0.0%) 
+physics               [variable]     1017159/4194304  (24.3%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22107
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+6 minutes, 43 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1013839 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4865 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-25 11:02:42
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450761 square feet [1504909568.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+38 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8053675, max 1076
+transfer lists:  61.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11721, 11419, 9072)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(2986, 2473, 1535)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1180, 851, 410)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(525, 342, 138)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(259, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(128, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0310 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 133/1024         6384/49152    (13.0%) 
+brushes               2739/8192        32868/98304    (33.4%) 
+brushsides           20444/65536      163552/524288   (31.2%) 
+planes               12886/65536      257720/1310720  (19.7%) 
+vertexes             15534/65536      186408/786432   (23.7%) 
+nodes                 6004/65536      192128/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6138/65536      196416/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8098/65536       16196/131072   (12.4%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         38/8192         3800/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      367634/393216   (93.5%) VERY FULL!
+LDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+HDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+LDR leaf ambient      6138/65536      171864/1835008  ( 9.4%) 
+HDR leaf ambient     25329/65536      709212/1835008  (38.6%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76676    ( 0.0%) 
+pakfile               [variable]     6646181/0        ( 0.0%) 
+physics               [variable]     1013839/4194304  (24.2%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+7 minutes, 9 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1013840 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4873 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-25 16:38:06
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450761 square feet [1504909568.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+38 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8053668, max 1076
+transfer lists:  61.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11724, 11421, 9074)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(2987, 2473, 1535)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1180, 851, 410)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(525, 342, 138)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(259, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(128, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0262 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 133/1024         6384/49152    (13.0%) 
+brushes               2739/8192        32868/98304    (33.4%) 
+brushsides           20423/65536      163384/524288   (31.2%) 
+planes               12848/65536      256960/1310720  (19.6%) 
+vertexes             15534/65536      186408/786432   (23.7%) 
+nodes                 6004/65536      192128/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6138/65536      196416/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8098/65536       16196/131072   (12.4%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         38/8192         3800/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      367636/393216   (93.5%) VERY FULL!
+LDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+HDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+LDR leaf ambient      6138/65536      171864/1835008  ( 9.4%) 
+HDR leaf ambient     25328/65536      709184/1835008  (38.6%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76676    ( 0.0%) 
+pakfile               [variable]     6646181/0        ( 0.0%) 
+physics               [variable]     1013840/4194304  (24.2%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+7 minutes, 1 second elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1013840 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4873 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-30 19:50:19
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450761 square feet [1504909568.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+42 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8051209, max 1076
+transfer lists:  61.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11907, 11570, 9177)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(3047, 2509, 1548)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1202, 861, 413)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(532, 344, 139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(262, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(129, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0291 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 133/1024         6384/49152    (13.0%) 
+brushes               2739/8192        32868/98304    (33.4%) 
+brushsides           20423/65536      163384/524288   (31.2%) 
+planes               12848/65536      256960/1310720  (19.6%) 
+vertexes             15534/65536      186408/786432   (23.7%) 
+nodes                 6004/65536      192128/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6138/65536      196416/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8098/65536       16196/131072   (12.4%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         42/8192         4200/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      372841/393216   (94.8%) VERY FULL!
+LDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+HDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+LDR leaf ambient      6138/65536      171864/1835008  ( 9.4%) 
+HDR leaf ambient     25327/65536      709156/1835008  (38.6%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76952    ( 0.0%) 
+pakfile               [variable]     6646181/0        ( 0.0%) 
+physics               [variable]     1013840/4194304  (24.2%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+6 minutes, 21 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1013840 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4873 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-30 20:00:36
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450761 square feet [1504909568.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+42 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8051209, max 1076
+transfer lists:  61.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11907, 11570, 9177)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(3047, 2509, 1548)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1202, 861, 413)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(532, 344, 139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(262, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(129, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0263 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 133/1024         6384/49152    (13.0%) 
+brushes               2739/8192        32868/98304    (33.4%) 
+brushsides           20423/65536      163384/524288   (31.2%) 
+planes               12848/65536      256960/1310720  (19.6%) 
+vertexes             15534/65536      186408/786432   (23.7%) 
+nodes                 6004/65536      192128/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6138/65536      196416/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8098/65536       16196/131072   (12.4%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         42/8192         4200/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      372841/393216   (94.8%) VERY FULL!
+LDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+HDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+LDR leaf ambient      6138/65536      171864/1835008  ( 9.4%) 
+HDR leaf ambient     25327/65536      709156/1835008  (38.6%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76952    ( 0.0%) 
+pakfile               [variable]     6646181/0        ( 0.0%) 
+physics               [variable]     1013840/4194304  (24.2%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+6 minutes, 14 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1013840 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4873 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+9 seconds elapsed
+
+==================================================================
+Date: 2026-07-09 16:07:04
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450761 square feet [1504909568.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+42 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8059651, max 1076
+transfer lists:  61.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11920, 11583, 9187)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(3049, 2511, 1549)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1202, 862, 413)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(532, 345, 139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(262, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(129, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0286 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 133/1024         6384/49152    (13.0%) 
+brushes               2739/8192        32868/98304    (33.4%) 
+brushsides           20423/65536      163384/524288   (31.2%) 
+planes               12848/65536      256960/1310720  (19.6%) 
+vertexes             15534/65536      186408/786432   (23.7%) 
+nodes                 6004/65536      192128/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6138/65536      196416/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8098/65536       16196/131072   (12.4%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         42/8192         4200/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      372841/393216   (94.8%) VERY FULL!
+LDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+HDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+LDR leaf ambient      6138/65536      171864/1835008  ( 9.4%) 
+HDR leaf ambient     25331/65536      709268/1835008  (38.7%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76876    ( 0.0%) 
+pakfile               [variable]     6646179/0        ( 0.0%) 
+physics               [variable]     1013840/4194304  (24.2%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+6 minutes, 10 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (1)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1013840 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4873 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-07-09 19:08:21
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450761 square feet [1504909568.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+42 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8059651, max 1076
+transfer lists:  61.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11922, 11586, 9189)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(3049, 2511, 1549)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1202, 862, 413)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(532, 345, 139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(262, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(129, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0334 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 133/1024         6384/49152    (13.0%) 
+brushes               2739/8192        32868/98304    (33.4%) 
+brushsides           20423/65536      163384/524288   (31.2%) 
+planes               12848/65536      256960/1310720  (19.6%) 
+vertexes             15534/65536      186408/786432   (23.7%) 
+nodes                 6004/65536      192128/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6138/65536      196416/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8098/65536       16196/131072   (12.4%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         42/8192         4200/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      372841/393216   (94.8%) VERY FULL!
+LDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+HDR ambient table     6138/65536       24552/262144   ( 9.4%) 
+LDR leaf ambient      6138/65536      171864/1835008  ( 9.4%) 
+HDR leaf ambient     25328/65536      709184/1835008  (38.6%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76876    ( 0.0%) 
+pakfile               [variable]     6646179/0        ( 0.0%) 
+physics               [variable]     1013840/4194304  (24.2%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+7 minutes, 7 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1011749 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4873 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-07-09 20:45:47
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450761 square feet [1504909568.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+42 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8059651, max 1076
+transfer lists:  61.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11920, 11584, 9188)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(3049, 2511, 1549)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1202, 862, 413)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(532, 345, 139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(262, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(129, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0297 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 132/1024         6336/49152    (12.9%) 
+brushes               2736/8192        32832/98304    (33.4%) 
+brushsides           20401/65536      163208/524288   (31.1%) 
+planes               12840/65536      256800/1310720  (19.6%) 
+vertexes             15526/65536      186312/786432   (23.7%) 
+nodes                 5998/65536      191936/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6131/65536      196192/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8076/65536       16152/131072   (12.3%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         42/8192         4200/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      372410/393216   (94.7%) VERY FULL!
+LDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+HDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+LDR leaf ambient      6131/65536      171668/1835008  ( 9.4%) 
+HDR leaf ambient     25269/65536      707532/1835008  (38.6%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76876    ( 0.0%) 
+pakfile               [variable]     6646179/0        ( 0.0%) 
+physics               [variable]     1011749/4194304  (24.1%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+7 minutes, 37 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1016453 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1016453 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4879 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+9 seconds elapsed
+
+==================================================================
+Date: 2026-07-10 16:03:31
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450761 square feet [1504909568.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+42 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8059651, max 1076
+transfer lists:  61.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11920, 11583, 9187)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(3049, 2511, 1549)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1202, 862, 413)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(532, 345, 139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(262, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(129, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0271 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 132/1024         6336/49152    (12.9%) 
+brushes               2742/8192        32904/98304    (33.5%) 
+brushsides           20445/65536      163560/524288   (31.2%) 
+planes               12882/65536      257640/1310720  (19.7%) 
+vertexes             15526/65536      186312/786432   (23.7%) 
+nodes                 5998/65536      191936/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6131/65536      196192/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8082/65536       16164/131072   (12.3%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         42/8192         4200/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      372944/393216   (94.8%) VERY FULL!
+LDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+HDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+LDR leaf ambient      6131/65536      171668/1835008  ( 9.4%) 
+HDR leaf ambient     25270/65536      707560/1835008  (38.6%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76876    ( 0.0%) 
+pakfile               [variable]     6646179/0        ( 0.0%) 
+physics               [variable]     1016453/4194304  (24.2%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+6 minutes, 58 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1016453 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4879 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+12 seconds elapsed
+
+==================================================================
+Date: 2026-07-12 17:09:54
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450562 square feet [1504880896.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+42 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8059875, max 1076
+transfer lists:  61.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11922, 11586, 9189)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(3049, 2511, 1549)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1202, 862, 413)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(532, 345, 139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(262, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(129, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0282 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 132/1024         6336/49152    (12.9%) 
+brushes               2742/8192        32904/98304    (33.5%) 
+brushsides           20445/65536      163560/524288   (31.2%) 
+planes               12882/65536      257640/1310720  (19.7%) 
+vertexes             15526/65536      186312/786432   (23.7%) 
+nodes                 5998/65536      191936/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6131/65536      196192/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8082/65536       16164/131072   (12.3%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         42/8192         4200/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      372944/393216   (94.8%) VERY FULL!
+LDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+HDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+LDR leaf ambient      6131/65536      171668/1835008  ( 9.4%) 
+HDR leaf ambient     25263/65536      707364/1835008  (38.5%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76876    ( 0.0%) 
+pakfile               [variable]     6646179/0        ( 0.0%) 
+physics               [variable]     1016453/4194304  (24.2%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+6 minutes, 47 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 634 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1017637 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 4883 texinfos to 2913
+Reduced 443 texdatas to 360 (19757 bytes to 16431)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-07-14 20:20:46
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 9000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.prt
+  64 portalclusters
+ 258 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 10 visible clusters (0.55%)
+Total clusters visible: 1809
+Average clusters visible: 28
+Building PAS...
+Average clusters audible: 62
+visdatasize:1601  compressed from 1024
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+Wrote ZIP buffer, estimated size 4573021, actual size 4522289
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+8054 faces
+1 degenerate faces
+10450562 square feet [1504880896.00 square inches]
+54 Displacements
+23971 Square Feet [3451894.25 Square Inches]
+8053 patches before subdivision
+107621 patches after subdivision
+42 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 8059875, max 1076
+transfer lists:  61.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(11922, 11586, 9189)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(3049, 2511, 1549)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1202, 862, 413)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(532, 345, 139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(262, 154, 53)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(129, 70, 21)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(66, 33, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(34, 16, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(18, 8, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(9, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(5, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(3, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #13 added RGB(1, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #14 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0272 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 132/1024         6336/49152    (12.9%) 
+brushes               2746/8192        32952/98304    (33.5%) 
+brushsides           20478/65536      163824/524288   (31.2%) 
+planes               12908/65536      258160/1310720  (19.7%) 
+vertexes             15526/65536      186312/786432   (23.7%) 
+nodes                 5998/65536      191936/2097152  ( 9.2%) 
+texinfos              2913/12288      209736/884736   (23.7%) 
+texdata                360/2048        11520/65536    (17.6%) 
+dispinfos               54/0            9504/0        ( 0.0%) 
+disp_verts            2582/0           51640/0        ( 0.0%) 
+disp_tris             3840/0            7680/0        ( 0.0%) 
+disp_lmsamples      118608/0          118608/0        ( 0.0%) 
+faces                 8054/65536      451024/3670016  (12.3%) 
+hdr faces             8054/65536      451024/3670016  (12.3%) 
+origfaces             5093/65536      285208/3670016  ( 7.8%) 
+leaves                6131/65536      196192/2097152  ( 9.4%) 
+leaffaces            10139/65536       20278/131072   (15.5%) 
+leafbrushes           8131/65536       16262/131072   (12.4%) 
+areas                   16/256           128/2048     ( 6.3%) 
+surfedges            58536/512000     234144/2048000  (11.4%) 
+edges                38036/256000     152144/1024000  (14.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         42/8192         4200/819200   ( 0.5%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            780/32768        7800/327680   ( 2.4%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14697/65536       29394/131072   (22.4%) 
+cubemapsamples          50/1024          800/16384    ( 4.9%) 
+overlays               210/512         73920/180224   (41.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4043348/0        ( 0.0%) 
+visdata               [variable]        1601/16777216 ( 0.0%) 
+entdata               [variable]      372944/393216   (94.8%) VERY FULL!
+LDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+HDR ambient table     6131/65536       24524/262144   ( 9.4%) 
+LDR leaf ambient      6131/65536      171668/1835008  ( 9.4%) 
+HDR leaf ambient     25263/65536      707364/1835008  (38.5%) 
+occluders               14/0             560/0        ( 0.0%) 
+occluder polygons       21/0             252/0        ( 0.0%) 
+occluder vert ind       99/0             396/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/76876    ( 0.0%) 
+pakfile               [variable]     6646179/0        ( 0.0%) 
+physics               [variable]     1017637/4194304  (24.3%) 
+physics terrain       [variable]        9892/1048576  ( 0.9%) 
+
+Level flags = 2
+
+Total triangle count: 22082
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m1_greenhouse.bsp
+6 minutes, 14 seconds elapsed

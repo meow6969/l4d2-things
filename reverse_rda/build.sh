@@ -12,6 +12,7 @@ echo_pathvars
 
 source "${shutilspath}/buildutils.sh"
 
+
 function copy_over_custom_models() {
 	cp -r "${srcpath}/models" "${l4d2path}/reverse_dead_air/"
 
@@ -20,10 +21,10 @@ function copy_over_custom_models() {
 
 function full_final_compile_all_maps() {
 	start="$(date +%s)"
-	full_final_compile_map "${shdirpath}/map/r_c11m1_greenhouse.vmf" "${srcpath}"
-	full_final_compile_map "${shdirpath}/map/r_c11m2_offices.vmf" "${srcpath}"
-	full_final_compile_map "${shdirpath}/map/r_c11m3_garage.vmf" "${srcpath}"
-	full_final_compile_map "${shdirpath}/map/r_c11m4_terminal.vmf" "${srcpath}"
+	#full_final_compile_map "${shdirpath}/map/r_c11m1_greenhouse.vmf" "${srcpath}"
+	#full_final_compile_map "${shdirpath}/map/r_c11m2_offices.vmf" "${srcpath}"
+	#full_final_compile_map "${shdirpath}/map/r_c11m3_garage.vmf" "${srcpath}"
+	#full_final_compile_map "${shdirpath}/map/r_c11m4_terminal.vmf" "${srcpath}"
 	full_final_compile_map "${shdirpath}/map/r_c11m5_runway.vmf" "${srcpath}"
 	ended="$(date +%s)"
 	runtime="$((ended-start))"
@@ -31,6 +32,7 @@ function full_final_compile_all_maps() {
 	echo "map compile took ${runtime} seconds"
 	echo ""
 }
+
 function full_compile_all_maps() {
 	full_compile_map "${shdirpath}/map/r_c11m1_greenhouse.vmf" "${srcpath}"
 	full_compile_map "${shdirpath}/map/r_c11m2_offices.vmf" "${srcpath}"
@@ -38,6 +40,7 @@ function full_compile_all_maps() {
 	full_compile_map "${shdirpath}/map/r_c11m4_terminal.vmf" "${srcpath}"
 	full_compile_map "${shdirpath}/map/r_c11m5_runway.vmf" "${srcpath}"	
 }
+
 function upload_map() {
 	s3cmd put "${pakpath}" s3://httpbucket/meow/stuff/"${pakname}"
 	sleep 5
@@ -46,10 +49,19 @@ function upload_map() {
 	echo "https://jestershelter.xyz/files/bucketstorage/stuff/reverse_rda.vpk"
 }
 
+function build_all_maps_stringtables() {
+	#build_map_stringtable "${srcpath}/maps/r_c11m1_greenhouse.bsp"
+	#build_map_stringtable "${srcpath}/maps/r_c11m2_offices.bsp"
+	#build_map_stringtable "${srcpath}/maps/r_c11m3_garage.bsp"
+	#build_map_stringtable "${srcpath}/maps/r_c11m4_terminal.bsp"
+	build_map_stringtable "${srcpath}/maps/r_c11m5_runway.bsp"
+}
+
 
 #full_final_compile_all_maps
 #full_compile_all_maps
 
+#build_all_maps_stringtables
 
 #python3 reverse_anims.py
 #python3 trim_barricade.py
@@ -63,6 +75,8 @@ function upload_map() {
 #compile_model "${shdirpath}/uncompiled/models/rda/props/de_nuke/crate_extralarge/crate_extralarge.qc" "${srcpath}"
 #compile_model "${shdirpath}/uncompiled/models/rda/props/de_nuke/crate_extralarge_thin/crate_extralarge_thin.qc" "${srcpath}"
 #compile_model "${shdirpath}/uncompiled/models/rda/props_industrial/construction_crane/construction_crane.qc" "${srcpath}"
+
+#compile_model "${shdirpath}/uncompiled/models/rda/props_interiors/painting_landscape01/painting_landscape01.qc" "${srcpath}"
 
 #compile_model "${shdirpath}/uncompiled/models/rda/v2cam/intro/intro.qc" "${srcpath}"
 #compile_model "${shdirpath}/uncompiled/models/rda/v2cam/outro/outro.qc" "${srcpath}"
@@ -82,6 +96,6 @@ copy_over_custom_models
 vpkeditcli -v 1 -s --no-progress -o "${pakpath}" "${srcpath}"
 cp -fv "${pakpath}" "${l4d2path}/left4dead2/addons"
 
-upload_map
+#upload_map
 
 

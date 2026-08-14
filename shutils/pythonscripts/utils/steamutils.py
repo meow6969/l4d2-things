@@ -5,6 +5,7 @@ import json
 import inspect
 import os
 import re
+import shutil
 
 import vdf
 
@@ -94,7 +95,7 @@ def get_workshop_id(i: int | str) -> int:
     return workshop_id
 
 
-def download_workshop_collection(workshop_id: int | str, out_dir: Path = Path.cwd()):
+def download_workshop_collection(workshop_id: int | str, out_dir: Path = Path.cwd(), source_folder=None):
     workshop_id = get_workshop_id(workshop_id)
     out_dir = out_dir.joinpath(str(workshop_id))
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -104,15 +105,23 @@ def download_workshop_collection(workshop_id: int | str, out_dir: Path = Path.cw
         raise Exception("error downloading collection webpage")
     addons = find_addons.findall(site.text)
     for i in addons:
-        download_workshop_mod(i, out_dir)
-    print("downloaded mod!")
+        download_workshop_mod(i, out_dir, source_folder=source_folder)
+    print("downloaded mod collection!")
 
 
 def download_workshop_mod(workshop_id: int | str, out_dir: Path = Path.cwd(), only_print_name=False, interactive=False,
-                          out_replace=False) -> Path | None:
+                          out_replace=False, source_folder=None) -> Path | None:
     workshop_id = get_workshop_id(workshop_id)
     assert isinstance(workshop_id, int)
     assert isinstance(out_dir, Path)
+    if source_folder is not None and source_folder.joinpath(f"{workshop_id}.vpk").exists():
+        out_file = out_dir.joinpath(f"{workshop_id}.vpk")
+        shutil.copyfile(source_folder.joinpath(f"{workshop_id}.vpk"), out_file)
+        print(f"successfully copied local workshop mod {CCs.OKCYAN}id={workshop_id}{CCs.ENDC} to "
+            f"{CCs.OKGREEN}\"{out_file}\"{CCs.ENDC}")
+        return out_file
+
+
 
     #####################################################
     #       sample returned json                        #
@@ -237,6 +246,7 @@ def download_workshop_mod(workshop_id: int | str, out_dir: Path = Path.cwd(), on
             #if filename is None:
             #    raise Exception(f"workshop mod download file for url: {file_url}\n"
             #                    f"returned invalid headers: {r.headers}")
+            filename = filename.encode("ascii", "ignore").decode("ascii")
             out_file = Path(out_dir, f"{workshop_id}_{filename}")
 
             if out_file.exists():

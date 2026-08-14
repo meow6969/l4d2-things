@@ -1,6 +1,6 @@
 // TODO
 //  * save PlayerSettings each in their own file  ---  DONE
-//  * localization & multi language support       ---  idk if will ever be added ,, until i can think of elegant solution probably will not be added
+//  * localization & multi language support       ---  idk if will ever be added ,, until i can think of elegant solution probably will not be added  -- DONE  !!!
 //                                                ---  problems include: 
 //                                                       ---  individual players should be able to select language
 //                                                       ---  would have to create intuitive solution to inserting variables
@@ -31,6 +31,9 @@ if (!("IncludeScript" in getroottable()))
 	dofile("implement_l4d2_utils.nut", true);
 }
 
+
+IncludeScript("bhop_lang/en.nut");
+IncludeScript("bhop_lang/es.nut");
 
 IncludeScript("meowlib/json.nut");
 IncludeScript("meowlib/commands.nut");
@@ -453,7 +456,7 @@ class ::BhopClasses.BhopConfig
 	</ json_ignore = true />
 	SessionData				= null;			// table[pSID, ::BhopClasses.BhopChainData]
 	</ json_ignore = true />
-	build_num=153
+	build_num=198
 }
 
 printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_num+"  !!!")
@@ -494,7 +497,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			::MeowUtils.Log("SessionData is empty, skipping write");
 			return;
 		}
-		local path = ::BhopVars.ConfigPath+"/sessions/";
+		/* local path = ::BhopVars.ConfigPath+"/sessions/";
 		if (reset)
 		{
 			local currentMap = Director.GetMapName();
@@ -507,7 +510,8 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 				return;
 			path = path+nextMap+".json";
 		}
-		::Json.Serialize.ToFile(path, ::BhopVars.SessionData)
+		::Json.Serialize.ToFile(path, ::BhopVars.SessionData) */
+		::MeowUtils.JsonSaveTable("Meow_Bhop_Detect_Session_Data", ::BhopVars.SessionData);
 
 		/* local a = ::Json.Utils.ClassToTable(::BhopVars.SessionData); 
 		SaveTable("meow_bhop_detect_session_table", a);
@@ -521,15 +525,15 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 
 	function ReadSessionData(erase=true)
 	{
-		local currentMap = Director.GetMapName();
+		/* local currentMap = Director.GetMapName();
 		local path = ::BhopVars.ConfigPath+"/sessions/"+currentMap+".json";
 		local file = FileToString(path);
 		if (!file || strip(file) == "") return {};
 		local rDict = ::Json.Deserialize.String(file);
-		if (typeof rDict != "table" || rDict.len() == 0) return {};
+		if (typeof rDict != "table" || rDict.len() == 0) return {}; */
 
 		// this is checking to make sure this is not the session data from a crashed game
-		local testBhop = ::MeowUtils.TableValues(rDict)[0];
+		/* local testBhop = ::MeowUtils.TableValues(rDict)[0];
 		local testTime = split(testBhop["timeString"], "/");  // YYYY/MM/DD
 		testTime = {
 			year  = testTime[0].tointeger(),
@@ -561,7 +565,11 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		else if (testTime["day"] + 1 != curTime["day"])
 		{
 			return {};
-		} 
+		} */
+
+		local rDict = ::MeowUtils.JsonRestoreTable("Meow_Bhop_Detect_Session_Data");
+		if (rDict == null)
+			return {};
 
 		local newDict = {};
 		foreach (pSID, bhop in rDict)
@@ -583,7 +591,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			newDict[pSID] <- ::Json.Deserialize.ExtractClassProperties(a, ::BhopClasses.BhopChainData);
 		}
 		printl("done getting things"); */
-		if (erase) StringToFile(path, "");
+		//if (erase) StringToFile(path, "");
 		return newDict;
 	}
 
@@ -592,48 +600,18 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		if (::BhopVars.CommandManager != null) return;
 		// ::BhopVars.CommandManager = ::Commands.CommandManager(::BhopCmds, "!bhop", ::Commands.HelpCommand);
 		// printl("SetCommandManager()");
-		::BhopVars.CommandManager = ::Commands.CommandManager(::BhopCmds, ::BhopVars.CommandsPrefix, ::BhopFunc.IsPlayerAdmin, ::Commands.HelpCommand);
+		::BhopVars.CommandManager = ::Commands.CommandManager(
+			::BhopCmds, 
+			::BhopVars.CommandsPrefix, 
+			::BhopFunc.IsPlayerAdmin, 
+			::Commands.HelpCommand, 
+			::BhopFunc.GetPlayerLanguage, 
+			::BhopLang, 
+			::BhopFunc.StyleLocalizedStringCode, 
+			// ::BhopFunc.IsPlayerNotInInitList
+			::BhopFunc.IsPlayerCommandManagerValid
+		);
 	}
-
-	// i should remove players manifest entirely, completely unnecessary and bad
-
-	/* function ReadPlayersManifest()  // -> array<string>
-	{
-		local path = ::BhopVars.ConfigPath+"/playersmanifest";
-		local playerIds = [];
-		local fNum = 1;
-		while (true)
-		{
-			local file = FileToString(path+fNum+".txt");
-			if (!file) break;
-			playerIds.extend(split(file, "\n"));
-		}
-		return playerIds;
-	}
-
-	function WritePlayersManifest()
-	{
-		local l = ::BhopFunc.ReadPlayersManifest();
-		local steamids = ::MeowUtils.TableKeys(::BhopVars.PlayerSettings);
-		// filters out only steamids that have a len greater than 10
-		steamids = steamids.filter(@(i, v) v.len() > 10);
-		// slices off the initial STEAM_1:1:
-		// steamids.apply(@(v) v.slice(10));
-
-		steamids.apply(@(v) ::MeowUtils.StringReplace(v.slice(6), ":", "_")); 
-
-		// printl("steamidstype="+typeof steamids);
-		// printl("ltype="+typeof l);
-		
-		local r = ::MeowUtils.MergeArrays(l, steamids);
-		::MeowUtils.Log("len(r)="+r.len()+", len(steamids)="+steamids.len()+", len(l)="+l.len());
-		// this means nothing new was added,,,, probably,,,  --  mmaybe ,,  I HOPE!!!!!!!!!!!! SHINJITE!!!!!
-		if (r.len() == steamids.len() && steamids.len() == l.len()) return;
-		local path = ::BhopVars.ConfigPath+"/playersmanifest.txt";
-		StringToFile(path, ::MeowUtils.ArrayJoin(r, "\n"));
-	} */
-
-	
 
 	function ReadPlayerFile(steamid)  // -> ::BhopClasses.PlayerSettings || null
 	{
@@ -776,45 +754,6 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		::BhopFunc.ReadLeaderboard();
 		//::BhopFunc.WriteConfig();
 
-		/* local r = ::BhopFunc.ReadPlayersManifest();
-		
-		foreach (steamid in r)
-		{
-			local pSet = ::BhopFunc.ReadPlayerFile(steamid);
-
-			// we need to only add the top NumLeaderboardSlots best
-
-			if (pSet == null || pSet.BestBhop == null) 
-				continue;
-			if (::BhopVars.PlayerSettings.len() < ::BhopVars.NumLeaderboardSlots)
-			{
-				::BhopVars.PlayerSettings[fullSteamid] <- pSet;
-				continue;
-			}
-			// TODO: test dis  -- i did but also im scrapping dis code xdddddddddddddd
-			local lowestScore = 999999999;
-			// if (pSet.BestBhop != null) lowestScore
-			local lowestId = null;
-			
-			foreach (theId, setting in ::BhopVars.PlayerSettings) 
-			{
-				if (setting.BestBhop == null) 
-				{
-					lowestId = theId;
-					break;
-				}
-				if (setting.BestBhop.score < lowestScore && setting.BestBhop.score < pSet.BestBhop.score)
-				{
-					lowestScore = setting.BestBhop.score;
-					lowestId = theId;
-				}
-			}
-			if (lowestId != null)
-			{
-				delete ::BhopVars.PlayerSettings[lowestId];
-				::BhopVars.PlayerSettings[fullSteamid] <- pSet;
-			}
-		} */
 		// ::MeowUtils.Log("::BhopVars.PlayerSettings="+::Json.Serialize.ToString(::BhopVars.PlayerSettings));
 	}
 
@@ -893,6 +832,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 	}
 
 	function SendToAllNonIgnoredPlayers(message)
+	// function SendToAllNonIgnoredPlayers()
 	{
 		local player = null;
 		while (player = Entities.FindByClassname(player, "player"))
@@ -905,7 +845,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			if (IsPlayerIgnored(steamid))
 			{
 				// printl(player.GetPlayerName()+" was ignored SendToAllNon");
-				continue;
+				continue; 
 			}
 			::MeowUtils.ClientPrintSplit(player, message);
 		}
@@ -976,8 +916,6 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		return ::BhopVars.PlayerSettings[steamid]["Admin"];
 	}
 
-	
-
 	function DisplayLeaderboard(player=null, session=false)
 	{
 		// "\x01high score: \x04"+best["score"]+"\x01, total distance bhopped: \x04"+pSet["TotalDistanceBhopped"]+"\x01, total bhops: \x04"+pSet["TotalBhops"]+"\x01highest velocity: \x04"+pSet["HighestVelocity"]+"\x01"
@@ -1038,16 +976,21 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			if (::BhopVars.SessionData.len() == 0)
 			{
 				if (player != null)
-					ClientPrint(player, 5, "no bhops tracked this session!");
+					// ClientPrint(player, 5, "no bhops tracked this session!");
+					::BhopVars.CommandManager.Send(player, "SessionLeaderboard|NoBhopsTracked");
 				return;
 			}
 			tVals = ::MeowUtils.TableValues(::BhopVars.SessionData);
 			tVals.sort(SessionCompare);
-			local awawawa = "session leaderboard:"
-			if (player == null)
-				::BhopFunc.SendToAllNonIgnoredPlayers(awawawa);
-			else
-				ClientPrint(player, 5, awawawa);
+
+			//  this stuff should be printed later with everything else
+			// local awawawa = "session leaderboard:"
+			//if (player == null)
+				// ::BhopFunc.SendToAllNonIgnoredPlayers(awawawa);
+			//	::BhopVars.CommandManager.Send(null, "SessionLeaderboard|HeaderText");
+			//else
+				// ClientPrint(player, 5, awawawa);
+			//	::BhopVars.Command
 			// tVals.reverse();
 		
 			/* if (tVals.len() > ::BhopVars.NumLeaderboardSlots)
@@ -1058,6 +1001,12 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		}
 		else
 		{
+			if (::BhopVars.LeaderboardData.len() == 0)
+			{
+				if (player != null)
+					::BhopVars.CommandManager.Send(player, "Leaderboard|NoBhopsTracked");
+				return;
+			}
 			tVals = ::MeowUtils.TableValues(::BhopVars.LeaderboardData);
 			// tVals.sort(MeowCompare);
 			//printl("precompare");
@@ -1078,10 +1027,26 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			tVals = tVals.slice(0, ::BhopVars.NumLeaderboardSlots);
 		}	
 		bestBhops = tVals;
-		local leaderboardSlot = 1;
+		//local leaderboardSlot = 1;
 		
 		// local s = "";
 		// if (bestBhops.len() == 0)
+
+		local code;
+		local headerCode;
+		local audience;
+		if (session)
+		{
+			code = "SessionLeaderboard|Entry";
+			headerCode = "SessionLeaderboard|HeaderText";
+		}
+		else
+		{
+			code = "Leaderboard|Entry";
+			headerCode = "Leaderboard|HeaderText";
+		}
+		// player is either null for everyone or a player object, we dont need to check for it
+		::BhopVars.CommandManager.Send(player, headerCode);
 		
 		foreach (i, t in bestBhops)
 		{
@@ -1092,12 +1057,14 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			local numBhops;
 			local maxVel;
 			local avgVel;
+			local timeString;
 
 			name = t["playerName"]; // ::BhopVars.PlayerSettings[t["playerSteamID"]]["Name"];
 			score = t["score"];
 			numBhops = t["numBhops"];
 			maxVel = t["maxVel"];
 			avgVel = t["avgVel"];
+			timeString = t["timeString"];
 			
 			/* if (session)
 			{
@@ -1117,25 +1084,29 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			} */
 			
 			// l4d2 has 255 char message limit so this is really pushing it   -- shut up baka   I WONT LISTEN TO YOU ! !!!!
-			local s = "  \x03"+leaderboardSlot+"\x01: \x04"+name+"\x01 ";
+			//local s = "  \x03"+leaderboardSlot+"\x01: \x04"+name+"\x01 ";
 			// if (!session) s = s+"\x05("+t["BestBhop"]["timeString"]+")\x01, " 
-			if (!session) s = s+"\x05("+t["timeString"]+")\x01, ";
-			s = s+"score: \x05"+score+"\x01, bhops: \x05"+numBhops+"\x01, max speed: \x05"+maxVel+"\x01, avg speed: \x05"+avgVel+"\x01";
+			//if (!session) s = s+"\x05("+t["timeString"]+")\x01, ";
+			//s = s+"score: \x05"+score+"\x01, bhops: \x05"+numBhops+"\x01, max speed: \x05"+maxVel+"\x01, avg speed: \x05"+avgVel+"\x01";
 			// local s = "  \x03"+leaderboardSlot+"\x01: \x04"+t["Name"]+"\x01 score: \x05"+t["BestBhop"]["score"]+"\x01, bhops: \x05"+t["BestBhop"]["bhopChain"].len()+"\x01, max speed: \x05"+t["BestBhop"]["maxVel"]+"\x01, avg speed: \x05"+t["BestBhop"].AverageVelocity()+"\x01";
 			// s += "  \x03"+leaderboardSlot+"\x01: \x04"+t["Name"]+"\x01 \x05("+t["BestBhop"]["timeString"]+")\x01, score: \x05"+t["BestBhop"]["score"]+"\x01, bhops: \x05"+t["BestBhop"]["bhopChain"].len()+"\x01, max speed: \x05"+t["BestBhop"]["maxVel"]+"\x01, avg speed: \x05"+t["BestBhop"].AverageVelocity()+"\x01\n";
-			leaderboardSlot++;
-			if (player == null)
-			{	
+			
+			//if (player == null)
+			//{	
 				// dis sucks xddddddddddddddddddddddddddddddddddddddddd   its 2 bcs we  increment it above dis since theres a continue below ddis  and  NO  i WILL NOT USE A ELSE BLOCK!!! I HATE ELSE 
 				//   -- idk wut i was trying to say with this ??  --- wtf amm i even doing 
-				if (leaderboardSlot == 2 && !session)
-					::BhopFunc.SendToAllNonIgnoredPlayers("server leaderboard:");
-				::BhopFunc.SendToAllNonIgnoredPlayers(s);
-				continue;
-			}
-			if (leaderboardSlot == 2 && !session)
-				ClientPrint(player, 5, "server leaderboard:");
-			ClientPrint(player, 5, s);
+				//if (leaderboardSlot == 2 && !session)
+					// ::BhopFunc.SendToAllNonIgnoredPlayers("server leaderboard:");
+					//::BhopVars.CommandManager.Send(null, headerCode);
+				// ::BhopFunc.SendToAllNonIgnoredPlayers(s);
+				//::BhopVars.CommandManager.Send(null, 
+				//continue;
+			//}
+			//if (leaderboardSlot == 2 && !session)
+			//	ClientPrint(player, 5, "server leaderboard:");
+			::BhopVars.CommandManager.Send(player, code, {leaderboardSlot = i + 1, name = name, timeString = timeString, score = score, numBhops = numBhops, topSpeed = maxVel, avgSpeed = avgVel});
+
+			//leaderboardSlot++;
 		}
 		// remove last "\n"
 		/* s = s.slice(0, -1);
@@ -1154,6 +1125,11 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 			return true;
 		}
 		return false;
+	 }
+
+	function IsPlayerNotInInitList(userid)
+	{
+		return !::BhopFunc.IsPlayerInInitList(userid);
 	}
 
 	function ShouldIgnorePlayer(userid, player)
@@ -1179,6 +1155,19 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		if (::BhopVars.PlayerSettings[pSID].Banned)
 			return true; */
 		return false;
+	}
+
+	function IsPlayerCommandManagerValid(userid)
+	{
+		local player = GetPlayerFromUserID(userid);
+		if (IsPlayerABot(player))
+			return false;
+		if (::BhopFunc.IsPlayerInInitList(userid))
+			return false;
+		local steamid = ::MeowUtils.GetPlayerSteamID(player);
+		if (::BhopFunc.IsPlayerIgnored(steamid))
+			return false;
+		return true;
 	}
 
 	function EnsurePlayerSettings(player, pName, steamid=null)
@@ -1223,8 +1212,9 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 				::BhopVars.PlayerSettings[steamid] <- ::BhopClasses.PlayerSettings();
 				if (::BhopVars.NewPlayerIntroduction)
 				{
-					ClientPrint(player, 5, "\x01"+"hello \x04"+pName+"\x01! you seem to be new to MeowBhopDetect!");
-					ClientPrint(player, 5, "\x01"+"enter \"\x05"+::BhopVars.CommandsPrefix+" help\x01\" to see the help command, and do \"\x05!bhop toggle\x01\" to enable/disable me!");
+					//ClientPrint(player, 5, "\x01"+"hello \x04"+pName+"\x01! you seem to be new to MeowBhopDetect!");
+					//ClientPrint(player, 5, "\x01"+"enter \"\x05"+::BhopVars.CommandsPrefix+" help\x01\" to see the help command, and do \"\x05!bhop toggle\x01\" to enable/disable me!");
+					::BhopVars.CommandManager.Send(player, "Misc|Introduction", {name = pName, prefix = ::BhopVars.CommandsPrefix});
 				}
 				// ClientPrint(player, 5, "\x04"+"elitezrule2\x01 is currently testing this mod, expect bugs!");
 				// ClientPrint(player, 5, "\x01"+"feedback is welcome!");
@@ -1252,8 +1242,9 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		}
 		if (::BhopVars.PlayerSettings[steamid].Banned)
 		{
-			ClientPrint(player, 5, "\x01"+"for your attention: i regret to inform you of the following,");
-			ClientPrint(player, 5, "\x01"+"you are currently \x04"+"BANNED\x01, your achievements will not be \x04"+"ACKNOWLEDGED\x01");
+			//ClientPrint(player, 5, "\x01"+"for your attention: i regret to inform you of the following,");
+			//ClientPrint(player, 5, "\x01"+"you are currently \x04"+"BANNED\x01, your achievements will not be \x04"+"ACKNOWLEDGED\x01");
+			::BhopVars.CommandManager.Send(player, "Banned|Introduction");
 		}
 		// ::BhopFunc.WriteConfig(::BhopVars.ConfigPath);
 		return true;
@@ -1331,7 +1322,7 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 				continue;
 			rStr += u[1]+u[0]+" ";
 			if (u[0] == "d")
-			{wouldnt effect 99% of use
+			{
 				rStr += "("+(u[1] * 24).tointeger()+"h) ";
 			}
 		}
@@ -1343,9 +1334,12 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 
 	function GetPlayerLanguage(steamid)
 	{
+		//printl("get player language, steamid="+steamid);
 		if (!(steamid in ::BhopVars.PlayerSettings))
 			return "en";
-		return ::BhopVars.PlayerSettings[steamid]["Language"];
+		local a = ::BhopVars.PlayerSettings[steamid]["Language"];
+		//printl("a="+a);
+		return a;
 	}
 
 	//                                string, table
@@ -1355,52 +1349,44 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 		local brightGreen = "\x03";
 		local orange = "\x04";
 		local oliveGreen = "\x05";
-		switch (code)
+		try
 		{
-			case "LEADERBOARD_SLOT":
-				return brightGreen+extraInfos["leaderboardSlot"]+white;
-			case "NAME":
-				return orange+"\""+extraInfos["name"]+"\""+white;
-			case "STEAMID":
-				return brightGreen+"\""+extraInfos["steamID"]+"\""+white;
-
-			case "TIME_STRING":
-				return oliveGreen+"("+extraInfos["timeString"]+")"+white;
-			case "SCORE":
-				return oliveGreen+extraInfos["score"]+white;
-			case "NUM_BHOPS":
-				return oliveGreen+extraInfos["numBhops"]+white;
-			case "TOP_SPEED":
-				return oliveGreen+extraInfos["topSpeed"].tointeger()+white;
-			case "AVG_SPEED":
-				return oliveGreen+extraInfos["avgSpeed"].tointeger()+white;
-			case "SPEED_PERFECTJUMP":
-				return extraInfos["speed"].tointeger();
-			case "DURATION":
-				return orange+extraInfos["duration"]+white;
-			case "SCORE_DIFFERENCE":
-				return oliveGreen+"+"+extraInfos("scoreDifference")+white;
-
-			case "ERROR":
-				return extraInfos["error"];
-			case "KEYNAME":
-				return "\""+extraInfos["keyName"]+"\"";
-			case "USER_INPUT":
-				return "\""+extraInfos["userInput"]+"\"";
-			case "SQUIRREL_TYPE":
-				return "\""+extraInfos["squirrelType"]+"\"";
-			case "VARIABLE_PATH":
-				return oliveGreen+"\""+extraInfos["variablePath"]+"\""+white;  
-			case "VARIABLE_VALUE":
-				return orange+"\""+extraInfos["variableValue"]+"\""+white;
-
-			case "VERSION":
-				return oliveGreen+"r"+extraInfos["version"]+white;
-			case "PREFIX":
-				return "\""+extraInfos["prefix"]+"\"";
-			
-			default:
-				return null;
+			switch (code)
+			{
+				case "LEADERBOARD_SLOT":
+					return brightGreen+extraInfos["leaderboardSlot"]+white;
+				
+	
+				case "TIME_STRING":
+					return oliveGreen+"("+extraInfos["timeString"]+")"+white;
+				case "SCORE":
+					return oliveGreen+extraInfos["score"]+white;
+				case "NUM_BHOPS":
+					return oliveGreen+extraInfos["numBhops"]+white;
+				case "TOP_SPEED":
+					return oliveGreen+extraInfos["topSpeed"].tointeger()+white;
+				case "AVG_SPEED":
+					return oliveGreen+extraInfos["avgSpeed"].tointeger()+white;
+				case "SPEED_PERFECTJUMP":
+					return extraInfos["speedPerfectJump"].tointeger();
+				case "DURATION":
+					return orange+extraInfos["duration"]+white;
+				case "SCORE_DIFFERENCE":
+					return oliveGreen+"+"+extraInfos["scoreDifference"]+white;
+				case "DISTANCE":
+					return orange+extraInfos["distance"]+white;
+	
+				case "OLD_PREFIX":
+					return "\""+extraInfos["oldPrefix"]+"\"";
+				
+				
+				default:
+					return null;
+			}
+		}
+		catch (e)
+		{
+			throw "ERROR: bhop string coder encountered an error! error="+e;
 		}
 	}
 
@@ -1463,25 +1449,41 @@ printl("<bhop> loaded MeowBhopDetect script r"+::BhopClasses.BhopConfig.build_nu
 				local avgspeed = bhopChain.avgVel.tointeger();
 				// chat message length limut is 255 char
 				// idk whether to add bhop duration on this
-				local msg = "\x04"+pName+"\x01 got \x05"+count+"\x01 bunnyhop"+((count > 1)?"s":"")+ " in a row (top speed: \x05"+topspeed+"\x01, avg speed: \x05"+avgspeed+"\x01, score: \x05"+bhopChain.score+"\x01)";
+				// local msg = "\x04"+pName+"\x01 got \x05"+count+"\x01 bunnyhop"+((count > 1)?"s":"")+ " in a row (top speed: \x05"+topspeed+"\x01, avg speed: \x05"+avgspeed+"\x01, score: \x05"+bhopChain.score+"\x01)";
+				local infos = {name = pName, numBhops = count, topSpeed = topspeed, avgSpeed = avgspeed, score = bhopChain.score};
 				if (::BhopVars.BunnyDetectDuration > 0 && bhopChain.bhopTime > ::BhopVars.BunnyDetectDuration)
-					msg += "\n\x04"+pName+"\x01 bhopped for \x04"+::BhopFunc.DurationToString(bhopChain.bhopTime, false, false, true, true)+"\x01 straight!";
+					// msg += "\n\x04"+pName+"\x01 bhopped for \x04"+::BhopFunc.DurationToString(bhopChain.bhopTime, false, false, true, true)+"\x01 straight!";
+					infos["duration"] <- ::BhopFunc.DurationToString(bhopChain.bhopTime, false, false, true, true);
+				local code;
+				if (count <= 1)
+					code = "BhopAnnounce|InARowSingular";
+				else
+					code = "BhopAnnounce|InARowMultiple";
 				if (::BhopVars.PlayerSettings[steamid].Banned)
 				{
-					::MeowUtils.ClientPrintSplit(player, msg);
+					// ::MeowUtils.ClientPrintSplit(player, msg);
+					::BhopVars.CommandManager.Send(player, code, infos);
+					if ("duration" in infos)
+						::BhopVars.CommandManager.Send(player, "BhopAnnounce|Time", infos);
 					return false;
 				}
-				::BhopFunc.SendToAllNonIgnoredPlayers(msg);
+				// ::BhopFunc.SendToAllNonIgnoredPlayers(msg);
+				::BhopVars.CommandManager.Send(null, code, infos);
+				if ("duration" in infos)
+					::BhopVars.CommandManager.Send(null, "BhopAnnounce|Time", infos);
 				if (best == 2)
 				{
-					::BhopFunc.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 got their first bunnyhop record!");
+					// ::BhopFunc.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 got their first bunnyhop record!");
+					::BhopVars.CommandManager.Send(null, "BhopAnnounce|FirstRecord", {name = pName});
 				}
 				else if (typeof best == "array")
 				{
 					if (best[0] == 3)
-						::BhopFunc.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 beat their bunnyhop record! \x05+"+(bhopChain.score - best[1].score)+"\x01 points!");
+						// ::BhopFunc.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 beat their bunnyhop record! \x05+"+(bhopChain.score - best[1].score)+"\x01 points!");
+						::BhopVars.CommandManager.Send(null, "BhopAnnounce|BeatPB", {name = pName, scoreDifference = bhopChain.score - best[1].score});
 					else if (best[0] == 5)
-						::BhopFunc.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 beat their session bunnyhop record! \x05+"+(bhopChain.score - best[1].score)+"\x01 points!");
+						// ::BhopFunc.SendToAllNonIgnoredPlayers("\x04"+pName+"\x01 beat their session bunnyhop record! \x05+"+(bhopChain.score - best[1].score)+"\x01 points!");
+						::BhopVars.CommandManager.Send(null, "BhopAnnounce|BeatSessionPB", {name = pName, scoreDifference = bhopChain.score - best[1].score});
 				}
 				// ClientPrint(null,5,"\x04"+pName+"\x01 got \x05"+count+"\x01 bunnyhop"+((count > 1)?"s":"")+ " in a row (top speed: \x05"+topspeed+"\x01)");
 			}
@@ -1744,7 +1746,8 @@ class ::BhopCmds.Stats extends ::Commands.Command
 			pSet = ::BhopFunc.GetPlayerSettingsFromSteamID(pSID);
 			if (pSet == null)
 			{
-				ClientPrint(ctx.player,5,"ERROR: cant find player!");
+				// ClientPrint(ctx.player,5,"ERROR: cant find player!");
+				this.commandMan.Send(ctx.player, "Errors|CantFindPlayer");
 				return true;
 			}
 		}
@@ -1756,21 +1759,38 @@ class ::BhopCmds.Stats extends ::Commands.Command
 		if (best == null)
 		{
 			local msg;
-			if (otherPlayer == null) msg = "you have no stats tracked!";
-			else msg = otherPlayer+" has no stats tracked!";
+			// if (otherPlayer == null) msg = "you have no stats tracked!";
+			if (otherPlayer == null) msg = this.commandMan.GetPlayerLocalizedString("Commands|stats|ErrorYouHaveNoStats", {}, ctx.playerSteamID, false);
+			// else msg = otherPlayer+" has no stats tracked!";
+			else msg = this.commandMan.GetPlayerLocalizedString("Commands|stats|ErrorOtherHasNoStats", {name = otherPlayer}, ctx.playerSteamID, false);
 			ClientPrint(ctx.player, 3, msg);
 			return true;
 		}
 		
-		local msg = "\x01stats for \"\x05"+pSet.Name+"\x01\" - high score: \x04"+best["score"]+"\x01, total distance bhopped: \x04"+pSet["TotalDistanceBhopped"]+"\x01, total bhops: \x04"+pSet["TotalBhops"]+"\x01, time spent bhopping: \x04"+::BhopFunc.DurationToString(pSet["TotalTimeSpentBhopped"])+"\x01, highest velocity: \x04"+pSet["HighestVelocity"]+"\x01";
-		if (::BhopVars.PlayerSettings[ctx.playerSteamID].Banned)
+		// local msg = "\x01stats for \"\x05"+pSet.Name+"\x01\" - high score: \x04"+best["score"]+"\x01, total distance bhopped: \x04"+pSet["TotalDistanceBhopped"]+"\x01, total bhops: \x04"+pSet["TotalBhops"]+"\x01, time spent bhopping: \x04"+::BhopFunc.DurationToString(pSet["TotalTimeSpentBhopped"])+"\x01, highest velocity: \x04"+pSet["HighestVelocity"]+"\x01";
+		// local msg = this.CommandMan.GetPlayerLocalizedString("Commands|stats|NormalMessage", {}, ctx.)
+		local infos = 
 		{
-			ClientPrint(ctx.player, 5, "\x01"+"for your attention: i regret to inform you of the following,");
-			ClientPrint(ctx.player, 5, "\x01"+"you are currently \x04"+"BANNED\x01, your stats are not being \x04RECORDED\x01");
-			ClientPrint(ctx.player, 5, msg);
+			name = pSet.Name, 
+			score = best["score"], 
+			distance = pSet["TotalDistanceBhopped"], 
+			numBhops = pSet["TotalBhops"], 
+			duration = ::BhopFunc.DurationToString(pSet["TotalTimeSpentBhopped"]), 
+			topSpeed = pSet["HighestVelocity"]
+		};
+		if (::BhopVars.PlayerSettings[ctx.playerSteamID].Banned || ::BhopFunc.IsPlayerIgnored(ctx.playerSteamID))
+		{
+			//ClientPrint(ctx.player, 5, "\x01"+"for your attention: i regret to inform you of the following,");
+			//ClientPrint(ctx.player, 5, "\x01"+"you are currently \x04"+"BANNED\x01, your stats are not being \x04RECORDED\x01");
+			if (::BhopVars.PlayerSettings[ctx.playerSteamID].Banned)
+				this.commandMan.Send(ctx.player, "Commands|stats|Banned");
+			// ClientPrint(ctx.player, 5, msg);
+			this.commandMan.Send(ctx.player, "Commands|stats|NormalMessage", infos);
 			return;
 		}
-		::BhopFunc.SendToAllNonIgnoredPlayers(msg);
+		// ::BhopFunc.SendToAllNonIgnoredPlayers(msg);   /// AAAAAAH  -- nvm i already solved this
+		printl("going to send the message now");
+		this.commandMan.Send(null, "Commands|stats|NormalMessage", infos);
 		return true;
 	}
 }
@@ -1808,7 +1828,8 @@ class ::BhopCmds.Settings extends ::Commands.Command
 		local varPath = split(settingPath, "|");
 		if (varPath.len() == 0)
 		{
-			ClientPrint(ctx.player, 5, "ERROR: invalid index");
+			// ClientPrint(ctx.player, 5, "ERROR: invalid index");
+			this.commandMan.Send(ctx.player, "Commands|settings|ErrorInvalidIndex");
 			return true;
 		}
 		/* if (!::BhopFunc.IsPlayerAdmin(ctx.playerSteamID))
@@ -1826,12 +1847,14 @@ class ::BhopCmds.Settings extends ::Commands.Command
 			keyName = strip(keyName);
 			if (keyName == "")
 			{
-				ClientPrint(ctx.player, 5, "ERROR: invalid index");
+				// ClientPrint(ctx.player, 5, "ERROR: invalid index");
+				this.commandMan.Send(ctx.player, "Commands|settings|ErrorInvalidIndex");
 				return;
 			}
 			if (!(keyName in curTable.ref()))
 			{
-				ClientPrint(ctx.player, 5, "ERROR: couldnt find index for keyname: \""+keyName+"\"");
+				// ClientPrint(ctx.player, 5, "ERROR: couldnt find index for keyname: \""+keyName+"\"");
+				this.commandMan.Send(ctx.player, "Commands|settings|ErrorInvalidKeyname", {keyName = keyName});
 				return;
 			}
 			try
@@ -1842,7 +1865,8 @@ class ::BhopCmds.Settings extends ::Commands.Command
 			}
 			catch (e)
 			{
-				ClientPrint(ctx.player,3,"ERROR: "+e);
+				// ClientPrint(ctx.player,3,"ERROR: "+e);
+				this.commandMan.Send(ctx.player, "Errors|Generic", {error = e});
 				return;
 			}
 		}
@@ -1850,7 +1874,8 @@ class ::BhopCmds.Settings extends ::Commands.Command
 		local foundVal = lastTable.ref()[lastKey];
 		if (settingVal == null)
 		{
-			ClientPrint(ctx.player, 5, "\x05\""+settingPath+"\"\x01 = \x04\""+::Json.Serialize.ToString(foundVal)+"\"\x01");
+			// ClientPrint(ctx.player, 5, "\x05\""+settingPath+"\"\x01 = \x04\""+::Json.Serialize.ToString(foundVal)+"\"\x01");
+			this.commandMan.Send(ctx.player, "Commands|settings|SuccessShowValue", {variablePath = settingPath, variableValue = ::Json.Serialize.ToString(foundVal)});
 			return;
 		}
 		local foundType = typeof foundVal;
@@ -1883,11 +1908,13 @@ class ::BhopCmds.Settings extends ::Commands.Command
 						convVal = false;
 						break;
 					}
-					ClientPrint(player,3,"ERROR: user input is not of bool type: \""+settingVal+"\"");
+					// ClientPrint(player,3,"ERROR: user input is not of bool type: \""+settingVal+"\"");
+					this.commandMan.Send(ctx.player, "Commands|settings|ErrorInputNotBool", {userInput = settingVal});
 					return;
 					break;
 				default:
-					ClientPrint(player,3,"ERROR: original value has invalid type: \""+foundType+"\"");
+					// ClientPrint(player,3,"ERROR: original value has invalid type: \""+foundType+"\"");
+					this.commandMan.Send(ctx.player, "Commands|settings|ErrorOriginalType", {squirrelType = foundType});
 					return;
 					break;
 			}
@@ -1904,13 +1931,15 @@ class ::BhopCmds.Settings extends ::Commands.Command
 		}
 		catch (e)
 		{
-			ClientPrint(player, 5, "ERROR: "+e);
+			// ClientPrint(player, 5, "ERROR: "+e);
+			this.commandMan.Send(ctx.player, "Errors|Generic", {error = e});
 			return;
 		}
 		if (varPath.len() > 2 && varPath[0] == "PlayerSettings" && varPath[1] in ::BhopVars.PlayerSettings)
 			::BhopVars.PlayerSettings[varPath[1]].ConfigAltered = true;
 		else ::BhopVars.ConfigAltered = true;
-		ClientPrint(ctx.player, 5, "set variable \x05\""+settingPath+"\"\x01 to \x04\""+convVal+"\"\x01");
+		// ClientPrint(ctx.player, 5, "set variable \x05\""+settingPath+"\"\x01 to \x04\""+convVal+"\"\x01");
+		this.commandMan.Send(ctx.player, "Commands|settings|SuccessSetValue", {variablePath = settingPath, variableValue = convVal});
 		return;
 	}
 }
@@ -1965,12 +1994,17 @@ class ::BhopCmds.Rules extends ::Commands.Command
 
 	function Callback(ctx)
 	{
-		ClientPrint(ctx.player, 5, "current bhop ruleset:");
-		ClientPrint(ctx.player, 5, "  \x05"+"tick leniency\x01	: \x04"+::BhopVars.BunnyTickLeniency+"\x01");
-		ClientPrint(ctx.player, 5, "  \x05"+"detection count\x01	: \x04"+::BhopVars.BunnyDetectCount+"\x01");
-		ClientPrint(ctx.player, 5, "  \x05"+"min starting vel\x01	: \x04"+::BhopVars.BunnyMinStartingVel+"\x01");
+		//ClientPrint(ctx.player, 5, "current bhop ruleset:");
+		//ClientPrint(ctx.player, 5, "  \x05"+"tick leniency\x01	: \x04"+::BhopVars.BunnyTickLeniency+"\x01");
+		//ClientPrint(ctx.player, 5, "  \x05"+"detection count\x01	: \x04"+::BhopVars.BunnyDetectCount+"\x01");
+		//ClientPrint(ctx.player, 5, "  \x05"+"min starting vel\x01	: \x04"+::BhopVars.BunnyMinStartingVel+"\x01");
+		this.commandMan.Send(ctx.player, "Commands|rules|Ruleset");
+		this.commandMan.Send(ctx.player, "Commands|rules|TickRuleset", {variableValue = ::BhopVars.BunnyTickLeniency});
+		this.commandMan.Send(ctx.player, "Commands|rules|CountRuleset", {variableValue = ::BhopVars.BunnyDetectCount});
+		this.commandMan.Send(ctx.player, "Commands|rules|VelRuleset", {variableValue = ::BhopVars.BunnyMinStartingVel});
 		if (::BhopVars.BunnyDetectDuration > 0)
-			ClientPrint(ctx.player, 5, "  \x05"+"bhop length count\x01	: \x04"+::BhopVars.BunnyDetectDuration+"\x01");
+			// ClientPrint(ctx.player, 5, "  \x05"+"bhop length count\x01	: \x04"+::BhopVars.BunnyDetectDuration+"\x01");
+			this.commandMan.Send(ctx.player, "Commands|rules|LengthRuleset", {variableValue = ::BhopVars.BunnyDetectDuration});
 		/* ClientPrint(ctx.player, 5, "scoring rules:");
 		ClientPrint(ctx.player, 5, "  \x05"+"bhop count mult\x01	: \x04"+::BhopVars["ScoringSettings"]["BhopCountMult"]+"\x01");
 		ClientPrint(ctx.player, 5, "  \x05"+"bhop speed mult\x01	: \x04"+::BhopVars["ScoringSettings"]["BhopAvgVelocityMult"]+"\x01"); */
@@ -1993,21 +2027,25 @@ class ::BhopCmds.Toggle extends ::Commands.Command
 			if (::BhopFunc.IsPlayerPerfectJumpIgnored(ctx.playerSteamID))
 			{
 				::BhopFunc.PerfectJumpIgnorePlayer(ctx.playerSteamID, false);
-				ClientPrint(ctx.player, 5, "\x01you will now be notified of your perfect jumps!");
+				// ClientPrint(ctx.player, 5, "\x01you will now be notified of your perfect jumps!");
+				this.commandMan.Send(ctx.player, "Commands|toggle|TogglePerfectJumpOn");
 				return;
 			}
 			::BhopFunc.PerfectJumpIgnorePlayer(ctx.playerSteamID, true);
-			ClientPrint(ctx.player, 5, "\x01you will no longer be notified of your perfect jumps!");
+			// ClientPrint(ctx.player, 5, "\x01you will no longer be notified of your perfect jumps!");
+			this.commandMan.Send(ctx.player, "Commands|toggle|TogglePerfectJumpOff");
 			return;
 		}
 		if (::BhopFunc.IsPlayerIgnored(ctx.playerSteamID))
 		{
 			::BhopFunc.IgnorePlayer(ctx.playerSteamID, false);
-			ClientPrint(ctx.player, 5, "\x01you are no longer ignored by MeowBhopDetect!");
+			// ClientPrint(ctx.player, 5, "\x01you are no longer ignored by MeowBhopDetect!");
+			this.commandMan.Send(ctx.player, "Commands|toggle|ToggleModOn");
 			return true;
 		}
 		::BhopFunc.IgnorePlayer(ctx.playerSteamID, true);
-		ClientPrint(ctx.player, 5, "\x01you will now be ignored by MeowBhopDetect!");
+		// ClientPrint(ctx.player, 5, "\x01you will now be ignored by MeowBhopDetect!");
+		this.commandMan.Send(ctx.player, "Commands|toggle|ToggleModOff");
 		return true;
 	}
 }
@@ -2019,9 +2057,10 @@ class ::BhopCmds.About extends ::Commands.Command
 
 	function Callback(ctx)
 	{
-		ClientPrint(ctx.player, 5, "\x01"+"MeowBhopDetect \x05r"+::BhopVars.build_num+"\x01");
-		ClientPrint(ctx.player, 5, "written by meowmeow, source code: \x05"+"https://github.com/meow6969/l4d2-things/tree/master/bunnyhop_detect\x01");
-		ClientPrint(ctx.player, 5, "a fork of simple bunny hop detect by mt2, link: \x05"+"https://steamcommunity.com/sharedfiles/filedetails/?id=2256379828\x01");
+		//ClientPrint(ctx.player, 5, "\x01"+"MeowBhopDetect \x05r"+::BhopVars.build_num+"\x01");
+		//ClientPrint(ctx.player, 5, "written by meowmeow, source code: \x05"+"https://github.com/meow6969/l4d2-things/tree/master/bunnyhop_detect\x01");
+		//ClientPrint(ctx.player, 5, "a fork of simple bunny hop detect by mt2, link: \x05"+"https://steamcommunity.com/sharedfiles/filedetails/?id=2256379828\x01");
+		this.commandMan.Send(ctx.player, "Commands|about|Callback", {version = ::BhopVars.build_num});
 	}
 }
 
@@ -2036,14 +2075,19 @@ class ::BhopCmds.Prefix extends ::Commands.Command
 	{
 		if (prefix.find(" ") != null)
 		{
-			ClientPrint(ctx.player, 5, "prefix cant have a space");
+			// ClientPrint(ctx.player, 5, "prefix cant have a space");
+			this.commandMan.Send(ctx.player, "Commands|prefix|ErrorPrefixSpace");
 			return;
 		}
 	
-		ClientPrint(null, 5, "bhop detector prefix changed from \""+::BhopVars.CommandsPrefix+"\"->\""+prefix+"\"");
+		// ClientPrint(null, 5, "bhop detector prefix changed from \""+::BhopVars.CommandsPrefix+"\"->\""+prefix+"\"");
+
 		::BhopVars.CommandsPrefix = prefix;
 		::BhopVars.ConfigAltered = true;
 		this.commandMan.prefix = prefix;
+		
+		this.commandMan.Send(null, "Commands|prefix|SuccessfullyChanged", {oldPrefix = ::BhopVars.CommandsPrefix, prefix = prefix}, false, ctx.player);
+		
 	}
 }
 
@@ -2060,18 +2104,21 @@ class ::BhopCmds.RemoveScore extends ::Commands.FollowupCommand
 		local pSet = ::BhopFunc.GetPlayerSettingsFromSteamID(pSID);
 		if (pSet == null)
 		{
-			ClientPrint(ctx.player,5,"ERROR: cant find player!");
+			// ClientPrint(ctx.player,5,"ERROR: cant find player!");
+			this.commandMan.Send(ctx.player, "Errors|CantFindPlayer");
 			return false;
 		}
 		
 		if (pSet["BestBhop"] == null)
 		{
-			ClientPrint(ctx.player, 5, "ERROR: player has no tracked bhop!");
+			// ClientPrint(ctx.player, 5, "ERROR: player has no tracked bhop!");
+			this.commandMan.Send(ctx.player, "Commands|removescore|ErrorPlayerHasNoBhop");
 			return false;
 		}
 		
-		ClientPrint(ctx.player, 5, "\x01"+"found bhop for player \x04"+pSet.Name+"\x01 steamid=\x03\""+pSID+"\"\x01, bhops=\x05"+pSet.BestBhop.numBhops+"\x01, score=\x05"+pSet.BestBhop.score+"\x01, date=\x05("+pSet.BestBhop.timeString+")\x01");
-		ClientPrint(ctx.player, 5, "\x01"+"are you sure you want to delete this score? Enter \x05\"YES\"\x01 to delete.");
+		// ClientPrint(ctx.player, 5, "\x01"+"found bhop for player \x04"+pSet.Name+"\x01 steamid=\x03\""+pSID+"\"\x01, bhops=\x05"+pSet.BestBhop.numBhops+"\x01, score=\x05"+pSet.BestBhop.score+"\x01, date=\x05("+pSet.BestBhop.timeString+")\x01");
+		// ClientPrint(ctx.player, 5, "\x01"+"are you sure you want to delete this score? Enter \x05\"YES\"\x01 to delete.");
+		this.commandMan.Send(ctx.player, "Commands|removescore|Confirmation", {name = pSet.Name, steamID = pSID, numBhops = pSet.BestBhop.numBhops, score = pSet.BestBhop.score, timeString = pSet.BestBhop.timeString});
 		return [pSID, pSet];
 	}
 
@@ -2081,7 +2128,8 @@ class ::BhopCmds.RemoveScore extends ::Commands.FollowupCommand
 		local pSet = followupData[1];
 		if (ctx.message != "YES")
 		{
-			ClientPrint(ctx.player, 5, "\x01you did not say \x05\"YES\"\x01, will not be doing anything.");
+			// ClientPrint(ctx.player, 5, "\x01you did not say \x05\"YES\"\x01, will not be doing anything.");
+			this.commandMan.Send(ctx.player, "Commands|removescore|FollowupFailed");
 			return false;
 		}
 		// now just delete the score from things
@@ -2104,7 +2152,8 @@ class ::BhopCmds.RemoveScore extends ::Commands.FollowupCommand
 	
 		::BhopFunc.WritePlayerSetting(pSID, pSet);
 	
-		ClientPrint(null, 5, "\x01"+"player \x04\""+pSet.Name+"\"\x01 has had their bhop scores removed");
+		// ClientPrint(null, 5, "\x01"+"player \x04\""+pSet.Name+"\"\x01 has had their bhop scores removed");
+		this.commandMan.Send(null, "Commands|removescore|FollowupSuccess", {name = pSet.Name}, false, ctx.player);
 		return false;
 	}
 }
@@ -2125,18 +2174,21 @@ class ::BhopCmds.Ban extends ::Commands.Command
 		local pSet = ::BhopFunc.GetPlayerSettingsFromSteamID(pSID);
 		if (pSet == null)
 		{
-			ClientPrint(ctx.player,5,"ERROR: cant find player!");
+			//ClientPrint(ctx.player,5,"ERROR: cant find player!");
+			this.commandMan.Send(ctx.player, "Errors|CantFindPlayer");
 			return false;
 		}
 		if (pSet.Banned)
 		{
-			ClientPrint(ctx.player, 5, "ERROR: player is already banned");
+			// ClientPrint(ctx.player, 5, "ERROR: player is already banned");
+			this.commandMan.Send(ctx.player, "Commands|ban|ErrorAlreadyBanned");
 			return;
 		}
 		pSet.Banned = true;
 		pSet.ConfigAltered = true;
 		::BhopFunc.WritePlayerSetting(pSID, pSet);
-		ClientPrint(null, 5, "\x01"+"player \x04\""+pSet.Name+"\"\x01, steamid="+pSID+" has been banned");
+		// ClientPrint(null, 5, "\x01"+"player \x04\""+pSet.Name+"\"\x01, steamid="+pSID+" has been banned");
+		this.commandMan.Send(null, "Commands|ban|SuccessfullyBanned", {name = pSet.Name, steamID = pSID}, false, ctx.player);
 	}
 }
 
@@ -2154,18 +2206,50 @@ class ::BhopCmds.Unban extends ::Commands.Command
 		local pSet = ::BhopFunc.GetPlayerSettingsFromSteamID(pSID);
 		if (pSet == null)
 		{
-			ClientPrint(ctx.player,5,"ERROR: cant find player!");
+			// ClientPrint(ctx.player,5,"ERROR: cant find player!");
+			this.commandMan.Send(ctx.player, "Errors|CantFindPlayer");
 			return false;
 		}
 		if (!pSet.Banned)
 		{
-			ClientPrint(ctx.player, 5, "ERROR: player is not banned");
+			// ClientPrint(ctx.player, 5, "ERROR: player is not banned");
+			this.commandMan.Send(ctx.player, "Commands|unban|ErrorPlayerNotBanned");
 			return;
 		}
 		pSet.Banned = false;
 		pSet.ConfigAltered = true;
 		::BhopFunc.WritePlayerSetting(pSID, pSet);
-		ClientPrint(null, 5, "\x01"+"player \x04\""+pSet.Name+"\"\x01, steamid="+pSID+" has been unbanned");
+		// ClientPrint(null, 5, "\x01"+"player \x04\""+pSet.Name+"\"\x01, steamid="+pSID+" has been unbanned");
+		this.commandMan.Send(null, "Commands|unban|SuccessfullyUnbanned", {name = pSet.Name, steamID = pSID}, false, ctx.player);
+	}
+}
+
+
+class ::BhopCmds.Language extends ::Commands.Command
+{
+	aliases = ["language", "lang", "l"];
+	brief = "change the language for you";
+
+	function Callback(ctx, language=null)
+	{
+		if (language == null)
+		{
+			this.commandMan.Send(ctx.player, "Commands|language|Callback", {language = ::BhopFunc.GetPlayerLanguage(ctx.playerSteamID), languages = ::MeowUtils.ArrayJoin(::MeowUtils.TableKeys(::BhopLang))});
+			// ClientPrint(ctx.player, 3, "your language:		"+::BhopFunc.GetPlayerLanguage(ctx.playerSteamID));
+			// ClientPrint(ctx.player, 3, "available languages:	"+::MeowUtils.ArrayJoin(::MeowUtils.TableKeys(::BhopLang)));
+			return;
+		}
+		//printl("language="+language);
+		language = language.toupper();
+		//printl("langs="+::Json.Serialize.ToString(::MeowUtils.TableKeys(::BhopLang)));
+		if (!(language in ::BhopLang))
+		{
+			this.commandMan.Send(ctx.player, "Commands|language|ErrorInvalidLanguage", {language = language});
+			return;
+		}
+		::BhopVars.PlayerSettings[ctx.playerSteamID].Language = language;
+		::BhopVars.PlayerSettings[ctx.playerSteamID].ConfigAltered = true;
+		this.commandMan.Send(ctx.player, "Commands|language|LanguageChanged");
 	}
 }
 
@@ -2231,7 +2315,9 @@ class ::BhopCmds.Unban extends ::Commands.Command
 				if (bhopChain.groundTime <= 1)
 				{
 					// ClientPrint(player, 4, "\x04perfect jump! speed=\x05"+speed.tointeger()+"\x01");
-					ClientPrint(player, 4, "perfect jump! speed="+speed.tointeger());
+					// ClientPrint(player, 4, "perfect jump! speed="+speed.tointeger());
+					local t = ::BhopVars.CommandManager.GetPlayerLocalizedString("Misc|PerfectJump", {speedPerfectJump = speed.tointeger()}, steamid, false);
+					ClientPrint(player, 4, t);
 				}
 			}
 			

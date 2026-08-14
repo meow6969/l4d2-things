@@ -353,6 +353,38 @@ function full_compile_map() {
 }
 
 
+# need the path to the bsp
+# will copy the map over, then edit the servers server.cfg to execute script buildstringtable.cfg
+# will also copy over the mission.txt  -- actualy dont think its needed
+# buildstringtable.cfg will be dynamically created every time, 
+function build_map_stringtable() {
+	if ! [[ -f "${1}" ]]; then
+		return 1
+	fi
+	bsp="${1}"
+	filename="$(basename -- "${bsp}")"
+	mapname="${filename%.*}"
+	output_bsp="${l4d2dspath}/left4dead2/maps/${filename}"
+	stringtableexecpath="${l4d2dspath}/left4dead2/cfg/buildstringtable.cfg"
+	
+	cp -fv "${bsp}" "${output_bsp}"
+
+	# echo "stringtabledictionary\nexit" > "${stringtableexecpath}"
+	
+	cp -fv "${l4d2dspath}/left4dead2/cfg/server.cfg" "${l4d2dspath}/left4dead2/cfg/server___old___.cfg"
+	# echo "\nexec buildstringtable.cfg" >> "${l4d2dspath}/left4dead2/cfg/server.cfg"
+	echo "\nstringtabledictionary\nexit" >> "${l4d2dspath}/left4dead2/cfg/server.cfg"
+
+	"${l4d2dspath}/srcds_run" +map "${mapname}" -norestart
+
+	echo "cleaning up"
+	cp -fv "${l4d2dspath}/left4dead2/cfg/server___old___.cfg" "${l4d2dspath}/left4dead2/cfg/server.cfg"
+	# rm -fv "${stringtableexecpath}"
+
+	cp -fv "${output_bsp}" "${bsp}"
+}
+
+
 # i really need to like finish this wah
 function build_mod () {
 	copy_to_addons=false

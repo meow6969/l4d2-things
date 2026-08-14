@@ -7,11 +7,14 @@ if ("MeowUtils" in getroottable())
 }
 
 
+IncludeScript("meowlib/lang/en.nut");
+IncludeScript("meowlib/lang/es.nut");
+
 
 // this is for functions that are more general and not specifically related to bhop detector
 ::MeowUtils <-
 {
-	build_num=13
+	build_num=58
 
 	// this function stole from vslib
 	function IsEntityOnGroundVSLib(entity) 
@@ -35,7 +38,7 @@ if ("MeowUtils" in getroottable())
 	{
 		local msgs = split(s, "\n");
 		foreach (msg in msgs)
-			ClientPrint(p, 5, msg);
+			ClientPrint(p, 5, "\x01"+msg);
 	}
 
 	function IsAlive(player)
@@ -178,13 +181,16 @@ if ("MeowUtils" in getroottable())
 		local newStr = "";
 		local i = 0;
 		local res;
+		//printl("s=\""+s+"\", o=\""+o+"\", r=\""+r+"\"");
 		while ((res = ex.search(s, i)) != null)
 		{
-			// print("begin="+res.begin+",end="+res.end+",slice=\""+s.slice(res.begin, res.end)+"\"\n");
+			//print("begin="+res.begin+",end="+res.end+",slice=\""+s.slice(res.begin, res.end)+"\"\n");
 			newStr = newStr+s.slice(i, res.begin)+r;
 			i = res.end;
+			if (i == s.len())
+				break;
 		}
-		
+		//printl("StringReplace: going to return the string now");
 		return newStr+s.slice(i);
 		// print("newStr=\""+newStr+"\"\n");
 	}
@@ -238,6 +244,26 @@ if ("MeowUtils" in getroottable())
 		return num.tointeger()+"."+((num - num.tointeger()) * pow(10, decimal_places)).tointeger();
 	}
 
+	// saves a table using json parser to string  which means arrays and stuff work normally
+	function JsonSaveTable(key, table)
+	{
+		local newTable = {json = ::Json.Serialize.ToString(table)};
+		
+		SaveTable(key, newTable);
+	}
+
+	function JsonRestoreTable(key)  // -> table
+	{
+		local lTable = {};
+
+		RestoreTable(key, lTable);
+
+		if (!("json" in lTable))
+			return null;
+		
+		return ::Json.Deserialize.String(lTable["json"]);
+	}
+
 	// split by |
 	function IndexTableByString(settingPath, tbl)
 	{
@@ -247,27 +273,29 @@ if ("MeowUtils" in getroottable())
 			throw "invalid blah blah";
 		}
 
-		local curTable = tbl.weakref();
+		local curTable = tbl;
 		local lastTable = curTable;
 		local lastKey = strip(varPath[0]);
 		
 		foreach (keyName in varPath)
 		{
+			// printl("curTable="+::Json.Serialize.ToString(curTable));
+
 			keyName = strip(keyName);
 			if (keyName == "")
 			{
 				throw "invalid index";
 			}
-			if (!(keyName in curTable.ref()))
+			if (!(keyName in curTable))
 			{
 				throw "couldnt find index for keyname: \""+keyName+"\"";
 			}
 			lastTable = curTable;
-			curTable = curTable.ref()[keyName].weakref();
+			curTable = curTable[keyName];
 			lastKey = keyName;
 		}
 
-		return lastTable.ref()[lastKey];
+		return lastTable[lastKey];
 	}
 
 	function GetAllPlayers(validPlayerFunc=null)
@@ -283,8 +311,13 @@ if ("MeowUtils" in getroottable())
 			local userid = player.GetPlayerUserId();
 			if (userid == null) continue;
 			if (validPlayerFunc != null)
-				if (!validPlayerFunc(player))
+			{
+				if (!validPlayerFunc(userid))
+				{
+					//printl("user player func says userid isnt valid, skipping player");
 					continue;
+				}
+			}
 			r.append(player);
 		}
 		return r;
@@ -309,12 +342,12 @@ if ("MeowUtils" in getroottable())
 				return oliveGreen;
 				
 			case "NAME":
-				return orange+"\""+extraInfos["name"]+"\""+white;
+				return orange+extraInfos["name"]+white;
 			case "STEAMID":
 				return brightGreen+"\""+extraInfos["steamID"]+"\""+white;
 
 			case "ERROR":
-				return extraInfos["error"];
+				return orange+extraInfos["error"]+white;
 			case "KEYNAME":
 				return "\""+extraInfos["keyName"]+"\"";
 			case "USER_INPUT":
@@ -335,17 +368,45 @@ if ("MeowUtils" in getroottable())
 			case "CMD_NAME":
 				return "\""+extraInfos["cmdName"]+"\"";
 
-			case default:
+			case "LANGUAGE":
+				return brightGreen+"\""+extraInfos["language"]+"\""+white;
+			case "LANGUAGES":
+				return brightGreen+"\""+extraInfos["languages"]+"\""+white;
+
+			default:
 				return null;
 		}
 	}
 
-	//                          string, table, table,      function
-	function GetLocalizedString(path,   lang,  extraInfos, stringCoder=null)
+	function LocalizationStringExists(path, lang)  //  -> null|string
 	{
-		local foundVal = ::MeowUtils.IndexTableByString(path, lang);
+		try
+		{
+			local foundVal = ::MeowUtils.IndexTableByString(path, lang);
+			return foundVal;
+		}
+		catch (e)
+		{
+			::MeowUtils.Log("got an error, e="+e);
+			return null;
+		}
+	}
 
-		local ex = regexp("%%([A-Z_]+?)%%");
+	//                          string, table, table,      function
+	function GetLocalizedString(path,   lang,  extraInfos, stringCoder=null)  // -> str|null
+	{
+		local foundVal;
+		try
+		{
+			foundVal = ::MeowUtils.IndexTableByString(path, lang);
+		}
+		catch (e)
+		{
+			return null;
+			// throw "couldnt find val for string path \""+path+"\"";
+		}
+
+		local ex = regexp("%%([A-Z_]+)%%");
 		
 		// local test =  "%%NAME%%";
 		//local test = "%%NAME%% got %%NUM_BHOPS%% bunnyhop in a row (score: %%SCORE%%, top speed: %%TOP_SPEED%%, avg speed: %%AVG_SPEED%%)";
@@ -353,17 +414,26 @@ if ("MeowUtils" in getroottable())
 		local res;
 		local start = 0;
 		local formattedString = foundVal;
+		//printl("381: formattedString="+formattedString);
+		// printl();
 		while (res = ex.capture(foundVal, start))
 		{
+			//printl("res found");
 			start = res[0].end;
-			local full_match = test.slice(res[0].begin, res[0].end);
-			local code = test.slice(res[1].begin, res[1].end);
+			local full_match = foundVal.slice(res[0].begin, res[0].end);
+			local code = foundVal.slice(res[1].begin, res[1].end);
 			local formattedCode = ::MeowUtils.LangCoder(code, extraInfos);
 			if (formattedCode == null && stringCoder != null)
 				formattedCode = stringCoder(code, extraInfos);
+			//printl("formattedString="+formattedString+", full_match="+full_match+", formattedCode="+formattedCode);
 			if (formattedCode == null)
-				throw "code \""+code+"\" doesnt correspond to anything !!"
+				throw "code \""+code+"\" doesnt correspond to anything !!";
+				// return null;
+				//return formattedString;  // i should do this right ???
+										 // no i shouldnt but we get a different error this time i guess
+			//printl("doing string replace");
 			formattedString = ::MeowUtils.StringReplace(formattedString, full_match, formattedCode);
+			//printl("done string replace");
 
 			//printl("match=("+res[0].begin+"-"+res[0].end+")="+test.slice(res[0].begin, res[0].end));
 			//printl("match=("+res[1].begin+"-"+res[1].end+")="+test.slice(res[1].begin, res[1].end));
@@ -375,10 +445,10 @@ if ("MeowUtils" in getroottable())
 	function Log(s)
 	{
 		local stackinfo = getstackinfos(2);
-		local prefix = "<"+stackinfo.src.slice(17)+":"+stackinfo.func+"():"+stackinfo.line+">";
+		local prefix = "<"+stackinfo.src.slice(17)+":"+stackinfo.func+"():"+stackinfo.line+"> ";
 		foreach (l in split(s, "\n"))
 		{
-			printl(prefix+" "+l);
+			printl(prefix+l);
 		}
 	}
 

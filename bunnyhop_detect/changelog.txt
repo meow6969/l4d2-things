@@ -2,3 +2,8 @@ fix tick leniency bug
 add time tracking
 local server hosts are now automatically admin
 
+
+
+check for local host thing
+move the functions to classes
+

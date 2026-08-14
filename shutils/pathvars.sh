@@ -67,6 +67,7 @@ function init_pathvars() {
 
 #  ensure_file "${shutilspath}/l4d2path.txt"
   l4d2path="$(python "${shutilspath}/pythonscripts/get_l4d2_dir.py")"
+  l4d2dspath="$(python "${shutilspath}/pythonscripts/get_l4d2_ds_dir.py")"
   ensure_dir "${l4d2path}"
   
 
@@ -106,6 +107,7 @@ function echo_pathvars () {
   output "${BRACKET_COLOR}echo_pathvars"
   output "${BRACKET_COLOR}{"
   output "	$(format_key "l4d2path")	$(format_path "${l4d2path}")"
+  output "	$(format_key "l4d2dspath")	$(format_path "${l4d2dspath}")"
   output "	$(format_key "pathvarspath")	$(format_path "${pathvarspath}")"
   output "	$(format_key "shutilspath")	$(format_path "${shutilspath}")"
   output "	$(format_key "pyscriptspath")	$(format_path "${pyscriptspath}")"

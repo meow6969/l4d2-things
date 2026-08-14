@@ -5,6 +5,7 @@ from pathlib import Path
 from enum import Enum
 from unittest import case
 import shutil
+import copy
 
 from valvepcf.unloader import unload_pcf, save_pcf
 from valvepcf import Pcf, PcfSystemNode, PcfOperatorNode, PcfAttribute, PcfNode
@@ -153,6 +154,7 @@ class OperatorPatcher:
     attrs: list[PcfAttribute]
     _attrs: list[PcfAttribute] | None = None
     operation: OperatorPatcherOperation
+    # this corresponds to the properties things of a particle system
     operation_type: OperatorPatcherType
     _node: PcfOperatorNode | None = None
     _node_attr_dict: dict[str, PcfAttribute] | None = None
@@ -329,12 +331,14 @@ class OperatorPatcher:
 
 class PcfEditor:
     patches: list[OperatorPatcher]
+    system_remover: PcfSystemSelector = PcfSystemSelector()
     system_selector: PcfSystemSelector = PcfSystemSelector()
     file_selector: PcfFileSelector = PcfFileSelector()
 
     def __init__(self, patches: list[OperatorPatcher] | OperatorPatcher,
                  system_selector: PcfSystemSelector | None = None,
-                 file_selector: PcfFileSelector | None = None) -> None:
+                 file_selector: PcfFileSelector | None = None,
+                 system_remover: PcfSystemSelector | None = None) -> None:
         if not isinstance(patches, list):
             self.patches = [patches]
         else:
@@ -343,11 +347,26 @@ class PcfEditor:
             self.system_selector = system_selector
         if file_selector is not None:
             self.file_selector = file_selector
+        if system_remover is not None:
+            self.system_remover = system_remover
 
+    # this patches a single pcf
     # noinspection PyProtectedMember
     def patch_pcf(self, pcf: Pcf) -> tuple[Pcf, bool]:
         edits_made = 0
         pcf_filename = Path(pcf.source_path).name
+
+        if self.system_remover is not None:
+            new_systems = copy.copy(pcf.systems)
+            for sys_i, particle_system in reversed(list(enumerate(pcf.systems))):
+                assert isinstance(particle_system, PcfSystemNode)
+                if not self.system_remover.does_system_match(particle_system):
+                    continue
+                debug_log(f"deleting system {particle_system._name} from {pcf_filename}, matches system_remover, sys_i={sys_i}", DebugLogLevel.HUMAN)
+                del new_systems[sys_i]
+            pcf.systems = new_systems
+        
+
         for sys_i, particle_system in enumerate(pcf.systems):
             system_edit = 0
             assert isinstance(particle_system, PcfSystemNode)
@@ -367,6 +386,7 @@ class PcfEditor:
             debug_log(f"", DebugLogLevel.VERBOSE)
         return pcf, edits_made > 0
 
+    # this patches a directory of pcf files
     def patch_particles(self, output_dir: Path, extract_folder: Path = Path("./extractparticles"), override_particles_folder: Path | None = None) \
             -> None:
         # extract_folder = Path("./extractparticles")

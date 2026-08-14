@@ -7857,3 +7857,1734 @@ Level flags = 2
 Total triangle count: 34658
 Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
 1 minute, 5 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+Can't find surfaceprop cloth for material METAL/CUBICLE01, using default
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 1250 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1632627 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 9827 texinfos to 5157
+Reduced 746 texdatas to 562 (34192 bytes to 25915)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-18 16:18:26
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 6000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt
+2014 portalclusters
+5050 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 18178 visible clusters (1.95%)
+Total clusters visible: 934012
+Average clusters visible: 463
+Building PAS...
+Average clusters audible: 1454
+visdatasize:772048  compressed from 1031168
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Wrote ZIP buffer, estimated size 6006933, actual size 5915465
+1 minute, 16 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+12013 faces
+8250594 square feet [1188085504.00 square inches]
+131 Displacements
+300733 Square Feet [43305636.00 Square Inches]
+12013 patches before subdivision
+86223 patches after subdivision
+115 direct lights
+0...1...2...3... warning - face vectors parallel to face normal. bad lighting will be produced
+4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 6961267, max 1047
+transfer lists:  53.1 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18547, 16636, 13064)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(4302, 4055, 2855)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1273, 1178, 722)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(452, 406, 219)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(171, 148, 70)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(69, 57, 24)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(29, 23, 8)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(12, 10, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(2, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0222 sec>
+0...1... warning - face vectors parallel to face normal. bad lighting will be produced
+2...3... warning - face vectors parallel to face normal. bad lighting will be produced
+ warning - face vectors parallel to face normal. bad lighting will be produced
+SampleRadial: Punting, Waiting for fix
+4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 186/1024         8928/49152    (18.2%) 
+brushes               4529/8192        54348/98304    (55.3%) 
+brushsides           32919/65536      263352/524288   (50.2%) 
+planes               19914/65536      398280/1310720  (30.4%) 
+vertexes             22744/65536      272928/786432   (34.7%) 
+nodes                 6693/65536      214176/2097152  (10.2%) 
+texinfos              5157/12288      371304/884736   (42.0%) 
+texdata                562/2048        17984/65536    (27.4%) 
+dispinfos              131/0           23056/0        ( 0.0%) 
+disp_verts            5059/0          101180/0        ( 0.0%) 
+disp_tris             7360/0           14720/0        ( 0.0%) 
+disp_lmsamples      220814/0          220814/0        ( 0.0%) 
+faces                12013/65536      672728/3670016  (18.3%) 
+hdr faces            12013/65536      672728/3670016  (18.3%) 
+origfaces             8692/65536      486752/3670016  (13.3%) 
+leaves                6880/65536      220160/2097152  (10.5%) 
+leaffaces            15252/65536       30504/131072   (23.3%) 
+leafbrushes          12536/65536       25072/131072   (19.1%) 
+areas                   19/256           152/2048     ( 7.4%) 
+surfedges            93333/512000     373332/2048000  (18.2%) 
+edges                60214/256000     240856/1024000  (23.5%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights        115/8192        11500/819200   ( 1.4%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1388/32768       13880/327680   ( 4.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         27099/65536       54198/131072   (41.3%) 
+cubemapsamples          65/1024         1040/16384    ( 6.3%) 
+overlays               377/512        132704/180224   (73.6%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4810500/0        ( 0.0%) 
+visdata               [variable]      772048/16777216 ( 4.6%) 
+entdata               [variable]      775594/393216   (197.2%) VERY FULL!
+LDR ambient table     6880/65536       27520/262144   (10.5%) 
+HDR ambient table     6880/65536       27520/262144   (10.5%) 
+LDR leaf ambient      6880/65536      192640/1835008  (10.5%) 
+HDR leaf ambient     27191/65536      761348/1835008  (41.5%) 
+occluders                5/0             200/0        ( 0.0%) 
+occluder polygons       11/0             132/0        ( 0.0%) 
+occluder vert ind       48/0             192/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/104656   ( 0.0%) 
+pakfile               [variable]     7561263/0        ( 0.0%) 
+physics               [variable]     1632627/4194304  (38.9%) 
+physics terrain       [variable]       15435/1048576  ( 1.5%) 
+
+Level flags = 2
+
+Total triangle count: 34681
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+4 minutes, 30 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+Can't find surfaceprop cloth for material METAL/CUBICLE01, using default
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 1250 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt...Building visibility clusters...
+done (1)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1632865 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 9806 texinfos to 5149
+Reduced 746 texdatas to 562 (34192 bytes to 25915)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-20 08:44:53
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 6000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt
+2014 portalclusters
+5050 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 18172 visible clusters (1.95%)
+Total clusters visible: 934008
+Average clusters visible: 463
+Building PAS...
+Average clusters audible: 1454
+visdatasize:772057  compressed from 1031168
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Wrote ZIP buffer, estimated size 6006933, actual size 5915465
+1 minute, 35 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+12007 faces
+8250281 square feet [1188040448.00 square inches]
+131 Displacements
+300733 Square Feet [43305636.00 Square Inches]
+12007 patches before subdivision
+86169 patches after subdivision
+115 direct lights
+0...1...2...3... warning - face vectors parallel to face normal. bad lighting will be produced
+4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 6957766, max 1047
+transfer lists:  53.1 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18597, 16726, 13131)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(4306, 4061, 2859)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1273, 1179, 722)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(452, 406, 219)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(171, 148, 70)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(69, 57, 24)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(29, 23, 8)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(12, 10, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(2, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0225 sec>
+0...1... warning - face vectors parallel to face normal. bad lighting will be produced
+2...3... warning - face vectors parallel to face normal. bad lighting will be produced
+ warning - face vectors parallel to face normal. bad lighting will be produced
+SampleRadial: Punting, Waiting for fix
+4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 191/1024         9168/49152    (18.7%) 
+brushes               4530/8192        54360/98304    (55.3%) 
+brushsides           32905/65536      263240/524288   (50.2%) 
+planes               19844/65536      396880/1310720  (30.3%) 
+vertexes             22764/65536      273168/786432   (34.7%) 
+nodes                 6723/65536      215136/2097152  (10.3%) 
+texinfos              5149/12288      370728/884736   (41.9%) 
+texdata                562/2048        17984/65536    (27.4%) 
+dispinfos              131/0           23056/0        ( 0.0%) 
+disp_verts            5059/0          101180/0        ( 0.0%) 
+disp_tris             7360/0           14720/0        ( 0.0%) 
+disp_lmsamples      220814/0          220814/0        ( 0.0%) 
+faces                12007/65536      672392/3670016  (18.3%) 
+hdr faces            12007/65536      672392/3670016  (18.3%) 
+origfaces             8686/65536      486416/3670016  (13.3%) 
+leaves                6915/65536      221280/2097152  (10.6%) 
+leaffaces            15239/65536       30478/131072   (23.3%) 
+leafbrushes          12529/65536       25058/131072   (19.1%) 
+areas                   19/256           152/2048     ( 7.4%) 
+surfedges            93277/512000     373108/2048000  (18.2%) 
+edges                60178/256000     240712/1024000  (23.5%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights        115/8192        11500/819200   ( 1.4%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1388/32768       13880/327680   ( 4.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         27099/65536       54198/131072   (41.3%) 
+cubemapsamples          65/1024         1040/16384    ( 6.3%) 
+overlays               377/512        132704/180224   (73.6%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4807384/0        ( 0.0%) 
+visdata               [variable]      772057/16777216 ( 4.6%) 
+entdata               [variable]      781923/393216   (198.9%) VERY FULL!
+LDR ambient table     6915/65536       27660/262144   (10.6%) 
+HDR ambient table     6915/65536       27660/262144   (10.6%) 
+LDR leaf ambient      6915/65536      193620/1835008  (10.6%) 
+HDR leaf ambient     27432/65536      768096/1835008  (41.9%) 
+occluders                5/0             200/0        ( 0.0%) 
+occluder polygons       11/0             132/0        ( 0.0%) 
+occluder vert ind       48/0             192/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/104500   ( 0.0%) 
+pakfile               [variable]     7561263/0        ( 0.0%) 
+physics               [variable]     1632865/4194304  (38.9%) 
+physics terrain       [variable]       15435/1048576  ( 1.5%) 
+
+Level flags = 2
+
+Total triangle count: 34665
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+5 minutes, 23 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+Can't find surfaceprop cloth for material METAL/CUBICLE01, using default
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 1260 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1638147 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 9945 texinfos to 5201
+Reduced 746 texdatas to 563 (34192 bytes to 25971)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-25 11:10:03
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 6000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt
+2021 portalclusters
+5062 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 18208 visible clusters (1.95%)
+Total clusters visible: 935471
+Average clusters visible: 462
+Building PAS...
+Average clusters audible: 1456
+visdatasize:776232  compressed from 1034752
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Wrote ZIP buffer, estimated size 6006933, actual size 5915465
+1 minute, 44 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+12094 faces
+8250075 square feet [1188010880.00 square inches]
+131 Displacements
+300733 Square Feet [43305636.00 Square Inches]
+12094 patches before subdivision
+86418 patches after subdivision
+115 direct lights
+0...1...2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+.4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 6985534, max 1047
+transfer lists:  53.3 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18611, 16743, 13146)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(4310, 4067, 2863)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1275, 1180, 723)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(452, 407, 219)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(171, 148, 70)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(69, 57, 24)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(29, 23, 8)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(12, 10, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(2, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0233 sec>
+0...1... warning - face vectors parallel to face normal. bad lighting will be produced
+2...3... warning - face vectors parallel to face normal. bad lighting will be produced
+ warning - face vectors parallel to face normal. bad lighting will be produced
+SampleRadial: Punting, Waiting for fix
+4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 193/1024         9264/49152    (18.8%) 
+brushes               4542/8192        54504/98304    (55.4%) 
+brushsides           32991/65536      263928/524288   (50.3%) 
+planes               20202/65536      404040/1310720  (30.8%) 
+vertexes             22884/65536      274608/786432   (34.9%) 
+nodes                 6770/65536      216640/2097152  (10.3%) 
+texinfos              5201/12288      374472/884736   (42.3%) 
+texdata                563/2048        18016/65536    (27.5%) 
+dispinfos              131/0           23056/0        ( 0.0%) 
+disp_verts            5059/0          101180/0        ( 0.0%) 
+disp_tris             7360/0           14720/0        ( 0.0%) 
+disp_lmsamples      220814/0          220814/0        ( 0.0%) 
+faces                12094/65536      677264/3670016  (18.5%) 
+hdr faces            12094/65536      677264/3670016  (18.5%) 
+origfaces             8743/65536      489608/3670016  (13.3%) 
+leaves                6964/65536      222848/2097152  (10.6%) 
+leaffaces            15348/65536       30696/131072   (23.4%) 
+leafbrushes          12572/65536       25144/131072   (19.2%) 
+areas                   19/256           152/2048     ( 7.4%) 
+surfedges            93841/512000     375364/2048000  (18.3%) 
+edges                60525/256000     242100/1024000  (23.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights        115/8192        11500/819200   ( 1.4%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1390/32768       13900/327680   ( 4.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         27093/65536       54186/131072   (41.3%) 
+cubemapsamples          65/1024         1040/16384    ( 6.3%) 
+overlays               377/512        132704/180224   (73.6%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4819384/0        ( 0.0%) 
+visdata               [variable]      776232/16777216 ( 4.6%) 
+entdata               [variable]      781036/393216   (198.6%) VERY FULL!
+LDR ambient table     6964/65536       27856/262144   (10.6%) 
+HDR ambient table     6964/65536       27856/262144   (10.6%) 
+LDR leaf ambient      6964/65536      194992/1835008  (10.6%) 
+HDR leaf ambient     27572/65536      772016/1835008  (42.1%) 
+occluders                5/0             200/0        ( 0.0%) 
+occluder polygons       11/0             132/0        ( 0.0%) 
+occluder vert ind       48/0             192/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/104354   ( 0.0%) 
+pakfile               [variable]     7561261/0        ( 0.0%) 
+physics               [variable]     1638147/4194304  (39.1%) 
+physics terrain       [variable]       15435/1048576  ( 1.5%) 
+
+Level flags = 2
+
+Total triangle count: 34825
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+5 minutes, 42 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+Can't find surfaceprop cloth for material METAL/CUBICLE01, using default
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 1260 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1638147 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 9945 texinfos to 5201
+Reduced 746 texdatas to 563 (34192 bytes to 25971)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-25 16:45:20
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 6000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt
+2021 portalclusters
+5062 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 18189 visible clusters (1.94%)
+Total clusters visible: 935432
+Average clusters visible: 462
+Building PAS...
+Average clusters audible: 1456
+visdatasize:776228  compressed from 1034752
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Wrote ZIP buffer, estimated size 6006933, actual size 5915465
+1 minute, 43 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+12094 faces
+8250075 square feet [1188010880.00 square inches]
+131 Displacements
+300733 Square Feet [43305636.00 Square Inches]
+12094 patches before subdivision
+86418 patches after subdivision
+115 direct lights
+0...1...2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+.4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 6985534, max 1047
+transfer lists:  53.3 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18611, 16742, 13146)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(4310, 4067, 2863)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1275, 1180, 723)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(452, 407, 219)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(171, 148, 70)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(69, 57, 24)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(29, 23, 8)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(12, 10, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(2, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0204 sec>
+0...1... warning - face vectors parallel to face normal. bad lighting will be produced
+2...3... warning - face vectors parallel to face normal. bad lighting will be produced
+ warning - face vectors parallel to face normal. bad lighting will be produced
+SampleRadial: Punting, Waiting for fix
+4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 193/1024         9264/49152    (18.8%) 
+brushes               4542/8192        54504/98304    (55.4%) 
+brushsides           32991/65536      263928/524288   (50.3%) 
+planes               20202/65536      404040/1310720  (30.8%) 
+vertexes             22884/65536      274608/786432   (34.9%) 
+nodes                 6770/65536      216640/2097152  (10.3%) 
+texinfos              5201/12288      374472/884736   (42.3%) 
+texdata                563/2048        18016/65536    (27.5%) 
+dispinfos              131/0           23056/0        ( 0.0%) 
+disp_verts            5059/0          101180/0        ( 0.0%) 
+disp_tris             7360/0           14720/0        ( 0.0%) 
+disp_lmsamples      220814/0          220814/0        ( 0.0%) 
+faces                12094/65536      677264/3670016  (18.5%) 
+hdr faces            12094/65536      677264/3670016  (18.5%) 
+origfaces             8743/65536      489608/3670016  (13.3%) 
+leaves                6964/65536      222848/2097152  (10.6%) 
+leaffaces            15348/65536       30696/131072   (23.4%) 
+leafbrushes          12572/65536       25144/131072   (19.2%) 
+areas                   19/256           152/2048     ( 7.4%) 
+surfedges            93841/512000     375364/2048000  (18.3%) 
+edges                60525/256000     242100/1024000  (23.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights        115/8192        11500/819200   ( 1.4%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1390/32768       13900/327680   ( 4.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         27093/65536       54186/131072   (41.3%) 
+cubemapsamples          65/1024         1040/16384    ( 6.3%) 
+overlays               377/512        132704/180224   (73.6%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4819384/0        ( 0.0%) 
+visdata               [variable]      776228/16777216 ( 4.6%) 
+entdata               [variable]      781036/393216   (198.6%) VERY FULL!
+LDR ambient table     6964/65536       27856/262144   (10.6%) 
+HDR ambient table     6964/65536       27856/262144   (10.6%) 
+LDR leaf ambient      6964/65536      194992/1835008  (10.6%) 
+HDR leaf ambient     27574/65536      772072/1835008  (42.1%) 
+occluders                5/0             200/0        ( 0.0%) 
+occluder polygons       11/0             132/0        ( 0.0%) 
+occluder vert ind       48/0             192/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/104354   ( 0.0%) 
+pakfile               [variable]     7561261/0        ( 0.0%) 
+physics               [variable]     1638147/4194304  (39.1%) 
+physics terrain       [variable]       15435/1048576  ( 1.5%) 
+
+Level flags = 2
+
+Total triangle count: 34825
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+5 minutes, 37 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+Can't find surfaceprop cloth for material METAL/CUBICLE01, using default
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (1)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 1252 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1639573 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 9982 texinfos to 5209
+Reduced 746 texdatas to 563 (34192 bytes to 25971)
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+Can't find surfaceprop cloth for material METAL/CUBICLE01, using default
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 1252 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1639573 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 9982 texinfos to 5209
+Reduced 746 texdatas to 563 (34192 bytes to 25971)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-06-30 20:07:01
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 6000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt
+2027 portalclusters
+5090 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 18699 visible clusters (1.99%)
+Total clusters visible: 941826
+Average clusters visible: 464
+Building PAS...
+Average clusters audible: 1464
+visdatasize:781271  compressed from 1037824
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Wrote ZIP buffer, estimated size 6006933, actual size 5915465
+1 minute, 23 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+12116 faces
+8260603 square feet [1189526912.00 square inches]
+131 Displacements
+300733 Square Feet [43305636.00 Square Inches]
+12116 patches before subdivision
+86188 patches after subdivision
+115 direct lights
+0...1...2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+.4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 6960793, max 1047
+transfer lists:  53.1 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18576, 16725, 13131)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(4307, 4065, 2862)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1274, 1180, 723)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(452, 407, 219)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(171, 148, 70)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(69, 57, 24)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(29, 23, 8)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(12, 10, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(2, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0216 sec>
+0...1... warning - face vectors parallel to face normal. bad lighting will be produced
+2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+. warning - face vectors parallel to face normal. bad lighting will be produced
+SampleRadial: Punting, Waiting for fix
+4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 196/1024         9408/49152    (19.1%) 
+brushes               4544/8192        54528/98304    (55.5%) 
+brushsides           33004/65536      264032/524288   (50.4%) 
+planes               20244/65536      404880/1310720  (30.9%) 
+vertexes             22902/65536      274824/786432   (34.9%) 
+nodes                 6794/65536      217408/2097152  (10.4%) 
+texinfos              5209/12288      375048/884736   (42.4%) 
+texdata                563/2048        18016/65536    (27.5%) 
+dispinfos              131/0           23056/0        ( 0.0%) 
+disp_verts            5059/0          101180/0        ( 0.0%) 
+disp_tris             7360/0           14720/0        ( 0.0%) 
+disp_lmsamples      220814/0          220814/0        ( 0.0%) 
+faces                12116/65536      678496/3670016  (18.5%) 
+hdr faces            12116/65536      678496/3670016  (18.5%) 
+origfaces             8755/65536      490280/3670016  (13.4%) 
+leaves                6991/65536      223712/2097152  (10.7%) 
+leaffaces            15347/65536       30694/131072   (23.4%) 
+leafbrushes          12551/65536       25102/131072   (19.2%) 
+areas                   19/256           152/2048     ( 7.4%) 
+surfedges            94001/512000     376004/2048000  (18.4%) 
+edges                60612/256000     242448/1024000  (23.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights        115/8192        11500/819200   ( 1.4%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1394/32768       13940/327680   ( 4.3%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         27159/65536       54318/131072   (41.4%) 
+cubemapsamples          65/1024         1040/16384    ( 6.3%) 
+overlays               377/512        132704/180224   (73.6%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4799192/0        ( 0.0%) 
+visdata               [variable]      781271/16777216 ( 4.7%) 
+entdata               [variable]      781328/393216   (198.7%) VERY FULL!
+LDR ambient table     6991/65536       27964/262144   (10.7%) 
+HDR ambient table     6991/65536       27964/262144   (10.7%) 
+LDR leaf ambient      6991/65536      195748/1835008  (10.7%) 
+HDR leaf ambient     27594/65536      772632/1835008  (42.1%) 
+occluders                5/0             200/0        ( 0.0%) 
+occluder polygons       11/0             132/0        ( 0.0%) 
+occluder vert ind       48/0             192/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/104358   ( 0.0%) 
+pakfile               [variable]     7561261/0        ( 0.0%) 
+physics               [variable]     1639573/4194304  (39.1%) 
+physics terrain       [variable]       15435/1048576  ( 1.5%) 
+
+Level flags = 2
+
+Total triangle count: 34893
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+5 minutes, 2 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+Can't find surfaceprop cloth for material METAL/CUBICLE01, using default
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 1252 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1639573 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 9982 texinfos to 5209
+Reduced 746 texdatas to 563 (34192 bytes to 25971)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+9 seconds elapsed
+
+==================================================================
+Date: 2026-07-09 16:13:27
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 6000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt
+2027 portalclusters
+5090 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 18706 visible clusters (1.99%)
+Total clusters visible: 941843
+Average clusters visible: 464
+Building PAS...
+Average clusters audible: 1464
+visdatasize:781275  compressed from 1037824
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Wrote ZIP buffer, estimated size 6006933, actual size 5915465
+1 minute, 24 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+12116 faces
+8260603 square feet [1189526912.00 square inches]
+131 Displacements
+300733 Square Feet [43305636.00 Square Inches]
+12116 patches before subdivision
+86188 patches after subdivision
+117 direct lights
+0...1...2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+.4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 6961066, max 1047
+transfer lists:  53.1 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18073, 16317, 12705)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(4267, 4058, 2835)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1266, 1182, 719)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(459, 414, 221)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(176, 151, 71)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(72, 59, 24)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(30, 24, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(13, 10, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(3, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0243 sec>
+0...1... warning - face vectors parallel to face normal. bad lighting will be produced
+2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+. warning - face vectors parallel to face normal. bad lighting will be produced
+SampleRadial: Punting, Waiting for fix
+4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 196/1024         9408/49152    (19.1%) 
+brushes               4544/8192        54528/98304    (55.5%) 
+brushsides           33004/65536      264032/524288   (50.4%) 
+planes               20244/65536      404880/1310720  (30.9%) 
+vertexes             22902/65536      274824/786432   (34.9%) 
+nodes                 6794/65536      217408/2097152  (10.4%) 
+texinfos              5209/12288      375048/884736   (42.4%) 
+texdata                563/2048        18016/65536    (27.5%) 
+dispinfos              131/0           23056/0        ( 0.0%) 
+disp_verts            5059/0          101180/0        ( 0.0%) 
+disp_tris             7360/0           14720/0        ( 0.0%) 
+disp_lmsamples      220814/0          220814/0        ( 0.0%) 
+faces                12116/65536      678496/3670016  (18.5%) 
+hdr faces            12116/65536      678496/3670016  (18.5%) 
+origfaces             8755/65536      490280/3670016  (13.4%) 
+leaves                6991/65536      223712/2097152  (10.7%) 
+leaffaces            15347/65536       30694/131072   (23.4%) 
+leafbrushes          12551/65536       25102/131072   (19.2%) 
+areas                   19/256           152/2048     ( 7.4%) 
+surfedges            94001/512000     376004/2048000  (18.4%) 
+edges                60612/256000     242448/1024000  (23.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights        117/8192        11700/819200   ( 1.4%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1394/32768       13940/327680   ( 4.3%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         27159/65536       54318/131072   (41.4%) 
+cubemapsamples          65/1024         1040/16384    ( 6.3%) 
+overlays               377/512        132704/180224   (73.6%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4663600/0        ( 0.0%) 
+visdata               [variable]      781275/16777216 ( 4.7%) 
+entdata               [variable]      782699/393216   (199.1%) VERY FULL!
+LDR ambient table     6991/65536       27964/262144   (10.7%) 
+HDR ambient table     6991/65536       27964/262144   (10.7%) 
+LDR leaf ambient      6991/65536      195748/1835008  (10.7%) 
+HDR leaf ambient     27551/65536      771428/1835008  (42.0%) 
+occluders                5/0             200/0        ( 0.0%) 
+occluder polygons       11/0             132/0        ( 0.0%) 
+occluder vert ind       48/0             192/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/104304   ( 0.0%) 
+pakfile               [variable]     7561261/0        ( 0.0%) 
+physics               [variable]     1639573/4194304  (39.1%) 
+physics terrain       [variable]       15435/1048576  ( 1.5%) 
+
+Level flags = 2
+
+Total triangle count: 34893
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+4 minutes, 51 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+Can't find surfaceprop cloth for material METAL/CUBICLE01, using default
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 1252 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1639574 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 9986 texinfos to 5209
+Reduced 746 texdatas to 563 (34192 bytes to 25971)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-07-09 19:15:39
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 6000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt
+2027 portalclusters
+5090 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 18685 visible clusters (1.98%)
+Total clusters visible: 941820
+Average clusters visible: 464
+Building PAS...
+Average clusters audible: 1464
+visdatasize:781274  compressed from 1037824
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Wrote ZIP buffer, estimated size 6006933, actual size 5915465
+1 minute, 37 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+12116 faces
+8260815 square feet [1189557376.00 square inches]
+131 Displacements
+300733 Square Feet [43305636.00 Square Inches]
+12116 patches before subdivision
+86188 patches after subdivision
+117 direct lights
+0...1...2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+.4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 6961084, max 1047
+transfer lists:  53.1 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18073, 16317, 12705)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(4267, 4057, 2835)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1266, 1182, 719)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(459, 414, 221)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(176, 151, 71)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(72, 59, 24)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(30, 24, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(13, 10, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(3, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0225 sec>
+0...1... warning - face vectors parallel to face normal. bad lighting will be produced
+2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+. warning - face vectors parallel to face normal. bad lighting will be produced
+SampleRadial: Punting, Waiting for fix
+4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 196/1024         9408/49152    (19.1%) 
+brushes               4544/8192        54528/98304    (55.5%) 
+brushsides           33004/65536      264032/524288   (50.4%) 
+planes               20244/65536      404880/1310720  (30.9%) 
+vertexes             22902/65536      274824/786432   (34.9%) 
+nodes                 6794/65536      217408/2097152  (10.4%) 
+texinfos              5209/12288      375048/884736   (42.4%) 
+texdata                563/2048        18016/65536    (27.5%) 
+dispinfos              131/0           23056/0        ( 0.0%) 
+disp_verts            5059/0          101180/0        ( 0.0%) 
+disp_tris             7360/0           14720/0        ( 0.0%) 
+disp_lmsamples      220814/0          220814/0        ( 0.0%) 
+faces                12116/65536      678496/3670016  (18.5%) 
+hdr faces            12116/65536      678496/3670016  (18.5%) 
+origfaces             8755/65536      490280/3670016  (13.4%) 
+leaves                6991/65536      223712/2097152  (10.7%) 
+leaffaces            15347/65536       30694/131072   (23.4%) 
+leafbrushes          12551/65536       25102/131072   (19.2%) 
+areas                   19/256           152/2048     ( 7.4%) 
+surfedges            94001/512000     376004/2048000  (18.4%) 
+edges                60612/256000     242448/1024000  (23.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights        117/8192        11700/819200   ( 1.4%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1394/32768       13940/327680   ( 4.3%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         27159/65536       54318/131072   (41.4%) 
+cubemapsamples          65/1024         1040/16384    ( 6.3%) 
+overlays               377/512        132704/180224   (73.6%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4663600/0        ( 0.0%) 
+visdata               [variable]      781274/16777216 ( 4.7%) 
+entdata               [variable]      782699/393216   (199.1%) VERY FULL!
+LDR ambient table     6991/65536       27964/262144   (10.7%) 
+HDR ambient table     6991/65536       27964/262144   (10.7%) 
+LDR leaf ambient      6991/65536      195748/1835008  (10.7%) 
+HDR leaf ambient     27580/65536      772240/1835008  (42.1%) 
+occluders                5/0             200/0        ( 0.0%) 
+occluder polygons       11/0             132/0        ( 0.0%) 
+occluder vert ind       48/0             192/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/104380   ( 0.0%) 
+pakfile               [variable]     7561261/0        ( 0.0%) 
+physics               [variable]     1639574/4194304  (39.1%) 
+physics terrain       [variable]       15435/1048576  ( 1.5%) 
+
+Level flags = 2
+
+Total triangle count: 34893
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+6 minutes, 7 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+Can't find surfaceprop cloth for material METAL/CUBICLE01, using default
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 1252 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt...Building visibility clusters...
+done (1)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1639574 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 9986 texinfos to 5209
+Reduced 746 texdatas to 563 (34192 bytes to 25971)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+10 seconds elapsed
+
+==================================================================
+Date: 2026-07-10 16:10:40
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 6000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.prt
+2027 portalclusters
+5090 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 18675 visible clusters (1.98%)
+Total clusters visible: 941814
+Average clusters visible: 464
+Building PAS...
+Average clusters audible: 1464
+visdatasize:781274  compressed from 1037824
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Wrote ZIP buffer, estimated size 6006933, actual size 5915465
+1 minute, 37 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+Patch Sample Radius Clamped!
+12116 faces
+8260815 square feet [1189557376.00 square inches]
+131 Displacements
+300733 Square Feet [43305636.00 Square Inches]
+12116 patches before subdivision
+86188 patches after subdivision
+117 direct lights
+0...1...2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+.4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 6961084, max 1047
+transfer lists:  53.1 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(18073, 16316, 12704)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(4267, 4057, 2835)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1266, 1182, 719)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(459, 414, 221)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(176, 151, 71)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(72, 59, 24)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(30, 24, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(13, 10, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(3, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0222 sec>
+0...1... warning - face vectors parallel to face normal. bad lighting will be produced
+2...3.. warning - face vectors parallel to face normal. bad lighting will be produced
+. warning - face vectors parallel to face normal. bad lighting will be produced
+SampleRadial: Punting, Waiting for fix
+4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 196/1024         9408/49152    (19.1%) 
+brushes               4544/8192        54528/98304    (55.5%) 
+brushsides           33004/65536      264032/524288   (50.4%) 
+planes               20244/65536      404880/1310720  (30.9%) 
+vertexes             22902/65536      274824/786432   (34.9%) 
+nodes                 6794/65536      217408/2097152  (10.4%) 
+texinfos              5209/12288      375048/884736   (42.4%) 
+texdata                563/2048        18016/65536    (27.5%) 
+dispinfos              131/0           23056/0        ( 0.0%) 
+disp_verts            5059/0          101180/0        ( 0.0%) 
+disp_tris             7360/0           14720/0        ( 0.0%) 
+disp_lmsamples      220814/0          220814/0        ( 0.0%) 
+faces                12116/65536      678496/3670016  (18.5%) 
+hdr faces            12116/65536      678496/3670016  (18.5%) 
+origfaces             8755/65536      490280/3670016  (13.4%) 
+leaves                6991/65536      223712/2097152  (10.7%) 
+leaffaces            15347/65536       30694/131072   (23.4%) 
+leafbrushes          12551/65536       25102/131072   (19.2%) 
+areas                   19/256           152/2048     ( 7.4%) 
+surfedges            94001/512000     376004/2048000  (18.4%) 
+edges                60612/256000     242448/1024000  (23.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights        117/8192        11700/819200   ( 1.4%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1394/32768       13940/327680   ( 4.3%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         27159/65536       54318/131072   (41.4%) 
+cubemapsamples          65/1024         1040/16384    ( 6.3%) 
+overlays               377/512        132704/180224   (73.6%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     4663600/0        ( 0.0%) 
+visdata               [variable]      781274/16777216 ( 4.7%) 
+entdata               [variable]      782699/393216   (199.1%) VERY FULL!
+LDR ambient table     6991/65536       27964/262144   (10.7%) 
+HDR ambient table     6991/65536       27964/262144   (10.7%) 
+LDR leaf ambient      6991/65536      195748/1835008  (10.7%) 
+HDR leaf ambient     27580/65536      772240/1835008  (42.1%) 
+occluders                5/0             200/0        ( 0.0%) 
+occluder polygons       11/0             132/0        ( 0.0%) 
+occluder vert ind       48/0             192/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/104380   ( 0.0%) 
+pakfile               [variable]     7561261/0        ( 0.0%) 
+physics               [variable]     1639574/4194304  (39.1%) 
+physics terrain       [variable]       15435/1048576  ( 1.5%) 
+
+Level flags = 2
+
+Total triangle count: 34893
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m2_offices.bsp
+5 minutes, 26 seconds elapsed

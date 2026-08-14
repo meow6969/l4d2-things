@@ -1,0 +1,12 @@
+"AddonInfo"
+{
+addontitle "pretty fire no incendiary tracers"
+addonversion "1"
+addontagline ""
+addonauthor "elitezrule2"
+addonauthorSteamID ""
+
+addonDescription "meow"
+
+addonContent_Skin		"1"
+}

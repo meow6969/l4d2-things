@@ -1,6 +1,6 @@
 // Created by Crowbar 0.74
 
-$modelname "Weapons/melee/v_fireaxe.mdl"
+$modelname "weapons/melee/v_fireaxe.mdl"
 
 $bodygroup "body"
 {
@@ -89,11 +89,6 @@ $definebone "ValveBiped.Bip01_R_thumbroot" "ValveBiped.Bip01_R_Hand" 0.109995 -0
 $definebone "ValveBiped.Bip01_L_Forearm_driven" "ValveBiped.Bip01_L_Forearm" 3.257999 -0.031 0 5.999998 7.000002 78.000002 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_L_Driven_ulna" "ValveBiped.Bip01_L_Forearm" 6.867996 0 0 5.999998 7.000002 78.000002 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_L_thumbroot" "ValveBiped.Bip01_L_Hand" 0.084999 -0.691999 1.011 26.039005 111.970003 -76.420999 0 0 0 0 0 0
-$definebone "ValveBiped.hlp_wrist01_L" "ValveBiped.Bip01_L_Hand" 0.000002 0 0 0.000001 -0.000007 0.000004 0 0 0 0 0 0
-$definebone "ValveBiped.hlp_ulna02_L" "ValveBiped.Bip01_L_Forearm" 9.179489 0 0.000004 0.000005 0 -0.000005 0 0 0 0 0 0
-$definebone "ValveBiped.hlp_ulna01_L" "ValveBiped.Bip01_L_Forearm" 6.694332 0.000001 0 0.000005 0 -0.000005 0 0 0 0 0 0
-$definebone "ValveBiped.hlp_wrist01_R" "ValveBiped.Bip01_R_Hand" -0.000002 0 0 -0.000003 0.000003 -31.408861 0 0 0 0 0 0
-$definebone "ValveBiped.hlp_ulna01_R" "ValveBiped.Bip01_R_Forearm" 6.694324 0 0 0.000003 0.000004 31.408861 0 0 0 0 0 0
 
 $bonemerge "ValveBiped.ValveBiped"
 $bonemerge "ValveBiped.Bip01"
@@ -150,11 +145,6 @@ $bonemerge "ValveBiped.Bip01_R_thumbroot"
 $bonemerge "ValveBiped.Bip01_L_Forearm_driven"
 $bonemerge "ValveBiped.Bip01_L_Driven_ulna"
 $bonemerge "ValveBiped.Bip01_L_thumbroot"
-$bonemerge "ValveBiped.hlp_wrist01_L"
-$bonemerge "ValveBiped.hlp_ulna02_L"
-$bonemerge "ValveBiped.hlp_ulna01_L"
-$bonemerge "ValveBiped.hlp_wrist01_R"
-$bonemerge "ValveBiped.hlp_ulna01_R"
 
 
 $poseparameter "ver_aims" -1 1 loop 0

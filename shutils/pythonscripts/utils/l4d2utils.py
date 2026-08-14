@@ -9,6 +9,7 @@ from utils.steamutils import *
 from utils.miscutils import DEBUG_LOG_LEVEL, DebugLogLevel
 
 L4D2_PATH: Path | None = get_game_install_path(550)
+L4D2_DS_PATH: Path | None = get_game_install_path(222860)
 # L4D2_PATH: Path | None = Path("/mnt/f/stuff/l4d2game/")
 __vpkeditcli_args = ["vpkeditcli", "--no-progress", "-v", "1", "-c", "200"]
 __l4d2_vpk_order = ["hl2", "left4dead2", "left4dead2_dlc1", "left4dead2_dlc2", "left4dead2_dlc3", "update"]

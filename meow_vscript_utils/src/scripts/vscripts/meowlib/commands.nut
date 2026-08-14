@@ -11,6 +11,13 @@ if ("Commands" in getroottable())
 }
 
 
+function Commands::IsCommandInternal(cmd)
+{
+	return cmd instanceof ::Commands.HelpCommand;
+		
+}
+
+
 IncludeScript("meowlib/meowutils.nut");
 IncludeScript("meowlib/json.nut");
 
@@ -24,7 +31,7 @@ class ::Commands.CommandCtx
 	prefix = "";
 	playerSteamID = "";
 	
-	constructor(p, msg, pfx, steamid, privil=false)
+	constructor(p, msg, pfx, steamid, privil)
 	{
 		this.player = p;
 		this.playerName = p.GetPlayerName();
@@ -148,24 +155,31 @@ class ::Commands.HelpCommand extends ::Commands.Command
 			local _cmd = this.commandMan.GetCmdByAlias(cmdName);
 			if (_cmd == null)
 			{
-				ClientPrint(ctx.player, 5, "ERROR: could not find command by alias: \""+cmdName+"\"");
+				// ClientPrint(ctx.player, 5, "ERROR: could not find command by alias: \""+cmdName+"\"");
+				this.commandMan.Send(ctx.player, "Commands|help|ErrorCantFindCommand", {cmdName = cmdName}, true);
 				return;
 			}
 			::MeowUtils.ClientPrintSplit(ctx.player, this.GetCmdFullHelp(ctx, _cmd));
 			return;
 		}
-		::MeowUtils.ClientPrintSplit(ctx.player, this.GetHelpStr(ctx));
+		local s = this.GetHelpStr(ctx);
+		// printl("helpStr=\""+s+"\"");
+		::MeowUtils.ClientPrintSplit(ctx.player, s);
 	}
 
 	function GetHelpCmdParamsArray(cmd)  // -> array<tuple<string, defaultValue<obj|>>>
 	{
 		local rLst = [];
 
+		// TODO: make this work with localizzation stuffs
+
 		local clbkInfos = cmd.GetCallbackInfos();
 		local params = clbkInfos["parameters"];
 		local paramsLen = params.len();
 		local defParams = clbkInfos["defparams"];
 		local numDefParams = defParams.len();
+		local isInternal = ::Commands.IsCommandInternal(cmd);
+
 		// in the documentation it shows "varargs = 2" , but ive never been able to get that my self?
 		local variableParams = clbkInfos["varargs"] > 0;
 
@@ -184,8 +198,16 @@ class ::Commands.HelpCommand extends ::Commands.Command
 			if (variableParams && i == paramsLen - 2)
 			{
 				// printl("variable params");
-				local clbkAttrs = cmd.GetCallbackAttributes();
-				if ("meowCmd_vargvName" in clbkAttrs) rStr += "["+clbkAttrs["meowCmd_vargvName"]+"]";
+				local localizationKey = "Commands|"+cmd.aliases[0]+"VargvName";
+				// local isInternal = cmd instanceof ::Commands.HelpCommand;
+				local blah = this.commandMan.GetPlayerLocalizedString(localizationKey, {prefix = this.commandMan.prefix}, ctx.playerSteamID, isInternal);
+				if (blah == null)
+				{
+					local clbkAttrs = cmd.GetCallbackAttributes();
+					if ("meowCmd_vargvName" in clbkAttrs) rStr += "["+clbkAttrs["meowCmd_vargvName"]+"]";
+				}
+				else
+					rStr += "["+blah+"]";
 				rStr += "...\x01";
 				// rLst.append(rStr);
 				rLst.append([rStr, "vargv"]);
@@ -222,13 +244,38 @@ class ::Commands.HelpCommand extends ::Commands.Command
 		return ::MeowUtils.ArrayJoin(rLst, " ");
 	}
 
+	function GetCmdBrief(ctx, cmd, isInternal=null)  // -> str
+	{
+		if (isInternal == null)
+			isInternal = ::Commands.IsCommandInternal(cmd);
+
+		local brief = this.commandMan.GetPlayerLocalizedString("Commands|"+cmd.aliases[0]+"|Brief", {prefix = this.commandMan.prefix}, ctx.playerSteamID, isInternal);
+		if (brief == null)
+		{
+			return strip(cmd.brief);
+			//if (strip(cmd.brief) != "")
+			//	brief = strip(cmd.brief);
+		}
+		return brief;
+	}
+
+	function GetCmdHelpText(ctx, cmd, isInternal=null)
+	{
+		if (isInternal == null)
+			isInternal = ::Commands.IsCommandInternal(cmd);
+
+		local help = this.commandMan.GetPlayerLocalizedString("Commands|"+cmd.aliases[0]+"|Help", {prefix = this.commandMan.prefix}, ctx.playerSteamID, isInternal);
+		if (help == null)
+			return strip(cmd.help);
+		return help;
+	}
+
 	function GetCmdFullHelp(ctx, cmd)  // -> string
 	{
-		local isPriv = cmd.privileged;
-		if (isPriv && !ctx.playerPrivileged)
+		if (cmd.privileged && !ctx.playerPrivileged)
 		{
-			return "ERROR: you dont have access to view this command!";
-			return;
+			// return "ERROR: you dont have access to view this command!";
+			return this.commandMan.GetPlayerLocalizedString("Commands|help|ErrorCantShowCommand", {}, ctx.playerSteamID, true);
 		}
 		local tabWidth = 6;
 		local bStr = "";
@@ -238,19 +285,26 @@ class ::Commands.HelpCommand extends ::Commands.Command
 		if (cmd.aliases.len() > 1) aliasesStr = "["+::MeowUtils.ArrayJoin(cmd.aliases, "|")+"]";
 		else aliasesStr = cmd.aliases[0];
 		local paramStr = strip("\x05"+aliasesStr+"\x01 "+::MeowUtils.ArrayJoin(paramLst, " ", (@(lst, i) lst[i][0])));
+		local isInternal = ::Commands.IsCommandInternal(cmd);
 
 		if (cmd.privileged) privilegedStr = "\x03[ADMIN]\x01 ";
-		if (strip(cmd.brief) != "" || privilegedStr != "") bStr = " : "+privilegedStr+cmd.brief;
+		
+		local brief = this.GetCmdBrief(ctx, cmd, isInternal);
+	
+		if (brief != "" || privilegedStr != "") bStr = " : "+privilegedStr+brief;
 
 		local rStr = "  \x01\"\x05"+ctx.prefix+"\x01 "+paramStr+"\""+bStr+"\n";
 
-		if (strip(cmd.help) != "") rStr += "    \x01"+cmd.help;
+		local helpText = this.GetCmdHelpText(ctx, cmd, isInternal);
+		if (helpText != "") rStr += "    \x01"+helpText;
 		if (cmd.GetNumArgs() == 0) return rStr;
 		rStr += "\n";
 		// rStr += "\x01"+"arguments:\n"
-		rStr += "\x01"+"arguments:";
+		// rStr += "\x01"+"arguments:";
+		rStr += this.commandMan.GetPlayerLocalizedString("Commands|help|Arguments", {}, ctx.playerSteamID, true);
 		local longestParam = ::MeowUtils.GetLongestStringLen(paramLst);
 		local clbkAttrs = cmd.GetCallbackAttributes();
+	
 		// local paramLst
 		// i think i can fix spacing issues by removing the color codes (\x01,\x02,...) from the strings before hand , but idk dont wanna
 		foreach (prmBlah in paramLst)
@@ -263,14 +317,36 @@ class ::Commands.HelpCommand extends ::Commands.Command
 			local padding = ::MeowUtils.StringMult("\t", numTabs);
 			local paramDescription;
 			local paramHelpKey;
-			if (prmBlah[1] == "vargv") paramHelpKey = "meowCmd_vargvHelp";
-			else paramHelpKey = "meowCmd_param_"+prmBlah[1];
-			// printl("paramHelpKey="+paramHelpKey);
-			if (paramHelpKey in clbkAttrs) paramDescription = clbkAttrs[paramHelpKey];
-			else paramDescription = "no description given";
+			local localizationKey = "Commands|"+cmd.aliases[0]+"|";   //  this is relaly problematic  like, oh god, this entire system is breaking , its falling apart, everything, 
+			if (prmBlah[1] == "vargv") 
+			{
+				paramHelpKey = "meowCmd_vargvHelp";
+				localizationKey += "Param_vargv";
+			}
+			else
+			{
+				paramHelpKey = "meowCmd_param_"+prmBlah[1];
+				localizationKey += "Param_"+prmBlah[1];
+			}
+			
+			paramDescription = this.commandMan.GetPlayerLocalizedString(localizationKey, {prefix = this.commandMan.prefix}, ctx.playerSteamID, isInternal);
+
+			if (paramDescription == null)
+			{
+				// printl("paramHelpKey="+paramHelpKey);
+				if (paramHelpKey in clbkAttrs) 
+					paramDescription = clbkAttrs[paramHelpKey];
+				else 
+					// paramDescription = "no description given";
+					paramDescription = this.commandMan.GetPlayerLocalizedString("Commands|help|NoParamDescription", {}, ctx.playerSteamID, true);
+			}
+			
 			
 			if (prmBlah.len() == 3)
-				paramDescription += " (default: \x05"+::Json.Serialize.ToString(prmBlah[2], 0)+"\x01)";
+			{
+				paramDescription += " "+this.commandMan.GetPlayerLocalizedString("Commands|help|ParamDefaultValue", {prefix = this.commandMan.prefix, variableValue = ::Json.Serialize.ToString(prmBlah[2], 0)}, ctx.playerSteamID, true);			
+				// paramDescription += " (default: \x05"+::Json.Serialize.ToString(prmBlah[2], 0)+"\x01)";
+			}
 
 			// rStr += "  "+prm+padding+" : "+paramDescription+"\n"; 
 			rStr += "\n  "+prm+padding+" : "+paramDescription;
@@ -296,6 +372,7 @@ class ::Commands.HelpCommand extends ::Commands.Command
 		return rTbl;
 	}
 
+	// this is the function that generates the text returned from "prefix help"
 	function GetHelpStr(ctx)  // -> string
 	{
 		local rStr = "";
@@ -321,7 +398,12 @@ class ::Commands.HelpCommand extends ::Commands.Command
 			if (ctx.playerPrivileged && cmd.privileged) privilegedStr = "\x03[ADMIN]\x01 ";
 			else privilegedStr = "";
 
-			rStr += "  \x01\"\x05"+ctx.prefix+"\x01 "+paramStr+"\" "+padding+": "+privilegedStr+cmd.brief+"\n";
+			rStr += "  \x01\"\x05"+ctx.prefix+"\x01 "+paramStr+"\" "; // +padding+": "+privilegedStr+cmd.brief+"\n";
+			local brief = this.GetCmdBrief(ctx, cmd);
+			if (brief != "" || privilegedStr != "")
+				rStr += padding+": "+privilegedStr+brief;
+			rStr += "\n";
+			
 		}
 		return rStr;
 	}
@@ -365,7 +447,7 @@ class ::Commands.CommandManager
 		else
 			this.validPlayerFunc = function(a) { return true; };
 
-		local takenAliases = clone helpCmd.aliases;
+		local takenAliases= clone helpCmd.aliases;
 		this.commands.append(helpCmd(this));
 		foreach (clsName, cls in cmdTable)
 		{
@@ -393,7 +475,7 @@ class ::Commands.CommandManager
 	}
 
 	//                                string,  table,      string,  bool
-	function GetPlayerLocalizedString(msgCode, extraInfos, steamid, internal)
+	function GetPlayerLocalizedString(msgCode, extraInfos, steamid, internal=false)
 	{
 		local langCode = this.langFunc(steamid).toupper();
 		local langDict;
@@ -407,14 +489,37 @@ class ::Commands.CommandManager
 			langDict = this.langTable;
 		}
 
-		return ::MeowUtils.GetLocalizedString(msgCode, langDict, extraInfos, this.langCoder);
+		if (!(langCode in langDict))
+		{
+			langCode = "EN";
+		}
+		//printl("found langCode="+langCode);
+
+		return ::MeowUtils.GetLocalizedString(msgCode, langDict[langCode], extraInfos, this.langCoder);
 	}
 
-	function Send(p, msgCode, extraInfos, internal=false)
+	// p				= player entity, or null, if its null it sends to everyone that passes the validPlayerFunc function
+	// msgCode			= the message code, for example "Commands|ban|SuccessfullyBanned"
+	// extraInfos		= the extra info related to the command, these are defined by their %%VAR%% code in the lang coder function
+	// internal			= the message code is an internal meowutils message code, not an external message code (i.e. bhop message code)
+	// neededPlayers	= any players that should always be sent the message, regardless of their acceptance according to validPlayerFunc
+	function Send(p, msgCode, extraInfos=null, internal=false, neededPlayers=null)
 	{
+		if (extraInfos == null)
+			extraInfos = {};
+		if (neededPlayers == null)
+			neededPlayers = [];
+		if ((typeof neededPlayers) != "array")
+			neededPlayers = [neededPlayers];
 		if (p == null)
 		{
 			local players = ::MeowUtils.GetAllPlayers(this.validPlayerFunc);
+			foreach (neededP in neededPlayers)
+			{
+				if (players.find(neededP) == null)
+					players.append(neededP);
+			}
+			//printl("players.len()="+players.len());
 			foreach (p in players)
 				this.Send(p, msgCode, extraInfos, internal);
 			return;
@@ -422,8 +527,10 @@ class ::Commands.CommandManager
 		local steamid = ::MeowUtils.GetPlayerSteamID(p);
 		
 		local s = this.GetPlayerLocalizedString(msgCode, extraInfos, steamid, internal);
+		//print("player="+p);
 
-		ClientPrint(p, 3, s);
+
+		ClientPrint(p, 5, "\x01"+s);
 	}
 
 	function GenerateCtx(p, msg, steamid=null)
@@ -449,7 +556,8 @@ class ::Commands.CommandManager
 			}
 			catch (e)
 			{
-				ClientPrint(p, 5, "ERROR: internal error processing your command followup, "+e);
+				// ClientPrint(p, 5, "ERROR: internal error processing your command followup, "+e);
+				this.Send(p, "Errors|InternalFollowup", {error = e}, true);
 			}
 			if (r != null && r != false)
 			{
@@ -481,19 +589,22 @@ class ::Commands.CommandManager
 		local cmd = this.GetCmdByAlias(alias);
 		if (cmd == null) 
 		{
-			ClientPrint(p, 5, "ERROR: invalid alias \""+alias+"\"");
-			ClientPrint(p, 5, "do \""+this.prefix+" help\" for help");
+			// ClientPrint(p, 5, "ERROR: invalid alias \""+alias+"\"");
+			// ClientPrint(p, 5, "do \""+this.prefix+" help\" for help");
+			this.Send(p, "Errors|InvalidAlias", {alias = alias, prefix = prefix}, true);
 			return;
 		}
 		if (cmd.privileged && !ctx.playerPrivileged)
 		{
-			ClientPrint(p, 5, "ERROR: you do not have the permission to run this command");
+			// ClientPrint(p, 5, "ERROR: you do not have the permission to run this command");
+			this.Send(p, "Errors|InvalidPermissions", {}, true);
 			return;
 		}
 		local cldwn = cmd.IsCooldown(ctx.playerSteamID);
 		if (cldwn)
 		{
-			ClientPrint(p, 5, "ERROR: this command is on cooldown! you have \x04"+cldwn+"\x01 seconds left");
+			// ClientPrint(p, 5, "ERROR: this command is on cooldown! you have \x04"+cldwn+"\x01 seconds left");
+			this.Send(p, "Errors|Cooldown", {cooldown = cldwn}, true);
 			return;
 		}
 		//                        sliced prefix, alias
@@ -502,12 +613,14 @@ class ::Commands.CommandManager
 		local minArgs = cmd.GetMinArgs();
 		if (minArgs > providedArgs)
 		{
-			ClientPrint(p, 5, "ERROR: not enough args, need \x05"+minArgs+"\x01, provided \x05"+providedArgs+"\x01");
+			// ClientPrint(p, 5, "ERROR: not enough args, need \x05"+minArgs+"\x01, provided \x05"+providedArgs+"\x01");
+			this.Send(p, "Errors|NotEnoughArgs", {minArgs = minArgs, numArgs = providedArgs}, true);
 			return;
 		}
 		if (maxArgs != -1 && providedArgs > maxArgs)
 		{
-			ClientPrint(p, 5, "ERROR: too many args, max \x05"+maxArgs+"\x01, provided \x05"+providedArgs+"\x01");
+			// ClientPrint(p, 5, "ERROR: too many args, max \x05"+maxArgs+"\x01, provided \x05"+providedArgs+"\x01");
+			this.Send(p, "Errors|TooManyArgs", {maxArgs = maxArgs, numArgs = providedArgs}, true);
 			return;
 		}
 		local arrayArgs = [cmd, ctx];
@@ -526,7 +639,9 @@ class ::Commands.CommandManager
 		}
 		catch (e)
 		{
-			ClientPrint(p, 5, "ERROR: internal error processing your command, "+e);
+			//ClientPrint(p, 5, "ERROR: internal error processing your command, "+e);
+			::MeowUtils.Log(e);
+			this.Send(p, "Errors|Internal", {error = e}, true);
 		}
 		cmd.AddCooldown(ctx.playerSteamID);
 	}

@@ -6138,3 +6138,2613 @@ Level flags = 2
 Total triangle count: 55353
 Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
 1 minute, 9 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 2016 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (2)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (2082288 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Error! To use model "models/props_doors/doormainmetal01.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_doors/doormainmetal01.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 11052 texinfos to 8066
+Reduced 549 texdatas to 496 (22739 bytes to 20957)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+12 seconds elapsed
+
+==================================================================
+Date: 2026-06-18 16:30:37
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 10000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt
+1290 portalclusters
+2642 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 1994 visible clusters (0.74%)
+Total clusters visible: 268682
+Average clusters visible: 208
+Building PAS...
+Average clusters audible: 563
+visdatasize:232632  compressed from 433440
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Wrote ZIP buffer, estimated size 6181426, actual size 6113274
+2 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+19261 faces
+15 degenerate faces
+9169422 square feet [1320396800.00 square inches]
+26 Displacements
+361979 Square Feet [52125112.00 Square Inches]
+19246 patches before subdivision
+162068 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 16378332, max 1499
+transfer lists: 125.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(29794, 27985, 19535)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5149, 4850, 3156)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(934, 822, 470)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(195, 171, 87)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(42, 36, 16)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(10, 9, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0589 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 154/1024         7392/49152    (15.0%) 
+brushes               5603/8192        67236/98304    (68.4%) 
+brushsides           52232/65536      417856/524288   (79.7%) 
+planes               47618/65536      952360/1310720  (72.7%) 
+vertexes             33047/65536      396564/786432   (50.4%) 
+nodes                 5943/65536      190176/2097152  ( 9.1%) 
+texinfos              8066/12288      580752/884736   (65.6%) 
+texdata                496/2048        15872/65536    (24.2%) 
+dispinfos               26/0            4576/0        ( 0.0%) 
+disp_verts            2522/0           50440/0        ( 0.0%) 
+disp_tris             4096/0            8192/0        ( 0.0%) 
+disp_lmsamples      232129/0          232129/0        ( 0.0%) 
+faces                19261/65536     1078616/3670016  (29.4%) 
+hdr faces            19261/65536     1078616/3670016  (29.4%) 
+origfaces            14891/65536      833896/3670016  (22.7%) 
+leaves                6098/65536      195136/2097152  ( 9.3%) 
+leaffaces            22972/65536       45944/131072   (35.1%) 
+leafbrushes          10789/65536       21578/131072   (16.5%) 
+areas                   39/256           312/2048     (15.2%) 
+surfedges           153761/512000     615044/2048000  (30.0%) 
+edges                96642/256000     386568/1024000  (37.8%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         61/8192         6100/819200   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           2216/32768       22160/327680   ( 6.8%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         41718/65536       83436/131072   (63.7%) 
+cubemapsamples          68/1024         1088/16384    ( 6.6%) 
+overlays               467/512        164384/180224   (91.2%) VERY FULL!
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     5607744/0        ( 0.0%) 
+visdata               [variable]      232632/16777216 ( 1.4%) 
+entdata               [variable]      605738/393216   (154.0%) VERY FULL!
+LDR ambient table     6098/65536       24392/262144   ( 9.3%) 
+HDR ambient table     6098/65536       24392/262144   ( 9.3%) 
+LDR leaf ambient      6098/65536      170744/1835008  ( 9.3%) 
+HDR leaf ambient     16318/65536      456904/1835008  (24.9%) 
+occluders                8/0             320/0        ( 0.0%) 
+occluder polygons       20/0             240/0        ( 0.0%) 
+occluder vert ind      104/0             416/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/86446    ( 0.0%) 
+pakfile               [variable]     7768338/0        ( 0.0%) 
+physics               [variable]     2082288/4194304  (49.6%) 
+physics terrain       [variable]        7592/1048576  ( 0.7%) 
+
+Level flags = 2
+
+Total triangle count: 55555
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+5 minutes, 12 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 2016 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (2)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (2082288 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Error! To use model "models/props_doors/doormainmetal01.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_doors/doormainmetal01.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 11052 texinfos to 8066
+Reduced 549 texdatas to 496 (22739 bytes to 20957)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+12 seconds elapsed
+
+==================================================================
+Date: 2026-06-20 08:59:23
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 10000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt
+1290 portalclusters
+2642 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 1975 visible clusters (0.74%)
+Total clusters visible: 268669
+Average clusters visible: 208
+Building PAS...
+Average clusters audible: 563
+visdatasize:232629  compressed from 433440
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Wrote ZIP buffer, estimated size 6181426, actual size 6113274
+2 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+19261 faces
+15 degenerate faces
+9169422 square feet [1320396800.00 square inches]
+26 Displacements
+361979 Square Feet [52125112.00 Square Inches]
+19246 patches before subdivision
+162068 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 16378332, max 1499
+transfer lists: 125.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(29795, 27986, 19536)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5149, 4850, 3156)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(934, 822, 470)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(195, 171, 87)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(42, 36, 16)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(10, 9, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0581 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 154/1024         7392/49152    (15.0%) 
+brushes               5603/8192        67236/98304    (68.4%) 
+brushsides           52232/65536      417856/524288   (79.7%) 
+planes               47618/65536      952360/1310720  (72.7%) 
+vertexes             33047/65536      396564/786432   (50.4%) 
+nodes                 5943/65536      190176/2097152  ( 9.1%) 
+texinfos              8066/12288      580752/884736   (65.6%) 
+texdata                496/2048        15872/65536    (24.2%) 
+dispinfos               26/0            4576/0        ( 0.0%) 
+disp_verts            2522/0           50440/0        ( 0.0%) 
+disp_tris             4096/0            8192/0        ( 0.0%) 
+disp_lmsamples      232129/0          232129/0        ( 0.0%) 
+faces                19261/65536     1078616/3670016  (29.4%) 
+hdr faces            19261/65536     1078616/3670016  (29.4%) 
+origfaces            14891/65536      833896/3670016  (22.7%) 
+leaves                6098/65536      195136/2097152  ( 9.3%) 
+leaffaces            22972/65536       45944/131072   (35.1%) 
+leafbrushes          10789/65536       21578/131072   (16.5%) 
+areas                   39/256           312/2048     (15.2%) 
+surfedges           153761/512000     615044/2048000  (30.0%) 
+edges                96642/256000     386568/1024000  (37.8%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         61/8192         6100/819200   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           2216/32768       22160/327680   ( 6.8%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         41718/65536       83436/131072   (63.7%) 
+cubemapsamples          68/1024         1088/16384    ( 6.6%) 
+overlays               467/512        164384/180224   (91.2%) VERY FULL!
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     5607744/0        ( 0.0%) 
+visdata               [variable]      232629/16777216 ( 1.4%) 
+entdata               [variable]      605738/393216   (154.0%) VERY FULL!
+LDR ambient table     6098/65536       24392/262144   ( 9.3%) 
+HDR ambient table     6098/65536       24392/262144   ( 9.3%) 
+LDR leaf ambient      6098/65536      170744/1835008  ( 9.3%) 
+HDR leaf ambient     16318/65536      456904/1835008  (24.9%) 
+occluders                8/0             320/0        ( 0.0%) 
+occluder polygons       20/0             240/0        ( 0.0%) 
+occluder vert ind      104/0             416/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/86446    ( 0.0%) 
+pakfile               [variable]     7768338/0        ( 0.0%) 
+physics               [variable]     2082288/4194304  (49.6%) 
+physics terrain       [variable]        7592/1048576  ( 0.7%) 
+
+Level flags = 2
+
+Total triangle count: 55555
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+6 minutes, 13 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 2016 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (2)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (2) (2082288 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Error! To use model "models/props_doors/doormainmetal01.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_doors/doormainmetal01.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 11053 texinfos to 8067
+Reduced 550 texdatas to 497 (22762 bytes to 20980)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+12 seconds elapsed
+
+==================================================================
+Date: 2026-06-25 11:26:10
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 10000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt
+1315 portalclusters
+2708 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2037 visible clusters (0.74%)
+Total clusters visible: 277078
+Average clusters visible: 210
+Building PAS...
+Average clusters audible: 576
+visdatasize:244348  compressed from 441840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Wrote ZIP buffer, estimated size 6181426, actual size 6113274
+4 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+19249 faces
+15 degenerate faces
+9169419 square feet [1320396288.00 square inches]
+26 Displacements
+361979 Square Feet [52125112.00 Square Inches]
+19234 patches before subdivision
+161868 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 16342579, max 1499
+transfer lists: 124.7 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(29715, 27866, 19428)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5138, 4833, 3142)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(933, 820, 468)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(195, 171, 87)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(42, 36, 16)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(10, 9, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0631 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 154/1024         7392/49152    (15.0%) 
+brushes               5606/8192        67272/98304    (68.4%) 
+brushsides           52250/65536      418000/524288   (79.7%) 
+planes               47618/65536      952360/1310720  (72.7%) 
+vertexes             33028/65536      396336/786432   (50.4%) 
+nodes                 5956/65536      190592/2097152  ( 9.1%) 
+texinfos              8067/12288      580824/884736   (65.6%) 
+texdata                497/2048        15904/65536    (24.3%) 
+dispinfos               26/0            4576/0        ( 0.0%) 
+disp_verts            2522/0           50440/0        ( 0.0%) 
+disp_tris             4096/0            8192/0        ( 0.0%) 
+disp_lmsamples      232129/0          232129/0        ( 0.0%) 
+faces                19249/65536     1077944/3670016  (29.4%) 
+hdr faces            19249/65536     1077944/3670016  (29.4%) 
+origfaces            14893/65536      834008/3670016  (22.7%) 
+leaves                6111/65536      195552/2097152  ( 9.3%) 
+leaffaces            23118/65536       46236/131072   (35.3%) 
+leafbrushes          10905/65536       21810/131072   (16.6%) 
+areas                   39/256           312/2048     (15.2%) 
+surfedges           153711/512000     614844/2048000  (30.0%) 
+edges                96618/256000     386472/1024000  (37.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         61/8192         6100/819200   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           2217/32768       22170/327680   ( 6.8%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         41760/65536       83520/131072   (63.7%) 
+cubemapsamples          68/1024         1088/16384    ( 6.6%) 
+overlays               468/512        164736/180224   (91.4%) VERY FULL!
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     5607508/0        ( 0.0%) 
+visdata               [variable]      244348/16777216 ( 1.5%) 
+entdata               [variable]      604351/393216   (153.7%) VERY FULL!
+LDR ambient table     6111/65536       24444/262144   ( 9.3%) 
+HDR ambient table     6111/65536       24444/262144   ( 9.3%) 
+LDR leaf ambient      6111/65536      171108/1835008  ( 9.3%) 
+HDR leaf ambient     16558/65536      463624/1835008  (25.3%) 
+occluders                8/0             320/0        ( 0.0%) 
+occluder polygons       20/0             240/0        ( 0.0%) 
+occluder vert ind      104/0             416/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/86458    ( 0.0%) 
+pakfile               [variable]     7768338/0        ( 0.0%) 
+physics               [variable]     2082288/4194304  (49.6%) 
+physics terrain       [variable]        7592/1048576  ( 0.7%) 
+
+Level flags = 2
+
+Total triangle count: 55521
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+7 minutes, 31 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 2016 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (2)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (2082288 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Error! To use model "models/props_doors/doormainmetal01.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_doors/doormainmetal01.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 11053 texinfos to 8067
+Reduced 550 texdatas to 497 (22762 bytes to 20980)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+12 seconds elapsed
+
+==================================================================
+Date: 2026-06-25 17:00:32
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 10000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt
+1315 portalclusters
+2708 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2012 visible clusters (0.73%)
+Total clusters visible: 277053
+Average clusters visible: 210
+Building PAS...
+Average clusters audible: 576
+visdatasize:244348  compressed from 441840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Wrote ZIP buffer, estimated size 6181426, actual size 6113274
+3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+19249 faces
+15 degenerate faces
+9169419 square feet [1320396288.00 square inches]
+26 Displacements
+361979 Square Feet [52125112.00 Square Inches]
+19234 patches before subdivision
+161868 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 16342579, max 1499
+transfer lists: 124.7 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(29715, 27865, 19427)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5138, 4833, 3141)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(933, 820, 468)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(195, 171, 87)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(42, 36, 16)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(10, 9, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0591 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 154/1024         7392/49152    (15.0%) 
+brushes               5606/8192        67272/98304    (68.4%) 
+brushsides           52250/65536      418000/524288   (79.7%) 
+planes               47618/65536      952360/1310720  (72.7%) 
+vertexes             33028/65536      396336/786432   (50.4%) 
+nodes                 5956/65536      190592/2097152  ( 9.1%) 
+texinfos              8067/12288      580824/884736   (65.6%) 
+texdata                497/2048        15904/65536    (24.3%) 
+dispinfos               26/0            4576/0        ( 0.0%) 
+disp_verts            2522/0           50440/0        ( 0.0%) 
+disp_tris             4096/0            8192/0        ( 0.0%) 
+disp_lmsamples      232129/0          232129/0        ( 0.0%) 
+faces                19249/65536     1077944/3670016  (29.4%) 
+hdr faces            19249/65536     1077944/3670016  (29.4%) 
+origfaces            14893/65536      834008/3670016  (22.7%) 
+leaves                6111/65536      195552/2097152  ( 9.3%) 
+leaffaces            23118/65536       46236/131072   (35.3%) 
+leafbrushes          10905/65536       21810/131072   (16.6%) 
+areas                   39/256           312/2048     (15.2%) 
+surfedges           153711/512000     614844/2048000  (30.0%) 
+edges                96618/256000     386472/1024000  (37.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         61/8192         6100/819200   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           2217/32768       22170/327680   ( 6.8%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         41760/65536       83520/131072   (63.7%) 
+cubemapsamples          68/1024         1088/16384    ( 6.6%) 
+overlays               468/512        164736/180224   (91.4%) VERY FULL!
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     5607508/0        ( 0.0%) 
+visdata               [variable]      244348/16777216 ( 1.5%) 
+entdata               [variable]      604351/393216   (153.7%) VERY FULL!
+LDR ambient table     6111/65536       24444/262144   ( 9.3%) 
+HDR ambient table     6111/65536       24444/262144   ( 9.3%) 
+LDR leaf ambient      6111/65536      171108/1835008  ( 9.3%) 
+HDR leaf ambient     16558/65536      463624/1835008  (25.3%) 
+occluders                8/0             320/0        ( 0.0%) 
+occluder polygons       20/0             240/0        ( 0.0%) 
+occluder vert ind      104/0             416/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/86458    ( 0.0%) 
+pakfile               [variable]     7768338/0        ( 0.0%) 
+physics               [variable]     2082288/4194304  (49.6%) 
+physics terrain       [variable]        7592/1048576  ( 0.7%) 
+
+Level flags = 2
+
+Total triangle count: 55521
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+6 minutes, 24 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 2004 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (2)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (2089895 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Error! To use model "models/props_doors/doormainmetal01.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_doors/doormainmetal01.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 11123 texinfos to 8076
+Reduced 554 texdatas to 499 (22935 bytes to 21073)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+12 seconds elapsed
+
+==================================================================
+Date: 2026-06-30 20:20:54
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 10000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt
+1321 portalclusters
+2728 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2023 visible clusters (0.73%)
+Total clusters visible: 277676
+Average clusters visible: 210
+Building PAS...
+Average clusters audible: 578
+visdatasize:246422  compressed from 443856
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Wrote ZIP buffer, estimated size 6182408, actual size 6113988
+3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+19250 faces
+15 degenerate faces
+9169005 square feet [1320336640.00 square inches]
+28 Displacements
+362535 Square Feet [52205128.00 Square Inches]
+19235 patches before subdivision
+161851 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 16327939, max 1499
+transfer lists: 124.6 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(29705, 27854, 19419)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5136, 4831, 3140)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(932, 820, 467)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(195, 171, 87)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(42, 36, 16)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(10, 9, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0600 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 154/1024         7392/49152    (15.0%) 
+brushes               5617/8192        67404/98304    (68.6%) 
+brushsides           52362/65536      418896/524288   (79.9%) 
+planes               47812/65536      956240/1310720  (73.0%) 
+vertexes             33118/65536      397416/786432   (50.5%) 
+nodes                 5975/65536      191200/2097152  ( 9.1%) 
+texinfos              8076/12288      581472/884736   (65.7%) 
+texdata                499/2048        15968/65536    (24.4%) 
+dispinfos               28/0            4928/0        ( 0.0%) 
+disp_verts            2684/0           53680/0        ( 0.0%) 
+disp_tris             4352/0            8704/0        ( 0.0%) 
+disp_lmsamples      233697/0          233697/0        ( 0.0%) 
+faces                19250/65536     1078000/3670016  (29.4%) 
+hdr faces            19250/65536     1078000/3670016  (29.4%) 
+origfaces            14861/65536      832216/3670016  (22.7%) 
+leaves                6130/65536      196160/2097152  ( 9.4%) 
+leaffaces            23150/65536       46300/131072   (35.3%) 
+leafbrushes          10994/65536       21988/131072   (16.8%) 
+areas                   39/256           312/2048     (15.2%) 
+surfedges           153572/512000     614288/2048000  (30.0%) 
+edges                96549/256000     386196/1024000  (37.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         61/8192         6100/819200   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           2206/32768       22060/327680   ( 6.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         41574/65536       83148/131072   (63.4%) 
+cubemapsamples          68/1024         1088/16384    ( 6.6%) 
+overlays               470/512        165440/180224   (91.8%) VERY FULL!
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     5609400/0        ( 0.0%) 
+visdata               [variable]      246422/16777216 ( 1.5%) 
+entdata               [variable]      604595/393216   (153.8%) VERY FULL!
+LDR ambient table     6130/65536       24520/262144   ( 9.4%) 
+HDR ambient table     6130/65536       24520/262144   ( 9.4%) 
+LDR leaf ambient      6130/65536      171640/1835008  ( 9.4%) 
+HDR leaf ambient     16611/65536      465108/1835008  (25.3%) 
+occluders                8/0             320/0        ( 0.0%) 
+occluder polygons       20/0             240/0        ( 0.0%) 
+occluder vert ind      104/0             416/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/87134    ( 0.0%) 
+pakfile               [variable]     7770692/0        ( 0.0%) 
+physics               [variable]     2089895/4194304  (49.8%) 
+physics terrain       [variable]        8720/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 55497
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+6 minutes, 12 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 2004 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (2)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (2091463 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Error! To use model "models/props_doors/doormainmetal01.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_doors/doormainmetal01.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 11124 texinfos to 8075
+Reduced 554 texdatas to 499 (22935 bytes to 21073)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+12 seconds elapsed
+
+==================================================================
+Date: 2026-07-09 16:26:49
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 10000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt
+1321 portalclusters
+2728 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2023 visible clusters (0.73%)
+Total clusters visible: 277682
+Average clusters visible: 210
+Building PAS...
+Average clusters audible: 578
+visdatasize:246422  compressed from 443856
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Wrote ZIP buffer, estimated size 6182408, actual size 6113988
+3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+19254 faces
+15 degenerate faces
+9169517 square feet [1320410368.00 square inches]
+28 Displacements
+362535 Square Feet [52205128.00 Square Inches]
+19239 patches before subdivision
+161823 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 16321949, max 1499
+transfer lists: 124.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(29699, 27849, 19414)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5135, 4831, 3139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(932, 820, 467)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(195, 171, 87)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(42, 36, 16)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(10, 9, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0569 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 154/1024         7392/49152    (15.0%) 
+brushes               5619/8192        67428/98304    (68.6%) 
+brushsides           52374/65536      418992/524288   (79.9%) 
+planes               47822/65536      956440/1310720  (73.0%) 
+vertexes             33119/65536      397428/786432   (50.5%) 
+nodes                 5975/65536      191200/2097152  ( 9.1%) 
+texinfos              8075/12288      581400/884736   (65.7%) 
+texdata                499/2048        15968/65536    (24.4%) 
+dispinfos               28/0            4928/0        ( 0.0%) 
+disp_verts            2684/0           53680/0        ( 0.0%) 
+disp_tris             4352/0            8704/0        ( 0.0%) 
+disp_lmsamples      233697/0          233697/0        ( 0.0%) 
+faces                19254/65536     1078224/3670016  (29.4%) 
+hdr faces            19254/65536     1078224/3670016  (29.4%) 
+origfaces            14862/65536      832272/3670016  (22.7%) 
+leaves                6130/65536      196160/2097152  ( 9.4%) 
+leaffaces            23154/65536       46308/131072   (35.3%) 
+leafbrushes          11000/65536       22000/131072   (16.8%) 
+areas                   39/256           312/2048     (15.2%) 
+surfedges           153594/512000     614376/2048000  (30.0%) 
+edges                96562/256000     386248/1024000  (37.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         61/8192         6100/819200   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           2205/32768       22050/327680   ( 6.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         41565/65536       83130/131072   (63.4%) 
+cubemapsamples          68/1024         1088/16384    ( 6.6%) 
+overlays               471/512        165792/180224   (92.0%) VERY FULL!
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     5609504/0        ( 0.0%) 
+visdata               [variable]      246422/16777216 ( 1.5%) 
+entdata               [variable]      604586/393216   (153.8%) VERY FULL!
+LDR ambient table     6130/65536       24520/262144   ( 9.4%) 
+HDR ambient table     6130/65536       24520/262144   ( 9.4%) 
+LDR leaf ambient      6130/65536      171640/1835008  ( 9.4%) 
+HDR leaf ambient     16611/65536      465108/1835008  (25.3%) 
+occluders                8/0             320/0        ( 0.0%) 
+occluder polygons       20/0             240/0        ( 0.0%) 
+occluder vert ind      104/0             416/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/87342    ( 0.0%) 
+pakfile               [variable]     7770692/0        ( 0.0%) 
+physics               [variable]     2091463/4194304  (49.9%) 
+physics terrain       [variable]        8664/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 55507
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+5 minutes, 57 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 2004 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (2)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (2092018 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Error! To use model "models/props_doors/doormainmetal01.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_doors/doormainmetal01.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 11127 texinfos to 8078
+Reduced 554 texdatas to 499 (22935 bytes to 21073)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+13 seconds elapsed
+
+==================================================================
+Date: 2026-07-09 19:32:43
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 10000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt
+1321 portalclusters
+2728 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2018 visible clusters (0.73%)
+Total clusters visible: 277671
+Average clusters visible: 210
+Building PAS...
+Average clusters audible: 578
+visdatasize:246422  compressed from 443856
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Wrote ZIP buffer, estimated size 6182408, actual size 6113988
+4 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+19260 faces
+15 degenerate faces
+9170025 square feet [1320483584.00 square inches]
+28 Displacements
+362535 Square Feet [52205128.00 Square Inches]
+19245 patches before subdivision
+161829 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 16322529, max 1499
+transfer lists: 124.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(29701, 27851, 19415)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5135, 4831, 3139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(932, 820, 467)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(195, 171, 87)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(42, 36, 16)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(10, 9, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0548 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 155/1024         7440/49152    (15.1%) 
+brushes               5620/8192        67440/98304    (68.6%) 
+brushsides           52380/65536      419040/524288   (79.9%) 
+planes               47840/65536      956800/1310720  (73.0%) 
+vertexes             33127/65536      397524/786432   (50.5%) 
+nodes                 5981/65536      191392/2097152  ( 9.1%) 
+texinfos              8078/12288      581616/884736   (65.7%) 
+texdata                499/2048        15968/65536    (24.4%) 
+dispinfos               28/0            4928/0        ( 0.0%) 
+disp_verts            2684/0           53680/0        ( 0.0%) 
+disp_tris             4352/0            8704/0        ( 0.0%) 
+disp_lmsamples      233697/0          233697/0        ( 0.0%) 
+faces                19260/65536     1078560/3670016  (29.4%) 
+hdr faces            19260/65536     1078560/3670016  (29.4%) 
+origfaces            14868/65536      832608/3670016  (22.7%) 
+leaves                6137/65536      196384/2097152  ( 9.4%) 
+leaffaces            23160/65536       46320/131072   (35.3%) 
+leafbrushes          11001/65536       22002/131072   (16.8%) 
+areas                   39/256           312/2048     (15.2%) 
+surfedges           153642/512000     614568/2048000  (30.0%) 
+edges                96586/256000     386344/1024000  (37.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         61/8192         6100/819200   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           2205/32768       22050/327680   ( 6.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         41565/65536       83130/131072   (63.4%) 
+cubemapsamples          68/1024         1088/16384    ( 6.6%) 
+overlays               471/512        165792/180224   (92.0%) VERY FULL!
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     5609504/0        ( 0.0%) 
+visdata               [variable]      246422/16777216 ( 1.5%) 
+entdata               [variable]      605371/393216   (154.0%) VERY FULL!
+LDR ambient table     6137/65536       24548/262144   ( 9.4%) 
+HDR ambient table     6137/65536       24548/262144   ( 9.4%) 
+LDR leaf ambient      6137/65536      171836/1835008  ( 9.4%) 
+HDR leaf ambient     16650/65536      466200/1835008  (25.4%) 
+occluders                8/0             320/0        ( 0.0%) 
+occluder polygons       20/0             240/0        ( 0.0%) 
+occluder vert ind      104/0             416/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/87342    ( 0.0%) 
+pakfile               [variable]     7770692/0        ( 0.0%) 
+physics               [variable]     2092018/4194304  (49.9%) 
+physics terrain       [variable]        8664/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 55519
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+6 minutes, 45 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 2004 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (2092018 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Error! To use model "models/props_doors/doormainmetal01.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_doors/doormainmetal01.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 11127 texinfos to 8078
+Reduced 554 texdatas to 499 (22935 bytes to 21073)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+11 seconds elapsed
+
+==================================================================
+Date: 2026-07-10 16:25:01
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 10000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt
+1321 portalclusters
+2728 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2015 visible clusters (0.73%)
+Total clusters visible: 277668
+Average clusters visible: 210
+Building PAS...
+Average clusters audible: 578
+visdatasize:246422  compressed from 443856
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Wrote ZIP buffer, estimated size 6182408, actual size 6113988
+2 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+19260 faces
+15 degenerate faces
+9170025 square feet [1320483584.00 square inches]
+28 Displacements
+362535 Square Feet [52205128.00 Square Inches]
+19245 patches before subdivision
+161829 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 16322529, max 1499
+transfer lists: 124.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(29701, 27851, 19415)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5135, 4831, 3139)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(932, 820, 467)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(195, 171, 87)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(42, 36, 16)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(10, 9, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0524 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 155/1024         7440/49152    (15.1%) 
+brushes               5620/8192        67440/98304    (68.6%) 
+brushsides           52380/65536      419040/524288   (79.9%) 
+planes               47840/65536      956800/1310720  (73.0%) 
+vertexes             33127/65536      397524/786432   (50.5%) 
+nodes                 5981/65536      191392/2097152  ( 9.1%) 
+texinfos              8078/12288      581616/884736   (65.7%) 
+texdata                499/2048        15968/65536    (24.4%) 
+dispinfos               28/0            4928/0        ( 0.0%) 
+disp_verts            2684/0           53680/0        ( 0.0%) 
+disp_tris             4352/0            8704/0        ( 0.0%) 
+disp_lmsamples      233697/0          233697/0        ( 0.0%) 
+faces                19260/65536     1078560/3670016  (29.4%) 
+hdr faces            19260/65536     1078560/3670016  (29.4%) 
+origfaces            14868/65536      832608/3670016  (22.7%) 
+leaves                6137/65536      196384/2097152  ( 9.4%) 
+leaffaces            23160/65536       46320/131072   (35.3%) 
+leafbrushes          11001/65536       22002/131072   (16.8%) 
+areas                   39/256           312/2048     (15.2%) 
+surfedges           153642/512000     614568/2048000  (30.0%) 
+edges                96586/256000     386344/1024000  (37.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         61/8192         6100/819200   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           2205/32768       22050/327680   ( 6.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         41565/65536       83130/131072   (63.4%) 
+cubemapsamples          68/1024         1088/16384    ( 6.6%) 
+overlays               471/512        165792/180224   (92.0%) VERY FULL!
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     5609504/0        ( 0.0%) 
+visdata               [variable]      246422/16777216 ( 1.5%) 
+entdata               [variable]      605371/393216   (154.0%) VERY FULL!
+LDR ambient table     6137/65536       24548/262144   ( 9.4%) 
+HDR ambient table     6137/65536       24548/262144   ( 9.4%) 
+LDR leaf ambient      6137/65536      171836/1835008  ( 9.4%) 
+HDR leaf ambient     16650/65536      466200/1835008  (25.4%) 
+occluders                8/0             320/0        ( 0.0%) 
+occluder polygons       20/0             240/0        ( 0.0%) 
+occluder vert ind      104/0             416/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/87342    ( 0.0%) 
+pakfile               [variable]     7770692/0        ( 0.0%) 
+physics               [variable]     2092018/4194304  (49.9%) 
+physics terrain       [variable]        8664/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 55519
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+5 minutes, 0 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01b.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ads/adgroup_01a.vmt
+LightmappedGeneric, 
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01B.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/ADS/ADGROUP_01A.vmt
+LightmappedGeneric, 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "01" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "02" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "04" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Occluder "03" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 2004 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (2)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (2091465 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Error! To use model "models/props_doors/doormainmetal01.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_doors/doormainmetal01.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 11121 texinfos to 8077
+Reduced 554 texdatas to 499 (22935 bytes to 21073)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+13 seconds elapsed
+
+==================================================================
+Date: 2026-07-12 17:16:58
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 10000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.prt
+1317 portalclusters
+2722 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2003 visible clusters (0.72%)
+Total clusters visible: 276670
+Average clusters visible: 210
+Building PAS...
+Average clusters audible: 576
+visdatasize:243891  compressed from 442512
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+Wrote ZIP buffer, estimated size 6182408, actual size 6113988
+3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+19243 faces
+15 degenerate faces
+9167405 square feet [1320106240.00 square inches]
+28 Displacements
+362535 Square Feet [52205128.00 Square Inches]
+19228 patches before subdivision
+161442 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 16249731, max 1499
+transfer lists: 124.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(29641, 27802, 19383)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5117, 4815, 3129)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(927, 816, 465)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(193, 170, 86)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(42, 36, 16)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(10, 9, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0538 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 154/1024         7392/49152    (15.0%) 
+brushes               5618/8192        67416/98304    (68.6%) 
+brushsides           52368/65536      418944/524288   (79.9%) 
+planes               47836/65536      956720/1310720  (73.0%) 
+vertexes             33101/65536      397212/786432   (50.5%) 
+nodes                 5971/65536      191072/2097152  ( 9.1%) 
+texinfos              8077/12288      581544/884736   (65.7%) 
+texdata                499/2048        15968/65536    (24.4%) 
+dispinfos               28/0            4928/0        ( 0.0%) 
+disp_verts            2684/0           53680/0        ( 0.0%) 
+disp_tris             4352/0            8704/0        ( 0.0%) 
+disp_lmsamples      233697/0          233697/0        ( 0.0%) 
+faces                19243/65536     1077608/3670016  (29.4%) 
+hdr faces            19243/65536     1077608/3670016  (29.4%) 
+origfaces            14867/65536      832552/3670016  (22.7%) 
+leaves                6126/65536      196032/2097152  ( 9.3%) 
+leaffaces            23141/65536       46282/131072   (35.3%) 
+leafbrushes          10998/65536       21996/131072   (16.8%) 
+areas                   38/256           304/2048     (14.8%) 
+surfedges           153572/512000     614288/2048000  (30.0%) 
+edges                96523/256000     386092/1024000  (37.7%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         61/8192         6100/819200   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           2205/32768       22050/327680   ( 6.7%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         41568/65536       83136/131072   (63.4%) 
+cubemapsamples          68/1024         1088/16384    ( 6.6%) 
+overlays               471/512        165792/180224   (92.0%) VERY FULL!
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     5599104/0        ( 0.0%) 
+visdata               [variable]      243891/16777216 ( 1.5%) 
+entdata               [variable]      604749/393216   (153.8%) VERY FULL!
+LDR ambient table     6126/65536       24504/262144   ( 9.3%) 
+HDR ambient table     6126/65536       24504/262144   ( 9.3%) 
+LDR leaf ambient      6126/65536      171528/1835008  ( 9.3%) 
+HDR leaf ambient     16640/65536      465920/1835008  (25.4%) 
+occluders                8/0             320/0        ( 0.0%) 
+occluder polygons       20/0             240/0        ( 0.0%) 
+occluder vert ind      104/0             416/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/87334    ( 0.0%) 
+pakfile               [variable]     7770692/0        ( 0.0%) 
+physics               [variable]     2091465/4194304  (49.9%) 
+physics terrain       [variable]        8664/1048576  ( 0.8%) 
+
+Level flags = 2
+
+Total triangle count: 55487
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m4_terminal.bsp
+6 minutes, 24 seconds elapsed
