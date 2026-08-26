@@ -39,7 +39,7 @@ if (!("MeowUtilsLang" in getroottable()))
 		Internal					= "ERROR: internal error processing your command, %%ERROR%%",
 		InternalFollowup			= "ERROR: internal error processing your command followup, %%ERROR%%",
 		InvalidAlias				= "ERROR: invalid alias %%ALIAS%%\n"+
-									  "do \"%%PREFIX%% help\" for help",
+									  "do \"%%PREFIX_NO_QUOTES%% help\" for help",
 		InvalidPermissions			= "ERROR: you do not have the permission to run this command",
 		Cooldown					= "ERROR: this command is on cooldown! you have %%COOLDOWN%% seconds left",
 

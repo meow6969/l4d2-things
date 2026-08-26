@@ -60,7 +60,8 @@ DirectorOptions <-
 	HordeEscapeCommonLimit = 20
 	EscapeSpawnTanks = true
 	//SpecialRespawnInterval = 80
-	ZombieSpawnDistance = 50
+	// ZombieSpawnDistance = 50
+	ZombieTankHealth = 5000
 	
 	//MusicDynamicMobSpawnSize = 8
 	//MusicDynamicMobStopSize = 2

@@ -21,11 +21,11 @@ function copy_over_custom_models() {
 
 function full_final_compile_all_maps() {
 	start="$(date +%s)"
-	#full_final_compile_map "${shdirpath}/map/r_c11m1_greenhouse.vmf" "${srcpath}"
+	full_final_compile_map "${shdirpath}/map/r_c11m1_greenhouse.vmf" "${srcpath}"
 	#full_final_compile_map "${shdirpath}/map/r_c11m2_offices.vmf" "${srcpath}"
 	#full_final_compile_map "${shdirpath}/map/r_c11m3_garage.vmf" "${srcpath}"
 	#full_final_compile_map "${shdirpath}/map/r_c11m4_terminal.vmf" "${srcpath}"
-	full_final_compile_map "${shdirpath}/map/r_c11m5_runway.vmf" "${srcpath}"
+	#full_final_compile_map "${shdirpath}/map/r_c11m5_runway.vmf" "${srcpath}"
 	ended="$(date +%s)"
 	runtime="$((ended-start))"
 	echo ""
@@ -34,12 +34,13 @@ function full_final_compile_all_maps() {
 }
 
 function full_compile_all_maps() {
-	full_compile_map "${shdirpath}/map/r_c11m1_greenhouse.vmf" "${srcpath}"
-	full_compile_map "${shdirpath}/map/r_c11m2_offices.vmf" "${srcpath}"
-	full_compile_map "${shdirpath}/map/r_c11m3_garage.vmf" "${srcpath}"
+	#full_compile_map "${shdirpath}/map/r_c11m1_greenhouse.vmf" "${srcpath}"
+	#full_compile_map "${shdirpath}/map/r_c11m2_offices.vmf" "${srcpath}"
+	#full_compile_map "${shdirpath}/map/r_c11m3_garage.vmf" "${srcpath}"
 	full_compile_map "${shdirpath}/map/r_c11m4_terminal.vmf" "${srcpath}"
 	full_compile_map "${shdirpath}/map/r_c11m5_runway.vmf" "${srcpath}"	
 }
+
 
 function upload_map() {
 	s3cmd put "${pakpath}" s3://httpbucket/meow/stuff/"${pakname}"

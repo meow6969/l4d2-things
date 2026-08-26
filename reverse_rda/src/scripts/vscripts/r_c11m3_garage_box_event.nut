@@ -5,7 +5,8 @@ DirectorOptions <-
 	// This turns off tanks and witches.
 	ProhibitBosses = true
 
-	//PreferredMobDirection = SPAWN_NO_PREFERENCE
+	// PreferredMobDirection = SPAWN_NO_PREFERENCE
+	SpecialRespawnInterval = 15
 	MobSpawnMinTime = 1
 	MobSpawnMaxTime = 2
 	MobMaxPending = 30
@@ -18,6 +19,8 @@ DirectorOptions <-
 	RelaxMaxInterval = 5
 	RelaxMaxFlowTravel = 200
 }
+
+// printl("SPAWN_NO_PREFERENCE="+SPAWN_NO_PREFERENCE);
 
 Director.ResetMobTimer()
 Director.PlayMegaMobWarningSounds()

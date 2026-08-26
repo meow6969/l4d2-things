@@ -348,7 +348,7 @@ function full_compile_map() {
 	WINEDEBUG="-all" wine "${vbsp}" -game "${game}" "${wine_vmf}"
 	WINEDEBUG="-all" wine "${vvis}" -game "${game}" "${wine_vmf}"
 	WINEDEBUG="-all" wine "${vrad}" -hdr -staticproplighting -game "${game}" "${wine_vmf}"
-
+	
 	mv -v "${vmfdir}/${mapname}.bsp" "${out_bsp}"
 }
 

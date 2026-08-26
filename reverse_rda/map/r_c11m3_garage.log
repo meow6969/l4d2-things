@@ -4954,3 +4954,524 @@ Level flags = 2
 Total triangle count: 38080
 Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
 5 minutes, 26 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/skybox/moonairport.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/skybox/moonairport.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+Can't find surfaceprop cloth for material PROPS/HOUSEBOATTARP, using default
+Patching WVT material: maps/r_c11m3_garage/nature/blenddirt01grass_ruddy_small_wvt_patch
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/SKYBOX/MOONAIRPORT.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/SKYBOX/MOONAIRPORT.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/SKYBOX/MOONAIRPORT.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/SKYBOX/MOONAIRPORT.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...Bad detail brush side
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+Error opening z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.vmf
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/skybox/moonairport.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/skybox/moonairport.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+Can't find surfaceprop cloth for material PROPS/HOUSEBOATTARP, using default
+Patching WVT material: maps/r_c11m3_garage/nature/blenddirt01grass_ruddy_small_wvt_patch
+fixing up env_cubemap materials on brush sides...
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/SKYBOX/MOONAIRPORT.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/SKYBOX/MOONAIRPORT.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/SKYBOX/MOONAIRPORT.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+KeyValues Error: RecursiveLoadFromBuffer:  got EOF instead of keyname in file materials/SKYBOX/MOONAIRPORT.vmt
+UnlitGeneric, (*UnlitGeneric_HDR_dx9*), (*Proxies*), (*AnimatedTexture*), 
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...Bad detail brush side
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+Error opening z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.vmf
+Can't find surfaceprop cloth for material PROPS/HOUSEBOATTARP, using default
+Patching WVT material: maps/r_c11m3_garage/nature/blenddirt01grass_ruddy_small_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...Bad detail brush side
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+Error opening z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.vmf
+Can't find surfaceprop cloth for material PROPS/HOUSEBOATTARP, using default
+Patching WVT material: maps/r_c11m3_garage/nature/blenddirt01grass_ruddy_small_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...Bad detail brush side
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+Error opening z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.vmf
+Can't find surfaceprop cloth for material PROPS/HOUSEBOATTARP, using default
+Patching WVT material: maps/r_c11m3_garage/nature/blenddirt01grass_ruddy_small_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...Bad detail brush side
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.vmf
+Can't find surfaceprop cloth for material PROPS/HOUSEBOATTARP, using default
+Patching WVT material: maps/r_c11m3_garage/nature/blenddirt01grass_ruddy_small_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 1354 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1571338 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 8097 texinfos to 4801
+Reduced 504 texdatas to 426 (20982 bytes to 18079)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+13 seconds elapsed
+
+==================================================================
+Date: 2026-08-16 16:06:49
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 7000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.prt
+2556 portalclusters
+6967 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 14708 visible clusters (1.23%)
+Total clusters visible: 1195608
+Average clusters visible: 467
+Building PAS...
+Average clusters audible: 1534
+visdatasize:1026103  compressed from 1635840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+Wrote ZIP buffer, estimated size 3982007, actual size 3927791
+1 minute, 31 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+13468 faces
+2 degenerate faces
+8715539 square feet [1255037568.00 square inches]
+123 Displacements
+138198 Square Feet [19900632.00 Square Inches]
+13466 patches before subdivision
+138578 patches after subdivision
+81 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 12630462, max 1228
+transfer lists:  96.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(27425, 23493, 18290)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5054, 4250, 3043)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1168, 963, 630)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(330, 267, 158)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(108, 84, 44)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(40, 30, 14)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(16, 11, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(3, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0462 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+Computing detail prop lighting : 0...1...2...3...4...5...6...7...8...9...10
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 187/1024         8976/49152    (18.3%) 
+brushes               4031/8192        48372/98304    (49.2%) 
+brushsides           34086/65536      272688/524288   (52.0%) 
+planes               28220/65536      564400/1310720  (43.1%) 
+vertexes             24822/65536      297864/786432   (37.9%) 
+nodes                 7501/65536      240032/2097152  (11.4%) 
+texinfos              4801/12288      345672/884736   (39.1%) 
+texdata                426/2048        13632/65536    (20.8%) 
+dispinfos              123/0           21648/0        ( 0.0%) 
+disp_verts            4651/0           93020/0        ( 0.0%) 
+disp_tris             6720/0           13440/0        ( 0.0%) 
+disp_lmsamples      241262/0          241262/0        ( 0.0%) 
+faces                13468/65536      754208/3670016  (20.6%) 
+hdr faces            13468/65536      754208/3670016  (20.6%) 
+origfaces             8724/65536      488544/3670016  (13.3%) 
+leaves                7689/65536      246048/2097152  (11.7%) 
+leaffaces            18810/65536       37620/131072   (28.7%) 
+leafbrushes          13009/65536       26018/131072   (19.9%) 
+areas                   29/256           232/2048     (11.3%) 
+surfedges           100311/512000     401244/2048000  (19.6%) 
+edges                63811/256000     255244/1024000  (24.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         81/8192         8100/819200   ( 1.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1401/32768       14010/327680   ( 4.3%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         26484/65536       52968/131072   (40.4%) 
+cubemapsamples          43/1024          688/16384    ( 4.2%) 
+overlays               365/512        128480/180224   (71.3%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     6772256/0        ( 0.0%) 
+visdata               [variable]     1026103/16777216 ( 6.1%) 
+entdata               [variable]      547145/393216   (139.1%) VERY FULL!
+LDR ambient table     7689/65536       30756/262144   (11.7%) 
+HDR ambient table     7689/65536       30756/262144   (11.7%) 
+LDR leaf ambient      7689/65536      215292/1835008  (11.7%) 
+HDR leaf ambient     33303/65536      932484/1835008  (50.8%) 
+occluders               12/0             480/0        ( 0.0%) 
+occluder polygons       25/0             300/0        ( 0.0%) 
+occluder vert ind      111/0             444/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/300544   ( 0.0%) 
+dtl prp lght          [variable]           1/4        (25.0%) 
+HDR dtl prp lght      [variable]           1/4        (25.0%) 
+static props          [variable]           1/99332    ( 0.0%) 
+pakfile               [variable]     5992961/0        ( 0.0%) 
+physics               [variable]     1571338/4194304  (37.5%) 
+physics terrain       [variable]       25310/1048576  ( 2.4%) 
+
+Level flags = 2
+
+Total triangle count: 38217
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+1 minute, 11 seconds elapsed
+
+
+
+Using shader api: shaderapiempty.dll
+materialPath: Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2\materials
+Loading Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.vmf
+Can't find surfaceprop cloth for material PROPS/HOUSEBOATTARP, using default
+Patching WVT material: maps/r_c11m3_garage/nature/blenddirt01grass_ruddy_small_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Occluder "" straddles multiple areas. This is invalid!
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 1354 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (1)
+writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Found a displacement edge abutting multiple other edges.
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (1571338 bytes)
+Cannot build Physics2 data
+                                                             -----------
+DataLinker total stream size                                     0.0 KiB
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 8097 texinfos to 4801
+Reduced 504 texdatas to 426 (20982 bytes to 18079)
+Writing Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+13 seconds elapsed
+
+==================================================================
+Date: 2026-08-16 19:26:45
+Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\bin\vvisplusplus.exe -game Z:\mnt\d\SteamLibrary\steamapps\common\Left 4 Dead 2\left4dead2 Z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.vmf
+==================================================================
+6 threads
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+Detected L4D2 lump format
+Max farz in all env_fog_controller entities: 7000 (used for radial vis)
+reading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.prt
+2556 portalclusters
+6967 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 14710 visible clusters (1.23%)
+Total clusters visible: 1195614
+Average clusters visible: 467
+Building PAS...
+Average clusters audible: 1534
+visdatasize:1026106  compressed from 1635840
+writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+Wrote ZIP buffer, estimated size 3982007, actual size 3927791
+1 minute, 3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[2 texlights parsed from 'lights.rad']
+
+Loading z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+13468 faces
+2 degenerate faces
+8715539 square feet [1255037568.00 square inches]
+123 Displacements
+138198 Square Feet [19900632.00 Square Inches]
+13466 patches before subdivision
+138578 patches after subdivision
+81 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 12630462, max 1228
+transfer lists:  96.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(27424, 23490, 18286)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(5053, 4249, 3043)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(1168, 962, 630)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(330, 267, 158)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(108, 84, 44)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(40, 30, 14)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(16, 11, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(6, 4, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(3, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0418 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+Computing detail prop lighting : 0...1...2...3...4...5...6...7...8...9...10
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                 187/1024         8976/49152    (18.3%) 
+brushes               4031/8192        48372/98304    (49.2%) 
+brushsides           34086/65536      272688/524288   (52.0%) 
+planes               28220/65536      564400/1310720  (43.1%) 
+vertexes             24822/65536      297864/786432   (37.9%) 
+nodes                 7501/65536      240032/2097152  (11.4%) 
+texinfos              4801/12288      345672/884736   (39.1%) 
+texdata                426/2048        13632/65536    (20.8%) 
+dispinfos              123/0           21648/0        ( 0.0%) 
+disp_verts            4651/0           93020/0        ( 0.0%) 
+disp_tris             6720/0           13440/0        ( 0.0%) 
+disp_lmsamples      241262/0          241262/0        ( 0.0%) 
+faces                13468/65536      754208/3670016  (20.6%) 
+hdr faces            13468/65536      754208/3670016  (20.6%) 
+origfaces             8724/65536      488544/3670016  (13.3%) 
+leaves                7689/65536      246048/2097152  (11.7%) 
+leaffaces            18810/65536       37620/131072   (28.7%) 
+leafbrushes          13009/65536       26018/131072   (19.9%) 
+areas                   29/256           232/2048     (11.3%) 
+surfedges           100311/512000     401244/2048000  (19.6%) 
+edges                63811/256000     255244/1024000  (24.9%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         81/8192         8100/819200   ( 1.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips           1401/32768       14010/327680   ( 4.3%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         26484/65536       52968/131072   (40.4%) 
+cubemapsamples          43/1024          688/16384    ( 4.2%) 
+overlays               365/512        128480/180224   (71.3%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     6772256/0        ( 0.0%) 
+visdata               [variable]     1026106/16777216 ( 6.1%) 
+entdata               [variable]      547145/393216   (139.1%) VERY FULL!
+LDR ambient table     7689/65536       30756/262144   (11.7%) 
+HDR ambient table     7689/65536       30756/262144   (11.7%) 
+LDR leaf ambient      7689/65536      215292/1835008  (11.7%) 
+HDR leaf ambient     33288/65536      932064/1835008  (50.8%) 
+occluders               12/0             480/0        ( 0.0%) 
+occluder polygons       25/0             300/0        ( 0.0%) 
+occluder vert ind      111/0             444/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/300544   ( 0.0%) 
+dtl prp lght          [variable]           1/4        (25.0%) 
+HDR dtl prp lght      [variable]           1/4        (25.0%) 
+static props          [variable]           1/99332    ( 0.0%) 
+pakfile               [variable]     5992961/0        ( 0.0%) 
+physics               [variable]     1571338/4194304  (37.5%) 
+physics terrain       [variable]       25310/1048576  ( 2.4%) 
+
+Level flags = 2
+
+Total triangle count: 38217
+Writing z:\mnt\f\stuff\git\l4d2-things\reverse_rda\map\r_c11m3_garage.bsp
+4 minutes, 47 seconds elapsed

@@ -14,7 +14,7 @@ IncludeScript("meowlib/lang/es.nut");
 // this is for functions that are more general and not specifically related to bhop detector
 ::MeowUtils <-
 {
-	build_num=58
+	build_num=63
 
 	// this function stole from vslib
 	function IsEntityOnGroundVSLib(entity) 
@@ -357,16 +357,23 @@ IncludeScript("meowlib/lang/es.nut");
 			case "VARIABLE_PATH":
 				return oliveGreen+"\""+extraInfos["variablePath"]+"\""+white;  
 			case "VARIABLE_VALUE":
-				return orange+"\""+extraInfos["variableValue"]+"\""+white;
+				return orange+extraInfos["variableValue"]+white;
 
 			case "VERSION":
 				return oliveGreen+"r"+extraInfos["version"]+white;
 			case "PREFIX":
 				return "\""+extraInfos["prefix"]+"\"";
+			case "PREFIX_NO_QUOTES":
+				return extraInfos["prefix"];
 			case "COOLDOWN":
 				return orange+extraInfos["cooldown"]+white;
 			case "CMD_NAME":
 				return "\""+extraInfos["cmdName"]+"\"";
+			case "ALIAS":
+				return "\""+extraInfos["alias"]+"\"";
+
+			case "MAP":
+				return orange+extraInfos["map"]+white;
 
 			case "LANGUAGE":
 				return brightGreen+"\""+extraInfos["language"]+"\""+white;
@@ -457,6 +464,7 @@ IncludeScript("meowlib/lang/es.nut");
 		local r = [];
 		local charEscaped = false;
 		local inQuotes = false;
+		local inSingleQuotes = false;
 		local arg = "";
 
 		foreach (c in s)
@@ -472,10 +480,11 @@ IncludeScript("meowlib/lang/es.nut");
 					case "\"":
 						arg += "\"";
 						break;
+					case "'":
 					case " ":
-						if (inQuotes)
+						if (inQuotes || inSingleQuotes)
 							arg += "\\";
-						arg += " ";
+						arg += c;
 						break;
 					default:
 						arg += "\\"+c;
@@ -490,10 +499,23 @@ IncludeScript("meowlib/lang/es.nut");
 					charEscaped = true;
 					break;
 				case "\"":
+					if (inSingleQuotes)
+					{
+						arg += c;
+						break;
+					}
 					inQuotes = !inQuotes;
 					break;
-				case " ":
+				case "'":
 					if (inQuotes)
+					{
+						arg += c;
+						break;
+					}
+					inSingleQuotes = !inSingleQuotes;
+					break;
+				case " ":
+					if (inQuotes || inSingleQuotes)
 					{
 						arg += " ";
 						break;
@@ -515,6 +537,8 @@ IncludeScript("meowlib/lang/es.nut");
 	}
 }
 
-IncludeScript("meowlib/lang/en.nut");
 
 printl("successfully loaded meowutils.nut version r"+::MeowUtils.build_num);
+
+
+

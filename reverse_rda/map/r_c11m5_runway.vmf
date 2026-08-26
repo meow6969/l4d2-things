@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8871"
-	"mapversion" "55"
+	"mapversion" "68"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -92,7 +92,7 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "64"
+	"nGridSpacing" "2"
 }
 palette_plus
 {
@@ -167,7 +167,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "55"
+	"mapversion" "68"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.4.7-DEV from c11m5_runway"
 	"detailmaterial" "detail/detailsprites"
@@ -77219,9 +77219,9 @@ entity
 	"solid" "6"
 	"spawn_without_director" "0"
 	"spawnflags" "2"
-	"weapon_selection" "tier1_shotgun"
+	"weapon_selection" "weapon_pumpshotgun"
 	"weaponskin" "-1"
-	"origin" "-4848 9112 -190.682"
+	"origin" "-4848 9112 -186.682"
 	editor
 	{
 		"color" "0 0 200"
@@ -77264,7 +77264,7 @@ entity
 	"solid" "6"
 	"spawn_without_director" "0"
 	"spawnflags" "2"
-	"weapon_selection" "any_smg"
+	"weapon_selection" "weapon_smg_silenced"
 	"weaponskin" "-1"
 	"origin" "-4828.62 9140.5 -150.916"
 	editor
@@ -172586,14 +172586,18 @@ entity
 	"hardware" "1"
 	"health" "0"
 	"model" "models/props_doors/checkpoint_door_02.mdl"
-	"opendir" "0"
+	"opendir" "2"
 	"rendercolor" "255 255 255"
 	"returndelay" "-1"
 	"skin" "0"
 	"spawnflags" "8193"
-	"spawnpos" "1"
-	"speed" "200"
+	"spawnpos" "0"
+	"speed" "60"
 	"targetname" "checkpoint_entrance"
+	connections
+	{
+		"OnOpen" "start_tank_relayTrigger0-1"
+	}
 	"origin" "-6359.18 11998.7 175"
 	editor
 	{
@@ -179607,13 +179611,576 @@ entity
 		"logicalpos" "[0 0]"
 	}
 }
+entity
+{
+	"id" "4482107"
+	"classname" "info_zombie_spawn"
+	"angles" "0 334 0"
+	"AttackOnSpawn" "1"
+	"offer_tank" "1"
+	"population" "river_docks_trap"
+	"targetname" "spawn_tank_coop"
+	"origin" "-6464 12000 144"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[5000 -6768]"
+	}
+}
+entity
+{
+	"id" "4482119"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "start_tank_relay"
+	connections
+	{
+		"OnTrigger" "spawn_tank_coopSpawnZombie0-1"
+		"OnTrigger" "spawn_tank_coopKill0.1-1"
+		"OnTrigger" "tank_sound_timerDisable0-1"
+		"OnTrigger" "checkpoint_entranceOpen0.5-1"
+		"OnTrigger" "checkpoint_entranceOpen1-1"
+		"OnTrigger" "checkpoint_entranceOpen2-1"
+		"OnTrigger" "checkpoint_entranceOpen4-1"
+	}
+	"origin" "-6400 12000 176.774"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "4482152"
+	"classname" "logic_auto"
+	"spawnflags" "1"
+	connections
+	{
+		"OnMapSpawn" "checkpoint_entranceClose0-1"
+	}
+	"origin" "-6288 11984 194.669"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "4484674"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.Breathe"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound1"
+	"volstart" "0"
+	"origin" "-6527.82 12023.1 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 500]"
+	}
+}
+entity
+{
+	"id" "4484677"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.Growl"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound2"
+	"volstart" "0"
+	"origin" "-6514.15 12018.5 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 1000]"
+	}
+}
+entity
+{
+	"id" "4484680"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.StartLedgeClimb"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound3"
+	"volstart" "0"
+	"origin" "-6498.56 12014.4 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 1500]"
+	}
+}
+entity
+{
+	"id" "4484683"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.Alert"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound4"
+	"volstart" "0"
+	"origin" "-6484.38 12007.9 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 2000]"
+	}
+}
+entity
+{
+	"id" "4484686"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.Thud"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound5"
+	"volstart" "0"
+	"origin" "-6470.72 12003.2 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 2500]"
+	}
+}
+entity
+{
+	"id" "4484689"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.Voice"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound6"
+	"volstart" "0"
+	"origin" "-6458.99 11998.1 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 3000]"
+	}
+}
+entity
+{
+	"id" "4484692"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.Yell"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound7"
+	"volstart" "0"
+	"origin" "-6445.85 11995.4 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 3500]"
+	}
+}
+entity
+{
+	"id" "4484695"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.Attack"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound8"
+	"volstart" "0"
+	"origin" "-6432.18 11990.8 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 4000]"
+	}
+}
+entity
+{
+	"id" "4484698"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.Thud"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound10"
+	"volstart" "0"
+	"origin" "-6453.3 11976.9 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 5000]"
+	}
+}
+entity
+{
+	"id" "4484701"
+	"classname" "logic_case"
+	"targetname" "tank_sound_picker"
+	connections
+	{
+		"OnCase01" "tank_sound1PlaySound0-1"
+		"OnCase02" "tank_sound2PlaySound0-1"
+		"OnCase03" "tank_sound3PlaySound0-1"
+		"OnCase04" "tank_sound4PlaySound0-1"
+		"OnCase05" "tank_sound5PlaySound0-1"
+		"OnCase06" "tank_sound6PlaySound0-1"
+		"OnCase07" "tank_sound7PlaySound0-1"
+		"OnCase08" "tank_sound8PlaySound0-1"
+		"OnCase09" "tank_sound9PlaySound0-1"
+		"OnCase10" "tank_sound10PlaySound0-1"
+		"OnCase05" "tank_shakeStartShake0-1"
+		"OnCase10" "tank_shakeStartShake0-1"
+		"OnCase09" "tank_shakeStartShake0-1"
+	}
+	"origin" "-6478.52 11986.8 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 5500]"
+	}
+}
+entity
+{
+	"id" "4484703"
+	"classname" "logic_timer"
+	"LowerRandomBound" "1"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "tank_sound_timer"
+	"UpperRandomBound" "5"
+	"UseRandomTime" "1"
+	connections
+	{
+		"OnTimer" "tank_sound_pickerPickRandom0-1"
+	}
+	"origin" "-6494.28 11990.7 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 6000]"
+	}
+}
+entity
+{
+	"id" "4484705"
+	"classname" "ambient_generic"
+	"cspinup" "0"
+	"fadeinsecs" "0"
+	"fadeoutsecs" "0"
+	"health" "10"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"lforate" "0"
+	"lfotype" "0"
+	"message" "HulkZombie.Thud"
+	"pitch" "100"
+	"pitchstart" "100"
+	"preset" "0"
+	"radius" "0"
+	"spawnflags" "48"
+	"spindown" "0"
+	"spinup" "0"
+	"targetname" "tank_sound9"
+	"volstart" "0"
+	"origin" "-6508.98 11999.2 176"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 4500]"
+	}
+}
+entity
+{
+	"id" "4487256"
+	"classname" "trigger_once"
+	"filtername" "planecrash_teamfilter"
+	"origin" "-5488 11736 133.9"
+	"spawnflags" "1"
+	"StartDisabled" "0"
+	connections
+	{
+		"OnTrigger" "tank_sound_timerEnable0-1"
+	}
+	solid
+	{
+		"id" "4487253"
+		side
+		{
+			"id" "9794"
+			"plane" "(-5664 11920 256) (-5312 11920 256) (-5312 11552 256)"
+			vertices_plus
+			{
+				"v" "-5664 11920 256"
+				"v" "-5312 11920 256"
+				"v" "-5312 11552 256"
+				"v" "-5664 11552 256"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9793"
+			"plane" "(-5664 11552 11.7958) (-5312 11552 11.7958) (-5312 11920 11.7958)"
+			vertices_plus
+			{
+				"v" "-5664 11552 11.7958"
+				"v" "-5312 11552 11.7958"
+				"v" "-5312 11920 11.7958"
+				"v" "-5664 11920 11.7958"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9792"
+			"plane" "(-5664 11920 256) (-5664 11552 256) (-5664 11552 11.7958)"
+			vertices_plus
+			{
+				"v" "-5664 11920 256"
+				"v" "-5664 11552 256"
+				"v" "-5664 11552 11.7958"
+				"v" "-5664 11920 11.7958"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9791"
+			"plane" "(-5312 11920 11.7958) (-5312 11552 11.7958) (-5312 11552 256)"
+			vertices_plus
+			{
+				"v" "-5312 11920 11.7958"
+				"v" "-5312 11552 11.7958"
+				"v" "-5312 11552 256"
+				"v" "-5312 11920 256"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9790"
+			"plane" "(-5312 11920 256) (-5664 11920 256) (-5664 11920 11.7958)"
+			vertices_plus
+			{
+				"v" "-5312 11920 256"
+				"v" "-5664 11920 256"
+				"v" "-5664 11920 11.7958"
+				"v" "-5312 11920 11.7958"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9789"
+			"plane" "(-5312 11552 11.7958) (-5664 11552 11.7958) (-5664 11552 256)"
+			vertices_plus
+			{
+				"v" "-5312 11552 11.7958"
+				"v" "-5664 11552 11.7958"
+				"v" "-5664 11552 256"
+				"v" "-5312 11552 256"
+			}
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-4237.59 9857.44 110.097]"
-		"look" "[-4499.95 9888.76 76.7066]"
+		"position" "[-6368.43 11976.3 206.486]"
+		"look" "[-6625.11 12042.3 180.451]"
 	}
 }
 cordons
